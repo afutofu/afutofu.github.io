@@ -42,7 +42,7 @@ const LoadingScreen = () => {
 
     tl.from(logo, {
       scale: 0,
-      duration: 0.7,
+      duration: 0.8,
       ease: Power3.easeOut,
     });
 
@@ -55,7 +55,7 @@ const LoadingScreen = () => {
     const scaleTime = 0.8;
 
     tl.to(logo, {
-      scale: 0.8,
+      scale: 0.6,
       duration: scaleTime,
     }).to(logo, {
       scale: 1,
@@ -84,9 +84,6 @@ const LoadingScreen = () => {
       scale: 1,
       duration: 0.7,
       ease: Power3.easeInOut,
-    }).to(whiteScreen, {
-      backgroundColor: "#ededed",
-      duration: 2,
     });
 
     return tl;
@@ -103,13 +100,14 @@ const LoadingScreen = () => {
     master.add(logoScaleOutIn(), "-=0.2");
     master.add(logoScaleDownToZero());
     master.add(whiteScreenEnter(), "+=0.5");
+    // master.seek(4);
     master.play();
   }, []);
 
   if (!animationComplete) {
     return (
       <LoadingScreenComp ref={(el) => (loadingScreen = el)}>
-        <Logo ref={(el) => (logo = el)} size={mounted ? 55 : 0} />
+        <Logo ref={(el) => (logo = el)} size={mounted ? 70 : 0} />
         <WhiteScreen ref={(el) => (whiteScreen = el)} />
       </LoadingScreenComp>
     );
