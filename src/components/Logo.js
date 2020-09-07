@@ -1,14 +1,18 @@
-import React from "react";
+import React, { forwardRef } from "react";
 import styled from "styled-components";
 
 const LogoComp = styled.h1`
-  color: #ffb742;
+  color: gold;
   font-family: "Montserrat", sans-serif;
-  font-size: 40px;
+  font-size: ${(props) => (props.size ? props.size + "px" : 0)};
 `;
 
-const Logo = () => {
-  return <LogoComp>A</LogoComp>;
-};
+const Logo = forwardRef((props, ref) => {
+  return (
+    <LogoComp ref={ref} size={props.size}>
+      A
+    </LogoComp>
+  );
+});
 
 export default Logo;

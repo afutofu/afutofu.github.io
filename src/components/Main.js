@@ -16,7 +16,6 @@ const Main = () => {
   return (
     <MainComp>
       <LoadingScreen />
-      <Logo />
     </MainComp>
   );
 };
