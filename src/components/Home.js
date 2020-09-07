@@ -1,6 +1,6 @@
-import React, { useRef, useEffect } from "react";
+import React, { useRef, useEffect, useState } from "react";
 import styled, { ThemeProvider } from "styled-components";
-import { TimelineLite } from "gsap";
+import { TimelineLite, Power3 } from "gsap";
 
 const HomeComp = styled.div`
   position: relative;
@@ -12,10 +12,10 @@ const HomeComp = styled.div`
 `;
 
 const Content = styled.div`
-  margin-top: 35%;
+  margin-top: 37%;
 
   @media only screen and (min-width: 992px) {
-    margin-top: 17%;
+    margin-top: 20%;
   }
 `;
 
@@ -32,8 +32,8 @@ const Introduction = styled.h3`
 `;
 
 const Name = styled.h1`
-  font-size: 43px;
-  color: #000;
+  font-size: 41px;
+  color: #222;
   margin: 0;
   margin-bottom: 2px;
   font-family: "Quicksand", "san-serif";
@@ -45,8 +45,8 @@ const Name = styled.h1`
 `;
 
 const NameBold = styled.span`
-  color: #222;
-  font-weight: 700;
+  color: #111;
+  font-weight: 600;
   margin: 0;
   padding: 0;
 `;
@@ -64,6 +64,7 @@ const Motto = styled.h2`
 `;
 
 const MottoBold = styled.span`
+  position: relative;
   color: #444;
   font-weight: 600;
 `;
@@ -73,13 +74,13 @@ const Description = styled.p`
   color: #222;
   font-weight: 400;
   font-size: 17px;
-  margin-bottom: 30px;
+  margin-bottom: 40px;
   line-height: 1.5rem;
 
   @media only screen and (min-width: 992px) {
     max-width: 50%;
-    font-size: 20px;
-    line-height: 2rem;
+    font-size: 19px;
+    line-height: 1.7rem;
   }
 `;
 
@@ -87,7 +88,7 @@ const Button = styled.button`
   font-family: "Quicksand", "san-serif";
   font-weight: 600;
   color: ${(props) => props.theme.color};
-  background-color: #fff;
+  background-color: unset;
   padding: 10px 40px;
   border-radius: 5px;
   outline: none;
@@ -104,7 +105,7 @@ const theme = {
   color: "#ff350d",
 };
 
-const Home = () => {
+const Home = (props) => {
   let home = useRef(null);
   let introduction = useRef(null);
   let name = useRef(null);
@@ -112,8 +113,27 @@ const Home = () => {
   let description = useRef(null);
   let button = useRef(null);
 
+  const textEnter = () => {
+    let tl = new TimelineLite();
+
+    tl.staggerFrom(
+      [introduction, name, motto, description, button],
+      0.5,
+      {
+        y: 100,
+        opacity: 0,
+        ease: Power3.easeOut,
+      },
+      0.2
+    );
+
+    return tl;
+  };
+
   useEffect(() => {
-    let master = new TimelineLite();
+    let masterTl = new TimelineLite({ paused: true });
+    masterTl.add(textEnter());
+    props.getTimeline(masterTl);
   }, []);
 
   return (
@@ -132,9 +152,8 @@ const Home = () => {
           </Motto>
           <Description ref={(el) => (description = el)}>
             Currently a college student who loves to code. Started coding games,
-            then systems, then websites for over 4 years. I'm only getting
-            better and still as ecstatic as the first time I logged "Hello
-            World"!
+            then systems, then websites for over 4 years. Only getting better
+            and still passionate since the first "Hello World"!
           </Description>
           <Button ref={(el) => (button = el)}>Contact Me</Button>
         </Content>

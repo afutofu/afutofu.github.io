@@ -30,7 +30,7 @@ const WhiteScreen = styled.div`
   transform: translate(-50%, -50%) scale(0);
 `;
 
-const LoadingScreen = () => {
+const LoadingScreen = (props) => {
   const [animationComplete, setAnimationComplete] = useState(false);
   const [mounted, setMounted] = useState(false);
   let loadingScreen = useRef(null);
@@ -91,6 +91,7 @@ const LoadingScreen = () => {
 
   const onComplete = () => {
     setAnimationComplete(true);
+    props.isLoading(false);
   };
 
   useEffect(() => {

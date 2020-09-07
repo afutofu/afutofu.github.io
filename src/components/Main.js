@@ -28,33 +28,58 @@ const Container = styled.div`
 `;
 
 const Main = () => {
+  const [navbarTl, setNavbarTl] = useState(null);
+  const [homeTl, setHomeTl] = useState(null);
+  const [isLoading, setIsLoading] = useState();
+  const [masterTl] = useState(new TimelineLite());
+
   let main = useRef(null);
+  let container = useRef(null);
 
   const backgroundFadeIn = () => {
     let tl = new TimelineLite();
 
     tl.to(main, {
-      backgroundColor: "#ee",
+      backgroundColor: "#eee",
       duration: 3,
-      ease: Power3.easeIn,
-    });
+      ease: Power3.easeInOut,
+    }).to(
+      container,
+      {
+        backgroundColor: "eee",
+        duration: 3,
+        ease: Power3.easeInOut,
+      },
+      "-=3"
+    );
 
     return tl;
   };
 
   useEffect(() => {
-    let master = new TimelineLite();
-    master.add(backgroundFadeIn());
-    master.play();
-  }, []);
+    if (navbarTl && homeTl && !isLoading) {
+      masterTl.add(backgroundFadeIn());
+      masterTl.add(navbarTl.play(), "-=3");
+      masterTl.add(homeTl.play(), "-=2");
+      masterTl.play();
+    }
+  }, [navbarTl, homeTl]);
+
+  const getNavbarTl = (tl) => {
+    setNavbarTl(tl);
+  };
+
+  const getHomeTl = (tl) => {
+    setHomeTl(tl);
+  };
 
   return (
     <MainComp ref={(el) => (main = el)}>
-      {/* <LoadingScreen /> */}
-      <Navbar />
+      {/* <LoadingScreen isLoading={setIsLoading} /> */}
+      <Navbar getTimeline={getNavbarTl} />
       <Content>
-        <Container>
-          <Home />
+        <Container ref={(el) => (container = el)}>
+          <Home getTimeline={getHomeTl} />
         </Container>
       </Content>
     </MainComp>
