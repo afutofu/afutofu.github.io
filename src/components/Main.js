@@ -6,6 +6,7 @@ import LoadingScreen from "./LoadingScreen";
 import Navbar from "./Navbar";
 import Home from "./Home";
 import About from "./About";
+import Skills from "./Skills";
 
 const MainComp = styled.div`
   position: absolute;
@@ -15,6 +16,8 @@ const MainComp = styled.div`
   padding: 0;
   background-color: white;
   box-sizing: border-box;
+  overflow: hidden;
+  opacity: 0;
 `;
 
 const Content = styled.div`
@@ -24,8 +27,12 @@ const Content = styled.div`
 `;
 
 const Container = styled.div`
-  padding: 0px 20%;
+  padding: 0px 10%;
   position: relative;
+
+  @media only screen and (min-width: 992px) {
+    padding: 0px 20%;
+  }
 `;
 
 const Main = () => {
@@ -41,18 +48,23 @@ const Main = () => {
     let tl = new TimelineLite();
 
     tl.to(main, {
-      backgroundColor: "#eee",
-      duration: 3,
-      ease: Power3.easeInOut,
-    }).to(
-      container,
-      {
-        backgroundColor: "eee",
+      opacity: 1,
+      duration: 0,
+    })
+      .to(main, {
+        backgroundColor: "#efefef",
         duration: 3,
         ease: Power3.easeInOut,
-      },
-      "-=3"
-    );
+      })
+      .to(
+        container,
+        {
+          backgroundColor: "eee",
+          duration: 3,
+          ease: Power3.easeInOut,
+        },
+        "-=3"
+      );
 
     return tl;
   };
@@ -74,14 +86,18 @@ const Main = () => {
     setHomeTl(tl);
   };
 
+  // if (isLoading) {
+  //   return <LoadingScreen isLoading={setIsLoading} />;
+  // }
+
   return (
     <MainComp ref={(el) => (main = el)}>
-      {/* <LoadingScreen isLoading={setIsLoading} /> */}
       <Navbar getTimeline={getNavbarTl} />
       <Content>
         <Container ref={(el) => (container = el)}>
           <Home getTimeline={getHomeTl} />
           <About />
+          <Skills />
         </Container>
       </Content>
     </MainComp>

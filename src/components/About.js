@@ -17,6 +17,7 @@ const Content = styled.div`
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
+  width: 100%;
   text-align: left;
   color: #222;
   display: flex;
@@ -33,8 +34,8 @@ const TitleArea = styled.div`
 `;
 
 const Title = styled.h2`
-  font-size: 24px;
-  font-weight: 600;
+  font-size: 26px;
+  font-weight: 500;
   padding-right: 20px;
 
   @media only screen and (min-width: 992px) {
@@ -47,9 +48,9 @@ const TitleHighlight = styled.span`
 `;
 
 const TitleLineWrapper = styled.div`
-  overflow: hidden;
+  overflow-x: hidden;
   flex: 1;
-  height: 3px;
+  height: 20px;
   padding: 0;
 `;
 
@@ -68,15 +69,15 @@ const Descriptions = styled.div`
 `;
 
 const Description = styled.p`
-  font-size: 18px;
+  font-size: 19px;
   line-height: 1.5rem;
-  font-weight: 500;
+  font-weight: 400;
   margin: 0;
   margin-bottom: 18px;
 `;
 
 const DescriptionBold = styled.span`
-  font-weight: 600;
+  font-weight: 500;
 `;
 
 const theme = {
@@ -96,14 +97,19 @@ const About = (props) => {
       y: -50,
       opacity: 0,
       duration: 0.5,
-    }).from(
+    }).fromTo(
       titleLine,
       {
         x: "-100%",
-        duration: 1.5,
+        y: 13,
+      },
+      {
+        x: 0,
+        y: 13,
+        duration: 1.2,
         ease: Power3.easeInOut,
       },
-      "-=0.5"
+      "-=0.2"
     );
 
     return tl;
@@ -114,12 +120,12 @@ const About = (props) => {
 
     tl.staggerFrom(
       descriptions.childNodes,
-      0.3,
+      0.5,
       {
         y: 50,
         opacity: 0,
       },
-      0.3
+      0.2
     );
 
     return tl;
@@ -131,11 +137,10 @@ const About = (props) => {
         trigger: titleText,
         start: "top+200 center",
         toggleActions: "play none none reverse",
-        markers: true,
       },
     });
     master.add(titleEnter());
-    master.add(descriptionsEnter(), "-=1.4");
+    master.add(descriptionsEnter(), "-=0.5");
   }, []);
 
   return (
