@@ -5,18 +5,15 @@ import { TimelineLite, Power3 } from "gsap";
 const HomeComp = styled.div`
   position: relative;
   width: 100%;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+  height: calc(100vh - 80px);
+  margin-top: 80px;
+  box-sizing: border-box;
 `;
 
 const Content = styled.div`
-  margin-top: 37%;
-
-  @media only screen and (min-width: 992px) {
-    margin-top: 20%;
-  }
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
 `;
 
 const Introduction = styled.h3`

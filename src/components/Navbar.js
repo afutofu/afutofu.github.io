@@ -7,8 +7,8 @@ import Logo from "./Logo";
 const NavbarComp = styled.div`
   position: fixed;
   width: 100%;
-  height: 60px;
-  padding: 40px 5%;
+  height: 80px;
+  padding: 10px 5%;
   background-color: none;
   display: flex;
   justify-content: space-between;
@@ -30,6 +30,7 @@ const NavItems = styled.ul`
   padding: 0;
   padding-left: 10px;
   margin: 0;
+  box-sizing: border-box;
 `;
 
 const NavItem = styled.li`

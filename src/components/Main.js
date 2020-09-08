@@ -5,6 +5,7 @@ import { TimelineLite, Power3 } from "gsap";
 import LoadingScreen from "./LoadingScreen";
 import Navbar from "./Navbar";
 import Home from "./Home";
+import About from "./About";
 
 const MainComp = styled.div`
   position: absolute;
@@ -30,7 +31,7 @@ const Container = styled.div`
 const Main = () => {
   const [navbarTl, setNavbarTl] = useState(null);
   const [homeTl, setHomeTl] = useState(null);
-  const [isLoading, setIsLoading] = useState();
+  const [isLoading, setIsLoading] = useState(false);
   const [masterTl] = useState(new TimelineLite());
 
   let main = useRef(null);
@@ -63,7 +64,7 @@ const Main = () => {
       masterTl.add(homeTl.play(), "-=2");
       masterTl.play();
     }
-  }, [navbarTl, homeTl]);
+  }, [navbarTl, homeTl, isLoading]);
 
   const getNavbarTl = (tl) => {
     setNavbarTl(tl);
@@ -80,6 +81,7 @@ const Main = () => {
       <Content>
         <Container ref={(el) => (container = el)}>
           <Home getTimeline={getHomeTl} />
+          {/* <About /> */}
         </Container>
       </Content>
     </MainComp>

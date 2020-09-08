@@ -9,6 +9,7 @@ const LogoComp = styled.h1`
   margin: 0;
   padding: 8px;
   cursor: ${(props) => (props.pointer ? "pointer" : "auto")};
+  box-sizing: border-box;
 `;
 
 const Logo = forwardRef((props, ref) => {
