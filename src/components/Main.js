@@ -81,7 +81,7 @@ const Main = () => {
       <Content>
         <Container ref={(el) => (container = el)}>
           <Home getTimeline={getHomeTl} />
-          {/* <About /> */}
+          <About />
         </Container>
       </Content>
     </MainComp>

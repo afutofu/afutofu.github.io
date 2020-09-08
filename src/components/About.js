@@ -1,26 +1,28 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
 import styled, { ThemeProvider } from "styled-components";
+import { gsap, TimelineLite, Power3 } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const AboutComp = styled.div`
   position: relative;
   width: 100%;
-  height: 800px;
+  height: 600px;
   display: flex;
-  margin: auto;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
   font-family: "Quicksand", "san-serif";
 `;
 
 const Content = styled.div`
-  margin-top: 40%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
   text-align: left;
   color: #222;
-
-  @media only screen and (min-width: 992px) {
-    margin-top: 22%;
-  }
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
 `;
 
 const TitleArea = styled.div`
@@ -44,18 +46,33 @@ const TitleHighlight = styled.span`
   color: ${(props) => props.theme.color};
 `;
 
-const TitleLine = styled.div`
+const TitleLineWrapper = styled.div`
+  overflow: hidden;
   flex: 1;
   height: 3px;
   padding: 0;
-  border-radius: 10px;
+`;
+
+const TitleLine = styled.div`
+  flex: 1;
+  height: 1px;
+  padding: 0;
   background-color: ${(props) => props.theme.color};
+`;
+
+const Descriptions = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
 `;
 
 const Description = styled.p`
   font-size: 18px;
   line-height: 1.5rem;
   font-weight: 500;
+  margin: 0;
+  margin-bottom: 18px;
 `;
 
 const DescriptionBold = styled.span`
@@ -67,34 +84,93 @@ const theme = {
 };
 
 const About = (props) => {
+  let about = useRef(null);
+  let titleText = useRef(null);
+  let titleLine = useRef(null);
+  let descriptions = useRef(null);
+
+  const titleEnter = () => {
+    let tl = new TimelineLite();
+
+    tl.from(titleText, {
+      y: -50,
+      opacity: 0,
+      duration: 0.5,
+    }).from(
+      titleLine,
+      {
+        x: "-100%",
+        duration: 1.5,
+        ease: Power3.easeInOut,
+      },
+      "-=0.5"
+    );
+
+    return tl;
+  };
+
+  const descriptionsEnter = () => {
+    let tl = new TimelineLite();
+
+    tl.staggerFrom(
+      descriptions.childNodes,
+      0.3,
+      {
+        y: 50,
+        opacity: 0,
+      },
+      0.3
+    );
+
+    return tl;
+  };
+
+  useEffect(() => {
+    let master = new TimelineLite({
+      scrollTrigger: {
+        trigger: titleText,
+        start: "top+200 center",
+        toggleActions: "play none none reverse",
+        markers: true,
+      },
+    });
+    master.add(titleEnter());
+    master.add(descriptionsEnter(), "-=1.4");
+  }, []);
+
   return (
-    <AboutComp>
+    <AboutComp ref={(el) => (about = el)}>
       <ThemeProvider theme={theme}>
         <Content>
           <TitleArea>
-            <Title>
+            <Title ref={(el) => (titleText = el)}>
               A Bit <TitleHighlight>About</TitleHighlight> Me
             </Title>
-            <TitleLine />
+            <TitleLineWrapper>
+              <TitleLine ref={(el) => (titleLine = el)} />
+            </TitleLineWrapper>
           </TitleArea>
-          <Description>
-            Hi! I'm Afuza, a college student in Seattle, WA.
-          </Description>
-          <Description>
-            Ever since starting programming, I feel like I've uncovered a
-            treasure trove filled with exciting opportunities and untouched
-            knowledge. I've built projects ranging from{" "}
-            <DescriptionBold>2D video games</DescriptionBold>,{" "}
-            <DescriptionBold>personal management tools</DescriptionBold>,{" "}
-            <DescriptionBold>company systems</DescriptionBold>,{" "}
-            <DescriptionBold>robots</DescriptionBold>,{" "}
-            <DescriptionBold>neural networks</DescriptionBold>, and currently
-            alot of <DescriptionBold>websites</DescriptionBold>.
-          </Description>
-          <Description>
-            Websites are currently my application of choice, and I'm avid to
-            keep contributing to helpful and meaningful projects.
-          </Description>
+          <Descriptions ref={(el) => (descriptions = el)}>
+            <Description>
+              Hi! I'm Afuza, a college student in Seattle, WA.
+            </Description>
+            <Description>
+              Ever since starting programming, I feel like I've uncovered a
+              treasure trove filled with exciting opportunities and untouched
+              potential. I've built projects ranging from{" "}
+              <DescriptionBold>2D video games</DescriptionBold>,{" "}
+              <DescriptionBold>personal management tools</DescriptionBold>,{" "}
+              <DescriptionBold>company systems</DescriptionBold>,{" "}
+              <DescriptionBold>robots</DescriptionBold>,{" "}
+              <DescriptionBold>AI</DescriptionBold>, and currently a lot of{" "}
+              <DescriptionBold>websites</DescriptionBold>.
+            </Description>
+            <Description>
+              Websites are currently my application of practice, and I'm avid to
+              keep creating and looking forward to contributing to helpful and
+              meaningful projects.
+            </Description>
+          </Descriptions>
         </Content>
       </ThemeProvider>
     </AboutComp>
