@@ -1,6 +1,6 @@
-import React, { useRef, useEffect, useState } from "react";
+import React, { useRef, useEffect } from "react";
 import styled from "styled-components";
-import { TimelineLite, Power3 } from "gsap";
+import { TimelineLite } from "gsap";
 
 import Logo from "./Logo";
 
@@ -44,7 +44,7 @@ const NavItem = styled.li`
   }
 `;
 
-const Navbar = (props) => {
+const Navbar = ({ getNavbarTl }) => {
   let logo = useRef(null);
   let about = useRef(null);
   let projects = useRef(null);
@@ -73,8 +73,8 @@ const Navbar = (props) => {
   useEffect(() => {
     let masterTl = new TimelineLite({ paused: true });
     masterTl.add(navItemsEnter());
-    props.getTimeline(masterTl);
-  }, []);
+    getNavbarTl(masterTl);
+  }, [getNavbarTl]);
 
   return (
     <NavbarComp>

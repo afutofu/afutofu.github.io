@@ -18,8 +18,6 @@ const AboutComp = styled.div`
 
 const Content = styled.div`
   position: relative;
-  /* top: 50%;
-  transform: translateY(-50%); */
   width: 100%;
   max-width: 700px;
   text-align: left;
@@ -95,7 +93,6 @@ const theme = {
 };
 
 const About = (props) => {
-  let about = useRef(null);
   let titleText = useRef(null);
   let titleLine = useRef(null);
   let descriptions = useRef(null);
@@ -145,7 +142,7 @@ const About = (props) => {
     let master = new TimelineLite({
       scrollTrigger: {
         trigger: titleText,
-        start: "top+=200 center+=200",
+        start: "top center",
         toggleActions: "play none none none",
       },
     });
@@ -154,7 +151,7 @@ const About = (props) => {
   }, []);
 
   return (
-    <AboutComp ref={(el) => (about = el)}>
+    <AboutComp>
       <ThemeProvider theme={theme}>
         <Content>
           <TitleArea>

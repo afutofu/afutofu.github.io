@@ -74,7 +74,7 @@ const ListAreaWrapper = styled.div`
 `;
 
 const ListArea = styled.div`
-  width: 90%;
+  width: 85%;
   max-width: 600px;
   display: flex;
   justify-content: space-between;
@@ -128,7 +128,6 @@ const theme = {
 };
 
 const Skills = (props) => {
-  let skills = useRef(null);
   let titleText = useRef(null);
   let titleLineLeft = useRef(null);
   let titleLineRight = useRef(null);
@@ -244,7 +243,7 @@ const Skills = (props) => {
   }, []);
 
   return (
-    <SkillsComp ref={(el) => (skills = el)}>
+    <SkillsComp>
       <ThemeProvider theme={theme}>
         <Content>
           <TitleArea>

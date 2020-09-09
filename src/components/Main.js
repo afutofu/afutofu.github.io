@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useState } from "react";
+import React, { useRef, useEffect, useState, useCallback } from "react";
 import styled from "styled-components";
 import { TimelineLite, Power3 } from "gsap";
 
@@ -34,7 +34,7 @@ const Container = styled.div`
   position: relative;
 
   @media only screen and (min-width: 992px) {
-    margin: 0px 20%;
+    margin: 0px 15%;
   }
 `;
 
@@ -74,7 +74,6 @@ const Main = () => {
 
   // Page scroll up on refresh
   window.onbeforeunload = function () {
-    gsap.to(main, 0, { opacity: 0 });
     window.scrollTo(0, 0);
   };
 
@@ -85,26 +84,30 @@ const Main = () => {
       masterTl.add(homeTl.play(), "-=2");
       masterTl.play();
     }
-  }, [navbarTl, homeTl, isLoading]);
+  }, [masterTl, navbarTl, homeTl, isLoading]);
 
-  const getNavbarTl = (tl) => {
+  const getNavbarTl = useCallback((tl) => {
     setNavbarTl(tl);
-  };
+  }, []);
 
-  const getHomeTl = (tl) => {
+  const getHomeTl = useCallback((tl) => {
     setHomeTl(tl);
-  };
+  }, []);
+
+  const setIsLoadingCallback = useCallback((isLoading) => {
+    setIsLoading(isLoading);
+  }, []);
 
   if (isLoading) {
-    return <LoadingScreen isLoading={setIsLoading} />;
+    return <LoadingScreen isLoading={setIsLoadingCallback} />;
   }
 
   return (
     <MainComp ref={(el) => (main = el)}>
-      <Navbar getTimeline={getNavbarTl} />
+      <Navbar getNavbarTl={getNavbarTl} />
       <Content>
         <Container ref={(el) => (container = el)}>
-          <Home getTimeline={getHomeTl} />
+          <Home getHomeTl={getHomeTl} />
           <About />
           <Skills />
           <Contact />

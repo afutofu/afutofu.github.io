@@ -1,7 +1,6 @@
-import React, { useRef, useEffect, useState } from "react";
-import ReactDOM from "react-dom";
+import React, { useRef, useEffect, useState, useCallback } from "react";
 import styled from "styled-components";
-import { TweenMax, TimelineLite, TimelineMax, Power3 } from "gsap";
+import { TimelineLite, TimelineMax, Power3 } from "gsap";
 
 import Logo from "./Logo";
 
@@ -30,10 +29,9 @@ const WhiteScreen = styled.div`
   transform: translate(-50%, -50%) scale(0);
 `;
 
-const LoadingScreen = (props) => {
+const LoadingScreen = ({ isLoadingCallback }) => {
   const [animationComplete, setAnimationComplete] = useState(false);
   const [mounted, setMounted] = useState(false);
-  let loadingScreen = useRef(null);
   let logo = useRef(null);
   let whiteScreen = useRef(null);
 
@@ -89,10 +87,10 @@ const LoadingScreen = (props) => {
     return tl;
   };
 
-  const onComplete = () => {
+  const onComplete = useCallback(() => {
     setAnimationComplete(true);
-    props.isLoading(false);
-  };
+    isLoadingCallback(false);
+  }, [isLoadingCallback]);
 
   useEffect(() => {
     setMounted(true);
@@ -103,11 +101,11 @@ const LoadingScreen = (props) => {
     master.add(whiteScreenEnter(), "+=0.5");
     // master.seek(4);
     master.play();
-  }, []);
+  }, [onComplete]);
 
   if (!animationComplete) {
     return (
-      <LoadingScreenComp ref={(el) => (loadingScreen = el)}>
+      <LoadingScreenComp>
         <Logo ref={(el) => (logo = el)} size={mounted ? 70 : 0} />
         <WhiteScreen ref={(el) => (whiteScreen = el)} />
       </LoadingScreenComp>

@@ -75,7 +75,8 @@ const Text = styled.p`
   line-height: 1.5rem;
   text-align: center;
   margin: 0;
-  margin-bottom: 35px;
+  padding: 0;
+  margin-bottom: 30px;
 
   @media only screen and (min-width: 992px) {
     max-width: 70%;

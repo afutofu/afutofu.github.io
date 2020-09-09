@@ -1,19 +1,32 @@
-import React, { useRef, useEffect, useState } from "react";
+import React, { useRef, useEffect, useCallback } from "react";
 import styled, { ThemeProvider } from "styled-components";
-import { TimelineLite, Power3 } from "gsap";
+import { gsap, TimelineLite, Power3 } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
 
 const HomeComp = styled.div`
   position: relative;
+  font-family: "Quicksand", "san-serif";
   width: 100%;
-  height: calc(100vh - 80px);
-  margin-top: 80px;
+  /* max-width: 2000px; */
+  height: 100vh;
+  padding-top: 80px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  /* margin: 0 auto; */
   box-sizing: border-box;
 `;
 
 const Content = styled.div`
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
+  position: relative;
+  margin: 0 auto;
+
+  /* padding-bottom: 150px; */
+  box-sizing: border-box;
+  @media only screen and (min-width: 2500px) {
+    max-width: 800px;
+  }
 `;
 
 const Introduction = styled.h3`
@@ -102,13 +115,19 @@ const theme = {
   color: "#ff350d",
 };
 
-const Home = (props) => {
-  let home = useRef(null);
+const Home = ({ getHomeTl }) => {
   let introduction = useRef(null);
   let name = useRef(null);
   let motto = useRef(null);
   let description = useRef(null);
   let button = useRef(null);
+
+  const getTimeline = useCallback(
+    (tl) => {
+      getHomeTl(tl);
+    },
+    [getHomeTl]
+  );
 
   const homeEnter = () => {
     let tl = new TimelineLite();
@@ -130,13 +149,13 @@ const Home = (props) => {
   useEffect(() => {
     let masterTl = new TimelineLite({ paused: true });
     masterTl.add(homeEnter());
-    props.getTimeline(masterTl);
-  }, []);
+    getTimeline(masterTl);
+  }, [getTimeline]);
 
   return (
-    <HomeComp ref={(el) => (home = el)}>
-      <ThemeProvider theme={theme}>
-        <Content>
+    <HomeComp>
+      <Content>
+        <ThemeProvider theme={theme}>
           <Introduction ref={(el) => (introduction = el)}>
             Hey there, I'm
           </Introduction>
@@ -153,8 +172,8 @@ const Home = (props) => {
             and still passionate since the first "Hello World"!
           </Description>
           <Button ref={(el) => (button = el)}>Contact Me</Button>
-        </Content>
-      </ThemeProvider>
+        </ThemeProvider>
+      </Content>
     </HomeComp>
   );
 };

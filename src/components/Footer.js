@@ -38,8 +38,8 @@ const Footer = () => {
     <FooterComp>
       <Credits>Developed by Muhammad Afuzarahman</Credits>
       <Socials>
-        <i class="fa fa-envelope"></i>
-        <i class="fa fa-github"></i>
+        <i className="fa fa-envelope"></i>
+        <i className="fa fa-github"></i>
       </Socials>
     </FooterComp>
   );
