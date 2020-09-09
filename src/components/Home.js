@@ -67,12 +67,12 @@ const MottoBold = styled.span`
 `;
 
 const Description = styled.p`
-  max-width: 70%;
-  color: #222;
-  font-weight: 400;
+  max-width: 60%;
   font-size: 17px;
-  margin-bottom: 35px;
   line-height: 1.5rem;
+  font-weight: 400;
+  margin: 0;
+  margin-bottom: 35px;
 
   @media only screen and (min-width: 992px) {
     max-width: 50%;

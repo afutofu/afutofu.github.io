@@ -8,18 +8,19 @@ gsap.registerPlugin(ScrollTrigger);
 const SkillsComp = styled.div`
   position: relative;
   width: 100%;
-  height: 600px;
+  /* height: 550px; */
   display: flex;
   justify-content: center;
   align-items: center;
   font-family: "Quicksand", "san-serif";
+  padding: 150px 0;
 `;
 
 const Content = styled.div`
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 90%;
+  position: relative;
+  /* top: 50%;
+  transform: translateY(-50%); */
+  width: 100%;
   max-width: 700px;
   text-align: left;
   color: #222;
@@ -73,7 +74,7 @@ const ListAreaWrapper = styled.div`
 `;
 
 const ListArea = styled.div`
-  width: 100%;
+  width: 90%;
   max-width: 600px;
   display: flex;
   justify-content: space-between;
@@ -113,11 +114,12 @@ const ListItems = styled.ul`
 
 const ListItem = styled.li`
   color: #222;
-  font-size: 18px;
+  font-size: 17px;
   padding-bottom: 5px;
+  font-weight: 500;
 
   @media only screen and (min-width: 992px) {
-    font-size: 20px;
+    font-size: 19px;
   }
 `;
 
@@ -232,8 +234,8 @@ const Skills = (props) => {
     let master = new TimelineLite({
       scrollTrigger: {
         trigger: titleText,
-        start: "top center",
-        toggleActions: "play none none reverse",
+        start: "top+=200 center+=200",
+        toggleActions: "play none none none",
       },
     });
     master.add(titleEnter());

@@ -7,17 +7,20 @@ gsap.registerPlugin(ScrollTrigger);
 const ContactComp = styled.div`
   position: relative;
   width: 100%;
-  height: 600px;
+  /* height: 550px; */
   display: flex;
   justify-content: center;
   align-items: center;
   font-family: "Quicksand", "san-serif";
+  box-sizing: border-box;
+  padding: 150px 0;
+  padding-bottom: calc(150px + 100px);
 `;
 
 const Content = styled.div`
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
+  position: relative;
+  /* top: 50%;
+  transform: translateY(-50%); */
   width: 90%;
   max-width: 700px;
   text-align: left;
@@ -69,10 +72,10 @@ const Text = styled.p`
   color: #222;
   font-weight: 400;
   font-size: 17px;
-  margin: 0;
-  margin-bottom: 35px;
   line-height: 1.5rem;
   text-align: center;
+  margin: 0;
+  margin-bottom: 35px;
 
   @media only screen and (min-width: 992px) {
     max-width: 70%;
@@ -177,9 +180,8 @@ const Contact = (props) => {
     let master = new TimelineLite({
       scrollTrigger: {
         trigger: titleText,
-        start: "top center",
-        toggleActions: "play none none reverse",
-        markers: true,
+        start: "top+=200 center+=200",
+        toggleActions: "play none none none",
       },
     });
     master.add(titleEnter());

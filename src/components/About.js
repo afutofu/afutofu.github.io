@@ -8,16 +8,20 @@ gsap.registerPlugin(ScrollTrigger);
 const AboutComp = styled.div`
   position: relative;
   width: 100%;
-  height: 600px;
+  /* height: 550px; */
   display: flex;
+  justify-content: center;
+  align-items: center;
   font-family: "Quicksand", "san-serif";
+  padding: 150px 0;
 `;
 
 const Content = styled.div`
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
+  position: relative;
+  /* top: 50%;
+  transform: translateY(-50%); */
   width: 100%;
+  max-width: 700px;
   text-align: left;
   color: #222;
   display: flex;
@@ -62,6 +66,7 @@ const TitleLine = styled.div`
 `;
 
 const Descriptions = styled.div`
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -70,10 +75,15 @@ const Descriptions = styled.div`
 
 const Description = styled.p`
   font-size: 19px;
-  line-height: 1.5rem;
+  line-height: 1.7rem;
   font-weight: 400;
   margin: 0;
   margin-bottom: 18px;
+
+  @media only screen and (min-width: 992px) {
+    font-size: 20px;
+    line-height: 1.8rem;
+  }
 `;
 
 const DescriptionBold = styled.span`
@@ -101,11 +111,11 @@ const About = (props) => {
       titleLine,
       {
         x: "-100%",
-        y: 13,
+        y: 14,
       },
       {
         x: 0,
-        y: 13,
+        y: 14,
         duration: 1.2,
         ease: Power3.easeInOut,
       },
@@ -135,8 +145,8 @@ const About = (props) => {
     let master = new TimelineLite({
       scrollTrigger: {
         trigger: titleText,
-        start: "top center",
-        toggleActions: "play none none reverse",
+        start: "top+=200 center+=200",
+        toggleActions: "play none none none",
       },
     });
     master.add(titleEnter());

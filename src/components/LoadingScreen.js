@@ -50,7 +50,7 @@ const LoadingScreen = (props) => {
   };
 
   const logoScaleOutIn = () => {
-    let tl = new TimelineMax({ repeat: 1 });
+    let tl = new TimelineMax();
 
     const scaleTime = 0.8;
 

@@ -8,9 +8,11 @@ import Home from "./Home";
 import About from "./About";
 import Skills from "./Skills";
 import Contact from "./Contact";
+import Footer from "./Footer";
+import gsap from "gsap/gsap-core";
 
 const MainComp = styled.div`
-  position: absolute;
+  position: relative;
   width: 100%;
   min-height: 100vh;
   margin: 0;
@@ -28,20 +30,15 @@ const Content = styled.div`
 `;
 
 const Container = styled.div`
-  padding: 0px 10%;
+  margin: 0px 10%;
   position: relative;
 
   @media only screen and (min-width: 992px) {
-    padding: 0px 20%;
+    margin: 0px 20%;
   }
 `;
 
 const Main = () => {
-  // Page scroll up on refresh
-  window.onbeforeunload = function () {
-    window.scrollTo(0, 0);
-  };
-
   const [navbarTl, setNavbarTl] = useState(null);
   const [homeTl, setHomeTl] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
@@ -75,6 +72,12 @@ const Main = () => {
     return tl;
   };
 
+  // Page scroll up on refresh
+  window.onbeforeunload = function () {
+    gsap.to(main, 0, { opacity: 0 });
+    window.scrollTo(0, 0);
+  };
+
   useEffect(() => {
     if (navbarTl && homeTl && !isLoading) {
       masterTl.add(backgroundFadeIn());
@@ -105,6 +108,7 @@ const Main = () => {
           <About />
           <Skills />
           <Contact />
+          <Footer />
         </Container>
       </Content>
     </MainComp>
