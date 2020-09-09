@@ -71,7 +71,7 @@ const Description = styled.p`
   color: #222;
   font-weight: 400;
   font-size: 17px;
-  margin-bottom: 40px;
+  margin-bottom: 35px;
   line-height: 1.5rem;
 
   @media only screen and (min-width: 992px) {
@@ -110,7 +110,7 @@ const Home = (props) => {
   let description = useRef(null);
   let button = useRef(null);
 
-  const textEnter = () => {
+  const homeEnter = () => {
     let tl = new TimelineLite();
 
     tl.staggerFrom(
@@ -129,7 +129,7 @@ const Home = (props) => {
 
   useEffect(() => {
     let masterTl = new TimelineLite({ paused: true });
-    masterTl.add(textEnter());
+    masterTl.add(homeEnter());
     props.getTimeline(masterTl);
   }, []);
 

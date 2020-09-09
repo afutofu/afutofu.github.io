@@ -7,6 +7,7 @@ import Navbar from "./Navbar";
 import Home from "./Home";
 import About from "./About";
 import Skills from "./Skills";
+import Contact from "./Contact";
 
 const MainComp = styled.div`
   position: absolute;
@@ -36,6 +37,11 @@ const Container = styled.div`
 `;
 
 const Main = () => {
+  // Page scroll up on refresh
+  window.onbeforeunload = function () {
+    window.scrollTo(0, 0);
+  };
+
   const [navbarTl, setNavbarTl] = useState(null);
   const [homeTl, setHomeTl] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
@@ -52,7 +58,7 @@ const Main = () => {
       duration: 0,
     })
       .to(main, {
-        backgroundColor: "#efefef",
+        backgroundColor: "#eee",
         duration: 3,
         ease: Power3.easeInOut,
       })
@@ -86,9 +92,9 @@ const Main = () => {
     setHomeTl(tl);
   };
 
-  // if (isLoading) {
-  //   return <LoadingScreen isLoading={setIsLoading} />;
-  // }
+  if (isLoading) {
+    return <LoadingScreen isLoading={setIsLoading} />;
+  }
 
   return (
     <MainComp ref={(el) => (main = el)}>
@@ -98,6 +104,7 @@ const Main = () => {
           <Home getTimeline={getHomeTl} />
           <About />
           <Skills />
+          <Contact />
         </Container>
       </Content>
     </MainComp>

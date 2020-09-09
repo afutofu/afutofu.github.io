@@ -232,7 +232,7 @@ const Skills = (props) => {
     let master = new TimelineLite({
       scrollTrigger: {
         trigger: titleText,
-        start: "top+200 center",
+        start: "top center",
         toggleActions: "play none none reverse",
       },
     });
