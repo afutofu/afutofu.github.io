@@ -14,7 +14,7 @@ const ContactComp = styled.div`
   font-family: "Quicksand", "san-serif";
   box-sizing: border-box;
   padding: 150px 0;
-  padding-bottom: calc(150px + 100px);
+  padding-bottom: calc(150px + 150px);
 `;
 
 const Content = styled.div`
@@ -130,7 +130,7 @@ const Contact = (props) => {
         {
           x: 0,
           y: 13,
-          duration: 1.2,
+          duration: 0.8,
           ease: Power3.easeInOut,
         },
         "-=0.2"
@@ -144,10 +144,10 @@ const Contact = (props) => {
         {
           x: 0,
           y: 13,
-          duration: 1.2,
+          duration: 0.82,
           ease: Power3.easeInOut,
         },
-        "-=1.2"
+        "-=0.8"
       );
 
     return tl;
@@ -186,7 +186,7 @@ const Contact = (props) => {
       },
     });
     master.add(titleEnter());
-    master.add(textEnter(), "-=0.45");
+    master.add(textEnter(), "-=0.3");
     master.add(buttonEnter(), "-=0.2");
   }, []);
 

@@ -29,7 +29,7 @@ const WhiteScreen = styled.div`
   transform: translate(-50%, -50%) scale(0);
 `;
 
-const LoadingScreen = ({ isLoadingCallback }) => {
+const LoadingScreen = ({ isLoading }) => {
   const [animationComplete, setAnimationComplete] = useState(false);
   const [mounted, setMounted] = useState(false);
   let logo = useRef(null);
@@ -89,8 +89,8 @@ const LoadingScreen = ({ isLoadingCallback }) => {
 
   const onComplete = useCallback(() => {
     setAnimationComplete(true);
-    isLoadingCallback(false);
-  }, [isLoadingCallback]);
+    isLoading(false);
+  }, [isLoading]);
 
   useEffect(() => {
     setMounted(true);

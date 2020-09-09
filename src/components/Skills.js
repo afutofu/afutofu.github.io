@@ -151,7 +151,7 @@ const Skills = (props) => {
         {
           x: 0,
           y: 13,
-          duration: 1.2,
+          duration: 0.8,
           ease: Power3.easeInOut,
         },
         "-=0.2"
@@ -165,10 +165,10 @@ const Skills = (props) => {
         {
           x: 0,
           y: 13,
-          duration: 1.2,
+          duration: 0.8,
           ease: Power3.easeInOut,
         },
-        "-=1.2"
+        "-=0.8"
       );
 
     return tl;
@@ -238,7 +238,7 @@ const Skills = (props) => {
       },
     });
     master.add(titleEnter());
-    master.add(listTitleEnter(), "-=0.5");
+    master.add(listTitleEnter(), "-=0.3");
     master.add(listItemsEnter(), "-=0.4");
   }, []);
 

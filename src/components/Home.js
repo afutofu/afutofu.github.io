@@ -10,7 +10,7 @@ const HomeComp = styled.div`
   width: 100%;
   /* max-width: 2000px; */
   height: 100vh;
-  padding-top: 80px;
+  padding-top: 60px;
   display: flex;
   justify-content: flex-start;
   align-items: center;

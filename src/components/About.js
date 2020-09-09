@@ -113,7 +113,7 @@ const About = (props) => {
       {
         x: 0,
         y: 14,
-        duration: 1.2,
+        duration: 0.8,
         ease: Power3.easeInOut,
       },
       "-=0.2"
@@ -147,7 +147,7 @@ const About = (props) => {
       },
     });
     master.add(titleEnter());
-    master.add(descriptionsEnter(), "-=0.5");
+    master.add(descriptionsEnter(), "-=0.3");
   }, []);
 
   return (

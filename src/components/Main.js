@@ -9,7 +9,6 @@ import About from "./About";
 import Skills from "./Skills";
 import Contact from "./Contact";
 import Footer from "./Footer";
-import gsap from "gsap/gsap-core";
 
 const MainComp = styled.div`
   position: relative;
@@ -45,7 +44,6 @@ const Main = () => {
   const [masterTl] = useState(new TimelineLite());
 
   let main = useRef(null);
-  let container = useRef(null);
 
   const backgroundFadeIn = () => {
     let tl = new TimelineLite();
@@ -53,28 +51,13 @@ const Main = () => {
     tl.to(main, {
       opacity: 1,
       duration: 0,
-    })
-      .to(main, {
-        backgroundColor: "#eee",
-        duration: 3,
-        ease: Power3.easeInOut,
-      })
-      .to(
-        container,
-        {
-          backgroundColor: "eee",
-          duration: 3,
-          ease: Power3.easeInOut,
-        },
-        "-=3"
-      );
+    }).to(main, {
+      backgroundColor: "#eee",
+      duration: 3,
+      ease: Power3.easeInOut,
+    });
 
     return tl;
-  };
-
-  // Page scroll up on refresh
-  window.onbeforeunload = function () {
-    window.scrollTo(0, 0);
   };
 
   useEffect(() => {
@@ -106,7 +89,7 @@ const Main = () => {
     <MainComp ref={(el) => (main = el)}>
       <Navbar getNavbarTl={getNavbarTl} />
       <Content>
-        <Container ref={(el) => (container = el)}>
+        <Container>
           <Home getHomeTl={getHomeTl} />
           <About />
           <Skills />

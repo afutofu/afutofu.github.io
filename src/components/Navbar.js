@@ -1,26 +1,28 @@
 import React, { useRef, useEffect } from "react";
 import styled from "styled-components";
-import { TimelineLite } from "gsap";
+import { TimelineLite, Power3 } from "gsap";
 
 import Logo from "./Logo";
 
 const NavbarComp = styled.div`
   position: fixed;
   width: 100%;
-  height: 80px;
+  height: 60px;
   padding: 10px 5%;
-  background-color: none;
+  background-color: white;
   display: flex;
   justify-content: space-between;
   align-items: center;
   box-sizing: border-box;
   margin: 0;
   z-index: 10;
+  transition: 0.3s;
 `;
 
 const NavItems = styled.ul`
-  width: 35%;
-  min-width: 350px;
+  width: 100%;
+  min-width: 300px;
+  max-width: 400px;
   color: #222;
   font-family: "Quicksand", "san-serif";
   display: flex;
@@ -35,7 +37,7 @@ const NavItems = styled.ul`
 
 const NavItem = styled.li`
   font-size: 20px;
-  padding: 5px;
+  padding: 0 10px;
   margin: 0;
   box-sizing: border-box;
   :hover {
@@ -45,15 +47,27 @@ const NavItem = styled.li`
 `;
 
 const Navbar = ({ getNavbarTl }) => {
+  let navbar = useRef(null);
   let logo = useRef(null);
   let about = useRef(null);
   let projects = useRef(null);
   let contact = useRef(null);
   let resume = useRef(null);
 
-  const navItemsEnter = () => {
+  const navbarEnter = () => {
     let tl = new TimelineLite();
 
+    tl.to(navbar, {
+      backgroundColor: "#eee",
+      duration: 2.5,
+      ease: Power3.easeInOut,
+    });
+
+    return tl;
+  };
+
+  const navItemsEnter = () => {
+    let tl = new TimelineLite();
     tl.from(logo, 1.5, {
       opacity: 0,
     }).staggerFrom(
@@ -72,12 +86,38 @@ const Navbar = ({ getNavbarTl }) => {
 
   useEffect(() => {
     let masterTl = new TimelineLite({ paused: true });
-    masterTl.add(navItemsEnter());
+    masterTl.add(navbarEnter());
+    masterTl.add(navItemsEnter(), "-=2.5");
     getNavbarTl(masterTl);
   }, [getNavbarTl]);
 
+  useEffect(() => {
+    navbar.style.top = "0px";
+    const navbarClass = "." + navbar.getAttribute("class").split(" ").join(".");
+
+    let scrollPosition = 0;
+    window.addEventListener("scroll", () => {
+      const navbarDOM = document.querySelector(navbarClass);
+      let topOfScreenPosition =
+        window.pageYOffset || document.documentElement.scrollTop;
+
+      if (topOfScreenPosition > scrollPosition) {
+        navbarDOM.style.top = "-80px";
+      } else {
+        navbarDOM.style.top = "0";
+        navbarDOM.style.boxShadow = "0px 1px 15px 0px rgba(0, 0, 0, 0.1)";
+
+        if (scrollPosition < 20) {
+          navbarDOM.style.boxShadow = "";
+        }
+      }
+
+      scrollPosition = topOfScreenPosition;
+    });
+  }, [navbar]);
+
   return (
-    <NavbarComp>
+    <NavbarComp ref={(el) => (navbar = el)}>
       <Logo size={30} pointer ref={(el) => (logo = el)} />
       <NavItems>
         <NavItem ref={(el) => (about = el)}>About</NavItem>
