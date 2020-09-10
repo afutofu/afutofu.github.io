@@ -243,7 +243,7 @@ const Skills = (props) => {
   }, []);
 
   return (
-    <SkillsComp>
+    <SkillsComp id="skills">
       <ThemeProvider theme={theme}>
         <Content>
           <TitleArea>

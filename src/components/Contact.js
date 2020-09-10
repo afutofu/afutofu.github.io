@@ -14,7 +14,7 @@ const ContactComp = styled.div`
   font-family: "Quicksand", "san-serif";
   box-sizing: border-box;
   padding: 150px 0;
-  padding-bottom: calc(150px + 150px);
+  padding-bottom: 200px;
 `;
 
 const Content = styled.div`
@@ -191,7 +191,7 @@ const Contact = (props) => {
   }, []);
 
   return (
-    <ContactComp>
+    <ContactComp id="contact">
       <ThemeProvider theme={theme}>
         <Content>
           <TitleArea>

@@ -10,12 +10,16 @@ const LogoComp = styled.h1`
   padding: 8px;
   cursor: ${(props) => (props.pointer ? "pointer" : "auto")};
   box-sizing: border-box;
+
+  .active {
+    font-size: 100px;
+    box-shadow: 10px 10px #ff350d;
+  }
 `;
 
 const Logo = forwardRef((props, ref) => {
   return (
     <LogoComp ref={ref} size={props.size} pointer={props.pointer}>
-      {" "}
       A
     </LogoComp>
   );

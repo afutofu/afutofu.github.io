@@ -151,7 +151,7 @@ const About = (props) => {
   }, []);
 
   return (
-    <AboutComp>
+    <AboutComp id="about">
       <ThemeProvider theme={theme}>
         <Content>
           <TitleArea>

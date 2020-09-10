@@ -153,7 +153,7 @@ const Home = ({ getHomeTl }) => {
   }, [getTimeline]);
 
   return (
-    <HomeComp>
+    <HomeComp id="home">
       <Content>
         <ThemeProvider theme={theme}>
           <Introduction ref={(el) => (introduction = el)}>

@@ -23,7 +23,6 @@ const MainComp = styled.div`
 `;
 
 const Content = styled.div`
-  /* padding-top: 60px; */
   color: #222;
   font-family: "Quicksand", "san-serif";
 `;

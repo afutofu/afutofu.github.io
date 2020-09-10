@@ -1,6 +1,7 @@
 import React, { useRef, useEffect } from "react";
 import styled from "styled-components";
 import { TimelineLite, Power3 } from "gsap";
+import { Link } from "react-scroll";
 
 import Logo from "./Logo";
 
@@ -33,6 +34,10 @@ const NavItems = styled.ul`
   padding-left: 10px;
   margin: 0;
   box-sizing: border-box;
+
+  @media only screen and (min-width: 992px) {
+    max-width: 500px;
+  }
 `;
 
 const NavItem = styled.li`
@@ -40,6 +45,9 @@ const NavItem = styled.li`
   padding: 0 10px;
   margin: 0;
   box-sizing: border-box;
+
+  transition: 0.3s;
+
   :hover {
     cursor: pointer;
     color: #ff350d;
@@ -50,6 +58,7 @@ const Navbar = ({ getNavbarTl }) => {
   let navbar = useRef(null);
   let logo = useRef(null);
   let about = useRef(null);
+  let skills = useRef(null);
   let projects = useRef(null);
   let contact = useRef(null);
   let resume = useRef(null);
@@ -71,7 +80,7 @@ const Navbar = ({ getNavbarTl }) => {
     tl.from(logo, 1.5, {
       opacity: 0,
     }).staggerFrom(
-      [about, projects, contact, resume],
+      [about, skills, projects, contact, resume],
       0.5,
       {
         y: -100,
@@ -87,7 +96,7 @@ const Navbar = ({ getNavbarTl }) => {
   useEffect(() => {
     let masterTl = new TimelineLite({ paused: true });
     masterTl.add(navbarEnter());
-    masterTl.add(navItemsEnter(), "-=2.5");
+    masterTl.add(navItemsEnter(), "-=2");
     getNavbarTl(masterTl);
   }, [getNavbarTl]);
 
@@ -118,11 +127,65 @@ const Navbar = ({ getNavbarTl }) => {
 
   return (
     <NavbarComp ref={(el) => (navbar = el)}>
-      <Logo size={30} pointer ref={(el) => (logo = el)} />
+      <Link
+        to="home"
+        smooth={true}
+        duration={1000}
+        spy={true}
+        offset={0}
+        ignoreCancelEvents={true}
+      >
+        <Logo size={30} pointer ref={(el) => (logo = el)} />
+      </Link>
       <NavItems>
-        <NavItem ref={(el) => (about = el)}>About</NavItem>
-        <NavItem ref={(el) => (projects = el)}>Projects</NavItem>
-        <NavItem ref={(el) => (contact = el)}>Contact</NavItem>
+        <NavItem ref={(el) => (about = el)}>
+          <Link
+            to="about"
+            smooth={true}
+            duration={1000}
+            spy={true}
+            offset={0}
+            ignoreCancelEvents={true}
+          >
+            About
+          </Link>
+        </NavItem>
+        <NavItem ref={(el) => (skills = el)}>
+          <Link
+            to="skills"
+            smooth={true}
+            duration={1000}
+            spy={true}
+            offset={0}
+            ignoreCancelEvents={true}
+          >
+            Skills
+          </Link>
+        </NavItem>
+        <NavItem ref={(el) => (projects = el)}>
+          <Link
+            to="projects"
+            smooth={true}
+            duration={1000}
+            spy={true}
+            offset={0}
+            ignoreCancelEvents={true}
+          >
+            Projects
+          </Link>
+        </NavItem>
+        <NavItem ref={(el) => (contact = el)}>
+          <Link
+            to="contact"
+            smooth={true}
+            duration={1000}
+            spy={true}
+            offset={0}
+            ignoreCancelEvents={true}
+          >
+            Contact
+          </Link>
+        </NavItem>
         <NavItem ref={(el) => (resume = el)}>Resume</NavItem>
       </NavItems>
     </NavbarComp>

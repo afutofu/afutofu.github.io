@@ -6,7 +6,7 @@ const FooterComp = styled.div`
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 100px;
+  height: 70px;
   display: flex;
   justify-content: space-between;
   align-items: center;
