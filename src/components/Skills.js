@@ -8,19 +8,45 @@ gsap.registerPlugin(ScrollTrigger);
 const SkillsComp = styled.div`
   position: relative;
   width: 100%;
+  font-family: "Quicksand", "san-serif";
   /* height: 550px; */
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: "Quicksand", "san-serif";
   padding: 150px 0;
+  box-sizing: border-box;
+  background-color: #eee;
+  z-index: 0;
+
+  :after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-color: inherit;
+    transform-origin: top right;
+    transform: skewY(-6deg);
+  }
+`;
+
+const Container = styled.div`
+  margin: 0px 10%;
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @media only screen and (min-width: 992px) {
+    margin: 0px 15%;
+  }
 `;
 
 const Content = styled.div`
   position: relative;
   /* top: 50%;
   transform: translateY(-50%); */
-  width: 100%;
+  width: 90%;
   max-width: 700px;
   text-align: left;
   color: #222;
@@ -244,55 +270,59 @@ const Skills = (props) => {
 
   return (
     <SkillsComp id="skills">
-      <ThemeProvider theme={theme}>
-        <Content>
-          <TitleArea>
-            <TitleLineWrapper>
-              <TitleLine ref={(el) => (titleLineLeft = el)} />
-            </TitleLineWrapper>
-            <Title ref={(el) => (titleText = el)}>
-              <TitleHighlight>Skills</TitleHighlight> I'm Proud Of
-            </Title>
-            <TitleLineWrapper>
-              <TitleLine ref={(el) => (titleLineRight = el)} />
-            </TitleLineWrapper>
-          </TitleArea>
-          <ListAreaWrapper>
-            <ListArea>
-              <List>
-                <ListTitle ref={(el) => (listTitle = el)}>Languages</ListTitle>
-                <ListItems ref={(el) => (listItems = el)}>
-                  <ListItem>Javascript (ES6)</ListItem>
-                  <ListItem>HTML</ListItem>
-                  <ListItem>CSS</ListItem>
-                  <ListItem>Python</ListItem>
-                  <ListItem>SQL</ListItem>
-                  <ListItem>PHP</ListItem>
-                  <ListItem>Java</ListItem>
-                </ListItems>
-              </List>
-              <List>
-                <ListTitle>Frameworks</ListTitle>
-                <ListItems>
-                  <ListItem>React</ListItem>
-                  <ListItem>Express</ListItem>
-                  <ListItem>Laravel</ListItem>
-                </ListItems>
-              </List>
-              <List>
-                <ListTitle>Tools</ListTitle>
-                <ListItems>
-                  <ListItem>Git & Github</ListItem>
-                  <ListItem>Postman</ListItem>
-                  <ListItem>MongoDB</ListItem>
-                  <ListItem>Chrome DevTools</ListItem>
-                  <ListItem>Bash</ListItem>
-                </ListItems>
-              </List>
-            </ListArea>
-          </ListAreaWrapper>
-        </Content>
-      </ThemeProvider>
+      <Container>
+        <ThemeProvider theme={theme}>
+          <Content>
+            <TitleArea>
+              <TitleLineWrapper>
+                <TitleLine ref={(el) => (titleLineLeft = el)} />
+              </TitleLineWrapper>
+              <Title ref={(el) => (titleText = el)}>
+                <TitleHighlight>Skills</TitleHighlight> I'm Proud Of
+              </Title>
+              <TitleLineWrapper>
+                <TitleLine ref={(el) => (titleLineRight = el)} />
+              </TitleLineWrapper>
+            </TitleArea>
+            <ListAreaWrapper>
+              <ListArea>
+                <List>
+                  <ListTitle ref={(el) => (listTitle = el)}>
+                    Languages
+                  </ListTitle>
+                  <ListItems ref={(el) => (listItems = el)}>
+                    <ListItem>Javascript (ES6)</ListItem>
+                    <ListItem>HTML</ListItem>
+                    <ListItem>CSS</ListItem>
+                    <ListItem>Python</ListItem>
+                    <ListItem>SQL</ListItem>
+                    <ListItem>PHP</ListItem>
+                    <ListItem>Java</ListItem>
+                  </ListItems>
+                </List>
+                <List>
+                  <ListTitle>Frameworks</ListTitle>
+                  <ListItems>
+                    <ListItem>React</ListItem>
+                    <ListItem>Express</ListItem>
+                    <ListItem>Laravel</ListItem>
+                  </ListItems>
+                </List>
+                <List>
+                  <ListTitle>Tools</ListTitle>
+                  <ListItems>
+                    <ListItem>Git & Github</ListItem>
+                    <ListItem>Postman</ListItem>
+                    <ListItem>MongoDB</ListItem>
+                    <ListItem>Chrome DevTools</ListItem>
+                    <ListItem>Bash</ListItem>
+                  </ListItems>
+                </List>
+              </ListArea>
+            </ListAreaWrapper>
+          </Content>
+        </ThemeProvider>
+      </Container>
     </SkillsComp>
   );
 };

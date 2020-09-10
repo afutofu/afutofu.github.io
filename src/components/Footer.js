@@ -7,10 +7,22 @@ const FooterComp = styled.div`
   left: 0;
   width: 100%;
   height: 70px;
+`;
+
+const Container = styled.div`
+  margin: 0px 10%;
+  position: relative;
+
+  @media only screen and (min-width: 992px) {
+    margin: 0px 15%;
+  }
+`;
+
+const Content = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  box-sizing: border-boxl;
+  box-sizing: border-box;
 `;
 
 const Credits = styled.h3`
@@ -36,11 +48,15 @@ const Socials = styled.div`
 const Footer = () => {
   return (
     <FooterComp>
-      <Credits>Developed by Muhammad Afuzarahman</Credits>
-      <Socials>
-        <i className="fa fa-envelope"></i>
-        <i className="fa fa-github"></i>
-      </Socials>
+      <Container>
+        <Content>
+          <Credits>Developed by Muhammad Afuzarahman</Credits>
+          <Socials>
+            <i className="fa fa-envelope"></i>
+            <i className="fa fa-github"></i>
+          </Socials>
+        </Content>
+      </Container>
     </FooterComp>
   );
 };

@@ -16,6 +16,16 @@ const HomeComp = styled.div`
   align-items: center;
   /* margin: 0 auto; */
   box-sizing: border-box;
+  background-color: #eee;
+`;
+
+const Container = styled.div`
+  margin: 0px 10%;
+  position: relative;
+
+  @media only screen and (min-width: 992px) {
+    margin: 0px 15%;
+  }
 `;
 
 const Content = styled.div`
@@ -154,26 +164,28 @@ const Home = ({ getHomeTl }) => {
 
   return (
     <HomeComp id="home">
-      <Content>
-        <ThemeProvider theme={theme}>
-          <Introduction ref={(el) => (introduction = el)}>
-            Hey there, I'm
-          </Introduction>
-          <Name ref={(el) => (name = el)}>
-            Muhammad <NameBold>Afuza</NameBold>rahman
-          </Name>
-          <Motto ref={(el) => (motto = el)}>
-            Ready To <MottoBold>Build</MottoBold> And{" "}
-            <MottoBold>Learn</MottoBold>
-          </Motto>
-          <Description ref={(el) => (description = el)}>
-            Currently a college student who loves to code. Started coding games,
-            then systems, then websites for over 4 years. Only getting better
-            and still passionate since the first "Hello World"!
-          </Description>
-          <Button ref={(el) => (button = el)}>Contact Me</Button>
-        </ThemeProvider>
-      </Content>
+      <Container>
+        <Content>
+          <ThemeProvider theme={theme}>
+            <Introduction ref={(el) => (introduction = el)}>
+              Hey there, I'm
+            </Introduction>
+            <Name ref={(el) => (name = el)}>
+              Muhammad <NameBold>Afuza</NameBold>rahman
+            </Name>
+            <Motto ref={(el) => (motto = el)}>
+              Ready To <MottoBold>Build</MottoBold> And{" "}
+              <MottoBold>Learn</MottoBold>
+            </Motto>
+            <Description ref={(el) => (description = el)}>
+              Currently a college student who loves to code. Started coding
+              games, then systems, then websites for over 4 years. Only getting
+              better and still passionate since the first "Hello World"!
+            </Description>
+            <Button ref={(el) => (button = el)}>Contact Me</Button>
+          </ThemeProvider>
+        </Content>
+      </Container>
     </HomeComp>
   );
 };

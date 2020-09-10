@@ -14,6 +14,20 @@ const AboutComp = styled.div`
   align-items: center;
   font-family: "Quicksand", "san-serif";
   padding: 150px 0;
+  background-color: #eee;
+`;
+
+const Container = styled.div`
+  margin: 0px 10%;
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @media only screen and (min-width: 992px) {
+    margin: 0px 15%;
+  }
 `;
 
 const Content = styled.div`
@@ -152,39 +166,41 @@ const About = (props) => {
 
   return (
     <AboutComp id="about">
-      <ThemeProvider theme={theme}>
-        <Content>
-          <TitleArea>
-            <Title ref={(el) => (titleText = el)}>
-              A Bit <TitleHighlight>About</TitleHighlight> Me
-            </Title>
-            <TitleLineWrapper>
-              <TitleLine ref={(el) => (titleLine = el)} />
-            </TitleLineWrapper>
-          </TitleArea>
-          <Descriptions ref={(el) => (descriptions = el)}>
-            <Description>
-              Hi! I'm Afuza, a college student in Seattle, WA.
-            </Description>
-            <Description>
-              Ever since starting programming, I feel like I've uncovered a
-              treasure trove filled with exciting opportunities and untouched
-              potential. I've built projects ranging from{" "}
-              <DescriptionBold>2D video games</DescriptionBold>,{" "}
-              <DescriptionBold>personal management tools</DescriptionBold>,{" "}
-              <DescriptionBold>company systems</DescriptionBold>,{" "}
-              <DescriptionBold>robots</DescriptionBold>,{" "}
-              <DescriptionBold>AI</DescriptionBold>, and currently a lot of{" "}
-              <DescriptionBold>websites</DescriptionBold>.
-            </Description>
-            <Description>
-              Websites are currently my application of practice, and I'm avid to
-              keep creating and looking forward to contributing to helpful and
-              meaningful projects.
-            </Description>
-          </Descriptions>
-        </Content>
-      </ThemeProvider>
+      <Container>
+        <ThemeProvider theme={theme}>
+          <Content>
+            <TitleArea>
+              <Title ref={(el) => (titleText = el)}>
+                A Bit <TitleHighlight>About</TitleHighlight> Me
+              </Title>
+              <TitleLineWrapper>
+                <TitleLine ref={(el) => (titleLine = el)} />
+              </TitleLineWrapper>
+            </TitleArea>
+            <Descriptions ref={(el) => (descriptions = el)}>
+              <Description>
+                Hi! I'm Afuza, a college student in Seattle, WA.
+              </Description>
+              <Description>
+                Ever since starting programming, I feel like I've uncovered a
+                treasure trove filled with exciting opportunities and untouched
+                potential. I've built projects ranging from{" "}
+                <DescriptionBold>2D video games</DescriptionBold>,{" "}
+                <DescriptionBold>personal management tools</DescriptionBold>,{" "}
+                <DescriptionBold>company systems</DescriptionBold>,{" "}
+                <DescriptionBold>robots</DescriptionBold>,{" "}
+                <DescriptionBold>AI</DescriptionBold>, and currently a lot of{" "}
+                <DescriptionBold>websites</DescriptionBold>.
+              </Description>
+              <Description>
+                Websites are currently my application of practice, and I'm avid
+                to keep creating and looking forward to contributing to helpful
+                and meaningful projects.
+              </Description>
+            </Descriptions>
+          </Content>
+        </ThemeProvider>
+      </Container>
     </AboutComp>
   );
 };

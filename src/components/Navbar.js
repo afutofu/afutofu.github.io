@@ -16,14 +16,14 @@ const NavbarComp = styled.div`
   align-items: center;
   box-sizing: border-box;
   margin: 0;
-  z-index: 10;
+  z-index: 500;
   transition: 0.3s;
 `;
 
 const NavItems = styled.ul`
   width: 100%;
   min-width: 300px;
-  max-width: 400px;
+  max-width: 450px;
   color: #222;
   font-family: "Quicksand", "san-serif";
   display: flex;
@@ -116,7 +116,7 @@ const Navbar = ({ getNavbarTl }) => {
         navbarDOM.style.top = "0";
         navbarDOM.style.boxShadow = "0px 1px 15px 0px rgba(0, 0, 0, 0.1)";
 
-        if (scrollPosition < 20) {
+        if (scrollPosition < 30) {
           navbarDOM.style.boxShadow = "";
         }
       }
@@ -144,7 +144,7 @@ const Navbar = ({ getNavbarTl }) => {
             smooth={true}
             duration={1000}
             spy={true}
-            offset={0}
+            offset={-30}
             ignoreCancelEvents={true}
           >
             About
@@ -156,7 +156,7 @@ const Navbar = ({ getNavbarTl }) => {
             smooth={true}
             duration={1000}
             spy={true}
-            offset={0}
+            offset={-50}
             ignoreCancelEvents={true}
           >
             Skills
@@ -168,7 +168,7 @@ const Navbar = ({ getNavbarTl }) => {
             smooth={true}
             duration={1000}
             spy={true}
-            offset={0}
+            offset={-50}
             ignoreCancelEvents={true}
           >
             Projects

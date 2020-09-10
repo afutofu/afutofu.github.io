@@ -14,7 +14,33 @@ const ContactComp = styled.div`
   font-family: "Quicksand", "san-serif";
   box-sizing: border-box;
   padding: 150px 0;
-  padding-bottom: 200px;
+  padding-bottom: 270px;
+  background-color: #eee;
+  z-index: 0;
+
+  :before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-color: inherit;
+    transform-origin: bottom left;
+    transform: skewY(-6deg);
+  }
+`;
+
+const Container = styled.div`
+  margin: 0px 10%;
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @media only screen and (min-width: 992px) {
+    margin: 0px 15%;
+  }
 `;
 
 const Content = styled.div`
@@ -192,28 +218,30 @@ const Contact = (props) => {
 
   return (
     <ContactComp id="contact">
-      <ThemeProvider theme={theme}>
-        <Content>
-          <TitleArea>
-            <TitleLineWrapper>
-              <TitleLine ref={(el) => (titleLineLeft = el)} />
-            </TitleLineWrapper>
-            <Title ref={(el) => (titleText = el)}>
-              Feel Free To <TitleHighlight>Contact</TitleHighlight> Me!
-            </Title>
-            <TitleLineWrapper>
-              <TitleLine ref={(el) => (titleLineRight = el)} />
-            </TitleLineWrapper>
-          </TitleArea>
-          <Text ref={(el) => (text = el)}>
-            I'm looking forward to working as a full time web developer -
-            frontent, backend, or full-stack. So feel free to let me know if
-            you're interested in hiring, want to ask some questions, or just
-            want to say hi!
-          </Text>
-          <Button ref={(el) => (button = el)}>Contact Me</Button>
-        </Content>
-      </ThemeProvider>
+      <Container>
+        <ThemeProvider theme={theme}>
+          <Content>
+            <TitleArea>
+              <TitleLineWrapper>
+                <TitleLine ref={(el) => (titleLineLeft = el)} />
+              </TitleLineWrapper>
+              <Title ref={(el) => (titleText = el)}>
+                Feel Free To <TitleHighlight>Contact</TitleHighlight> Me!
+              </Title>
+              <TitleLineWrapper>
+                <TitleLine ref={(el) => (titleLineRight = el)} />
+              </TitleLineWrapper>
+            </TitleArea>
+            <Text ref={(el) => (text = el)}>
+              I'm looking forward to working as a full time web developer -
+              frontent, backend, or full-stack. So feel free to let me know if
+              you're interested in hiring, want to ask some questions, or just
+              want to say hi!
+            </Text>
+            <Button ref={(el) => (button = el)}>Contact Me</Button>
+          </Content>
+        </ThemeProvider>
+      </Container>
     </ContactComp>
   );
 };
