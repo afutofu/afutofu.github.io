@@ -16,7 +16,6 @@ const HomeComp = styled.div`
   align-items: center;
   /* margin: 0 auto; */
   box-sizing: border-box;
-  background-color: #eee;
 `;
 
 const Container = styled.div`
@@ -126,6 +125,7 @@ const theme = {
 };
 
 const Home = ({ getHomeTl }) => {
+  let home = useRef(null);
   let introduction = useRef(null);
   let name = useRef(null);
   let motto = useRef(null);
@@ -150,7 +150,8 @@ const Home = ({ getHomeTl }) => {
         opacity: 0,
         ease: Power3.easeOut,
       },
-      0.2
+      0.2,
+      "-=2"
     );
 
     return tl;
@@ -163,7 +164,7 @@ const Home = ({ getHomeTl }) => {
   }, [getTimeline]);
 
   return (
-    <HomeComp id="home">
+    <HomeComp id="home" ref={(el) => (home = el)}>
       <Container>
         <Content>
           <ThemeProvider theme={theme}>

@@ -15,7 +15,7 @@ const SkillsComp = styled.div`
   align-items: center;
   padding: 150px 0;
   box-sizing: border-box;
-  background-color: #eee;
+  background-color: inherit;
   z-index: 0;
 
   :after {

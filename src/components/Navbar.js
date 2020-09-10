@@ -10,7 +10,7 @@ const NavbarComp = styled.div`
   width: 100%;
   height: 60px;
   padding: 10px 5%;
-  background-color: white;
+  background-color: none;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -68,7 +68,7 @@ const Navbar = ({ getNavbarTl }) => {
 
     tl.to(navbar, {
       backgroundColor: "#eee",
-      duration: 2.5,
+      duration: 2,
       ease: Power3.easeInOut,
     });
 
@@ -77,6 +77,7 @@ const Navbar = ({ getNavbarTl }) => {
 
   const navItemsEnter = () => {
     let tl = new TimelineLite();
+
     tl.from(logo, 1.5, {
       opacity: 0,
     }).staggerFrom(
@@ -84,10 +85,10 @@ const Navbar = ({ getNavbarTl }) => {
       0.5,
       {
         y: -100,
-        opacity: 1,
+        opacity: 0,
       },
       0.2,
-      "-=1.5"
+      "-=1.2"
     );
 
     return tl;
@@ -96,7 +97,7 @@ const Navbar = ({ getNavbarTl }) => {
   useEffect(() => {
     let masterTl = new TimelineLite({ paused: true });
     masterTl.add(navbarEnter());
-    masterTl.add(navItemsEnter(), "-=2");
+    masterTl.add(navItemsEnter(), "-=1.9");
     getNavbarTl(masterTl);
   }, [getNavbarTl]);
 
@@ -116,7 +117,7 @@ const Navbar = ({ getNavbarTl }) => {
         navbarDOM.style.top = "0";
         navbarDOM.style.boxShadow = "0px 1px 15px 0px rgba(0, 0, 0, 0.1)";
 
-        if (scrollPosition < 30) {
+        if (scrollPosition < 50) {
           navbarDOM.style.boxShadow = "";
         }
       }

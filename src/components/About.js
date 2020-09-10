@@ -14,7 +14,7 @@ const AboutComp = styled.div`
   align-items: center;
   font-family: "Quicksand", "san-serif";
   padding: 150px 0;
-  background-color: #eee;
+  /* background-color: white; */
 `;
 
 const Container = styled.div`
@@ -106,10 +106,23 @@ const theme = {
   color: "#ff350d",
 };
 
-const About = (props) => {
+const About = () => {
+  let about = useRef(null);
   let titleText = useRef(null);
   let titleLine = useRef(null);
   let descriptions = useRef(null);
+
+  const backgroundFade = () => {
+    let tl = new TimelineLite();
+
+    tl.to(about, {
+      backgroundColor: "#eee",
+      ease: Power3.easeInOut,
+      duration: 2,
+    });
+
+    return tl;
+  };
 
   const titleEnter = () => {
     let tl = new TimelineLite();
@@ -160,12 +173,13 @@ const About = (props) => {
         toggleActions: "play none none none",
       },
     });
+    // master.add(backgroundFade());
     master.add(titleEnter());
     master.add(descriptionsEnter(), "-=0.3");
   }, []);
 
   return (
-    <AboutComp id="about">
+    <AboutComp id="about" ref={(el) => (about = el)}>
       <Container>
         <ThemeProvider theme={theme}>
           <Content>

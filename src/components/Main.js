@@ -21,7 +21,7 @@ const MainComp = styled.div`
   padding: 0;
   background-color: white;
   box-sizing: border-box;
-  overflow: auto;
+  overflow-y: hidden;
   opacity: 0;
   z-index: 10;
 `;
@@ -52,21 +52,16 @@ const BackgroundImage = styled.img.attrs((props) => ({
   object-fit: cover;
 `;
 
-// const BackgroundImage = styled.div`
-//   position: fixed;
-//   width: 100%;
-//   height: 100%;
-//   z-index: -500;
-//   background-image: url(${skyrimWallpaper});
-//   background-size: cover;
-//   /* object-fit: cover; */
-// `;
-
 const Content = styled.div`
-  /* background-color: white; */
   color: #222;
   font-family: "Quicksand", "san-serif";
   z-index: 0;
+`;
+
+const ContentBackground = styled.div`
+  width: 100%;
+  height: 100%;
+  background-color: white;
 `;
 
 const Main = () => {
@@ -77,27 +72,39 @@ const Main = () => {
 
   let main = useRef(null);
   let content = useRef(null);
+  let contentBg1 = useRef(null);
+  let contentBg2 = useRef(null);
 
-  const backgroundFadeIn = () => {
+  const mainEnter = () => {
     let tl = new TimelineLite();
 
     tl.to(main, {
       opacity: 1,
       duration: 0,
-    }).to(main, {
-      backgroundColor: "#eee",
-      duration: 3,
-      ease: Power3.easeInOut,
-    });
+    })
+      .to(contentBg1, {
+        backgroundColor: "#eee",
+        duration: 2,
+        ease: Power3.easeInOut,
+      })
+      .to(
+        contentBg2,
+        {
+          backgroundColor: "#eee",
+          duration: 2,
+          ease: Power3.easeInOut,
+        },
+        "-=2"
+      );
 
     return tl;
   };
 
   useEffect(() => {
     if (navbarTl && homeTl && !isLoading) {
-      masterTl.add(backgroundFadeIn());
-      masterTl.add(navbarTl.play(), "-=3");
-      masterTl.add(homeTl.play(), "-=2");
+      masterTl.add(mainEnter());
+      masterTl.add(navbarTl.play(), "-=2");
+      masterTl.add(homeTl.play(), "-=1");
       masterTl.play();
     }
   }, [masterTl, navbarTl, homeTl, isLoading]);
@@ -126,12 +133,16 @@ const Main = () => {
         <BackgroundImageContainer>
           <BackgroundImage />
         </BackgroundImageContainer>
-        <Home getHomeTl={getHomeTl} />
-        <About />
-        <Skills />
+        <ContentBackground ref={(el) => (contentBg1 = el)}>
+          <Home getHomeTl={getHomeTl} />
+          <About />
+          <Skills />
+        </ContentBackground>
         <Projects />
-        <Contact />
-        <Footer />
+        <ContentBackground ref={(el) => (contentBg2 = el)}>
+          <Contact />
+          <Footer />
+        </ContentBackground>
       </Content>
     </MainComp>
   );
