@@ -26,7 +26,7 @@ const SkillsComp = styled.div`
     z-index: -1;
     background-color: inherit;
     transform-origin: top right;
-    transform: skewY(-6deg);
+    transform: skewY(-5deg);
   }
 `;
 

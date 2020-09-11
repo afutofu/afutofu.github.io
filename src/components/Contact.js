@@ -15,18 +15,18 @@ const ContactComp = styled.div`
   box-sizing: border-box;
   padding: 150px 0;
   padding-bottom: 270px;
-  background-color: #eee;
+  background-color: inherit;
   z-index: 0;
 
   :before {
     content: "";
     position: absolute;
     width: 100%;
-    height: 100%;
+    height: 110%;
     z-index: -1;
     background-color: inherit;
     transform-origin: bottom left;
-    transform: skewY(-6deg);
+    transform: skewY(-5deg);
   }
 `;
 
@@ -207,8 +207,9 @@ const Contact = (props) => {
     let master = new TimelineLite({
       scrollTrigger: {
         trigger: titleText,
-        start: "top+=200 center+=200",
+        start: "top+=2000 center+=200",
         toggleActions: "play none none none",
+        markers: true,
       },
     });
     master.add(titleEnter());
