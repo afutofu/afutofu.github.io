@@ -22,7 +22,7 @@ const ContactComp = styled.div`
     content: "";
     position: absolute;
     width: 100%;
-    height: 110%;
+    height: 100%;
     z-index: -1;
     background-color: inherit;
     transform-origin: bottom left;
@@ -207,9 +207,8 @@ const Contact = (props) => {
     let master = new TimelineLite({
       scrollTrigger: {
         trigger: titleText,
-        start: "top+=2000 center+=200",
+        start: "top center",
         toggleActions: "play none none none",
-        markers: true,
       },
     });
     master.add(titleEnter());

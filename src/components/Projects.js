@@ -10,10 +10,12 @@ gsap.registerPlugin(ScrollTrigger);
 const ProjectsComp = styled.div`
   position: relative;
   width: 100%;
+  min-height: 1900px;
   display: flex;
   justify-content: center;
   align-items: center;
   font-family: "Quicksand", "san-serif";
+  padding-top: 100px;
   margin: 150px 0;
   margin-bottom: 250px;
   /* padding: 250px 0; */
@@ -21,6 +23,10 @@ const ProjectsComp = styled.div`
   object-fit: cover;
   overflow: hidden;
   z-index: 0;
+
+  @media only screen and (min-width: 1200px) {
+    min-height: 2100px;
+  }
 `;
 
 const Container = styled.div`
@@ -39,7 +45,7 @@ const Container = styled.div`
 const Content = styled.div`
   position: relative;
   width: 100%;
-  max-width: 900px;
+  /* max-width: 900px; */
   text-align: left;
   color: #eee;
   display: flex;
@@ -100,14 +106,10 @@ const Projects = () => {
   const sectionEnter = () => {
     let tl = new TimelineLite();
 
-    tl.to(projects, {
+    tl.from(projects, {
       height: "0px",
       padding: "0px",
       margin: "0px",
-      duration: 0,
-    }).to(projects, {
-      minHeight: "1600px",
-      margin: "250px 0",
       duration: 3,
       ease: Power3.linear,
     });
@@ -119,7 +121,7 @@ const Projects = () => {
     let tl = new TimelineLite();
 
     tl.from(titleText, {
-      y: -50,
+      y: -100,
       opacity: 0,
       duration: 0.5,
     }).fromTo(
@@ -150,7 +152,7 @@ const Projects = () => {
         opacity: 0,
         y: 50,
       },
-      1
+      0.2
     );
 
     return tl;
@@ -164,8 +166,8 @@ const Projects = () => {
         toggleActions: "play none none none",
       },
     });
-    master.add(sectionEnter());
-    master.add(titleEnter(), "-=1");
+    // master.add(sectionEnter());
+    master.add(titleEnter(), "");
     master.add(projectsEnter());
   }, []);
 
@@ -182,9 +184,22 @@ const Projects = () => {
                 <TitleLine ref={(el) => (titleLine = el)} />
               </TitleLineWrapper>
             </TitleArea>
-            <FeaturedProject ref={(el) => (project1 = el)} />
-            <FeaturedProject ref={(el) => (project2 = el)} />
-            <FeaturedProject ref={(el) => (project3 = el)} />
+            <FeaturedProject
+              ref={(el) => (project1 = el)}
+              title={"Machio's Pub & Gym"}
+              desc={`A website for "Machio's Pub and Gym", highlighting the pub menu, gym facilities, and more restaurant related details`}
+            />
+            <FeaturedProject
+              ref={(el) => (project2 = el)}
+              reverse={true}
+              title={"Saiko Games"}
+              desc={`A video game information website that displays current releases, most popular and featured games, and video game information and reviews`}
+            />
+            <FeaturedProject
+              ref={(el) => (project3 = el)}
+              title={"Projecc"}
+              desc={`A text messaging web app inspired by Discord. Join projects groups, interact with fellow project members, and plan out your next big project!`}
+            />
           </Content>
         </Container>
       </ThemeProvider>

@@ -207,9 +207,9 @@ const About = () => {
                 <DescriptionBold>websites</DescriptionBold>.
               </Description>
               <Description>
-                Websites are currently my application of practice, and I'm avid
-                to keep creating and looking forward to contributing to helpful
-                and meaningful projects.
+                Websites and webapps are currently my application of practice,
+                and I'm avid to keep creating and looking forward to
+                contributing to helpful and meaningful projects.
               </Description>
             </Descriptions>
           </Content>
