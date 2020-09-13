@@ -10,7 +10,7 @@ gsap.registerPlugin(ScrollTrigger);
 const ProjectsComp = styled.div`
   position: relative;
   width: 100%;
-  min-height: 1900px;
+  min-height: 1800px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -45,7 +45,7 @@ const Container = styled.div`
 const Content = styled.div`
   position: relative;
   width: 100%;
-  /* max-width: 900px; */
+  max-width: 1500px;
   text-align: left;
   color: #eee;
   display: flex;
@@ -90,6 +90,14 @@ const TitleLine = styled.div`
   background-color: ${(props) => props.theme.color};
 `;
 
+const ProjectArea = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+`;
+
 const theme = {
   color: "#ff350d",
 };
@@ -99,9 +107,9 @@ const Projects = () => {
   let titleText = useRef(null);
   let titleLine = useRef(null);
 
-  let project1 = useRef(null);
-  let project2 = useRef(null);
-  let project3 = useRef(null);
+  // let project1 = useRef(null);
+  // let project2 = useRef(null);
+  // let project3 = useRef(null);
 
   const sectionEnter = () => {
     let tl = new TimelineLite();
@@ -142,21 +150,21 @@ const Projects = () => {
     return tl;
   };
 
-  const projectsEnter = () => {
-    let tl = new TimelineLite();
+  // const projectsEnter = () => {
+  //   let tl = new TimelineLite();
 
-    tl.staggerFrom(
-      [project1, project2, project3],
-      0.5,
-      {
-        opacity: 0,
-        y: 50,
-      },
-      0.2
-    );
+  //   tl.staggerFrom(
+  //     [project1, project2, project3],
+  //     0.5,
+  //     {
+  //       opacity: 0,
+  //       y: 50,
+  //     },
+  //     0.2
+  //   );
 
-    return tl;
-  };
+  //   return tl;
+  // };
 
   useEffect(() => {
     let master = new TimelineLite({
@@ -168,7 +176,7 @@ const Projects = () => {
     });
     // master.add(sectionEnter());
     master.add(titleEnter(), "");
-    master.add(projectsEnter());
+    // master.add(projectsEnter());
   }, []);
 
   return (
@@ -184,22 +192,30 @@ const Projects = () => {
                 <TitleLine ref={(el) => (titleLine = el)} />
               </TitleLineWrapper>
             </TitleArea>
-            <FeaturedProject
-              ref={(el) => (project1 = el)}
-              title={"Machio's Pub & Gym"}
-              desc={`A website for "Machio's Pub and Gym", highlighting the pub menu, gym facilities, and more restaurant related details`}
-            />
-            <FeaturedProject
-              ref={(el) => (project2 = el)}
-              reverse={true}
-              title={"Saiko Games"}
-              desc={`A video game information website that displays current releases, most popular and featured games, and video game information and reviews`}
-            />
-            <FeaturedProject
-              ref={(el) => (project3 = el)}
-              title={"Projecc"}
-              desc={`A text messaging web app inspired by Discord. Join projects groups, interact with fellow project members, and plan out your next big project!`}
-            />
+            <ProjectArea>
+              <FeaturedProject
+                title={"Machio's Pub & Gym"}
+                desc={`A website for "Machio's Pub and Gym", highlighting the menu, gym facilities, and more restaurant related details.`}
+                techs={["React"]}
+              />
+              <FeaturedProject
+                reverse={true}
+                title={"Projecc"}
+                desc={`A realtime text messaging web app inspired by Discord. Join project groups, interact with fellow project members, and plan out your next big project!`}
+                techs={["React", "Node.js", "Express.js", "Socket.IO"]}
+              />
+              <FeaturedProject
+                title={"Saiko Games"}
+                desc={`A video game information website that displays current releases, most popular and featured games, and video game information and reviews.`}
+                techs={["React", "IGDB Game API"]}
+              />
+              <FeaturedProject
+                reverse={true}
+                title={"Devil's Advocate"}
+                desc={`An e-commerce website selling 'devil fruits' from the 'One Piece' series. Data scraped from a third party site, complete with a cart system and authentication.`}
+                techs={["React", "Laravel", "SQL", "Python Scrapy"]}
+              />
+            </ProjectArea>
           </Content>
         </Container>
       </ThemeProvider>
