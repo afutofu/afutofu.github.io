@@ -144,13 +144,13 @@ const Home = ({ getHomeTl }) => {
 
     tl.staggerFrom(
       [introduction, name, motto, description, button],
-      0.5,
+      0.6,
       {
         y: 100,
-        opacity: 0,
+        autoAlpha: 0,
         ease: Power3.easeOut,
       },
-      0.2,
+      0.175,
       "-=2"
     );
 

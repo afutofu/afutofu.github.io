@@ -10,14 +10,15 @@ const NavbarComp = styled.div`
   width: 100%;
   height: 60px;
   padding: 10px 5%;
-  background-color: none;
+  background-color: white;
   display: flex;
   justify-content: space-between;
   align-items: center;
   box-sizing: border-box;
   margin: 0;
   z-index: 500;
-  transition: 0.3s;
+
+  transition: top 0.3s;
 `;
 
 const NavItems = styled.ul`
@@ -46,7 +47,7 @@ const NavItem = styled.li`
   margin: 0;
   box-sizing: border-box;
 
-  transition: 0.3s;
+  transition: color 0.3s;
 
   :hover {
     cursor: pointer;
@@ -79,15 +80,15 @@ const Navbar = ({ getNavbarTl }) => {
     let tl = new TimelineLite();
 
     tl.from(logo, 1.5, {
-      opacity: 0,
+      autoAlpha: 0,
     }).staggerFrom(
       [about, skills, projects, contact, resume],
-      0.5,
+      0.7,
       {
         y: -100,
-        opacity: 0,
+        autoAlpha: 0,
       },
-      0.2,
+      0.15,
       "-=1.2"
     );
 
@@ -97,7 +98,7 @@ const Navbar = ({ getNavbarTl }) => {
   useEffect(() => {
     let masterTl = new TimelineLite({ paused: true });
     masterTl.add(navbarEnter());
-    masterTl.add(navItemsEnter(), "-=1.9");
+    masterTl.add(navItemsEnter(), "-=1.5");
     getNavbarTl(masterTl);
   }, [getNavbarTl]);
 

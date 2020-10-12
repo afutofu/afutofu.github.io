@@ -40,7 +40,7 @@ const LoadingScreen = ({ isLoading }) => {
 
     tl.from(logo, {
       scale: 0,
-      duration: 0.8,
+      duration: 1,
       ease: Power3.easeOut,
     });
 
@@ -58,6 +58,21 @@ const LoadingScreen = ({ isLoading }) => {
     }).to(logo, {
       scale: 1,
       duration: scaleTime,
+    });
+
+    return tl;
+  };
+
+  const logoRotate = () => {
+    let tl = new TimelineMax({ repeat: 2, repeatDelay: 0.03 });
+
+    const rotateTime = 1.2;
+
+    tl.to(logo, {
+      rotate: 360,
+      transformOrigin: "50% 55%",
+      duration: rotateTime,
+      ease: Power3.easeInOut,
     });
 
     return tl;
@@ -95,8 +110,9 @@ const LoadingScreen = ({ isLoading }) => {
   useEffect(() => {
     setMounted(true);
     const master = new TimelineLite({ paused: true, onComplete });
-    master.add(logoEnter(), "+=0.5");
-    master.add(logoScaleOutIn(), "-=0.2");
+    master.add(logoEnter(), "+=1");
+    // master.add(logoScaleOutIn(), "-=0.2");
+    master.add(logoRotate(), "-=0.2");
     master.add(logoScaleDownToZero());
     master.add(whiteScreenEnter(), "+=0.5");
     // master.seek(4);
