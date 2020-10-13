@@ -180,7 +180,7 @@ const Navbar = ({ getNavbarTl }) => {
             smooth={true}
             duration={1000}
             spy={true}
-            offset={-50}
+            offset={100}
             ignoreCancelEvents={true}
           >
             Projects

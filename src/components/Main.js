@@ -13,6 +13,13 @@ import Projects from "./Projects";
 import Contact from "./Contact";
 import Footer from "./Footer";
 
+const MainWrapper = styled.div`
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow-y: hidden;
+`;
+
 const MainComp = styled.div`
   position: relative;
   width: 100%;
@@ -21,9 +28,9 @@ const MainComp = styled.div`
   padding: 0;
   background-color: white;
   box-sizing: border-box;
-  overflow-y: hidden;
   opacity: 0;
   z-index: 10;
+  overflow-y: hidden;
 `;
 
 const AlphaBackground = styled.div`
@@ -67,13 +74,17 @@ const ContentBackground = styled.div`
 const Main = () => {
   const [navbarTl, setNavbarTl] = useState(null);
   const [homeTl, setHomeTl] = useState(null);
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
   const [masterTl] = useState(new TimelineLite());
 
   let main = useRef(null);
   let content = useRef(null);
   let contentBg1 = useRef(null);
   let contentBg2 = useRef(null);
+
+  window.onbeforeunload = function () {
+    window.scrollTo(0, 0);
+  };
 
   const mainEnter = () => {
     let tl = new TimelineLite();
@@ -121,30 +132,29 @@ const Main = () => {
     setIsLoading(isLoading);
   }, []);
 
-  if (isLoading) {
-    return <LoadingScreen isLoading={setIsLoadingCallback} />;
-  }
-
   return (
-    <MainComp ref={(el) => (main = el)}>
-      <Navbar getNavbarTl={getNavbarTl} />
-      <Content ref={(el) => (content = el)}>
-        <AlphaBackground />
-        <BackgroundImageContainer>
-          <BackgroundImage />
-        </BackgroundImageContainer>
-        <ContentBackground ref={(el) => (contentBg1 = el)}>
-          <Home getHomeTl={getHomeTl} />
-          <About />
-          <Skills />
-        </ContentBackground>
-        <Projects />
-        <ContentBackground ref={(el) => (contentBg2 = el)}>
-          <Contact />
-          <Footer />
-        </ContentBackground>
-      </Content>
-    </MainComp>
+    <MainWrapper>
+      {isLoading && <LoadingScreen isLoading={setIsLoadingCallback} />}
+      <MainComp ref={(el) => (main = el)}>
+        <Navbar getNavbarTl={getNavbarTl} />
+        <Content ref={(el) => (content = el)}>
+          <AlphaBackground />
+          <BackgroundImageContainer>
+            <BackgroundImage />
+          </BackgroundImageContainer>
+          <ContentBackground ref={(el) => (contentBg1 = el)}>
+            <Home getHomeTl={getHomeTl} />
+            <About />
+            <Skills />
+          </ContentBackground>
+          <Projects />
+          <ContentBackground ref={(el) => (contentBg2 = el)}>
+            <Contact />
+            <Footer />
+          </ContentBackground>
+        </Content>
+      </MainComp>
+    </MainWrapper>
   );
 };
 

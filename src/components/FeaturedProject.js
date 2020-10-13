@@ -45,6 +45,13 @@ const ProjectSide = styled.div`
   }
 `;
 
+const ProjectImage = styled.img.attrs((props) => ({
+  src: props.src,
+}))`
+  width: 100%;
+  height: 100%;
+`;
+
 const TextSide = styled.div`
   width: 40%;
   min-width: 300px;
@@ -161,8 +168,8 @@ const FeaturedProject = (props) => {
 
   const displayTechs = () => {
     if (props.techs) {
-      return props.techs.map((techItem) => {
-        return <TechItem>{techItem}</TechItem>;
+      return props.techs.map((techItem, i) => {
+        return <TechItem key={i}>{techItem}</TechItem>;
       });
     }
 
@@ -193,31 +200,12 @@ const FeaturedProject = (props) => {
     master.add(projectEnter());
   }, []);
 
-  // if (props.reverse) {
-  //   return (
-  //     <FeaturedProjectComp ref={(el) => (project = el)} >
-  //       <ThemeProvider theme={theme}>
-  //         <TextSide>
-  //           <Title>{props.title}</Title>
-  //           <Desc>{props.desc}</Desc>
-  //           <Techs>{displayTechs()}</Techs>
-  //           <Icons>
-  //             <a href={props.codeLink} target="_blank">
-  //               <i className="fab fa-github"></i>
-  //             </a>
-  //             <i className="fas fa-external-link-alt"></i>
-  //           </Icons>
-  //         </TextSide>
-  //         <ProjectSide reverse={true}></ProjectSide>
-  //       </ThemeProvider>
-  //     </FeaturedProjectComp>
-  //   );
-  // }
-
   return (
     <FeaturedProjectComp ref={(el) => (project = el)} reverse={props.reverse}>
       <ThemeProvider theme={theme}>
-        <ProjectSide reverse={props.reverse}></ProjectSide>
+        <ProjectSide reverse={props.reverse}>
+          <ProjectImage src={props.images} />
+        </ProjectSide>
         <TextSide>
           <Title>{props.title}</Title>
           <Desc>{props.desc}</Desc>

@@ -3,6 +3,10 @@ import styled, { ThemeProvider } from "styled-components";
 import { gsap, TimelineLite, Power3 } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
+import machios1 from "../assets/projectImages/machios1-min.png";
+import projecc1 from "../assets/projectImages/projecc1-min.png";
+import saiko1 from "../assets/projectImages/saiko1-min.png";
+import devils1 from "../assets/projectImages/devils1-min.png";
 import FeaturedProject from "./FeaturedProject";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -121,6 +125,7 @@ const FeaturedProjects = () => {
             desc={`A website for "Machio's Pub and Gym", highlighting the menu, gym facilities, and more restaurant related details.`}
             techs={["React"]}
             codeLink={"https://github.com/afutofu/machios-pub-and-gym"}
+            images={machios1}
           />
           <FeaturedProject
             reverse={true}
@@ -128,12 +133,14 @@ const FeaturedProjects = () => {
             desc={`A realtime text messaging web app inspired by Discord. Join project groups, interact with fellow project members, and plan out your next big project!`}
             techs={["React", "Node.js", "Express.js", "Socket.IO", "MongoDB"]}
             codeLink={"https://github.com/afutofu/projecc"}
+            images={projecc1}
           />
           <FeaturedProject
             title={"Saiko Games"}
             desc={`A video game information website that displays current releases, most popular and featured games, and video game information and reviews.`}
             techs={["React", "IGDB Game API"]}
             codeLink={"https://github.com/afutofu/saiko-games"}
+            images={saiko1}
           />
           <FeaturedProject
             reverse={true}
@@ -141,6 +148,7 @@ const FeaturedProjects = () => {
             desc={`An e-commerce website selling 'devil fruits' from the 'One Piece' series. Data scraped from a third party site, complete with a cart system and authentication.`}
             techs={["React", "Express.js", "MongoDB", "Scrapy"]}
             codeLink={"https://github.com/afutofu/devils-advocate-mern"}
+            images={devils1}
           />
         </ProjectArea>
       </ThemeProvider>
