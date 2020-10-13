@@ -102,6 +102,15 @@ const LoadingScreen = ({ isLoading }) => {
     return tl;
   };
 
+  const showScrollBar = () => {
+    let tl = new TimelineLite();
+
+    tl.from(document.querySelector("body"), {
+      overflow: "hidden",
+    });
+    return tl;
+  };
+
   const onComplete = useCallback(() => {
     setAnimationComplete(true);
     isLoading(false);
@@ -115,6 +124,7 @@ const LoadingScreen = ({ isLoading }) => {
     master.add(logoRotate(), "-=0.2");
     master.add(logoScaleDownToZero());
     master.add(whiteScreenEnter(), "+=0.5");
+    master.add(showScrollBar());
     // master.seek(4);
     master.play();
   }, [onComplete]);
