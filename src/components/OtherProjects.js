@@ -136,12 +136,12 @@ const OtherProjects = () => {
           <OtherProject
             title={"Investment Banking System App"}
             desc={`A system app that records the money being lent and borrowed by creditors and debtors, including interest and time left before payment.`}
-            techs={["React", "IGDB Game API"]}
+            techs={["Java", "MySQL"]}
           />
           <OtherProject
             title={"Insalts"}
-            desc={`Reddit for insults. Create insult groups and post insults for people to view. This was my first original project using javascript.`}
-            techs={["Node.js", "Express.js"]}
+            desc={`Reddit for insults. Create insult groups and post insults for people to view. This was my first project using javascript.`}
+            techs={["Vanilla JS", "Node.js", "Express.js"]}
           />
           <OtherProject
             reverse={true}

@@ -64,7 +64,7 @@ const LoadingScreen = ({ isLoading }) => {
   };
 
   const logoRotate = () => {
-    let tl = new TimelineMax({ repeat: 2, repeatDelay: 0.03 });
+    let tl = new TimelineMax({ repeat: 2, repeatDelay: 0.02 });
 
     const rotateTime = 1.2;
 

@@ -56,7 +56,7 @@ const Name = styled.h1`
   margin: 0;
   margin-bottom: 2px;
   font-family: "Quicksand", "san-serif";
-  font-weight: 500;
+  font-weight: 600;
 
   @media only screen and (min-width: 992px) {
     font-size: 51px;
@@ -171,9 +171,7 @@ const Home = ({ getHomeTl }) => {
             <Introduction ref={(el) => (introduction = el)}>
               Hey there, I'm
             </Introduction>
-            <Name ref={(el) => (name = el)}>
-              Muhammad <NameBold>Afuza</NameBold>rahman
-            </Name>
+            <Name ref={(el) => (name = el)}>Muhammad Afuzarahman</Name>
             <Motto ref={(el) => (motto = el)}>
               Ready To <MottoBold>Build</MottoBold> And{" "}
               <MottoBold>Learn</MottoBold>

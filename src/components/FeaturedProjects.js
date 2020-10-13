@@ -120,23 +120,27 @@ const FeaturedProjects = () => {
             title={"Machio's Pub & Gym"}
             desc={`A website for "Machio's Pub and Gym", highlighting the menu, gym facilities, and more restaurant related details.`}
             techs={["React"]}
+            codeLink={"https://github.com/afutofu/machios-pub-and-gym"}
           />
           <FeaturedProject
             reverse={true}
             title={"Projecc"}
             desc={`A realtime text messaging web app inspired by Discord. Join project groups, interact with fellow project members, and plan out your next big project!`}
-            techs={["React", "Node.js", "Express.js", "Socket.IO"]}
+            techs={["React", "Node.js", "Express.js", "Socket.IO", "MongoDB"]}
+            codeLink={"https://github.com/afutofu/projecc"}
           />
           <FeaturedProject
             title={"Saiko Games"}
             desc={`A video game information website that displays current releases, most popular and featured games, and video game information and reviews.`}
             techs={["React", "IGDB Game API"]}
+            codeLink={"https://github.com/afutofu/saiko-games"}
           />
           <FeaturedProject
             reverse={true}
             title={"Devil's Advocate"}
             desc={`An e-commerce website selling 'devil fruits' from the 'One Piece' series. Data scraped from a third party site, complete with a cart system and authentication.`}
-            techs={["React", "Laravel", "SQL", "Scrapy"]}
+            techs={["React", "Express.js", "MongoDB", "Scrapy"]}
+            codeLink={"https://github.com/afutofu/devils-advocate-mern"}
           />
         </ProjectArea>
       </ThemeProvider>

@@ -81,6 +81,7 @@ const Navbar = ({ getNavbarTl }) => {
 
     tl.from(logo, 1.5, {
       autoAlpha: 0,
+      ease: Power3.easeOut,
     }).staggerFrom(
       [about, skills, projects, contact, resume],
       0.7,
@@ -98,7 +99,7 @@ const Navbar = ({ getNavbarTl }) => {
   useEffect(() => {
     let masterTl = new TimelineLite({ paused: true });
     masterTl.add(navbarEnter());
-    masterTl.add(navItemsEnter(), "-=1.5");
+    masterTl.add(navItemsEnter(), "-=1.9");
     getNavbarTl(masterTl);
   }, [getNavbarTl]);
 

@@ -208,8 +208,8 @@ const About = () => {
               </Description>
               <Description>
                 Websites and webapps are currently my application of practice,
-                and I'm avid to keep creating and looking forward to
-                contributing to helpful and meaningful projects.
+                and I'm avid to keep creating and look forward to contributing
+                to helpful and meaningful projects.
               </Description>
             </Descriptions>
           </Content>

@@ -67,7 +67,7 @@ const ContentBackground = styled.div`
 const Main = () => {
   const [navbarTl, setNavbarTl] = useState(null);
   const [homeTl, setHomeTl] = useState(null);
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(false);
   const [masterTl] = useState(new TimelineLite());
 
   let main = useRef(null);
@@ -104,7 +104,7 @@ const Main = () => {
     if (navbarTl && homeTl && !isLoading) {
       masterTl.add(mainEnter());
       masterTl.add(navbarTl.play(), "-=2");
-      masterTl.add(homeTl.play(), "+=0");
+      masterTl.add(homeTl.play(), "-=0.5");
       masterTl.play();
     }
   }, [masterTl, navbarTl, homeTl, isLoading]);

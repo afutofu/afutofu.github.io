@@ -17,22 +17,38 @@ const FeaturedProjectComp = styled.div`
 `;
 
 const ProjectSide = styled.div`
-  flex: 1;
+  width: 70%;
   height: 100%;
   background-color: #eee;
   margin-left: ${(props) => (props.reverse ? "40px" : "0")};
   margin-right: ${(props) => (props.reverse ? "0" : "40px")};
+
+  @media only screen and (max-width: 600px) {
+    width: 70%;
+    margin: 0;
+  }
 `;
 
 const TextSide = styled.div`
+  width: 30%;
   min-width: 300px;
-  max-width: 400px;
+  /* max-width: 400px; */
   height: 100%;
   color: #eee;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
+
+  @media only screen and (max-width: 1200px) {
+    min-width: 250px;
+  }
+
+  @media only screen and (max-width: 600px) {
+    width: 30%;
+    margin: 0;
+  }
 `;
 
 const Title = styled.h3`
@@ -58,6 +74,7 @@ const Techs = styled.ul`
   display: flex;
   justify-content: space-around;
   align-items: center;
+  flex-wrap: wrap;
   list-style-type: none;
   padding: 0;
   margin: 0;
@@ -68,6 +85,28 @@ const TechItem = styled.li`
   font-size: 18px;
   padding: 10px;
   color: ${(props) => props.theme.color};
+`;
+
+const Icons = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  a {
+    color: white;
+  }
+
+  i {
+    font-size: 25px;
+    padding: 5px;
+    margin: 20px;
+    transition: color 0.2s;
+
+    :hover {
+      color: ${(props) => props.theme.color};
+    }
+  }
 `;
 
 const theme = {
@@ -119,6 +158,12 @@ const FeaturedProject = (props) => {
             <Title>{props.title}</Title>
             <Desc>{props.desc}</Desc>
             <Techs>{displayTechs()}</Techs>
+            <Icons>
+              <a href={props.codeLink} target="_blank">
+                <i className="fab fa-github"></i>
+              </a>
+              <i className="fas fa-external-link-alt"></i>
+            </Icons>
           </TextSide>
           <ProjectSide reverse={true}></ProjectSide>
         </ThemeProvider>
@@ -134,6 +179,12 @@ const FeaturedProject = (props) => {
           <Title>{props.title}</Title>
           <Desc>{props.desc}</Desc>
           <Techs>{displayTechs()}</Techs>
+          <Icons>
+            <a href={props.codeLink} target="_blank">
+              <i className="fab fa-github"></i>
+            </a>
+            <i className="fas fa-external-link-alt"></i>
+          </Icons>
         </TextSide>
       </ThemeProvider>
     </FeaturedProjectComp>
