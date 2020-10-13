@@ -4,9 +4,17 @@ import { gsap, TimelineLite, Power3 } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 import machios1 from "../assets/projectImages/machios1-min.png";
+import machios2 from "../assets/projectImages/machios2-min.png";
+import machios3 from "../assets/projectImages/machios3-min.png";
 import projecc1 from "../assets/projectImages/projecc1-min.png";
+import projecc2 from "../assets/projectImages/projecc2-min.png";
+import projecc3 from "../assets/projectImages/projecc3-min.png";
 import saiko1 from "../assets/projectImages/saiko1-min.png";
+import saiko2 from "../assets/projectImages/saiko2-min.png";
+import saiko3 from "../assets/projectImages/saiko3-min.png";
 import devils1 from "../assets/projectImages/devils1-min.png";
+import devils2 from "../assets/projectImages/devils2-min.png";
+import devils3 from "../assets/projectImages/devils3-min.png";
 import FeaturedProject from "./FeaturedProject";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -125,30 +133,30 @@ const FeaturedProjects = () => {
             desc={`A website for "Machio's Pub and Gym", highlighting the menu, gym facilities, and more restaurant related details.`}
             techs={["React"]}
             codeLink={"https://github.com/afutofu/machios-pub-and-gym"}
-            images={machios1}
+            images={[machios1, machios2, machios3]}
           />
           <FeaturedProject
             reverse={true}
             title={"Projecc"}
             desc={`A realtime text messaging web app inspired by Discord. Join project groups, interact with fellow project members, and plan out your next big project!`}
-            techs={["React", "Node.js", "Express.js", "Socket.IO", "MongoDB"]}
+            techs={["React", "Node", "Express", "Socket.IO", "MongoDB"]}
             codeLink={"https://github.com/afutofu/projecc"}
-            images={projecc1}
+            images={[projecc1, projecc2, projecc3]}
           />
           <FeaturedProject
             title={"Saiko Games"}
             desc={`A video game information website that displays current releases, most popular and featured games, and video game information and reviews.`}
             techs={["React", "IGDB Game API"]}
             codeLink={"https://github.com/afutofu/saiko-games"}
-            images={saiko1}
+            images={[saiko1, saiko2, saiko3]}
           />
           <FeaturedProject
             reverse={true}
             title={"Devil's Advocate"}
             desc={`An e-commerce website selling 'devil fruits' from the 'One Piece' series. Data scraped from a third party site, complete with a cart system and authentication.`}
-            techs={["React", "Express.js", "MongoDB", "Scrapy"]}
+            techs={["React", "Node", "Express", "MongoDB", "Scrapy"]}
             codeLink={"https://github.com/afutofu/devils-advocate-mern"}
-            images={devils1}
+            images={[devils1, devils2, devils3]}
           />
         </ProjectArea>
       </ThemeProvider>

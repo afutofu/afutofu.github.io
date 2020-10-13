@@ -1,4 +1,4 @@
-import React, { forwardRef, useRef, useEffect } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import styled, { ThemeProvider } from "styled-components";
 import { gsap, TimelineLite, Power3 } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -27,11 +27,13 @@ const FeaturedProjectComp = styled.div`
 `;
 
 const ProjectSide = styled.div`
+  position: relative;
   width: 60%;
   height: 100%;
   background-color: #eee;
   margin-left: ${(props) => (props.reverse ? "40px" : "0")};
   margin-right: ${(props) => (props.reverse ? "0" : "40px")};
+  overflow: hidden;
 
   @media only screen and (max-width: 992px) {
     width: 100%;
@@ -45,11 +47,58 @@ const ProjectSide = styled.div`
   }
 `;
 
+const ProjectImages = styled.div`
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+`;
+
 const ProjectImage = styled.img.attrs((props) => ({
   src: props.src,
 }))`
   width: 100%;
   height: 100%;
+`;
+
+const ImageButtons = styled.div`
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+`;
+
+const ImageButton = styled.button`
+  width: 10px;
+  height: 10px;
+  outline: unset;
+  border: ${(props) => `1px solid ${props.theme.color}`};
+  background-color: ${(props) =>
+    props.selected ? props.theme.color : "white"};
+  border-radius: 50%;
+  padding: 3px;
+  margin: 0 10px;
+  box-sizing: border-box;
+  cursor: pointer;
+`;
+
+const AlphaBackground = styled.div`
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  /* z-index: 50; */
+  transition: 0.3s;
+  cursor: pointer;
+
+  ${ProjectSide}:hover & {
+    background-color: rgba(0, 0, 0, 0);
+  }
 `;
 
 const TextSide = styled.div`
@@ -149,6 +198,7 @@ const Icons = styled.div`
     }
 
     @media only screen and (max-width: 992px) {
+      font-size: 22px;
       padding: 5px 15px;
       margin: 0 10px;
     }
@@ -164,7 +214,9 @@ const theme = {
 };
 
 const FeaturedProject = (props) => {
+  const [imageIndex, setImageIndex] = useState(0);
   let project = useRef(null);
+  let images = useRef(null);
 
   const displayTechs = () => {
     if (props.techs) {
@@ -189,6 +241,16 @@ const FeaturedProject = (props) => {
     return tl;
   };
 
+  const slideImage = (imageIndex) => {
+    gsap.to(images, {
+      xPercent: `-${imageIndex * 100}`,
+      duration: 1,
+      ease: Power3.easeInOut,
+    });
+
+    setImageIndex(imageIndex);
+  };
+
   useEffect(() => {
     let master = new TimelineLite({
       scrollTrigger: {
@@ -204,7 +266,26 @@ const FeaturedProject = (props) => {
     <FeaturedProjectComp ref={(el) => (project = el)} reverse={props.reverse}>
       <ThemeProvider theme={theme}>
         <ProjectSide reverse={props.reverse}>
-          <ProjectImage src={props.images} />
+          <ProjectImages ref={(el) => (images = el)}>
+            {props.images.map((image, i) => {
+              return <ProjectImage key={i} src={image} />;
+            })}
+          </ProjectImages>
+          <ImageButtons>
+            <ImageButton
+              onClick={() => slideImage(0)}
+              selected={imageIndex == 0}
+            />
+            <ImageButton
+              onClick={() => slideImage(1)}
+              selected={imageIndex == 1}
+            />
+            <ImageButton
+              onClick={() => slideImage(2)}
+              selected={imageIndex == 2}
+            />
+          </ImageButtons>
+          <AlphaBackground />
         </ProjectSide>
         <TextSide>
           <Title>{props.title}</Title>
