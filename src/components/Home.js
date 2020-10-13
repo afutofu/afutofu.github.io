@@ -19,11 +19,15 @@ const HomeComp = styled.div`
 `;
 
 const Container = styled.div`
-  margin: 0px 10%;
+  margin: 0px 15%;
   position: relative;
 
-  @media only screen and (min-width: 992px) {
-    margin: 0px 15%;
+  @media only screen and (max-width: 992px) {
+    margin: 0px 10%;
+  }
+
+  @media only screen and (max-width: 600px) {
+    margin: 0 10%;
   }
 `;
 
@@ -80,6 +84,11 @@ const Motto = styled.h2`
   @media only screen and (min-width: 992px) {
     font-size: 41px;
   }
+
+  @media only screen and (max-width: 600px) {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
 `;
 
 const MottoBold = styled.span`
@@ -100,6 +109,12 @@ const Description = styled.p`
     max-width: 50%;
     font-size: 19px;
     line-height: 1.7rem;
+  }
+
+  @media only screen and (max-width: 600px) {
+    max-width: 80%;
+    font-size: 16px;
+    margin-bottom: 30px;
   }
 `;
 

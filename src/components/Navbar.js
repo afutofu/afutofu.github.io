@@ -39,6 +39,10 @@ const NavItems = styled.ul`
   @media only screen and (min-width: 992px) {
     max-width: 500px;
   }
+
+  @media only screen and (max-width: 600px) {
+    justify-content: flex-end;
+  }
 `;
 
 const NavItem = styled.li`
@@ -52,6 +56,11 @@ const NavItem = styled.li`
   :hover {
     cursor: pointer;
     color: #ff350d;
+  }
+
+  @media only screen and (max-width: 600px) {
+    font-size: 18px;
+    padding: 0 8px;
   }
 `;
 

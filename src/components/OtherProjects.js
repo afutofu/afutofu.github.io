@@ -97,7 +97,7 @@ const OtherProjects = () => {
     let master = new TimelineLite({
       scrollTrigger: {
         trigger: featuredProjects,
-        start: "top center",
+        start: "top-=100 center",
         toggleActions: "play none none none",
       },
     });

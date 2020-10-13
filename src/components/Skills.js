@@ -31,14 +31,19 @@ const SkillsComp = styled.div`
 `;
 
 const Container = styled.div`
-  margin: 0px 10%;
+  margin: 0px 15%;
   position: relative;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  @media only screen and (min-width: 992px) {
-    margin: 0px 15%;
+
+  @media only screen and (max-width: 992px) {
+    margin: 0px 10%;
+  }
+
+  @media only screen and (max-width: 600px) {
+    margin: 0 5%;
   }
 `;
 
@@ -54,6 +59,10 @@ const Content = styled.div`
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
+
+  @media only screen and (max-width: 600px) {
+    width: 100%;
+  }
 `;
 
 const TitleArea = styled.div`
@@ -105,6 +114,11 @@ const ListArea = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+
+  @media only screen and (max-width: 992px) {
+    width: 100%;
+    justify-content: center;
+  }
 `;
 
 const List = styled.div`
@@ -114,6 +128,11 @@ const List = styled.div`
   align-items: flex-start;
   list-style: none;
   margin: 0;
+
+  @media only screen and (max-width: 992px) {
+    justify-content: center;
+    align-items: center;
+  }
 `;
 
 const ListTitle = styled.h3`
@@ -123,8 +142,9 @@ const ListTitle = styled.h3`
   margin: 0;
   margin-bottom: 10px;
 
-  @media only screen and (min-width: 992px) {
+  @media only screen and (max-width: 992px) {
     font-size: 22px;
+    margin: 0 20px;
   }
 `;
 
@@ -136,6 +156,11 @@ const ListItems = styled.ul`
   list-style-type: none;
   padding: 0;
   margin: 0;
+
+  @media only screen and (max-width: 992px) {
+    align-items: center;
+    text-align: center;
+  }
 `;
 
 const ListItem = styled.li`

@@ -7,18 +7,18 @@ gsap.registerPlugin(ScrollTrigger);
 
 const OtherProjectComp = styled.div`
   position: relative;
-  width: 500px;
-  height: 300px;
+  width: 320px;
+  height: 250px;
   color: #222;
   margin-bottom: 50px;
 
-  @media only screen and (max-width: 600px) {
+  /* @media only screen and (max-width: 1200px) {
     width: 400px;
     height: 300px;
-  }
+  } */
 
-  @media only screen and (min-width: 1200px) {
-    width: 500px;
+  @media only screen and (max-width: 600px) {
+    width: 400px;
     height: 300px;
   }
 `;
@@ -60,26 +60,33 @@ const Title = styled.h3`
   font-size: 20px;
   font-weight: 600;
   margin: 0;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
+
+  @media only screen and (max-width: 600px) {
+    font-size: 22px;
+    margin: 0;
+    margin-bottom: 15px;
+  }
 `;
 
 const Desc = styled.p`
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.7rem;
   font-weight: 400;
   margin: 0;
-  margin-bottom: 18px;
+  margin-bottom: 5px;
 
-  @media only screen and (min-width: 1200px) {
-    font-size: 16px;
-    line-height: 1.8rem;
+  @media only screen and (max-width: 600px) {
+    font-size: 18px;
+    margin: 0;
+    margin-bottom: 15px;
   }
 `;
 
 const Techs = styled.ul`
   width: 100%;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   list-style-type: none;
   padding: 0;
@@ -89,11 +96,13 @@ const Techs = styled.ul`
 const TechItem = styled.li`
   font-weight: 600;
   font-size: 14px;
-  padding: 10px;
+  padding: 5px 10px;
   color: ${(props) => props.theme.color};
 
-  @media only screen and (min-width: 1200px) {
+  @media only screen and (max-width: 600px) {
     font-size: 16px;
+    margin: 0;
+    margin-bottom: 15px;
   }
 `;
 
@@ -131,7 +140,7 @@ const FeaturedProject = (props) => {
     let master = new TimelineLite({
       scrollTrigger: {
         trigger: project,
-        start: "top-=200 center",
+        start: "top-=150 center",
         toggleActions: "play none none none",
       },
     });
