@@ -74,7 +74,7 @@ const ContentBackground = styled.div`
 const Main = () => {
   const [navbarTl, setNavbarTl] = useState(null);
   const [homeTl, setHomeTl] = useState(null);
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(false);
   const [masterTl] = useState(new TimelineLite());
 
   let main = useRef(null);
@@ -82,9 +82,9 @@ const Main = () => {
   let contentBg1 = useRef(null);
   let contentBg2 = useRef(null);
 
-  window.onbeforeunload = function () {
-    window.scrollTo(0, 0);
-  };
+  // window.onbeforeunload = function () {
+  //   window.scrollTo(0, 0);
+  // };
 
   const mainEnter = () => {
     let tl = new TimelineLite();

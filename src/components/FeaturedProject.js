@@ -28,7 +28,7 @@ const FeaturedProjectComp = styled.div`
 
 const ProjectSide = styled.div`
   position: relative;
-  width: 60%;
+  flex: 1;
   height: 100%;
   background-color: #eee;
   margin-left: ${(props) => (props.reverse ? "40px" : "0")};
@@ -102,9 +102,8 @@ const AlphaBackground = styled.div`
 `;
 
 const TextSide = styled.div`
-  width: 40%;
-  min-width: 300px;
-  /* max-width: 400px; */
+  flex: 0;
+  min-width: 280px;
   height: 100%;
   color: #eee;
   display: flex;
@@ -112,6 +111,10 @@ const TextSide = styled.div`
   justify-content: center;
   align-items: center;
   text-align: center;
+
+  @media only screen and (max-width: 1200px) {
+    min-width: 190px;
+  }
 
   @media only screen and (max-width: 992px) {
     width: 100%;
@@ -124,11 +127,15 @@ const TextSide = styled.div`
 const Title = styled.h3`
   font-size: 24px;
   font-weight: 600;
+  margin: 0;
+  margin-bottom: 15px;
+
+  @media only screen and (max-width: 1200px) {
+    font-size: 20px;
+  }
 
   @media only screen and (max-width: 992px) {
     font-size: 22px;
-    margin: 0;
-    margin-bottom: 15px;
   }
 `;
 
@@ -139,10 +146,14 @@ const Desc = styled.p`
   margin: 0;
   margin-bottom: 18px;
 
+  @media only screen and (max-width: 1200px) {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+
   @media only screen and (max-width: 992px) {
     font-size: 18px;
     line-height: 1.7rem;
-    margin: 0;
     margin-bottom: 15px;
   }
 `;
@@ -157,6 +168,10 @@ const Techs = styled.ul`
   padding: 0;
   margin: 0;
 
+  @media only screen and (max-width: 1200px) {
+    margin-bottom: 13px;
+  }
+
   @media only screen and (max-width: 992px) {
     width: 100%;
     height: unset;
@@ -168,12 +183,17 @@ const Techs = styled.ul`
 const TechItem = styled.li`
   font-weight: 600;
   font-size: 18px;
-  padding: 10px 15px;
+  margin: 0 15px;
   color: ${(props) => props.theme.color};
+
+  @media only screen and (max-width: 1200px) {
+    font-size: 14px;
+    margin: 5px 10px;
+  }
 
   @media only screen and (max-width: 992px) {
     font-size: 16px;
-    padding: 5px 15px;
+    margin: 0 15px;
   }
 `;
 
@@ -195,6 +215,12 @@ const Icons = styled.div`
 
     :hover {
       color: ${(props) => props.theme.color};
+    }
+
+    @media only screen and (max-width: 1200px) {
+      font-size: 18px;
+      padding: 5px 15px;
+      margin: 0 10px;
     }
 
     @media only screen and (max-width: 992px) {
@@ -295,7 +321,9 @@ const FeaturedProject = (props) => {
             <a href={props.codeLink} target="_blank">
               <i className="fab fa-github"></i>
             </a>
-            <i className="fas fa-external-link-alt"></i>
+            <a href={props.codeLink} target="_blank">
+              <i className="fas fa-external-link-alt"></i>
+            </a>
           </Icons>
         </TextSide>
       </ThemeProvider>

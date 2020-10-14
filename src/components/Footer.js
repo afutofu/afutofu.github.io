@@ -38,6 +38,11 @@ const Socials = styled.div`
   max-width: 200px;
   font-size: 24px;
   justify-content: space-between;
+  align-items: center;
+
+  a {
+    color: #ff350d;
+  }
 
   i {
     margin-left: 20px;
@@ -53,7 +58,9 @@ const Footer = () => {
           <Credits>Developed by Muhammad Afuzarahman</Credits>
           <Socials>
             <i className="fa fa-envelope"></i>
-            <i className="fa fa-github"></i>
+            <a href="https://github.com/afutofu" target="_blank">
+              <i className="fa fa-github"></i>
+            </a>
           </Socials>
         </Content>
       </Container>
