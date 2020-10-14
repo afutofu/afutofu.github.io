@@ -210,14 +210,16 @@ const FeaturedProject = (props) => {
       onMouseEnter={onMouseEnterProject}
       onMouseLeave={onMouseLeaveProject}
     >
-      <ThemeProvider theme={theme}>
-        <ProjectSide></ProjectSide>
-        <TextSide>
-          <Title>{props.title}</Title>
-          <Desc>{props.desc}</Desc>
-          <Techs>{displayTechs()}</Techs>
-        </TextSide>
-      </ThemeProvider>
+      <a href={props.codeLink} target="_blank">
+        <ThemeProvider theme={theme}>
+          <ProjectSide></ProjectSide>
+          <TextSide>
+            <Title>{props.title}</Title>
+            <Desc>{props.desc}</Desc>
+            <Techs>{displayTechs()}</Techs>
+          </TextSide>
+        </ThemeProvider>
+      </a>
     </OtherProjectComp>
   );
 };

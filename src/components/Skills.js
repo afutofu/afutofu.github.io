@@ -59,10 +59,6 @@ const Content = styled.div`
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-
-  @media only screen and (max-width: 600px) {
-    width: 100%;
-  }
 `;
 
 const TitleArea = styled.div`
@@ -145,6 +141,7 @@ const ListTitle = styled.h3`
   @media only screen and (max-width: 992px) {
     font-size: 22px;
     margin: 0 20px;
+    margin-bottom: 10px;
   }
 `;
 

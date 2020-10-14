@@ -120,34 +120,40 @@ const OtherProjects = () => {
             title={"Task Manager"}
             desc={`A to-do list, day planner, and a 'things I learned today' list all in one app.`}
             techs={["Python", "Tkinter", "SQLite"]}
+            codeLink={"https://github.com/afutofu/task-manager"}
           />
           <OtherProject
             reverse={true}
             title={"Task Timer"}
             desc={`Enter a task and start the timer. Records the amount of time you do a task, graphs them, and ranks the time based on the trailing week.`}
             techs={["Python", "Tkinter", "Matplotlib", "SQLite"]}
+            codeLink={"https://github.com/afutofu/task-timer"}
           />
           <OtherProject
             reverse={true}
             title={"An Alan Watts Tribute"}
             desc={`A website detailing Alan Watt's life, books, and a few popular audio clips from his lectures. This was my first React project, and I'm looking forward to revisiting it.`}
             techs={["React"]}
-          />
-          <OtherProject
-            title={"Investment Banking System App"}
-            desc={`A system app that records the money being lent and borrowed by creditors and debtors, including interest and time left before payment.`}
-            techs={["Java", "MySQL"]}
+            codeLink={"https://github.com/afutofu/an-alan-watts-tribute"}
           />
           <OtherProject
             title={"Insalts"}
             desc={`Reddit for insults. Create insult groups and post insults for people to view. This was my first project using javascript.`}
             techs={["Vanilla JS", "Node", "Express"]}
+            codeLink={"https://github.com/afutofu/insalts"}
+          />
+          <OtherProject
+            title={"Investment Banking System App"}
+            desc={`A system app that records the money being lent and borrowed by creditors and debtors, including interest and time left before payment.`}
+            techs={["Java", "MySQL"]}
+            codeLink={"https://github.com/afutofu/investment-banking-app"}
           />
           <OtherProject
             reverse={true}
             title={"Automatic Garden Waterer"}
             desc={`Code for an automatic garden waterer, watering time can be customized. Used with arduino v3.`}
             techs={["Arduino"]}
+            codeLink={"https://github.com/afutofu/automatic-garden-waterer"}
           />
         </ProjectArea>
       </ThemeProvider>

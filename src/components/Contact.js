@@ -226,7 +226,7 @@ const Contact = (props) => {
                 <TitleLine ref={(el) => (titleLineLeft = el)} />
               </TitleLineWrapper>
               <Title ref={(el) => (titleText = el)}>
-                Feel Free To <TitleHighlight>Contact</TitleHighlight> Me!
+                <TitleHighlight>Contact</TitleHighlight> Me!
               </Title>
               <TitleLineWrapper>
                 <TitleLine ref={(el) => (titleLineRight = el)} />

@@ -31,15 +31,19 @@ const ProjectsComp = styled.div`
 `;
 
 const Container = styled.div`
-  margin: 0px 10%;
+  margin: 0px 15%;
   position: relative;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 
-  @media only screen and (min-width: 992px) {
-    margin: 0px 15%;
+  @media only screen and (max-width: 1200px) {
+    margin: 0px 10%;
+  }
+
+  @media only screen and (max-width: 992px) {
+    margin: 0px 10%;
   }
 `;
 
