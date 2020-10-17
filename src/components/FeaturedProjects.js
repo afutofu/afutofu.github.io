@@ -133,6 +133,7 @@ const FeaturedProjects = () => {
             desc={`A website for "Machio's Pub and Gym", highlighting the menu, gym facilities, and more restaurant related details.`}
             techs={["React"]}
             codeLink={"https://github.com/afutofu/machios-pub-and-gym"}
+            siteLink={"https://machios-pub-and-gym.netlify.app/"}
             images={[machios1, machios2, machios3]}
           />
           <FeaturedProject

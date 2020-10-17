@@ -17,7 +17,6 @@ const OtherProjectComp = styled.div`
   box-sizing: border-box;
   background-color: #151515;
   border-radius: 10px;
-  cursor: pointer;
 
   @media only screen and (max-width: 1200px) {
     min-width: 280px;
@@ -96,7 +95,7 @@ const Desc = styled.p`
   line-height: 1.7rem;
   font-weight: 400;
   margin: 0;
-  margin-bottom: 5px;
+  margin-bottom: 15px;
 
   @media only screen and (max-width: 1200px) {
     font-size: 16px;
@@ -144,6 +143,105 @@ const TechItem = styled.li`
 
   @media only screen and (max-width: 600px) {
     font-size: 16px;
+  }
+`;
+
+const CodeIcon = styled.div`
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  display: flex;
+  align-items: center;
+  z-index: 50;
+
+  a {
+    color: white;
+    pointer-events: none;
+
+    ${OtherProjectComp}:hover & {
+      opacity: 1;
+      pointer-events: auto;
+    }
+  }
+
+  i {
+    font-size: 18px;
+    padding: 5px;
+    transition: color 0.2s;
+    transition: opacity 0.5s;
+
+    opacity: 0;
+
+    :hover {
+      color: ${(props) => props.theme.color};
+    }
+
+    ${OtherProjectComp}:hover & {
+      opacity: 1;
+      cursor: pointer;
+    }
+
+    /* @media only screen and (max-width: 1200px) {
+      font-size: 18px;
+    }
+
+    @media only screen and (max-width: 992px) {
+      font-size: 18px;
+    }
+
+    @media only screen and (max-width: 600px) {
+      font-size: 20px;
+    } */
+  }
+`;
+
+const SiteIcon = styled.div`
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  align-items: center;
+  z-index: 50;
+  cursor: pointer;
+
+  a {
+    color: white;
+    pointer-events: none;
+
+    ${OtherProjectComp}:hover & {
+      opacity: 1;
+      pointer-events: auto;
+    }
+  }
+
+  i {
+    font-size: 18px;
+    padding: 5px;
+    transition: color 0.2s;
+    transition: opacity 0.5s;
+
+    opacity: 0;
+
+    :hover {
+      color: ${(props) => props.theme.color};
+    }
+
+    ${OtherProjectComp}:hover & {
+      opacity: 1;
+      cursor: pointer;
+    }
+
+    /* @media only screen and (max-width: 1200px) {
+      font-size: 16px;
+    }
+
+    @media only screen and (max-width: 992px) {
+      font-size: 16px;
+    }
+
+    @media only screen and (max-width: 600px) {
+      font-size: 18px;
+    } */
   }
 `;
 
@@ -210,16 +308,29 @@ const FeaturedProject = (props) => {
       onMouseEnter={onMouseEnterProject}
       onMouseLeave={onMouseLeaveProject}
     >
-      <a href={props.codeLink} target="_blank">
-        <ThemeProvider theme={theme}>
-          <ProjectSide></ProjectSide>
-          <TextSide>
-            <Title>{props.title}</Title>
-            <Desc>{props.desc}</Desc>
-            <Techs>{displayTechs()}</Techs>
-          </TextSide>
-        </ThemeProvider>
-      </a>
+      <ThemeProvider theme={theme}>
+        {/* <ProjectSide></ProjectSide> */}
+        {props.codeLink && (
+          <CodeIcon>
+            <a href={props.codeLink} target="_blank">
+              <i className="fab fa-github"></i>
+            </a>
+          </CodeIcon>
+        )}
+
+        {props.siteLink && (
+          <SiteIcon>
+            <a href={props.siteLink} target="_blank">
+              <i className="fas fa-external-link-alt"></i>
+            </a>
+          </SiteIcon>
+        )}
+        <TextSide>
+          <Title>{props.title}</Title>
+          <Desc>{props.desc}</Desc>
+          <Techs>{displayTechs()}</Techs>
+        </TextSide>
+      </ThemeProvider>
     </OtherProjectComp>
   );
 };

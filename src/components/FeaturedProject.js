@@ -23,6 +23,7 @@ const FeaturedProjectComp = styled.div`
 
   @media only screen and (max-width: 600px) {
     margin-bottom: 100px;
+    height: 500px;
   }
 `;
 
@@ -91,7 +92,7 @@ const AlphaBackground = styled.div`
   height: 100%;
   position: absolute;
   left: 0;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.2);
   /* z-index: 50; */
   transition: 0.3s;
   cursor: pointer;
@@ -183,7 +184,7 @@ const Techs = styled.ul`
 const TechItem = styled.li`
   font-weight: 600;
   font-size: 18px;
-  margin: 0 15px;
+  margin: 5px 15px;
   color: ${(props) => props.theme.color};
 
   @media only screen and (max-width: 1200px) {
@@ -193,7 +194,7 @@ const TechItem = styled.li`
 
   @media only screen and (max-width: 992px) {
     font-size: 16px;
-    margin: 0 15px;
+    margin: 5 15px;
   }
 `;
 
@@ -292,24 +293,22 @@ const FeaturedProject = (props) => {
     <FeaturedProjectComp ref={(el) => (project = el)} reverse={props.reverse}>
       <ThemeProvider theme={theme}>
         <ProjectSide reverse={props.reverse}>
-          <ProjectImages ref={(el) => (images = el)}>
-            {props.images.map((image, i) => {
-              return <ProjectImage key={i} src={image} />;
-            })}
-          </ProjectImages>
+          <a href={props.siteLink} target="_blank">
+            <ProjectImages ref={(el) => (images = el)}>
+              {props.images.map((image, i) => {
+                return <ProjectImage key={i} src={image} />;
+              })}
+            </ProjectImages>
+          </a>
           <ImageButtons>
-            <ImageButton
-              onClick={() => slideImage(0)}
-              selected={imageIndex == 0}
-            />
-            <ImageButton
-              onClick={() => slideImage(1)}
-              selected={imageIndex == 1}
-            />
-            <ImageButton
-              onClick={() => slideImage(2)}
-              selected={imageIndex == 2}
-            />
+            {props.images.map((_image, i) => {
+              return (
+                <ImageButton
+                  onClick={() => slideImage(i)}
+                  selected={imageIndex == i}
+                />
+              );
+            })}
           </ImageButtons>
           <AlphaBackground />
         </ProjectSide>
@@ -321,7 +320,7 @@ const FeaturedProject = (props) => {
             <a href={props.codeLink} target="_blank">
               <i className="fab fa-github"></i>
             </a>
-            <a href={props.codeLink} target="_blank">
+            <a href={props.siteLink} target="_blank">
               <i className="fas fa-external-link-alt"></i>
             </a>
           </Icons>

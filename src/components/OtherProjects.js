@@ -135,6 +135,7 @@ const OtherProjects = () => {
             desc={`A website detailing Alan Watt's life, books, and a few popular audio clips from his lectures. This was my first React project, and I'm looking forward to revisiting it.`}
             techs={["React"]}
             codeLink={"https://github.com/afutofu/an-alan-watts-tribute"}
+            siteLink={"https://an-alan-watts-tribute.netlify.app/"}
           />
           <OtherProject
             title={"Insalts"}
@@ -143,10 +144,10 @@ const OtherProjects = () => {
             codeLink={"https://github.com/afutofu/insalts"}
           />
           <OtherProject
-            title={"Investment Banking System App"}
-            desc={`A system app that records the money being lent and borrowed by creditors and debtors, including interest and time left before payment.`}
-            techs={["Java", "MySQL"]}
-            codeLink={"https://github.com/afutofu/investment-banking-app"}
+            title={"Don't Hit The Wall"}
+            desc={`A two player game where each player has to avoid the wall as the game progresses.`}
+            techs={["Java"]}
+            codeLink={"https://github.com/afutofu/dont-hit-the-wall"}
           />
           <OtherProject
             reverse={true}
