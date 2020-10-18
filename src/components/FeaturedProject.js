@@ -299,6 +299,7 @@ const FeaturedProject = (props) => {
                 return <ProjectImage key={i} src={image} />;
               })}
             </ProjectImages>
+            <AlphaBackground />
           </a>
           <ImageButtons>
             {props.images.map((_image, i) => {
@@ -310,7 +311,6 @@ const FeaturedProject = (props) => {
               );
             })}
           </ImageButtons>
-          <AlphaBackground />
         </ProjectSide>
         <TextSide>
           <Title>{props.title}</Title>

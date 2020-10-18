@@ -142,13 +142,15 @@ const FeaturedProjects = () => {
             desc={`A realtime text messaging web app inspired by Discord. Join project groups, interact with fellow project members, and plan out your next big project!`}
             techs={["React", "Node", "Express", "Socket.IO", "MongoDB"]}
             codeLink={"https://github.com/afutofu/projecc"}
+            siteLink={"https://projecc-afu.herokuapp.com/"}
             images={[projecc1, projecc2, projecc3]}
           />
           <FeaturedProject
             title={"Saiko Games"}
             desc={`A video game information website that displays current releases, most popular and featured games, and video game information and reviews.`}
-            techs={["React", "IGDB Game API"]}
+            techs={["React", "IGDB API", "Node", "Express"]}
             codeLink={"https://github.com/afutofu/saiko-games"}
+            siteLink={"https://saiko-games.herokuapp.com/"}
             images={[saiko1, saiko2, saiko3]}
           />
           <FeaturedProject
@@ -157,6 +159,7 @@ const FeaturedProjects = () => {
             desc={`An e-commerce website selling 'devil fruits' from the 'One Piece' series. Data scraped from a third party site, complete with a cart system and authentication.`}
             techs={["React", "Node", "Express", "MongoDB", "Scrapy"]}
             codeLink={"https://github.com/afutofu/devils-advocate-mern"}
+            siteLink={"https://devils-advocate-afu.herokuapp.com/"}
             images={[devils1, devils2, devils3]}
           />
         </ProjectArea>

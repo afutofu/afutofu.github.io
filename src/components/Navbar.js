@@ -51,7 +51,7 @@ const NavItem = styled.li`
   margin: 0;
   box-sizing: border-box;
 
-  transition: color 0.3s;
+  transition: color 0.2s;
 
   :hover {
     cursor: pointer;

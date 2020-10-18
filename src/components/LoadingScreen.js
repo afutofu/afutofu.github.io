@@ -5,7 +5,7 @@ import { TimelineLite, TimelineMax, Power3 } from "gsap";
 import Logo from "./Logo";
 
 const LoadingScreenComp = styled.div`
-  position: absolute;
+  position: fixed;
   left: 0;
   width: 100%;
   height: 100vh;

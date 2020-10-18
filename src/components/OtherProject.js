@@ -15,8 +15,17 @@ const OtherProjectComp = styled.div`
   padding: 10px;
   margin: 10px 10px;
   box-sizing: border-box;
-  background-color: #151515;
+  background-color: #e5e5e5;
   border-radius: 10px;
+
+  a {
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 50;
+  }
 
   @media only screen and (max-width: 1200px) {
     min-width: 280px;
@@ -35,17 +44,17 @@ const OtherProjectComp = styled.div`
   }
 `;
 
-const ProjectSide = styled.div`
-  position: absolute;
-  top: 0;
-  left: 0;
-  flex: 1;
-  width: 100%;
-  height: 100%;
+// const ProjectSide = styled.div`
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   flex: 1;
+//   width: 100%;
+//   height: 100%;
 
-  margin-left: ${(props) => (props.reverse ? "40px" : "0")};
-  margin-right: ${(props) => (props.reverse ? "0" : "40px")};
-`;
+//   margin-left: ${(props) => (props.reverse ? "40px" : "0")};
+//   margin-right: ${(props) => (props.reverse ? "0" : "40px")};
+// `;
 
 const TextSide = styled.div`
   position: absolute;
@@ -56,7 +65,7 @@ const TextSide = styled.div`
   min-width: 300px;
   max-width: 400px;
   height: 100%;
-  color: #eee;
+  color: #121212;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -146,54 +155,54 @@ const TechItem = styled.li`
   }
 `;
 
-const CodeIcon = styled.div`
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  display: flex;
-  align-items: center;
-  z-index: 50;
+// const CodeIcon = styled.div`
+//   position: absolute;
+//   top: 10px;
+//   left: 10px;
+//   display: flex;
+//   align-items: center;
+//   z-index: 50;
 
-  a {
-    color: white;
-    pointer-events: none;
+//   a {
+//     color: white;
+//     pointer-events: none;
 
-    ${OtherProjectComp}:hover & {
-      opacity: 1;
-      pointer-events: auto;
-    }
-  }
+//     ${OtherProjectComp}:hover & {
+//       opacity: 1;
+//       pointer-events: auto;
+//     }
+//   }
 
-  i {
-    font-size: 18px;
-    padding: 5px;
-    transition: color 0.2s;
-    transition: opacity 0.5s;
+//   i {
+//     font-size: 18px;
+//     padding: 5px;
+//     transition: color 0.2s;
+//     transition: opacity 0.5s;
 
-    opacity: 0;
+//     opacity: 0;
 
-    :hover {
-      color: ${(props) => props.theme.color};
-    }
+//     :hover {
+//       color: ${(props) => props.theme.color};
+//     }
 
-    ${OtherProjectComp}:hover & {
-      opacity: 1;
-      cursor: pointer;
-    }
+//     ${OtherProjectComp}:hover & {
+//       opacity: 1;
+//       cursor: pointer;
+//     }
 
-    /* @media only screen and (max-width: 1200px) {
-      font-size: 18px;
-    }
+//     /* @media only screen and (max-width: 1200px) {
+//       font-size: 18px;
+//     }
 
-    @media only screen and (max-width: 992px) {
-      font-size: 18px;
-    }
+//     @media only screen and (max-width: 992px) {
+//       font-size: 18px;
+//     }
 
-    @media only screen and (max-width: 600px) {
-      font-size: 20px;
-    } */
-  }
-`;
+//     @media only screen and (max-width: 600px) {
+//       font-size: 20px;
+//     } */
+//   }
+// `;
 
 const SiteIcon = styled.div`
   position: absolute;
@@ -205,7 +214,10 @@ const SiteIcon = styled.div`
   cursor: pointer;
 
   a {
-    color: white;
+    position: unset;
+    top: unset;
+    left: unset;
+    /* color: white; */
     pointer-events: none;
 
     ${OtherProjectComp}:hover & {
@@ -215,6 +227,7 @@ const SiteIcon = styled.div`
   }
 
   i {
+    color: ${(props) => props.theme.color};
     font-size: 18px;
     padding: 5px;
     transition: color 0.2s;
@@ -279,7 +292,7 @@ const FeaturedProject = (props) => {
     gsap.to(project, {
       y: -7,
       duration: 0.15,
-      backgroundColor: "#121212",
+      backgroundColor: "#eee",
     });
   };
 
@@ -287,7 +300,7 @@ const FeaturedProject = (props) => {
     gsap.to(project, {
       y: 0,
       duration: 0.15,
-      backgroundColor: "#151515",
+      backgroundColor: "#e5e5e5",
     });
   };
 
@@ -309,14 +322,8 @@ const FeaturedProject = (props) => {
       onMouseLeave={onMouseLeaveProject}
     >
       <ThemeProvider theme={theme}>
+        <a href={props.codeLink} target="_blank" />
         {/* <ProjectSide></ProjectSide> */}
-        {props.codeLink && (
-          <CodeIcon>
-            <a href={props.codeLink} target="_blank">
-              <i className="fab fa-github"></i>
-            </a>
-          </CodeIcon>
-        )}
 
         {props.siteLink && (
           <SiteIcon>
@@ -325,6 +332,7 @@ const FeaturedProject = (props) => {
             </a>
           </SiteIcon>
         )}
+
         <TextSide>
           <Title>{props.title}</Title>
           <Desc>{props.desc}</Desc>
