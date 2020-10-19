@@ -29,18 +29,19 @@ const OtherProjectComp = styled.div`
 
   @media only screen and (max-width: 1200px) {
     min-width: 280px;
-    min-height: 300px;
+    min-height: 260px;
   }
 
   @media only screen and (max-width: 992px) {
     min-width: 280px;
-    min-height: 350px;
+    min-height: 240px;
   }
 
   @media only screen and (max-width: 600px) {
     width: 100%;
     margin: 0;
     margin-bottom: 20px;
+    min-height: 200px;
   }
 
   @media only screen and (max-width: 450px) {
@@ -92,18 +93,18 @@ const Title = styled.h3`
   margin-bottom: 10px;
 
   @media only screen and (max-width: 1200px) {
-    font-size: 19px;
-    margin-bottom: 15px;
+    font-size: 18px;
+    margin-bottom: 10px;
   }
 
   @media only screen and (max-width: 992px) {
-    font-size: 22px;
-    margin-bottom: 15px;
+    font-size: 20px;
+    margin-bottom: 10px;
   }
 
   @media only screen and (max-width: 600px) {
-    font-size: 22px;
-    margin-bottom: 15px;
+    font-size: 20px;
+    margin-bottom: 10px;
   }
 
   @media only screen and (max-width: 450px) {
@@ -118,7 +119,7 @@ const Title = styled.h3`
 
 const Desc = styled.p`
   font-size: 14px;
-  line-height: 1.7rem;
+  /* line-height: 1.7rem; */
   font-weight: 400;
   margin: 0;
   margin-bottom: 15px;
@@ -129,18 +130,17 @@ const Desc = styled.p`
   }
 
   @media only screen and (max-width: 992px) {
-    font-size: 18px;
+    font-size: 16px;
     margin-bottom: 15px;
   }
 
   @media only screen and (max-width: 600px) {
-    font-size: 18px;
+    font-size: 16px;
     margin-bottom: 15px;
   }
 
   @media only screen and (max-width: 450px) {
     font-size: 14px;
-    line-height: unset;
     margin-bottom: 15px;
   }
 
@@ -162,7 +162,7 @@ const Techs = styled.ul`
 
 const TechItem = styled.li`
   font-weight: 600;
-  font-size: 13px;
+  font-size: 14px;
   margin: 0 10px;
   margin-bottom: 10px;
   color: ${(props) => props.theme.color};
