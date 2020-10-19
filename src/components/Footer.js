@@ -56,6 +56,11 @@ const Socials = styled.div`
     margin-left: 20px;
     cursor: pointer;
 
+    transition: transform 0.2s;
+    :hover {
+      transform: scale(1.2);
+    }
+
     @media only screen and (max-width: 450px) {
       margin-left: 10px;
     }
@@ -77,13 +82,22 @@ const Footer = () => {
         <Content>
           <Credits>Developed by Muhammad Afuzarahman</Credits>
           <Socials>
-            <i className="fa fa-envelope"></i>
+            <a href="mailto:theafuza@gmail.com">
+              <i className="fa fa-envelope"></i>
+            </a>
             <a
               href="https://github.com/afutofu"
               target="_blank"
               rel="noopener noreferrer"
             >
               <i className="fa fa-github"></i>
+            </a>
+            <a
+              href="https://twitter.com/afutofu"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i className="fab fa-twitter"></i>
             </a>
           </Socials>
         </Content>

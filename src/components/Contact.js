@@ -144,6 +144,16 @@ const Button = styled.button`
   margin-bottom: 50px;
   cursor: pointer;
 
+  transition: background-color 0.2s;
+  :hover {
+    background-color: #ffefeb;
+  }
+
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+
   @media only screen and (max-width: 450px) {
     padding: 5px 20px;
     font-size: 14px;
@@ -268,7 +278,9 @@ const Contact = (props) => {
               you're interested in hiring, want to ask some questions, or just
               want to say hi!
             </Text>
-            <Button ref={(el) => (button = el)}>Contact Me</Button>
+            <Button ref={(el) => (button = el)}>
+              <a href="mailto:theafuza@gmail.com">Contact Me</a>
+            </Button>
           </Content>
         </ThemeProvider>
       </Container>

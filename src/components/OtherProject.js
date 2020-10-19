@@ -15,7 +15,7 @@ const OtherProjectComp = styled.div`
   padding: 10px;
   margin: 10px 10px;
   box-sizing: border-box;
-  background-color: #e5e5e5;
+  background-color: #eee;
   border-radius: 10px;
 
   a {
@@ -94,8 +94,7 @@ const TextSide = styled.div`
 const Title = styled.h3`
   font-size: 17px;
   font-weight: 600;
-  margin: 0;
-  margin-bottom: 10px;
+  margin: 10px 0;
 
   @media only screen and (max-width: 1200px) {
     font-size: 18px;
@@ -273,17 +272,13 @@ const SiteIcon = styled.div`
       transform: scale(1.2);
     }
 
-    /* @media only screen and (max-width: 1200px) {
-      font-size: 16px;
-    }
-
     @media only screen and (max-width: 992px) {
       font-size: 16px;
     }
 
-    @media only screen and (max-width: 600px) {
-      font-size: 18px;
-    } */
+    @media only screen and (max-width: 450px) {
+      font-size: 12px;
+    }
   }
 `;
 
@@ -311,7 +306,7 @@ const FeaturedProject = (props) => {
     gsap.to(project, {
       y: -7,
       duration: 0.15,
-      backgroundColor: "#eee",
+      backgroundColor: "#fafafa",
     });
   };
 
@@ -319,7 +314,7 @@ const FeaturedProject = (props) => {
     gsap.to(project, {
       y: 0,
       duration: 0.15,
-      backgroundColor: "#e5e5e5",
+      backgroundColor: "#eee",
     });
   };
 

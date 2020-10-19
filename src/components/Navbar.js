@@ -91,7 +91,7 @@ const Navbar = ({ getNavbarTl }) => {
     let tl = new TimelineLite();
 
     tl.to(navbar, {
-      backgroundColor: "#eee",
+      backgroundColor: "#fafafa",
       duration: 2,
       ease: Power3.easeInOut,
     });

@@ -85,11 +85,15 @@ const ImageButtons = styled.div`
   justify-content: center;
   align-items: center;
   z-index: 100;
+
+  @media only screen and (max-width: 600px) {
+    bottom: 10px;
+  }
 `;
 
 const ImageButton = styled.button`
-  width: 10px;
-  height: 10px;
+  width: 12px;
+  height: 12px;
   outline: unset;
   border: ${(props) => `1px solid ${props.theme.color}`};
   background-color: ${(props) =>
@@ -255,7 +259,7 @@ const Icons = styled.div`
   }
 
   i {
-    font-size: 25px;
+    font-size: 20px;
     padding: 5px;
     margin: 20px;
     transition: color 0.2s;
@@ -271,13 +275,13 @@ const Icons = styled.div`
     }
 
     @media only screen and (max-width: 992px) {
-      font-size: 22px;
+      font-size: 18px;
       padding: 5px 15px;
       margin: 0 10px;
     }
 
     @media only screen and (max-width: 600px) {
-      font-size: 20px;
+      font-size: 18px;
     }
 
     @media only screen and (max-width: 450px) {

@@ -64,7 +64,7 @@ const Introduction = styled.h3`
 
 const Name = styled.h1`
   font-size: 41px;
-  color: #222;
+  color: black;
   margin: 0;
   margin-bottom: 2px;
   font-family: "Quicksand", "san-serif";
@@ -91,18 +91,14 @@ const Name = styled.h1`
 // `;
 
 const Motto = styled.h2`
-  font-size: 33px;
-  color: #666;
+  font-size: 28px;
+  color: #888;
   margin: 0;
   margin-bottom: 30px;
-  font-weight: 500;
+  font-weight: 700;
+  text-transform: uppercase;
 
-  @media only screen and (min-width: 992px) {
-    font-size: 41px;
-  }
-
-  @media only screen and (max-width: 600px) {
-    font-size: 28px;
+  @media only screen and (max-width: 992px) {
     margin-bottom: 20px;
   }
 
@@ -119,8 +115,8 @@ const Motto = styled.h2`
 
 const MottoBold = styled.span`
   position: relative;
-  color: #444;
-  font-weight: 600;
+  color: #777;
+  font-weight: 700;
 `;
 
 const Description = styled.p`
@@ -131,16 +127,14 @@ const Description = styled.p`
   margin: 0;
   margin-bottom: 35px;
 
-  @media only screen and (min-width: 992px) {
-    max-width: 50%;
-    font-size: 19px;
-    line-height: 1.7rem;
+  @media only screen and (max-width: 992px) {
+    margin-bottom: 25px;
   }
 
   @media only screen and (max-width: 600px) {
     max-width: 80%;
     font-size: 16px;
-    margin-bottom: 30px;
+    /* margin-bottom: 30px; */
   }
 
   @media only screen and (max-width: 450px) {
@@ -166,9 +160,16 @@ const Button = styled.button`
   border: 3px solid ${(props) => props.theme.color};
   font-size: 18px;
   margin-bottom: 50px;
+  cursor: pointer;
 
+  transition: background-color 0.2s;
   :hover {
-    cursor: pointer;
+    background-color: #ffefeb;
+  }
+
+  a {
+    text-decoration: none;
+    color: inherit;
   }
 
   @media only screen and (max-width: 450px) {
@@ -246,7 +247,9 @@ const Home = ({ getHomeTl }) => {
               games, then systems, then websites for over 4 years. Only getting
               better and still passionate since the first "Hello World"!
             </Description>
-            <Button ref={(el) => (button = el)}>Contact Me</Button>
+            <Button ref={(el) => (button = el)}>
+              <a href="mailto:theafuza@gmail.com">Contact Me</a>
+            </Button>
           </ThemeProvider>
         </Content>
       </Container>
