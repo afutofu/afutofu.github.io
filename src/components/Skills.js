@@ -70,18 +70,17 @@ const TitleArea = styled.div`
 `;
 
 const Title = styled.h2`
-  font-size: 26px;
+  font-size: 28px;
   font-weight: 500;
   padding: 0 20px;
 
-  @media only screen and (min-width: 992px) {
-    font-size: 28px;
+  @media only screen and (max-width: 992px) {
+    font-size: 26px;
   }
 
   @media only screen and (max-width: 450px) {
     padding: 0 15px;
     font-size: 22px;
-    line-height: unset;
   }
 
   @media only screen and (max-width: 350px) {
@@ -153,7 +152,7 @@ const List = styled.div`
 
 const ListTitle = styled.h3`
   color: ${(props) => props.theme.color};
-  font-size: 20px;
+  font-size: 24px;
   font-weight: 500;
   margin: 0;
   margin-bottom: 10px;
@@ -191,12 +190,16 @@ const ListItems = styled.ul`
 
 const ListItem = styled.li`
   color: #222;
-  font-size: 17px;
+  font-size: 20px;
   padding-bottom: 5px;
-  font-weight: 500;
+  font-weight: 400;
 
-  @media only screen and (min-width: 992px) {
-    font-size: 19px;
+  @media only screen and (max-width: 992px) {
+    font-size: 18px;
+  }
+
+  @media only screen and (max-width: 600px) {
+    font-size: 16px;
   }
 
   @media only screen and (max-width: 450px) {

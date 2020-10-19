@@ -50,12 +50,12 @@ const TitleArea = styled.div`
 `;
 
 const Title = styled.h2`
-  font-size: 26px;
+  font-size: 28px;
   font-weight: 500;
   padding-right: 20px;
 
-  @media only screen and (min-width: 992px) {
-    font-size: 28px;
+  @media only screen and (max-width: 992px) {
+    font-size: 26px;
   }
 
   @media only screen and (max-width: 450px) {
@@ -96,20 +96,22 @@ const Descriptions = styled.div`
 `;
 
 const Description = styled.p`
-  font-size: 19px;
-  line-height: 1.7rem;
+  font-size: 20px;
+  line-height: 1.5em;
   font-weight: 400;
   margin: 0;
   margin-bottom: 18px;
 
-  @media only screen and (min-width: 992px) {
-    font-size: 20px;
-    line-height: 1.8rem;
+  @media only screen and (max-width: 992px) {
+    font-size: 18px;
+  }
+
+  @media only screen and (max-width: 600px) {
+    font-size: 16px;
   }
 
   @media only screen and (max-width: 450px) {
     font-size: 14px;
-    line-height: unset;
   }
 
   @media only screen and (max-width: 350px) {

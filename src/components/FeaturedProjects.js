@@ -160,7 +160,7 @@ const FeaturedProjects = () => {
           <FeaturedProject
             reverse={true}
             title={"Projecc"}
-            desc={`A realtime text messaging web app inspired by Discord. Join project groups, interact with fellow project members, and plan out your next big project!`}
+            desc={`A real-time text messaging web app inspired by Discord. Join project groups, interact with fellow project members, and plan out your next big project!`}
             techs={["React", "Node", "Express", "Socket.IO", "MongoDB"]}
             codeLink={"https://github.com/afutofu/projecc"}
             siteLink={"https://projecc-afu.herokuapp.com/"}

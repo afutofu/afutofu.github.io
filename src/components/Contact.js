@@ -14,7 +14,7 @@ const ContactComp = styled.div`
   font-family: "Quicksand", "san-serif";
   box-sizing: border-box;
   padding: 150px 0;
-  padding-bottom: 220px;
+  padding-bottom: 250px;
   background-color: inherit;
   z-index: 0;
 
@@ -70,12 +70,12 @@ const TitleArea = styled.div`
 `;
 
 const Title = styled.h2`
-  font-size: 26px;
+  font-size: 28px;
   font-weight: 500;
   padding: 0 20px;
 
-  @media only screen and (min-width: 992px) {
-    font-size: 28px;
+  @media only screen and (max-width: 992px) {
+    font-size: 26px;
   }
 
   @media only screen and (max-width: 450px) {
@@ -109,17 +109,20 @@ const Text = styled.p`
   max-width: 80%;
   color: #222;
   font-weight: 400;
-  font-size: 17px;
-  line-height: 1.5rem;
+  font-size: 20px;
+  line-height: 1.5em;
   text-align: center;
   margin: 0;
   padding: 0;
   margin-bottom: 30px;
 
-  @media only screen and (min-width: 992px) {
+  @media only screen and (max-width: 992px) {
     max-width: 70%;
-    font-size: 19px;
-    line-height: 1.7rem;
+    font-size: 18px;
+  }
+
+  @media only screen and (max-width: 600px) {
+    font-size: 16px;
   }
 
   @media only screen and (max-width: 450px) {
@@ -141,7 +144,6 @@ const Button = styled.button`
   outline: none;
   border: 3px solid ${(props) => props.theme.color};
   font-size: 18px;
-  margin-bottom: 50px;
   cursor: pointer;
 
   transition: background-color 0.2s;
@@ -154,17 +156,20 @@ const Button = styled.button`
     color: inherit;
   }
 
+  @media only screen and (max-width: 600px) {
+    padding: 7px 24px;
+    font-size: 16px;
+  }
+
   @media only screen and (max-width: 450px) {
     padding: 5px 20px;
     font-size: 14px;
     border-width: 2px;
-    margin-bottom: unset;
   }
 
   @media only screen and (max-width: 350px) {
     padding: 5px 20px;
     font-size: 12px;
-    margin-bottom: unset;
   }
 `;
 

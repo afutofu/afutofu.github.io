@@ -10,6 +10,7 @@ const NavbarComp = styled.div`
   width: 100%;
   height: 60px;
   padding: 10px 5%;
+  padding-right: calc(5% + 4px);
   background-color: white;
   display: flex;
   justify-content: space-between;

@@ -44,13 +44,17 @@ const Content = styled.div`
 
 const Introduction = styled.h3`
   color: ${(props) => props.theme.color};
-  font-size: 22px;
+  font-size: 20px;
   margin: 0;
   margin-bottom: 8px;
   font-weight: 700;
 
-  @media only screen and (min-width: 992px) {
-    font-size: 26px;
+  @media only screen and (max-width: 992px) {
+    font-size: 18px;
+  }
+
+  @media only screen and (max-width: 600px) {
+    font-size: 16px;
   }
 
   @media only screen and (max-width: 450px) {
@@ -63,15 +67,23 @@ const Introduction = styled.h3`
 `;
 
 const Name = styled.h1`
-  font-size: 41px;
+  font-size: 50px;
   color: black;
   margin: 0;
   margin-bottom: 2px;
   font-family: "Quicksand", "san-serif";
   font-weight: 600;
 
-  @media only screen and (min-width: 992px) {
-    font-size: 51px;
+  @media only screen and (max-width: 1200px) {
+    font-size: 42px;
+  }
+
+  @media only screen and (max-width: 992px) {
+    font-size: 36px;
+  }
+
+  @media only screen and (max-width: 600px) {
+    font-size: 31px;
   }
 
   @media only screen and (max-width: 450px) {
@@ -92,7 +104,7 @@ const Name = styled.h1`
 
 const Motto = styled.h2`
   font-size: 28px;
-  color: #888;
+  color: #666;
   margin: 0;
   margin-bottom: 30px;
   font-weight: 700;
@@ -100,6 +112,10 @@ const Motto = styled.h2`
 
   @media only screen and (max-width: 992px) {
     margin-bottom: 20px;
+  }
+
+  @media only screen and (max-width: 600px) {
+    font-size: 22px;
   }
 
   @media only screen and (max-width: 450px) {
@@ -115,32 +131,33 @@ const Motto = styled.h2`
 
 const MottoBold = styled.span`
   position: relative;
-  color: #777;
   font-weight: 700;
 `;
 
 const Description = styled.p`
-  max-width: 60%;
-  font-size: 17px;
-  line-height: 1.5rem;
+  max-width: 50%;
+  font-size: 16px;
+  line-height: 1.5em;
   font-weight: 400;
   margin: 0;
   margin-bottom: 35px;
 
+  @media only screen and (max-width: 1200px) {
+    max-width: 60%;
+  }
+
   @media only screen and (max-width: 992px) {
+    /* max-width: 0%; */
     margin-bottom: 25px;
   }
 
   @media only screen and (max-width: 600px) {
-    max-width: 80%;
-    font-size: 16px;
-    /* margin-bottom: 30px; */
+    max-width: 100%;
   }
 
   @media only screen and (max-width: 450px) {
     font-size: 14px;
     margin-bottom: 20px;
-    line-height: unset;
   }
 
   @media only screen and (max-width: 350px) {
@@ -159,7 +176,6 @@ const Button = styled.button`
   outline: none;
   border: 3px solid ${(props) => props.theme.color};
   font-size: 18px;
-  margin-bottom: 50px;
   cursor: pointer;
 
   transition: background-color 0.2s;
@@ -172,17 +188,20 @@ const Button = styled.button`
     color: inherit;
   }
 
+  @media only screen and (max-width: 600px) {
+    padding: 7px 24px;
+    font-size: 16px;
+  }
+
   @media only screen and (max-width: 450px) {
     padding: 5px 20px;
     font-size: 14px;
     border-width: 2px;
-    margin-bottom: unset;
   }
 
   @media only screen and (max-width: 350px) {
     padding: 5px 20px;
     font-size: 12px;
-    margin-bottom: unset;
   }
 `;
 
