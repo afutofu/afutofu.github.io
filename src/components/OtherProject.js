@@ -1,4 +1,4 @@
-import React, { forwardRef, useRef, useEffect } from "react";
+import React, { useRef, useEffect } from "react";
 import styled, { ThemeProvider } from "styled-components";
 import { gsap, TimelineLite, Power3 } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -51,6 +51,11 @@ const OtherProjectComp = styled.div`
   @media only screen and (max-width: 350px) {
     font-size: 12px;
   }
+`;
+
+const Container = styled.div`
+  width: 100%;
+  height: 100%;
 `;
 
 // const ProjectSide = styled.div`
@@ -261,9 +266,11 @@ const SiteIcon = styled.div`
     font-size: 18px;
     padding: 5px;
     transition: color 0.2s;
+    transition: transform 0.3s;
 
     :hover {
       color: ${(props) => props.theme.color};
+      transform: scale(1.2);
     }
 
     /* @media only screen and (max-width: 1200px) {
@@ -286,16 +293,6 @@ const theme = {
 
 const FeaturedProject = (props) => {
   let project = useRef(null);
-
-  const displayTechs = () => {
-    if (props.techs) {
-      return props.techs.map((techItem) => {
-        return <TechItem>{techItem}</TechItem>;
-      });
-    }
-
-    return null;
-  };
 
   const projectEnter = () => {
     let tl = new TimelineLite();
@@ -344,22 +341,27 @@ const FeaturedProject = (props) => {
       onMouseLeave={onMouseLeaveProject}
     >
       <ThemeProvider theme={theme}>
-        <a href={props.codeLink} target="_blank" />
-        {/* <ProjectSide></ProjectSide> */}
-
+        <a href={props.codeLink} target="_blank" rel="noopener noreferrer">
+          <Container>
+            <TextSide>
+              <Title>{props.title}</Title>
+              <Desc>{props.desc}</Desc>
+              <Techs>
+                {props.techs &&
+                  props.techs.map((techItem, i) => {
+                    return <TechItem key={i}>{techItem}</TechItem>;
+                  })}
+              </Techs>
+            </TextSide>
+          </Container>
+        </a>
         {props.siteLink && (
           <SiteIcon>
-            <a href={props.siteLink} target="_blank">
+            <a href={props.siteLink} target="_blank" rel="noopener noreferrer">
               <i className="fas fa-external-link-alt"></i>
             </a>
           </SiteIcon>
         )}
-
-        <TextSide>
-          <Title>{props.title}</Title>
-          <Desc>{props.desc}</Desc>
-          <Techs>{displayTechs()}</Techs>
-        </TextSide>
       </ThemeProvider>
     </OtherProjectComp>
   );

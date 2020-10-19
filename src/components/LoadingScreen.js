@@ -47,21 +47,21 @@ const LoadingScreen = ({ isLoading }) => {
     return tl;
   };
 
-  const logoScaleOutIn = () => {
-    let tl = new TimelineMax();
+  // const logoScaleOutIn = () => {
+  //   let tl = new TimelineMax();
 
-    const scaleTime = 0.8;
+  //   const scaleTime = 0.8;
 
-    tl.to(logo, {
-      scale: 0.6,
-      duration: scaleTime,
-    }).to(logo, {
-      scale: 1,
-      duration: scaleTime,
-    });
+  //   tl.to(logo, {
+  //     scale: 0.6,
+  //     duration: scaleTime,
+  //   }).to(logo, {
+  //     scale: 1,
+  //     duration: scaleTime,
+  //   });
 
-    return tl;
-  };
+  //   return tl;
+  // };
 
   const logoRotate = () => {
     let tl = new TimelineMax({ repeat: 2, repeatDelay: 0.02 });

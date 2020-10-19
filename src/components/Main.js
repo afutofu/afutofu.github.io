@@ -78,7 +78,7 @@ const Main = () => {
   const [masterTl] = useState(new TimelineLite());
 
   let main = useRef(null);
-  let content = useRef(null);
+  // let content = useRef(null);
   let contentBg1 = useRef(null);
   let contentBg2 = useRef(null);
 
@@ -137,7 +137,7 @@ const Main = () => {
       {isLoading && <LoadingScreen isLoading={setIsLoadingCallback} />}
       <MainComp ref={(el) => (main = el)}>
         <Navbar getNavbarTl={getNavbarTl} />
-        <Content ref={(el) => (content = el)}>
+        <Content>
           <AlphaBackground />
           <BackgroundImageContainer>
             <BackgroundImage />

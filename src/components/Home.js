@@ -190,7 +190,7 @@ const theme = {
 };
 
 const Home = ({ getHomeTl }) => {
-  let home = useRef(null);
+  // let home = useRef(null);
   let introduction = useRef(null);
   let name = useRef(null);
   let motto = useRef(null);
@@ -229,7 +229,7 @@ const Home = ({ getHomeTl }) => {
   }, [getTimeline]);
 
   return (
-    <HomeComp id="home" ref={(el) => (home = el)}>
+    <HomeComp id="home">
       <Container>
         <Content>
           <ThemeProvider theme={theme}>

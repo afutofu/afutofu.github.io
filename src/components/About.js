@@ -126,22 +126,22 @@ const theme = {
 };
 
 const About = () => {
-  let about = useRef(null);
+  // let about = useRef(null);
   let titleText = useRef(null);
   let titleLine = useRef(null);
   let descriptions = useRef(null);
 
-  const backgroundFade = () => {
-    let tl = new TimelineLite();
+  // const backgroundFade = () => {
+  //   let tl = new TimelineLite();
 
-    tl.to(about, {
-      backgroundColor: "#eee",
-      ease: Power3.easeInOut,
-      duration: 2,
-    });
+  //   tl.to(about, {
+  //     backgroundColor: "#eee",
+  //     ease: Power3.easeInOut,
+  //     duration: 2,
+  //   });
 
-    return tl;
-  };
+  //   return tl;
+  // };
 
   const titleEnter = () => {
     let tl = new TimelineLite();
@@ -198,7 +198,7 @@ const About = () => {
   }, []);
 
   return (
-    <AboutComp id="about" ref={(el) => (about = el)}>
+    <AboutComp id="about">
       <Container>
         <ThemeProvider theme={theme}>
           <Content>

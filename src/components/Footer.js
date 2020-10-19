@@ -78,7 +78,11 @@ const Footer = () => {
           <Credits>Developed by Muhammad Afuzarahman</Credits>
           <Socials>
             <i className="fa fa-envelope"></i>
-            <a href="https://github.com/afutofu" target="_blank">
+            <a
+              href="https://github.com/afutofu"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <i className="fa fa-github"></i>
             </a>
           </Socials>
