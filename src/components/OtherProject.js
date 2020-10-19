@@ -294,7 +294,7 @@ const FeaturedProject = (props) => {
 
     tl.from(project, {
       opacity: 0,
-      y: 30,
+      y: 50,
       duration: 0.7,
       ease: Power3.easeInOut,
     });

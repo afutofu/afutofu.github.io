@@ -214,7 +214,8 @@ const About = () => {
             </TitleArea>
             <Descriptions ref={(el) => (descriptions = el)}>
               <Description>
-                Hi! I'm Afuza, a college student living in Jakarta, Indonesia.
+                Hi! I'm <DescriptionBold>Afuza</DescriptionBold>, currently
+                living in Jakarta, Indonesia.
               </Description>
               <Description>
                 Ever since starting programming, I feel like I've uncovered a

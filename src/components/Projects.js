@@ -22,7 +22,7 @@ const ProjectsComp = styled.div`
   /* padding: 250px 0; */
   box-sizing: border-box;
   object-fit: cover;
-  overflow: hidden;
+  /* overflow: hidden; */
   z-index: 0;
 
   @media only screen and (min-width: 1200px) {

@@ -75,11 +75,11 @@ const Name = styled.h1`
   font-weight: 600;
 
   @media only screen and (max-width: 1200px) {
-    font-size: 42px;
+    font-size: 46px;
   }
 
   @media only screen and (max-width: 992px) {
-    font-size: 36px;
+    font-size: 42px;
   }
 
   @media only screen and (max-width: 600px) {
@@ -262,9 +262,9 @@ const Home = ({ getHomeTl }) => {
               <MottoBold>Learn</MottoBold>
             </Motto>
             <Description ref={(el) => (description = el)}>
-              Currently a college student who loves to code. Started coding
-              games, then systems, then websites for over 4 years. Only getting
-              better and still passionate since the first "Hello World"!
+              Started coding games, then systems, then websites for over 4
+              years. Only getting better and still passionate since the first
+              "Hello World"!
             </Description>
             <Button ref={(el) => (button = el)}>
               <a href="mailto:theafuza@gmail.com">Contact Me</a>

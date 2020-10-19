@@ -60,6 +60,11 @@ const NavItem = styled.li`
     color: #ff350d;
   }
 
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+
   @media only screen and (max-width: 600px) {
     font-size: 18px;
     padding: 5px;
@@ -209,7 +214,11 @@ const Navbar = ({ getNavbarTl }) => {
             Contact
           </Link>
         </NavItem>
-        <NavItem ref={(el) => (resume = el)}>Resume</NavItem>
+        <NavItem ref={(el) => (resume = el)}>
+          <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">
+            Resume
+          </a>
+        </NavItem>
       </NavItems>
     </NavbarComp>
   );

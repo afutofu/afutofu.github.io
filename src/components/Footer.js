@@ -49,20 +49,19 @@ const Socials = styled.div`
   align-items: center;
 
   a {
-    color: #ff350d;
-  }
-
-  i {
     margin-left: 20px;
+    color: #ff350d;
     cursor: pointer;
-
-    transition: transform 0.2s;
-    :hover {
-      transform: scale(1.2);
-    }
 
     @media only screen and (max-width: 450px) {
       margin-left: 10px;
+    }
+  }
+
+  i {
+    transition: transform 0.2s;
+    :hover {
+      transform: scale(1.2);
     }
   }
 
@@ -92,6 +91,14 @@ const Footer = () => {
             >
               <i className="fa fa-github"></i>
             </a>
+            <a
+              href="linkedin.com/in/muhammad-afuzarahman-6a58931b9"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i className="fab fa-linkedin-in"></i>
+            </a>
+
             <a
               href="https://twitter.com/afutofu"
               target="_blank"
