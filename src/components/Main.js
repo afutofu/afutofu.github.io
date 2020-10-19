@@ -82,10 +82,6 @@ const Main = () => {
   let contentBg1 = useRef(null);
   let contentBg2 = useRef(null);
 
-  window.onbeforeunload = function () {
-    window.scrollTo(0, 0);
-  };
-
   const mainEnter = () => {
     let tl = new TimelineLite();
 
@@ -110,6 +106,12 @@ const Main = () => {
 
     return tl;
   };
+
+  useEffect(() => {
+    window.onbeforeunload = function () {
+      window.scrollTo(0, 0);
+    };
+  }, []);
 
   useEffect(() => {
     if (navbarTl && homeTl && !isLoading) {
