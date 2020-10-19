@@ -52,6 +52,14 @@ const Introduction = styled.h3`
   @media only screen and (min-width: 992px) {
     font-size: 26px;
   }
+
+  @media only screen and (max-width: 450px) {
+    font-size: 14px;
+  }
+
+  @media only screen and (max-width: 350px) {
+    font-size: 10px;
+  }
 `;
 
 const Name = styled.h1`
@@ -65,14 +73,22 @@ const Name = styled.h1`
   @media only screen and (min-width: 992px) {
     font-size: 51px;
   }
+
+  @media only screen and (max-width: 450px) {
+    font-size: 22px;
+  }
+
+  @media only screen and (max-width: 350px) {
+    font-size: 20px;
+  }
 `;
 
-const NameBold = styled.span`
-  color: #111;
-  font-weight: 600;
-  margin: 0;
-  padding: 0;
-`;
+// const NameBold = styled.span`
+//   color: #111;
+//   font-weight: 600;
+//   margin: 0;
+//   padding: 0;
+// `;
 
 const Motto = styled.h2`
   font-size: 33px;
@@ -88,6 +104,16 @@ const Motto = styled.h2`
   @media only screen and (max-width: 600px) {
     font-size: 28px;
     margin-bottom: 20px;
+  }
+
+  @media only screen and (max-width: 450px) {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+
+  @media only screen and (max-width: 350px) {
+    font-size: 16px;
+    margin-bottom: 10px;
   }
 `;
 
@@ -116,6 +142,17 @@ const Description = styled.p`
     font-size: 16px;
     margin-bottom: 30px;
   }
+
+  @media only screen and (max-width: 450px) {
+    font-size: 14px;
+    margin-bottom: 20px;
+    line-height: unset;
+  }
+
+  @media only screen and (max-width: 350px) {
+    font-size: 12px;
+    margin-bottom: 20px;
+  }
 `;
 
 const Button = styled.button`
@@ -132,6 +169,19 @@ const Button = styled.button`
 
   :hover {
     cursor: pointer;
+  }
+
+  @media only screen and (max-width: 450px) {
+    padding: 5px 20px;
+    font-size: 14px;
+    border-width: 2px;
+    margin-bottom: unset;
+  }
+
+  @media only screen and (max-width: 350px) {
+    padding: 5px 20px;
+    font-size: 12px;
+    margin-bottom: unset;
   }
 `;
 

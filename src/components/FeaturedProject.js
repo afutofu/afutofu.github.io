@@ -25,6 +25,11 @@ const FeaturedProjectComp = styled.div`
     margin-bottom: 100px;
     height: 500px;
   }
+
+  @media only screen and (max-width: 450px) {
+    height: 430px;
+    margin-bottom: 50px;
+  }
 `;
 
 const ProjectSide = styled.div`
@@ -44,7 +49,16 @@ const ProjectSide = styled.div`
 
   @media only screen and (max-width: 600px) {
     width: 100%;
-    height: 250px;
+    max-height: 250px;
+  }
+
+  @media only screen and (max-width: 450px) {
+    width: 90%;
+    max-height: 200px;
+  }
+
+  @media only screen and (max-width: 350px) {
+    max-height: 150px;
   }
 `;
 
@@ -123,6 +137,10 @@ const TextSide = styled.div`
     margin: 0;
     margin-bottom: 15px;
   }
+
+  @media only screen and (max-width: 450px) {
+    width: 90%;
+  }
 `;
 
 const Title = styled.h3`
@@ -137,6 +155,14 @@ const Title = styled.h3`
 
   @media only screen and (max-width: 992px) {
     font-size: 22px;
+  }
+
+  @media only screen and (max-width: 450px) {
+    font-size: 18px;
+  }
+
+  @media only screen and (max-width: 350px) {
+    font-size: 16px;
   }
 `;
 
@@ -156,6 +182,16 @@ const Desc = styled.p`
     font-size: 18px;
     line-height: 1.7rem;
     margin-bottom: 15px;
+  }
+
+  @media only screen and (max-width: 450px) {
+    font-size: 14px;
+    line-height: unset;
+    margin-bottom: 10px;
+  }
+
+  @media only screen and (max-width: 350px) {
+    font-size: 12px;
   }
 `;
 
@@ -196,6 +232,16 @@ const TechItem = styled.li`
     font-size: 16px;
     margin: 5 15px;
   }
+
+  @media only screen and (max-width: 450px) {
+    font-size: 14px;
+    line-height: unset;
+    margin: 3 5px;
+  }
+
+  @media only screen and (max-width: 350px) {
+    font-size: 12px;
+  }
 `;
 
 const Icons = styled.div`
@@ -232,6 +278,14 @@ const Icons = styled.div`
 
     @media only screen and (max-width: 600px) {
       font-size: 20px;
+    }
+
+    @media only screen and (max-width: 450px) {
+      font-size: 14px;
+    }
+
+    @media only screen and (max-width: 350px) {
+      font-size: 12px;
     }
   }
 `;

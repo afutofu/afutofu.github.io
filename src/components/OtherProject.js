@@ -38,9 +38,17 @@ const OtherProjectComp = styled.div`
   }
 
   @media only screen and (max-width: 600px) {
-    min-width: 400px;
-    min-height: 300px;
+    width: 100%;
+    margin: 0;
     margin-bottom: 20px;
+  }
+
+  @media only screen and (max-width: 450px) {
+    min-height: 180px;
+  }
+
+  @media only screen and (max-width: 350px) {
+    font-size: 12px;
   }
 `;
 
@@ -97,6 +105,15 @@ const Title = styled.h3`
     font-size: 22px;
     margin-bottom: 15px;
   }
+
+  @media only screen and (max-width: 450px) {
+    font-size: 18px;
+    margin-bottom: 8px;
+  }
+
+  @media only screen and (max-width: 350px) {
+    font-size: 16px;
+  }
 `;
 
 const Desc = styled.p`
@@ -119,6 +136,16 @@ const Desc = styled.p`
   @media only screen and (max-width: 600px) {
     font-size: 18px;
     margin-bottom: 15px;
+  }
+
+  @media only screen and (max-width: 450px) {
+    font-size: 14px;
+    line-height: unset;
+    margin-bottom: 15px;
+  }
+
+  @media only screen and (max-width: 350px) {
+    font-size: 12px;
   }
 `;
 
@@ -152,6 +179,14 @@ const TechItem = styled.li`
 
   @media only screen and (max-width: 600px) {
     font-size: 16px;
+  }
+
+  @media only screen and (max-width: 450px) {
+    font-size: 14px;
+  }
+
+  @media only screen and (max-width: 350px) {
+    font-size: 12px;
   }
 `;
 
@@ -217,13 +252,8 @@ const SiteIcon = styled.div`
     position: unset;
     top: unset;
     left: unset;
-    /* color: white; */
-    pointer-events: none;
-
-    ${OtherProjectComp}:hover & {
-      opacity: 1;
-      pointer-events: auto;
-    }
+    opacity: 1;
+    pointer-events: auto;
   }
 
   i {
@@ -231,17 +261,9 @@ const SiteIcon = styled.div`
     font-size: 18px;
     padding: 5px;
     transition: color 0.2s;
-    transition: opacity 0.5s;
-
-    opacity: 0;
 
     :hover {
       color: ${(props) => props.theme.color};
-    }
-
-    ${OtherProjectComp}:hover & {
-      opacity: 1;
-      cursor: pointer;
     }
 
     /* @media only screen and (max-width: 1200px) {

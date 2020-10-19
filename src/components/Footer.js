@@ -7,6 +7,10 @@ const FooterComp = styled.div`
   left: 0;
   width: 100%;
   height: 70px;
+
+  @media only screen and (max-width: 450px) {
+    height: 50px;
+  }
 `;
 
 const Container = styled.div`
@@ -29,6 +33,10 @@ const Credits = styled.h3`
   font-size: 16px;
   font-weight: 600;
   color: #222;
+
+  @media only screen and (max-width: 450px) {
+    font-size: 12px;
+  }
 `;
 
 const Socials = styled.div`
@@ -47,6 +55,18 @@ const Socials = styled.div`
   i {
     margin-left: 20px;
     cursor: pointer;
+
+    @media only screen and (max-width: 450px) {
+      margin-left: 10px;
+    }
+  }
+
+  @media only screen and (max-width: 450px) {
+    font-size: 14px;
+  }
+
+  @media only screen and (max-width: 350px) {
+    font-size: 12px;
   }
 `;
 

@@ -14,7 +14,7 @@ const ContactComp = styled.div`
   font-family: "Quicksand", "san-serif";
   box-sizing: border-box;
   padding: 150px 0;
-  padding-bottom: 270px;
+  padding-bottom: 220px;
   background-color: inherit;
   z-index: 0;
 
@@ -27,6 +27,10 @@ const ContactComp = styled.div`
     background-color: inherit;
     transform-origin: bottom left;
     transform: skewY(-5deg);
+  }
+
+  @media only screen and (max-width: 450px) {
+    padding-bottom: 150px;
   }
 `;
 
@@ -73,6 +77,14 @@ const Title = styled.h2`
   @media only screen and (min-width: 992px) {
     font-size: 28px;
   }
+
+  @media only screen and (max-width: 450px) {
+    font-size: 18px;
+  }
+
+  @media only screen and (max-width: 350px) {
+    font-size: 16px;
+  }
 `;
 
 const TitleHighlight = styled.span`
@@ -109,6 +121,14 @@ const Text = styled.p`
     font-size: 19px;
     line-height: 1.7rem;
   }
+
+  @media only screen and (max-width: 450px) {
+    font-size: 14px;
+  }
+
+  @media only screen and (max-width: 350px) {
+    font-size: 12px;
+  }
 `;
 
 const Button = styled.button`
@@ -122,9 +142,19 @@ const Button = styled.button`
   border: 3px solid ${(props) => props.theme.color};
   font-size: 18px;
   margin-bottom: 50px;
+  cursor: pointer;
 
-  :hover {
-    cursor: pointer;
+  @media only screen and (max-width: 450px) {
+    padding: 5px 20px;
+    font-size: 14px;
+    border-width: 2px;
+    margin-bottom: unset;
+  }
+
+  @media only screen and (max-width: 350px) {
+    padding: 5px 20px;
+    font-size: 12px;
+    margin-bottom: unset;
   }
 `;
 

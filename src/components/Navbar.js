@@ -42,12 +42,13 @@ const NavItems = styled.ul`
 
   @media only screen and (max-width: 600px) {
     justify-content: flex-end;
+    min-width: unset;
   }
 `;
 
 const NavItem = styled.li`
   font-size: 20px;
-  padding: 0 10px;
+  padding: 0 5px;
   margin: 0;
   box-sizing: border-box;
 
@@ -60,7 +61,20 @@ const NavItem = styled.li`
 
   @media only screen and (max-width: 600px) {
     font-size: 18px;
-    padding: 0 8px;
+    padding: 5px;
+    margin: 0 3px;
+  }
+
+  @media only screen and (max-width: 450px) {
+    font-size: 12px;
+    padding: 3px;
+    margin: 0 3px;
+  }
+
+  @media only screen and (max-width: 350px) {
+    font-size: 10px;
+    padding: 3px;
+    margin: 0 3px;
   }
 `;
 
@@ -88,8 +102,9 @@ const Navbar = ({ getNavbarTl }) => {
   const navItemsEnter = () => {
     let tl = new TimelineLite();
 
-    tl.from(logo, 2.5, {
+    tl.from(logo, 2, {
       autoAlpha: 0,
+      ease: Power3.easeOut,
     }).staggerFrom(
       [about, skills, projects, contact, resume],
       0.7,
@@ -98,7 +113,7 @@ const Navbar = ({ getNavbarTl }) => {
         autoAlpha: 0,
       },
       0.15,
-      "-=2"
+      "-=1.7"
     );
 
     return tl;
@@ -114,24 +129,20 @@ const Navbar = ({ getNavbarTl }) => {
   useEffect(() => {
     navbar.style.top = "0px";
     const navbarClass = "." + navbar.getAttribute("class").split(" ").join(".");
-
     let scrollPosition = 0;
     window.addEventListener("scroll", () => {
       const navbarDOM = document.querySelector(navbarClass);
       let topOfScreenPosition =
         window.pageYOffset || document.documentElement.scrollTop;
-
       if (topOfScreenPosition > scrollPosition) {
         navbarDOM.style.top = "-80px";
       } else {
         navbarDOM.style.top = "0";
         navbarDOM.style.boxShadow = "0px 1px 15px 0px rgba(0, 0, 0, 0.1)";
-
-        if (scrollPosition < 50) {
+        if (scrollPosition < 150) {
           navbarDOM.style.boxShadow = "";
         }
       }
-
       scrollPosition = topOfScreenPosition;
     });
   }, [navbar]);

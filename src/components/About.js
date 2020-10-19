@@ -57,6 +57,16 @@ const Title = styled.h2`
   @media only screen and (min-width: 992px) {
     font-size: 28px;
   }
+
+  @media only screen and (max-width: 450px) {
+    padding-right: 15px;
+    font-size: 22px;
+    line-height: unset;
+  }
+
+  @media only screen and (max-width: 350px) {
+    font-size: 20px;
+  }
 `;
 
 const TitleHighlight = styled.span`
@@ -95,6 +105,15 @@ const Description = styled.p`
   @media only screen and (min-width: 992px) {
     font-size: 20px;
     line-height: 1.8rem;
+  }
+
+  @media only screen and (max-width: 450px) {
+    font-size: 14px;
+    line-height: unset;
+  }
+
+  @media only screen and (max-width: 350px) {
+    font-size: 12px;
   }
 `;
 

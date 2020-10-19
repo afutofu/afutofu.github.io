@@ -77,6 +77,16 @@ const Title = styled.h2`
   @media only screen and (min-width: 992px) {
     font-size: 28px;
   }
+
+  @media only screen and (max-width: 450px) {
+    padding: 0 15px;
+    font-size: 22px;
+    line-height: unset;
+  }
+
+  @media only screen and (max-width: 350px) {
+    font-size: 20px;
+  }
 `;
 
 const TitleHighlight = styled.span`
@@ -115,6 +125,12 @@ const ListArea = styled.div`
     width: 100%;
     justify-content: center;
   }
+
+  @media only screen and (max-width: 600px) {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
 `;
 
 const List = styled.div`
@@ -129,6 +145,10 @@ const List = styled.div`
     justify-content: center;
     align-items: center;
   }
+
+  @media only screen and (max-width: 600px) {
+    margin-bottom: 20px;
+  }
 `;
 
 const ListTitle = styled.h3`
@@ -142,6 +162,15 @@ const ListTitle = styled.h3`
     font-size: 22px;
     margin: 0 20px;
     margin-bottom: 10px;
+  }
+
+  @media only screen and (max-width: 450px) {
+    font-size: 20px;
+    line-height: unset;
+  }
+
+  @media only screen and (max-width: 350px) {
+    font-size: 18px;
   }
 `;
 
@@ -168,6 +197,14 @@ const ListItem = styled.li`
 
   @media only screen and (min-width: 992px) {
     font-size: 19px;
+  }
+
+  @media only screen and (max-width: 450px) {
+    font-size: 14px;
+  }
+
+  @media only screen and (max-width: 350px) {
+    font-size: 12px;
   }
 `;
 
@@ -317,9 +354,9 @@ const Skills = (props) => {
                     <ListItem>HTML</ListItem>
                     <ListItem>CSS</ListItem>
                     <ListItem>Python</ListItem>
+                    <ListItem>Java</ListItem>
                     <ListItem>SQL</ListItem>
                     <ListItem>PHP</ListItem>
-                    <ListItem>Java</ListItem>
                   </ListItems>
                 </List>
                 <List>

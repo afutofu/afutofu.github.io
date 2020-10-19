@@ -43,6 +43,19 @@ const Title = styled.h2`
   @media only screen and (min-width: 992px) {
     font-size: 28px;
   }
+
+  @media only screen and (max-width: 600px) {
+    padding: 0;
+    margin: auto;
+  }
+
+  @media only screen and (max-width: 450px) {
+    font-size: 22px;
+  }
+
+  @media only screen and (max-width: 350px) {
+    font-size: 20px;
+  }
 `;
 
 const TitleHighlight = styled.span`
@@ -54,6 +67,14 @@ const TitleLineWrapper = styled.div`
   flex: 1;
   height: 20px;
   padding: 0;
+
+  @media only screen and (max-width: 600px) {
+    display: none;
+  }
+
+  @media only screen and (max-width: 450px) {
+    display: none;
+  }
 `;
 
 const TitleLine = styled.div`

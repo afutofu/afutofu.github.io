@@ -115,7 +115,7 @@ const Main = () => {
     if (navbarTl && homeTl && !isLoading) {
       masterTl.add(mainEnter());
       masterTl.add(navbarTl.play(), "-=2");
-      masterTl.add(homeTl.play(), "-=0.9");
+      masterTl.add(homeTl.play(), "-=0.6");
       masterTl.play();
     }
   }, [masterTl, navbarTl, homeTl, isLoading]);
