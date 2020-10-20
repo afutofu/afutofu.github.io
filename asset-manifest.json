@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.js": "/static/js/main.4d86fad5.chunk.js",
-    "main.js.map": "/static/js/main.4d86fad5.chunk.js.map",
+    "main.js": "/static/js/main.6dad8be5.chunk.js",
+    "main.js.map": "/static/js/main.6dad8be5.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.19ccc7f6.js",
     "runtime-main.js.map": "/static/js/runtime-main.19ccc7f6.js.map",
     "static/js/2.2b1868cf.chunk.js": "/static/js/2.2b1868cf.chunk.js",
     "static/js/2.2b1868cf.chunk.js.map": "/static/js/2.2b1868cf.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.499b9e0a9f5fe327b08529ba16b3d3f1.js": "/precache-manifest.499b9e0a9f5fe327b08529ba16b3d3f1.js",
+    "precache-manifest.8d5a8b23d0a7e25bf9f61ee24aa65a75.js": "/precache-manifest.8d5a8b23d0a7e25bf9f61ee24aa65a75.js",
     "service-worker.js": "/service-worker.js",
     "static/js/2.2b1868cf.chunk.js.LICENSE.txt": "/static/js/2.2b1868cf.chunk.js.LICENSE.txt",
     "static/media/devils1-min.png": "/static/media/devils1-min.5423eb9e.png",
@@ -22,11 +22,11 @@
     "static/media/saiko1-min.png": "/static/media/saiko1-min.2cd6e224.png",
     "static/media/saiko2-min.png": "/static/media/saiko2-min.07a77a4c.png",
     "static/media/saiko3-min.png": "/static/media/saiko3-min.532a4bf3.png",
-    "static/media/wallpaper-skyrim.jpg": "/static/media/wallpaper-skyrim.8bca1dd9.jpg"
+    "static/media/wallpaper-skyrim.jpg": "/static/media/wallpaper-skyrim.d70fb38a.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.19ccc7f6.js",
     "static/js/2.2b1868cf.chunk.js",
-    "static/js/main.4d86fad5.chunk.js"
+    "static/js/main.6dad8be5.chunk.js"
   ]
 }
