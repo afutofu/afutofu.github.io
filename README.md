@@ -16,7 +16,3 @@ Features in this version:
 - Complete links to live site on projects
 - Downloadable resume
 - Social links
-
-Future implementations:
-
-- Add final resume

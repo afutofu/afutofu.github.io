@@ -143,9 +143,11 @@ const List = styled.div`
   @media only screen and (max-width: 992px) {
     justify-content: center;
     align-items: center;
+    margin: 0 10px;
   }
 
   @media only screen and (max-width: 600px) {
+    margin: 0;
     margin-bottom: 20px;
   }
 `;
@@ -355,10 +357,11 @@ const Skills = (props) => {
                   <ListItems ref={(el) => (listItems = el)}>
                     <ListItem>Javascript (ES6)</ListItem>
                     <ListItem>HTML</ListItem>
-                    <ListItem>CSS</ListItem>
+                    <ListItem>CSS / SASS</ListItem>
                     <ListItem>Python</ListItem>
                     <ListItem>Java</ListItem>
                     <ListItem>SQL</ListItem>
+                    <ListItem>C++</ListItem>
                     <ListItem>PHP</ListItem>
                   </ListItems>
                 </List>
@@ -366,6 +369,9 @@ const Skills = (props) => {
                   <ListTitle>Frameworks</ListTitle>
                   <ListItems>
                     <ListItem>React</ListItem>
+                    <ListItem>Redux</ListItem>
+                    <ListItem>Bootstrap</ListItem>
+                    <ListItem>Node.js</ListItem>
                     <ListItem>Express</ListItem>
                     <ListItem>Laravel</ListItem>
                   </ListItems>
@@ -373,11 +379,11 @@ const Skills = (props) => {
                 <List>
                   <ListTitle>Tools</ListTitle>
                   <ListItems>
-                    <ListItem>Git & Github</ListItem>
-                    <ListItem>Postman</ListItem>
-                    <ListItem>MongoDB</ListItem>
-                    <ListItem>Chrome DevTools</ListItem>
                     <ListItem>Bash</ListItem>
+                    <ListItem>Git & Github</ListItem>
+                    <ListItem>Chrome DevTools</ListItem>
+                    <ListItem>MongoDB</ListItem>
+                    <ListItem>Postman</ListItem>
                   </ListItems>
                 </List>
               </ListArea>

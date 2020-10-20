@@ -161,7 +161,14 @@ const FeaturedProjects = () => {
             reverse={true}
             title={"Projecc"}
             desc={`A real-time text messaging web app inspired by Discord. Join project groups, interact with fellow project members, and plan out your next big project!`}
-            techs={["React", "Node", "Express", "Socket.IO", "MongoDB"]}
+            techs={[
+              "React",
+              "Node.js",
+              "Express",
+              "Socket.IO",
+              "MongoDB",
+              "JWT",
+            ]}
             codeLink={"https://github.com/afutofu/projecc"}
             siteLink={"https://projecc-afu.herokuapp.com/"}
             images={[projecc1, projecc2, projecc3]}
@@ -169,7 +176,7 @@ const FeaturedProjects = () => {
           <FeaturedProject
             title={"Saiko Games"}
             desc={`A video game information website that displays current releases, most popular and featured games, and video game information and reviews.`}
-            techs={["React", "IGDB API", "Node", "Express"]}
+            techs={["React", "IGDB API", "Node.js", "Express"]}
             codeLink={"https://github.com/afutofu/saiko-games"}
             siteLink={"https://saiko-games.herokuapp.com/"}
             images={[saiko1, saiko2, saiko3]}
@@ -178,7 +185,7 @@ const FeaturedProjects = () => {
             reverse={true}
             title={"Devil's Advocate"}
             desc={`An e-commerce website selling 'devil fruits' from the 'One Piece' series. Data scraped from a third party site, complete with a cart system and authentication.`}
-            techs={["React", "Node", "Express", "MongoDB", "Scrapy"]}
+            techs={["React", "Node.js", "Express", "MongoDB", "Scrapy", "JWT"]}
             codeLink={"https://github.com/afutofu/devils-advocate-mern"}
             siteLink={"https://devils-advocate-afu.herokuapp.com/"}
             images={[devils1, devils2, devils3]}

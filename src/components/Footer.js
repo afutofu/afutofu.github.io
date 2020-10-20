@@ -92,7 +92,7 @@ const Footer = () => {
               <i className="fa fa-github"></i>
             </a>
             <a
-              href="linkedin.com/in/muhammad-afuzarahman-6a58931b9"
+              href="https://www.linkedin.com/in/afutofu/"
               target="_blank"
               rel="noopener noreferrer"
             >

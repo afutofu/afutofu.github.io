@@ -104,7 +104,7 @@ const Name = styled.h1`
 
 const Motto = styled.h2`
   font-size: 28px;
-  color: #666;
+  color: #555;
   margin: 0;
   margin-bottom: 30px;
   font-weight: 700;
@@ -131,6 +131,7 @@ const Motto = styled.h2`
 
 const MottoBold = styled.span`
   position: relative;
+  color: #ff350d;
   font-weight: 700;
 `;
 
