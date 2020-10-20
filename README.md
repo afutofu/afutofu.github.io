@@ -1,6 +1,8 @@
 # Portfolio
 
-Online portfolio. Work In Progress.
+Website Link: [Muhammad Afuzarahman](https://afutofu.github.io/)
+
+Online portfolio.
 
 Technologies used:
 
@@ -13,6 +15,6 @@ Features in this version:
 - Displays general information
 - Displays favorite projects
 - Displays other projects
-- Complete links to live site on projects
-- Downloadable resume
+- Complete links to code and live sites
+- Viewable and downloadable resume
 - Social links
