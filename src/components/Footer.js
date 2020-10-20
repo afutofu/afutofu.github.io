@@ -49,15 +49,19 @@ const Socials = styled.div`
   align-items: center;
 
   a {
-    color: #ff350d;
-  }
-
-  i {
     margin-left: 20px;
+    color: #ff350d;
     cursor: pointer;
 
     @media only screen and (max-width: 450px) {
       margin-left: 10px;
+    }
+  }
+
+  i {
+    transition: transform 0.2s;
+    :hover {
+      transform: scale(1.2);
     }
   }
 
@@ -77,13 +81,30 @@ const Footer = () => {
         <Content>
           <Credits>Developed by Muhammad Afuzarahman</Credits>
           <Socials>
-            <i className="fa fa-envelope"></i>
+            <a href="mailto:theafuza@gmail.com">
+              <i className="fa fa-envelope"></i>
+            </a>
             <a
               href="https://github.com/afutofu"
               target="_blank"
               rel="noopener noreferrer"
             >
               <i className="fa fa-github"></i>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/afutofu/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i className="fab fa-linkedin-in"></i>
+            </a>
+
+            <a
+              href="https://twitter.com/afutofu"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i className="fab fa-twitter"></i>
             </a>
           </Socials>
         </Content>

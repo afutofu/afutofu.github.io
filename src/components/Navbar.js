@@ -10,6 +10,7 @@ const NavbarComp = styled.div`
   width: 100%;
   height: 60px;
   padding: 10px 5%;
+  padding-right: calc(5% + 4px);
   background-color: white;
   display: flex;
   justify-content: space-between;
@@ -59,6 +60,11 @@ const NavItem = styled.li`
     color: #ff350d;
   }
 
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+
   @media only screen and (max-width: 600px) {
     font-size: 18px;
     padding: 5px;
@@ -91,7 +97,7 @@ const Navbar = ({ getNavbarTl }) => {
     let tl = new TimelineLite();
 
     tl.to(navbar, {
-      backgroundColor: "#eee",
+      backgroundColor: "#fafafa",
       duration: 2,
       ease: Power3.easeInOut,
     });
@@ -208,7 +214,11 @@ const Navbar = ({ getNavbarTl }) => {
             Contact
           </Link>
         </NavItem>
-        <NavItem ref={(el) => (resume = el)}>Resume</NavItem>
+        <NavItem ref={(el) => (resume = el)}>
+          <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">
+            Resume
+          </a>
+        </NavItem>
       </NavItems>
     </NavbarComp>
   );

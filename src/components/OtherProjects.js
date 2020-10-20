@@ -154,7 +154,7 @@ const OtherProjects = () => {
           <OtherProject
             title={"Insalts"}
             desc={`Reddit for insults. Create insult groups and post insults for people to view. This was my first project using javascript.`}
-            techs={["Vanilla JS", "Node", "Express"]}
+            techs={["Vanilla JS", "Node.js", "Express"]}
             codeLink={"https://github.com/afutofu/insalts"}
           />
           <OtherProject

@@ -76,6 +76,7 @@ const Main = () => {
   const [homeTl, setHomeTl] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
   const [masterTl] = useState(new TimelineLite());
+  const backgroundColor = "#fafafa";
 
   let main = useRef(null);
   // let content = useRef(null);
@@ -90,14 +91,14 @@ const Main = () => {
       duration: 0,
     })
       .to(contentBg1, {
-        backgroundColor: "#eee",
+        backgroundColor: backgroundColor,
         duration: 2,
         ease: Power3.easeInOut,
       })
       .to(
         contentBg2,
         {
-          backgroundColor: "#eee",
+          backgroundColor: backgroundColor,
           duration: 2,
           ease: Power3.easeInOut,
         },

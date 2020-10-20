@@ -9,13 +9,13 @@ const OtherProjectComp = styled.div`
   position: relative;
   height: 100%;
   flex: 1;
-  min-width: 300px;
-  min-height: 250px;
+  min-width: 280px;
+  min-height: 260px;
   color: #222;
   padding: 10px;
   margin: 10px 10px;
   box-sizing: border-box;
-  background-color: #e5e5e5;
+  background-color: #eee;
   border-radius: 10px;
 
   a {
@@ -25,6 +25,7 @@ const OtherProjectComp = styled.div`
     width: 100%;
     height: 100%;
     z-index: 50;
+    text-decoration: none;
   }
 
   @media only screen and (max-width: 1200px) {
@@ -33,13 +34,12 @@ const OtherProjectComp = styled.div`
   }
 
   @media only screen and (max-width: 992px) {
-    min-width: 280px;
-    min-height: 240px;
+    min-width: 230px;
+    min-height: 330px;
   }
 
   @media only screen and (max-width: 600px) {
     width: 100%;
-    margin: 0;
     margin-bottom: 20px;
     min-height: 200px;
   }
@@ -54,6 +54,7 @@ const OtherProjectComp = styled.div`
 `;
 
 const Container = styled.div`
+  position: relative;
   width: 100%;
   height: 100%;
 `;
@@ -71,13 +72,12 @@ const Container = styled.div`
 // `;
 
 const TextSide = styled.div`
-  position: absolute;
+  /* position: absolute;
   left: 50%;
-  transform: translate(-50%);
+  transform: translate(-50%); */
+
   z-index: 10;
   width: 100%;
-  min-width: 300px;
-  max-width: 400px;
   height: 100%;
   color: #121212;
   display: flex;
@@ -94,8 +94,7 @@ const TextSide = styled.div`
 const Title = styled.h3`
   font-size: 17px;
   font-weight: 600;
-  margin: 0;
-  margin-bottom: 10px;
+  margin: 10px 0;
 
   @media only screen and (max-width: 1200px) {
     font-size: 18px;
@@ -273,17 +272,13 @@ const SiteIcon = styled.div`
       transform: scale(1.2);
     }
 
-    /* @media only screen and (max-width: 1200px) {
-      font-size: 16px;
-    }
-
     @media only screen and (max-width: 992px) {
       font-size: 16px;
     }
 
-    @media only screen and (max-width: 600px) {
-      font-size: 18px;
-    } */
+    @media only screen and (max-width: 450px) {
+      font-size: 12px;
+    }
   }
 `;
 
@@ -311,7 +306,7 @@ const FeaturedProject = (props) => {
     gsap.to(project, {
       y: -7,
       duration: 0.15,
-      backgroundColor: "#eee",
+      backgroundColor: "#fafafa",
     });
   };
 
@@ -319,7 +314,7 @@ const FeaturedProject = (props) => {
     gsap.to(project, {
       y: 0,
       duration: 0.15,
-      backgroundColor: "#e5e5e5",
+      backgroundColor: "#eee",
     });
   };
 

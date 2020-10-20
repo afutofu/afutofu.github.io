@@ -13,10 +13,6 @@ Features in this version:
 - Displays general information
 - Displays favorite projects
 - Displays other projects
-
-Future implementations:
-
-- Complete links to live site on favorite projects
-- Email prompt
+- Complete links to live site on projects
 - Downloadable resume
-- Responsive to widths lower than 500px
+- Social links

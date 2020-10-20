@@ -70,18 +70,17 @@ const TitleArea = styled.div`
 `;
 
 const Title = styled.h2`
-  font-size: 26px;
+  font-size: 28px;
   font-weight: 500;
   padding: 0 20px;
 
-  @media only screen and (min-width: 992px) {
-    font-size: 28px;
+  @media only screen and (max-width: 992px) {
+    font-size: 26px;
   }
 
   @media only screen and (max-width: 450px) {
     padding: 0 15px;
     font-size: 22px;
-    line-height: unset;
   }
 
   @media only screen and (max-width: 350px) {
@@ -144,16 +143,18 @@ const List = styled.div`
   @media only screen and (max-width: 992px) {
     justify-content: center;
     align-items: center;
+    margin: 0 10px;
   }
 
   @media only screen and (max-width: 600px) {
+    margin: 0;
     margin-bottom: 20px;
   }
 `;
 
 const ListTitle = styled.h3`
   color: ${(props) => props.theme.color};
-  font-size: 20px;
+  font-size: 24px;
   font-weight: 500;
   margin: 0;
   margin-bottom: 10px;
@@ -191,12 +192,16 @@ const ListItems = styled.ul`
 
 const ListItem = styled.li`
   color: #222;
-  font-size: 17px;
+  font-size: 20px;
   padding-bottom: 5px;
-  font-weight: 500;
+  font-weight: 400;
 
-  @media only screen and (min-width: 992px) {
-    font-size: 19px;
+  @media only screen and (max-width: 992px) {
+    font-size: 18px;
+  }
+
+  @media only screen and (max-width: 600px) {
+    font-size: 16px;
   }
 
   @media only screen and (max-width: 450px) {
@@ -352,10 +357,11 @@ const Skills = (props) => {
                   <ListItems ref={(el) => (listItems = el)}>
                     <ListItem>Javascript (ES6)</ListItem>
                     <ListItem>HTML</ListItem>
-                    <ListItem>CSS</ListItem>
+                    <ListItem>CSS / SASS</ListItem>
                     <ListItem>Python</ListItem>
                     <ListItem>Java</ListItem>
                     <ListItem>SQL</ListItem>
+                    <ListItem>C++</ListItem>
                     <ListItem>PHP</ListItem>
                   </ListItems>
                 </List>
@@ -363,6 +369,9 @@ const Skills = (props) => {
                   <ListTitle>Frameworks</ListTitle>
                   <ListItems>
                     <ListItem>React</ListItem>
+                    <ListItem>Redux</ListItem>
+                    <ListItem>Bootstrap</ListItem>
+                    <ListItem>Node.js</ListItem>
                     <ListItem>Express</ListItem>
                     <ListItem>Laravel</ListItem>
                   </ListItems>
@@ -370,11 +379,11 @@ const Skills = (props) => {
                 <List>
                   <ListTitle>Tools</ListTitle>
                   <ListItems>
-                    <ListItem>Git & Github</ListItem>
-                    <ListItem>Postman</ListItem>
-                    <ListItem>MongoDB</ListItem>
-                    <ListItem>Chrome DevTools</ListItem>
                     <ListItem>Bash</ListItem>
+                    <ListItem>Git & Github</ListItem>
+                    <ListItem>Chrome DevTools</ListItem>
+                    <ListItem>MongoDB</ListItem>
+                    <ListItem>Postman</ListItem>
                   </ListItems>
                 </List>
               </ListArea>

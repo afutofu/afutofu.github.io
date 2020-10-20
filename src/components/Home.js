@@ -44,13 +44,17 @@ const Content = styled.div`
 
 const Introduction = styled.h3`
   color: ${(props) => props.theme.color};
-  font-size: 22px;
+  font-size: 20px;
   margin: 0;
   margin-bottom: 8px;
   font-weight: 700;
 
-  @media only screen and (min-width: 992px) {
-    font-size: 26px;
+  @media only screen and (max-width: 992px) {
+    font-size: 18px;
+  }
+
+  @media only screen and (max-width: 600px) {
+    font-size: 16px;
   }
 
   @media only screen and (max-width: 450px) {
@@ -63,15 +67,23 @@ const Introduction = styled.h3`
 `;
 
 const Name = styled.h1`
-  font-size: 41px;
-  color: #222;
+  font-size: 50px;
+  color: black;
   margin: 0;
   margin-bottom: 2px;
   font-family: "Quicksand", "san-serif";
   font-weight: 600;
 
-  @media only screen and (min-width: 992px) {
-    font-size: 51px;
+  @media only screen and (max-width: 1200px) {
+    font-size: 46px;
+  }
+
+  @media only screen and (max-width: 992px) {
+    font-size: 42px;
+  }
+
+  @media only screen and (max-width: 600px) {
+    font-size: 31px;
   }
 
   @media only screen and (max-width: 450px) {
@@ -91,19 +103,19 @@ const Name = styled.h1`
 // `;
 
 const Motto = styled.h2`
-  font-size: 33px;
-  color: #666;
+  font-size: 28px;
+  color: #555;
   margin: 0;
   margin-bottom: 30px;
-  font-weight: 500;
+  font-weight: 700;
+  text-transform: uppercase;
 
-  @media only screen and (min-width: 992px) {
-    font-size: 41px;
+  @media only screen and (max-width: 992px) {
+    margin-bottom: 20px;
   }
 
   @media only screen and (max-width: 600px) {
-    font-size: 28px;
-    margin-bottom: 20px;
+    font-size: 22px;
   }
 
   @media only screen and (max-width: 450px) {
@@ -119,34 +131,34 @@ const Motto = styled.h2`
 
 const MottoBold = styled.span`
   position: relative;
-  color: #444;
-  font-weight: 600;
+  color: #ff350d;
+  font-weight: 700;
 `;
 
 const Description = styled.p`
-  max-width: 60%;
-  font-size: 17px;
-  line-height: 1.5rem;
+  max-width: 50%;
+  font-size: 16px;
+  line-height: 1.5em;
   font-weight: 400;
   margin: 0;
   margin-bottom: 35px;
 
-  @media only screen and (min-width: 992px) {
-    max-width: 50%;
-    font-size: 19px;
-    line-height: 1.7rem;
+  @media only screen and (max-width: 1200px) {
+    max-width: 60%;
+  }
+
+  @media only screen and (max-width: 992px) {
+    /* max-width: 0%; */
+    margin-bottom: 25px;
   }
 
   @media only screen and (max-width: 600px) {
-    max-width: 80%;
-    font-size: 16px;
-    margin-bottom: 30px;
+    max-width: 100%;
   }
 
   @media only screen and (max-width: 450px) {
     font-size: 14px;
     margin-bottom: 20px;
-    line-height: unset;
   }
 
   @media only screen and (max-width: 350px) {
@@ -165,23 +177,32 @@ const Button = styled.button`
   outline: none;
   border: 3px solid ${(props) => props.theme.color};
   font-size: 18px;
-  margin-bottom: 50px;
+  cursor: pointer;
 
+  transition: background-color 0.2s;
   :hover {
-    cursor: pointer;
+    background-color: #ffefeb;
+  }
+
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  @media only screen and (max-width: 600px) {
+    padding: 7px 24px;
+    font-size: 16px;
   }
 
   @media only screen and (max-width: 450px) {
     padding: 5px 20px;
     font-size: 14px;
     border-width: 2px;
-    margin-bottom: unset;
   }
 
   @media only screen and (max-width: 350px) {
     padding: 5px 20px;
     font-size: 12px;
-    margin-bottom: unset;
   }
 `;
 
@@ -242,11 +263,13 @@ const Home = ({ getHomeTl }) => {
               <MottoBold>Learn</MottoBold>
             </Motto>
             <Description ref={(el) => (description = el)}>
-              Currently a college student who loves to code. Started coding
-              games, then systems, then websites for over 4 years. Only getting
-              better and still passionate since the first "Hello World"!
+              Started coding games, then systems, then websites for over 4
+              years. Only getting better and still passionate since the first
+              "Hello World"!
             </Description>
-            <Button ref={(el) => (button = el)}>Contact Me</Button>
+            <Button ref={(el) => (button = el)}>
+              <a href="mailto:theafuza@gmail.com">Contact Me</a>
+            </Button>
           </ThemeProvider>
         </Content>
       </Container>
