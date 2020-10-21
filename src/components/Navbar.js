@@ -84,6 +84,10 @@ const NavItem = styled.li`
   }
 `;
 
+const NavBold = styled.span`
+  font-weight: 600;
+`;
+
 const Navbar = ({ getNavbarTl }) => {
   let navbar = useRef(null);
   let logo = useRef(null);
@@ -140,7 +144,9 @@ const Navbar = ({ getNavbarTl }) => {
       const navbarDOM = document.querySelector(navbarClass);
       let topOfScreenPosition =
         window.pageYOffset || document.documentElement.scrollTop;
-      if (topOfScreenPosition > scrollPosition) {
+      if (topOfScreenPosition < 70) {
+        navbarDOM.style.top = "0";
+      } else if (topOfScreenPosition > scrollPosition) {
         navbarDOM.style.top = "-80px";
       } else {
         navbarDOM.style.top = "0";
@@ -215,9 +221,11 @@ const Navbar = ({ getNavbarTl }) => {
           </Link>
         </NavItem>
         <NavItem ref={(el) => (resume = el)}>
-          <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">
-            Resume
-          </a>
+          <NavBold>
+            <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">
+              Resume
+            </a>
+          </NavBold>
         </NavItem>
       </NavItems>
     </NavbarComp>
