@@ -62,36 +62,36 @@ const Introduction = styled.h3`
   }
 
   @media only screen and (max-width: 350px) {
-    font-size: 10px;
+    font-size: 8px;
   }
 `;
 
 const Name = styled.h1`
-  font-size: 50px;
+  font-size: 48px;
   color: black;
   margin: 0;
   margin-bottom: 2px;
-  font-family: "Quicksand", "san-serif";
+  font-family: "Montserrat", "san-serif";
   font-weight: 600;
 
   @media only screen and (max-width: 1200px) {
-    font-size: 46px;
+    font-size: 44px;
   }
 
   @media only screen and (max-width: 992px) {
-    font-size: 42px;
+    font-size: 40px;
   }
 
   @media only screen and (max-width: 600px) {
-    font-size: 31px;
+    font-size: 29px;
   }
 
   @media only screen and (max-width: 450px) {
-    font-size: 22px;
+    font-size: 20px;
   }
 
   @media only screen and (max-width: 350px) {
-    font-size: 20px;
+    font-size: 18px;
   }
 `;
 
@@ -104,11 +104,12 @@ const Name = styled.h1`
 
 const Motto = styled.h2`
   font-size: 28px;
-  color: #555;
+  color: #a1a1a1;
   margin: 0;
   margin-bottom: 30px;
   font-weight: 700;
   text-transform: uppercase;
+  font-family: "Montserrat", "san-serif";
 
   @media only screen and (max-width: 992px) {
     margin-bottom: 20px;
