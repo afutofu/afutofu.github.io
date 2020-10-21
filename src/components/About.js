@@ -24,10 +24,6 @@ const Container = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-
-  @media only screen and (min-width: 992px) {
-    margin: 0px 15%;
-  }
 `;
 
 const Content = styled.div`

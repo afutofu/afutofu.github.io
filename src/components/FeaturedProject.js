@@ -7,7 +7,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 const FeaturedProjectComp = styled.div`
   width: 100%;
-  height: 400px;
+  min-height: 400px;
   color: #222;
   display: flex;
   flex-direction: ${(props) => (props.reverse ? "row-reverse" : "row")};
@@ -18,16 +18,17 @@ const FeaturedProjectComp = styled.div`
   @media only screen and (max-width: 992px) {
     flex-direction: column;
     justify-content: flex-start;
-    height: 600px;
+    align-items: center;
+    min-height: 600px;
   }
 
   @media only screen and (max-width: 600px) {
     margin-bottom: 100px;
-    height: 500px;
+    min-height: 500px;
   }
 
   @media only screen and (max-width: 450px) {
-    height: 430px;
+    min-height: 430px;
     margin-bottom: 50px;
   }
 `;
@@ -35,6 +36,7 @@ const FeaturedProjectComp = styled.div`
 const ProjectSide = styled.div`
   position: relative;
   flex: 1;
+  width: 100%;
   height: 100%;
   background-color: #eee;
   margin-left: ${(props) => (props.reverse ? "40px" : "0")};
@@ -53,7 +55,7 @@ const ProjectSide = styled.div`
   }
 
   @media only screen and (max-width: 450px) {
-    width: 90%;
+    /* width: 90%; */
     max-height: 200px;
   }
 
@@ -143,7 +145,7 @@ const TextSide = styled.div`
   }
 
   @media only screen and (max-width: 450px) {
-    width: 90%;
+    /* width: 90%; */
   }
 `;
 

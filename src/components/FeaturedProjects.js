@@ -33,6 +33,10 @@ const TitleArea = styled.div`
   justify-content: space-between;
   align-items: center;
   margin-bottom: 50px;
+
+  @media only screen and (max-width: 600px) {
+    text-align: center;
+  }
 `;
 
 const Title = styled.h2`
@@ -51,6 +55,7 @@ const Title = styled.h2`
 
   @media only screen and (max-width: 450px) {
     font-size: 22px;
+    line-height: 1.5em;
   }
 
   @media only screen and (max-width: 350px) {
@@ -69,10 +74,6 @@ const TitleLineWrapper = styled.div`
   padding: 0;
 
   @media only screen and (max-width: 600px) {
-    display: none;
-  }
-
-  @media only screen and (max-width: 450px) {
     display: none;
   }
 `;

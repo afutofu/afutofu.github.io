@@ -45,7 +45,7 @@ const OtherProjectComp = styled.div`
   }
 
   @media only screen and (max-width: 450px) {
-    min-height: 180px;
+    /* min-height: 190px; */
   }
 
   @media only screen and (max-width: 350px) {
@@ -145,7 +145,7 @@ const Desc = styled.p`
 
   @media only screen and (max-width: 450px) {
     font-size: 14px;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
   }
 
   @media only screen and (max-width: 350px) {
@@ -187,6 +187,7 @@ const TechItem = styled.li`
 
   @media only screen and (max-width: 450px) {
     font-size: 14px;
+    margin-bottom: 5px;
   }
 
   @media only screen and (max-width: 350px) {
