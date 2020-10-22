@@ -9,7 +9,7 @@ const FeaturedProjectComp = styled.div`
   position: relative;
   width: 100%;
   height: 100%;
-  height: 700px;
+  height: 500px;
   color: #222;
   display: flex;
   flex-direction: ${(props) => (props.reverse ? "row-reverse" : "row")};
@@ -145,7 +145,7 @@ const TextSide = styled.div`
 
   @media only screen and (max-width: 992px) {
     width: 100%;
-    min-height: 250px;
+    min-height: 100px;
     /* height: unset; */
     margin: 0;
     margin-bottom: 15px;
