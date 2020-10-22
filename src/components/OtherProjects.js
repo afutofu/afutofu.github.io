@@ -134,6 +134,14 @@ const OtherProjects = () => {
         </TitleArea>
         <ProjectArea>
           <OtherProject
+            reverse={true}
+            title={"An Alan Watts Tribute"}
+            desc={`A website detailing Alan Watt's life, books, and a few popular audio clips from his lectures. This was my first React project, and I'm looking forward to revisiting it.`}
+            techs={["React"]}
+            codeLink={"https://github.com/afutofu/an-alan-watts-tribute"}
+            siteLink={"https://an-alan-watts-tribute.netlify.app/"}
+          />
+          <OtherProject
             title={"Task Manager"}
             desc={`A to-do list, day planner, and a 'things I learned today' list all in one app.`}
             techs={["Python", "Tkinter", "SQLite"]}
@@ -145,14 +153,6 @@ const OtherProjects = () => {
             desc={`Enter a task and start the timer. Records the amount of time you do a task, graphs them, and ranks the time based on the trailing week.`}
             techs={["Python", "Tkinter", "Matplotlib", "SQLite"]}
             codeLink={"https://github.com/afutofu/task-timer"}
-          />
-          <OtherProject
-            reverse={true}
-            title={"An Alan Watts Tribute"}
-            desc={`A website detailing Alan Watt's life, books, and a few popular audio clips from his lectures. This was my first React project, and I'm looking forward to revisiting it.`}
-            techs={["React"]}
-            codeLink={"https://github.com/afutofu/an-alan-watts-tribute"}
-            siteLink={"https://an-alan-watts-tribute.netlify.app/"}
           />
           <OtherProject
             title={"Insalts"}
