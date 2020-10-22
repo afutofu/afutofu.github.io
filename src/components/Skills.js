@@ -371,6 +371,7 @@ const Skills = (props) => {
                     <ListItem>React</ListItem>
                     <ListItem>Redux</ListItem>
                     <ListItem>Bootstrap</ListItem>
+                    <ListItem>jQuery</ListItem>
                     <ListItem>Node.js</ListItem>
                     <ListItem>Express</ListItem>
                     <ListItem>Laravel</ListItem>

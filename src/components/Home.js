@@ -104,29 +104,29 @@ const Name = styled.h1`
 
 const Motto = styled.h2`
   font-size: 28px;
-  color: #a1a1a1;
+  color: #818181;
   margin: 0;
-  margin-bottom: 30px;
+  margin-bottom: 15px;
   font-weight: 700;
   text-transform: uppercase;
   font-family: "Montserrat", "san-serif";
 
-  @media only screen and (max-width: 992px) {
+  /* @media only screen and (max-width: 992px) {
     margin-bottom: 20px;
-  }
+  } */
 
   @media only screen and (max-width: 600px) {
-    font-size: 22px;
+    font-size: 20px;
   }
 
   @media only screen and (max-width: 450px) {
-    font-size: 20px;
-    margin-bottom: 15px;
+    font-size: 16px;
+    /* margin-bottom: 15px; */
   }
 
   @media only screen and (max-width: 350px) {
-    font-size: 16px;
-    margin-bottom: 10px;
+    font-size: 14px;
+    /* margin-bottom: 10px; */
   }
 `;
 
@@ -142,7 +142,7 @@ const Description = styled.p`
   line-height: 1.5em;
   font-weight: 400;
   margin: 0;
-  margin-bottom: 35px;
+  margin-bottom: 25px;
 
   @media only screen and (max-width: 1200px) {
     max-width: 60%;
@@ -154,11 +154,12 @@ const Description = styled.p`
   }
 
   @media only screen and (max-width: 600px) {
+    font-size: 14px;
     max-width: 100%;
   }
 
   @media only screen and (max-width: 450px) {
-    font-size: 14px;
+    /* font-size: 14px; */
     margin-bottom: 20px;
   }
 
@@ -268,9 +269,9 @@ const Home = ({ getHomeTl }) => {
               years. Only getting better and still passionate since the first
               "Hello World"!
             </Description>
-            <Button ref={(el) => (button = el)}>
-              <a href="mailto:theafuza@gmail.com">Contact Me</a>
-            </Button>
+            <a href="mailto:theafuza@gmail.com">
+              <Button ref={(el) => (button = el)}>Contact Me</Button>
+            </a>
           </ThemeProvider>
         </Content>
       </Container>

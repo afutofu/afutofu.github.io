@@ -283,9 +283,9 @@ const Contact = (props) => {
               you're interested in hiring, want to ask some questions, or just
               want to say hi!
             </Text>
-            <Button ref={(el) => (button = el)}>
-              <a href="mailto:theafuza@gmail.com">Contact Me</a>
-            </Button>
+            <a href="mailto:theafuza@gmail.com">
+              <Button ref={(el) => (button = el)}>Contact Me</Button>
+            </a>
           </Content>
         </ThemeProvider>
       </Container>

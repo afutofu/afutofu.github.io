@@ -84,6 +84,13 @@ const NavItem = styled.li`
   }
 `;
 
+const NavBold = styled.span`
+  font-weight: 600;
+  color: #ff350d;
+  text-transform: uppercase;
+  font-size: 0.9em;
+`;
+
 const Navbar = ({ getNavbarTl }) => {
   let navbar = useRef(null);
   let logo = useRef(null);
@@ -135,21 +142,30 @@ const Navbar = ({ getNavbarTl }) => {
   useEffect(() => {
     navbar.style.top = "0px";
     const navbarClass = "." + navbar.getAttribute("class").split(" ").join(".");
-    let scrollPosition = 0;
+    let lastScrollPosition = 0;
     window.addEventListener("scroll", () => {
       const navbarDOM = document.querySelector(navbarClass);
       let topOfScreenPosition =
         window.pageYOffset || document.documentElement.scrollTop;
-      if (topOfScreenPosition > scrollPosition) {
-        navbarDOM.style.top = "-80px";
-      } else {
+      if (topOfScreenPosition < 60) {
         navbarDOM.style.top = "0";
-        navbarDOM.style.boxShadow = "0px 1px 15px 0px rgba(0, 0, 0, 0.1)";
-        if (scrollPosition < 150) {
+
+        if (topOfScreenPosition < 10) {
           navbarDOM.style.boxShadow = "";
         }
+
+        // Scrolling down
+      } else if (topOfScreenPosition > lastScrollPosition) {
+        navbarDOM.style.top = "-80px";
+      } else {
+        // Scrolling up
+        navbarDOM.style.top = "0";
+        navbarDOM.style.boxShadow = "0px 1px 15px 0px rgba(0, 0, 0, 0.1)";
+        // if (topOfScreenPosition < 80) {
+        //   navbarDOM.style.boxShadow = "";
+        // }
       }
-      scrollPosition = topOfScreenPosition;
+      lastScrollPosition = topOfScreenPosition;
     });
   }, [navbar]);
 
@@ -215,9 +231,11 @@ const Navbar = ({ getNavbarTl }) => {
           </Link>
         </NavItem>
         <NavItem ref={(el) => (resume = el)}>
-          <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">
-            Resume
-          </a>
+          <NavBold>
+            <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">
+              Resume
+            </a>
+          </NavBold>
         </NavItem>
       </NavItems>
     </NavbarComp>

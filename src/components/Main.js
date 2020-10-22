@@ -33,29 +33,15 @@ const MainComp = styled.div`
   overflow-y: hidden;
 `;
 
-const AlphaBackground = styled.div`
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  z-index: -100;
-  background-color: rgba(0, 0, 0, 0.8);
-`;
-
-const BackgroundImageContainer = styled.div`
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  z-index: -500;
-  object-fit: cover;
-`;
-
-const BackgroundImage = styled.img.attrs((props) => ({
+const BackgroundImage = styled.img.attrs(() => ({
   src: skyrimWallpaper,
   alt: "skyrimWallpaper",
 }))`
   position: fixed;
   width: 100%;
   height: 100%;
+  z-index: -500;
+
   object-fit: cover;
 `;
 
@@ -63,6 +49,7 @@ const Content = styled.div`
   color: #222;
   font-family: "Quicksand", "san-serif";
   z-index: 0;
+  background-color: rgba(0, 0, 0, 0.8);
 `;
 
 const ContentBackground = styled.div`
@@ -141,10 +128,7 @@ const Main = () => {
       <MainComp ref={(el) => (main = el)}>
         <Navbar getNavbarTl={getNavbarTl} />
         <Content>
-          <AlphaBackground />
-          <BackgroundImageContainer>
-            <BackgroundImage />
-          </BackgroundImageContainer>
+          <BackgroundImage />
           <ContentBackground ref={(el) => (contentBg1 = el)}>
             <Home getHomeTl={getHomeTl} />
             <About />

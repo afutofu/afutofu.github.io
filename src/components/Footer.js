@@ -98,14 +98,6 @@ const Footer = () => {
             >
               <i className="fab fa-linkedin-in"></i>
             </a>
-
-            <a
-              href="https://twitter.com/afutofu"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <i className="fab fa-twitter"></i>
-            </a>
           </Socials>
         </Content>
       </Container>

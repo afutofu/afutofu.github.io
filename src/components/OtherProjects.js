@@ -8,6 +8,7 @@ import OtherProject from "./OtherProject";
 gsap.registerPlugin(ScrollTrigger);
 
 const OtherProjectsComp = styled.div`
+  position: relative;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -20,17 +21,19 @@ const TitleArea = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin: 0;
   margin-bottom: 50px;
 
-  @media only screen and (max-width: 450px) {
+  /* @media only screen and (max-width: 450px) {
     width: 90%;
-  }
+  } */
 `;
 
 const Title = styled.h2`
   font-size: 26px;
   font-weight: 500;
   padding-right: 20px;
+  margin: 0;
 
   @media only screen and (min-width: 992px) {
     font-size: 28px;
