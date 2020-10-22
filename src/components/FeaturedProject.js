@@ -145,7 +145,8 @@ const TextSide = styled.div`
 
   @media only screen and (max-width: 992px) {
     width: 100%;
-    height: unset;
+    min-height: 250px;
+    /* height: unset; */
     margin: 0;
     margin-bottom: 15px;
   }
