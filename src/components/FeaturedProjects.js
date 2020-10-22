@@ -6,20 +6,29 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import machios1 from "../assets/projectImages/machios1-min.png";
 import machios2 from "../assets/projectImages/machios2-min.png";
 import machios3 from "../assets/projectImages/machios3-min.png";
+import machios4 from "../assets/projectImages/machios4-min.png";
+import machios5 from "../assets/projectImages/machios5-min.png";
 import projecc1 from "../assets/projectImages/projecc1-min.png";
 import projecc2 from "../assets/projectImages/projecc2-min.png";
 import projecc3 from "../assets/projectImages/projecc3-min.png";
+import projecc4 from "../assets/projectImages/projecc4-min.png";
+import projecc5 from "../assets/projectImages/projecc5-min.png";
 import saiko1 from "../assets/projectImages/saiko1-min.png";
 import saiko2 from "../assets/projectImages/saiko2-min.png";
 import saiko3 from "../assets/projectImages/saiko3-min.png";
+import saiko4 from "../assets/projectImages/saiko4-min.png";
+import saiko5 from "../assets/projectImages/saiko5-min.png";
 import devils1 from "../assets/projectImages/devils1-min.png";
 import devils2 from "../assets/projectImages/devils2-min.png";
 import devils3 from "../assets/projectImages/devils3-min.png";
+import devils4 from "../assets/projectImages/devils4-min.png";
+import devils5 from "../assets/projectImages/devils5-min.png";
 import FeaturedProject from "./FeaturedProject";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const FeaturedProjectsComp = styled.div`
+  position: relative;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -156,7 +165,7 @@ const FeaturedProjects = () => {
             techs={["React"]}
             codeLink={"https://github.com/afutofu/machios-pub-and-gym"}
             siteLink={"https://machios-pub-and-gym.netlify.app/"}
-            images={[machios1, machios2, machios3]}
+            images={[machios1, machios2, machios3, machios4, machios5]}
           />
           <FeaturedProject
             reverse={true}
@@ -172,7 +181,7 @@ const FeaturedProjects = () => {
             ]}
             codeLink={"https://github.com/afutofu/projecc"}
             siteLink={"https://projecc-afu.herokuapp.com/"}
-            images={[projecc1, projecc2, projecc3]}
+            images={[projecc1, projecc2, projecc3, projecc4, projecc5]}
           />
           <FeaturedProject
             title={"Saiko Games"}
@@ -180,7 +189,7 @@ const FeaturedProjects = () => {
             techs={["React", "IGDB API", "Node.js", "Express"]}
             codeLink={"https://github.com/afutofu/saiko-games"}
             siteLink={"https://saiko-games.herokuapp.com/"}
-            images={[saiko1, saiko2, saiko3]}
+            images={[saiko1, saiko2, saiko3, saiko4, saiko5]}
           />
           <FeaturedProject
             reverse={true}
@@ -189,7 +198,7 @@ const FeaturedProjects = () => {
             techs={["React", "Node.js", "Express", "MongoDB", "Scrapy", "JWT"]}
             codeLink={"https://github.com/afutofu/devils-advocate-mern"}
             siteLink={"https://devils-advocate-afu.herokuapp.com/"}
-            images={[devils1, devils2, devils3]}
+            images={[devils1, devils2, devils3, devils4, devils5]}
           />
         </ProjectArea>
       </ThemeProvider>

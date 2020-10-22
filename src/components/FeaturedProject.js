@@ -6,14 +6,16 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 const FeaturedProjectComp = styled.div`
+  position: relative;
   width: 100%;
-  min-height: 400px;
+  height: 100%;
+  height: 500px;
   color: #222;
   display: flex;
   flex-direction: ${(props) => (props.reverse ? "row-reverse" : "row")};
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 200px;
+  margin-bottom: 150px;
 
   @media only screen and (max-width: 992px) {
     flex-direction: column;
@@ -38,6 +40,8 @@ const ProjectSide = styled.div`
   flex: 1;
   width: 100%;
   height: 100%;
+  max-height: 420px;
+  /* min-height: 250px; */
   background-color: #eee;
   margin-left: ${(props) => (props.reverse ? "40px" : "0")};
   margin-right: ${(props) => (props.reverse ? "0" : "40px")};
@@ -73,6 +77,8 @@ const ProjectImages = styled.div`
 
 const ProjectImage = styled.img.attrs((props) => ({
   src: props.src,
+  width: "100%",
+  height: "100%",
 }))`
   width: 100%;
   height: 100%;
