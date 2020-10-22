@@ -66,11 +66,11 @@ const Socials = styled.div`
   }
 
   @media only screen and (max-width: 450px) {
-    font-size: 14px;
+    font-size: 16px;
   }
 
   @media only screen and (max-width: 350px) {
-    font-size: 12px;
+    /* font-size: 12px; */
   }
 `;
 

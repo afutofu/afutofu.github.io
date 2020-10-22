@@ -160,12 +160,12 @@ const FeaturedProjects = () => {
         </TitleArea>
         <ProjectArea>
           <FeaturedProject
-            title={"Machio's Pub & Gym"}
-            desc={`A website for "Machio's Pub and Gym", highlighting the menu, gym facilities, and more restaurant related details.`}
-            techs={["React"]}
-            codeLink={"https://github.com/afutofu/machios-pub-and-gym"}
-            siteLink={"https://machios-pub-and-gym.netlify.app/"}
-            images={[machios1, machios2, machios3, machios4, machios5]}
+            title={"Saiko Games"}
+            desc={`A video game information website that displays current releases, most popular and featured games, and video game information and reviews.`}
+            techs={["React", "IGDB API", "Node.js", "Express"]}
+            codeLink={"https://github.com/afutofu/saiko-games"}
+            siteLink={"https://saiko-games.herokuapp.com/"}
+            images={[saiko1, saiko2, saiko3, saiko4, saiko5]}
           />
           <FeaturedProject
             reverse={true}
@@ -184,13 +184,14 @@ const FeaturedProjects = () => {
             images={[projecc1, projecc2, projecc3, projecc4, projecc5]}
           />
           <FeaturedProject
-            title={"Saiko Games"}
-            desc={`A video game information website that displays current releases, most popular and featured games, and video game information and reviews.`}
-            techs={["React", "IGDB API", "Node.js", "Express"]}
-            codeLink={"https://github.com/afutofu/saiko-games"}
-            siteLink={"https://saiko-games.herokuapp.com/"}
-            images={[saiko1, saiko2, saiko3, saiko4, saiko5]}
+            title={"Machio's Pub & Gym"}
+            desc={`A website for "Machio's Pub and Gym", highlighting the menu, gym facilities, and more restaurant related details.`}
+            techs={["React"]}
+            codeLink={"https://github.com/afutofu/machios-pub-and-gym"}
+            siteLink={"https://machios-pub-and-gym.netlify.app/"}
+            images={[machios1, machios2, machios3, machios4, machios5]}
           />
+
           <FeaturedProject
             reverse={true}
             title={"Devil's Advocate"}

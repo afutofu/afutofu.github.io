@@ -159,12 +159,12 @@ const Description = styled.p`
   }
 
   @media only screen and (max-width: 450px) {
-    /* font-size: 14px; */
+    font-size: 12px;
     margin-bottom: 20px;
   }
 
   @media only screen and (max-width: 350px) {
-    font-size: 12px;
+    font-size: 10px;
     margin-bottom: 20px;
   }
 `;

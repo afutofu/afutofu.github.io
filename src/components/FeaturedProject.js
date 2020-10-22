@@ -103,6 +103,10 @@ const ImageButtons = styled.div`
   @media only screen and (max-width: 600px) {
     bottom: 10px;
   }
+
+  @media only screen and (max-width: 450px) {
+    bottom: 5px;
+  }
 `;
 
 const ImageButton = styled.button`
@@ -117,6 +121,12 @@ const ImageButton = styled.button`
   margin: 0 10px;
   box-sizing: border-box;
   cursor: pointer;
+
+  @media only screen and (max-width: 450px) {
+    width: 14px;
+    height: 14px;
+    margin: 0 5px;
+  }
 `;
 
 const AlphaBackground = styled.div`
