@@ -9,7 +9,7 @@ const FeaturedProjectComp = styled.div`
   position: relative;
   width: 100%;
   height: 100%;
-  height: 500px;
+  height: 700px;
   color: #222;
   display: flex;
   flex-direction: ${(props) => (props.reverse ? "row-reverse" : "row")};
