@@ -9,38 +9,45 @@ const FeaturedProjectComp = styled.div`
   position: relative;
   width: 100%;
   height: 100%;
-  height: 500px;
+  /* height: 500px; */
   color: #222;
   display: flex;
   flex-direction: ${(props) => (props.reverse ? "row-reverse" : "row")};
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 150px;
+  margin: 0;
+  margin-bottom: 250px;
 
   @media only screen and (max-width: 992px) {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    min-height: 600px;
+    /* min-height: 600px; */
   }
 
   @media only screen and (max-width: 600px) {
-    margin-bottom: 100px;
-    min-height: 500px;
+    margin-bottom: 150px;
+    /* min-height: 500px; */
   }
 
   @media only screen and (max-width: 450px) {
-    min-height: 430px;
-    margin-bottom: 50px;
+    height: 100%;
+    margin-bottom: 170px;
+    /* min-height: 350px; */
+  }
+
+  @media only screen and (max-width: 350px) {
+    height: 100%;
+    margin-bottom: 150px;
+    /* min-height: 350px; */
   }
 `;
 
 const ProjectSide = styled.div`
   position: relative;
-  flex: 1;
+  /* flex: 1; */
   width: 100%;
-  height: 100%;
-  max-height: 420px;
+  height: 420px;
   /* min-height: 250px; */
   background-color: #eee;
   margin-left: ${(props) => (props.reverse ? "40px" : "0")};
@@ -51,20 +58,19 @@ const ProjectSide = styled.div`
     width: 100%;
     margin: 0;
     margin-bottom: 20px;
+    height: 350px;
   }
 
   @media only screen and (max-width: 600px) {
-    width: 100%;
-    max-height: 250px;
+    height: 250px;
   }
 
   @media only screen and (max-width: 450px) {
-    /* width: 90%; */
-    max-height: 200px;
+    height: 180px;
   }
 
   @media only screen and (max-width: 350px) {
-    max-height: 150px;
+    height: 150px;
   }
 `;
 
@@ -129,6 +135,7 @@ const AlphaBackground = styled.div`
 `;
 
 const TextSide = styled.div`
+  position: relative;
   flex: 0;
   min-width: 280px;
   height: 100%;
@@ -145,13 +152,8 @@ const TextSide = styled.div`
 
   @media only screen and (max-width: 992px) {
     width: 100%;
-    height: unset;
+    height: 100%;
     margin: 0;
-    margin-bottom: 15px;
-  }
-
-  @media only screen and (max-width: 450px) {
-    /* width: 90%; */
   }
 `;
 
@@ -199,7 +201,7 @@ const Desc = styled.p`
   @media only screen and (max-width: 450px) {
     font-size: 14px;
     line-height: unset;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
   }
 
   @media only screen and (max-width: 350px) {
@@ -226,6 +228,13 @@ const Techs = styled.ul`
     height: unset;
     margin: 0;
     margin-bottom: 15px;
+  }
+
+  @media only screen and (max-width: 450px) {
+    width: 100%;
+    height: unset;
+    margin: 0;
+    margin-bottom: 10px;
   }
 `;
 
