@@ -358,11 +358,11 @@ const Skills = (props) => {
                     <ListItem>Javascript (ES6)</ListItem>
                     <ListItem>HTML</ListItem>
                     <ListItem>CSS / SASS</ListItem>
+                    <ListItem>PHP</ListItem>
+                    <ListItem>SQL</ListItem>
                     <ListItem>Python</ListItem>
                     <ListItem>Java</ListItem>
-                    <ListItem>SQL</ListItem>
                     <ListItem>C++</ListItem>
-                    <ListItem>PHP</ListItem>
                   </ListItems>
                 </List>
                 <List>
@@ -374,7 +374,9 @@ const Skills = (props) => {
                     <ListItem>jQuery</ListItem>
                     <ListItem>Node.js</ListItem>
                     <ListItem>Express</ListItem>
+                    <ListItem>Socket.IO</ListItem>
                     <ListItem>Laravel</ListItem>
+                    <ListItem>Scrapy</ListItem>
                   </ListItems>
                 </List>
                 <List>
@@ -385,6 +387,7 @@ const Skills = (props) => {
                     <ListItem>Chrome DevTools</ListItem>
                     <ListItem>MongoDB</ListItem>
                     <ListItem>Postman</ListItem>
+                    <ListItem>VS Code</ListItem>
                   </ListItems>
                 </List>
               </ListArea>
