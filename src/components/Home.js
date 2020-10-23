@@ -265,7 +265,7 @@ const Home = ({ getHomeTl }) => {
               <MottoBold>Learn</MottoBold>
             </Motto>
             <Description ref={(el) => (description = el)}>
-              Started coding games, then systems, then websites for over 4
+              Started coding games, then systems, then websites for several
               years. Only getting better and still passionate since the first
               "Hello World"!
             </Description>
