@@ -155,12 +155,6 @@ const OtherProjects = () => {
             codeLink={"https://github.com/afutofu/task-timer"}
           />
           <OtherProject
-            title={"Insalts"}
-            desc={`Reddit for insults. Create insult groups and post insults for people to view. This was my first project using javascript.`}
-            techs={["Vanilla JS", "Node.js", "Express"]}
-            codeLink={"https://github.com/afutofu/insalts"}
-          />
-          <OtherProject
             title={"Don't Hit The Wall"}
             desc={`A two player game where each player has to avoid the wall as the game progresses.`}
             techs={["Java"]}
