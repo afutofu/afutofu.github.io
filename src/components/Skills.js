@@ -158,6 +158,7 @@ const ListTitle = styled.h3`
   font-weight: 500;
   margin: 0;
   margin-bottom: 10px;
+  text-align: center;
 
   @media only screen and (max-width: 992px) {
     font-size: 22px;
@@ -173,6 +174,10 @@ const ListTitle = styled.h3`
   @media only screen and (max-width: 350px) {
     font-size: 18px;
   }
+`;
+
+const SmallTitle = styled.span`
+  font-size: 0.9em;
 `;
 
 const ListItems = styled.ul`
@@ -355,7 +360,7 @@ const Skills = (props) => {
                     Languages
                   </ListTitle>
                   <ListItems ref={(el) => (listItems = el)}>
-                    <ListItem>Javascript (ES6)</ListItem>
+                    <ListItem>Javascript / ES6+</ListItem>
                     <ListItem>HTML</ListItem>
                     <ListItem>CSS / SASS</ListItem>
                     <ListItem>PHP</ListItem>
@@ -366,10 +371,13 @@ const Skills = (props) => {
                   </ListItems>
                 </List>
                 <List>
-                  <ListTitle>Frameworks</ListTitle>
+                  <ListTitle>
+                    <SmallTitle>Frameworks</SmallTitle>
+                  </ListTitle>
                   <ListItems>
                     <ListItem>React</ListItem>
                     <ListItem>Redux</ListItem>
+                    <ListItem>GSAP</ListItem>
                     <ListItem>Bootstrap</ListItem>
                     <ListItem>jQuery</ListItem>
                     <ListItem>Node.js</ListItem>
