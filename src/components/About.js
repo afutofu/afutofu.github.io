@@ -221,12 +221,12 @@ const About = () => {
                 <DescriptionBold>personal management tools</DescriptionBold>,{" "}
                 <DescriptionBold>company systems</DescriptionBold>,{" "}
                 <DescriptionBold>robots</DescriptionBold>,{" "}
-                <DescriptionBold>AI</DescriptionBold>, and currently a lot of{" "}
+                <DescriptionBold>AI</DescriptionBold>, and a lot of{" "}
                 <DescriptionBold>websites</DescriptionBold>.
               </Description>
               <Description>
-                Websites and webapps are currently my application of practice,
-                and I'm avid to keep creating and look forward to contribute to
+                Websites and webapps are currently my application of trade, and
+                I'm avid to keep creating and look forward to contribute to
                 helpful and meaningful projects.
               </Description>
             </Descriptions>

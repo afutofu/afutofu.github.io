@@ -360,7 +360,7 @@ const Skills = (props) => {
                     Languages
                   </ListTitle>
                   <ListItems ref={(el) => (listItems = el)}>
-                    <ListItem>Javascript / ES6+</ListItem>
+                    <ListItem>Javascript / ES6</ListItem>
                     <ListItem>HTML</ListItem>
                     <ListItem>CSS / SASS</ListItem>
                     <ListItem>PHP</ListItem>
