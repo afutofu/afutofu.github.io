@@ -105,9 +105,21 @@ const LoadingScreen = ({ isLoading }) => {
   const showScrollBar = () => {
     let tl = new TimelineLite();
 
-    tl.from(document.querySelector("body"), {
+    let html = document.querySelector("html");
+    let body = document.querySelector("body");
+    let root = document.querySelector("#root");
+
+    console.log(root);
+
+    tl.from(html, {
       overflow: "hidden",
-    });
+    })
+      .from(body, {
+        overflow: "hidden",
+      })
+      .from(root, {
+        overflow: "hidden",
+      });
     return tl;
   };
 
