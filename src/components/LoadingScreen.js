@@ -67,7 +67,7 @@ const LoadingScreen = ({ isLoading }) => {
   const logoRotate = () => {
     let tl = new TimelineMax({ repeat: 4, repeatDelay: 0.02 });
 
-    const rotateTime = 1.2;
+    const rotateTime = 1.1;
 
     tl.to(logo, {
       rotate: 360,
@@ -108,12 +108,15 @@ const LoadingScreen = ({ isLoading }) => {
 
     tl.from(html, {
       overflow: "hidden",
+      duration: 0,
     })
       .from(body, {
         overflow: "hidden",
+        duration: 0,
       })
       .from(root, {
         overflow: "hidden",
+        duration: 0,
       });
     return tl;
   };
@@ -147,7 +150,7 @@ const LoadingScreen = ({ isLoading }) => {
     // master.add(logoScaleOutIn(), "-=0.2");
     master.add(logoRotate(), "-=0.2");
     master.add(logoScaleDownToZero());
-    master.add(whiteScreenEnter(), "+=0.5");
+    master.add(whiteScreenEnter(), "+=0.3");
     master.add(showScrollBar(html, body, root));
     // master.seek(4);
     master.play();
