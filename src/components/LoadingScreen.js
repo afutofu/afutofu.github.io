@@ -1,6 +1,7 @@
 import React, { useRef, useEffect, useState, useCallback } from "react";
 import styled from "styled-components";
 import { TimelineLite, TimelineMax, Power3 } from "gsap";
+import { disableBodyScroll, enableBodyScroll } from "body-scroll-lock";
 
 import Logo from "./Logo";
 
@@ -102,14 +103,8 @@ const LoadingScreen = ({ isLoading }) => {
     return tl;
   };
 
-  const showScrollBar = () => {
+  const showScrollBar = (html, body, root) => {
     let tl = new TimelineLite();
-
-    let html = document.querySelector("html");
-    let body = document.querySelector("body");
-    let root = document.querySelector("#root");
-
-    console.log(root);
 
     tl.from(html, {
       overflow: "hidden",
@@ -123,20 +118,37 @@ const LoadingScreen = ({ isLoading }) => {
     return tl;
   };
 
-  const onComplete = useCallback(() => {
-    setAnimationComplete(true);
-    isLoading(false);
-  }, [isLoading]);
+  const onComplete = useCallback(
+    (html, body, root) => {
+      enableBodyScroll(html);
+      enableBodyScroll(body);
+      enableBodyScroll(root);
+      setAnimationComplete(true);
+      isLoading(false);
+    },
+    [isLoading]
+  );
 
   useEffect(() => {
+    let html = document.querySelector("html");
+    let body = document.querySelector("body");
+    let root = document.querySelector("#root");
+    disableBodyScroll(html);
+    disableBodyScroll(body);
+    disableBodyScroll(root);
+
     setMounted(true);
-    const master = new TimelineLite({ paused: true, onComplete });
+    const master = new TimelineLite({
+      paused: true,
+      onComplete,
+      onCompleteParams: [html, body, root],
+    });
     master.add(logoEnter(), "+=1");
     // master.add(logoScaleOutIn(), "-=0.2");
     master.add(logoRotate(), "-=0.2");
     master.add(logoScaleDownToZero());
     master.add(whiteScreenEnter(), "+=0.5");
-    master.add(showScrollBar());
+    master.add(showScrollBar(html, body, root));
     // master.seek(4);
     master.play();
   }, [onComplete]);
