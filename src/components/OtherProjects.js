@@ -6,6 +6,8 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import OtherProject from "./OtherProject";
 
 import aawt1 from "../assets/projectImages/otherProjects/aawt1.png";
+import taskManager from "../assets/projectImages/otherProjects/task-manager.png";
+import taskTimer from "../assets/projectImages/otherProjects/task-timer.png";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -163,13 +165,15 @@ const OtherProjects = () => {
             desc={`A to-do list, day planner, and a 'things I learned today' list all in one app.`}
             techs={["Python", "Tkinter", "SQLite"]}
             codeLink={"https://github.com/afutofu/task-manager"}
+            image={taskManager}
           />
           <OtherProject
             reverse={true}
             title={"Task Timer"}
-            desc={`Records the amount of time you do a task, graphs them, and ranks the time based on the trailing week.`}
+            desc={`Records the amount of time you do a task, graphs them, and ranks the time based on the trailing month.`}
             techs={["Python", "Tkinter", "Matplotlib", "SQLite"]}
             codeLink={"https://github.com/afutofu/task-timer"}
+            image={taskTimer}
           />
           <OtherProject
             title={"Don't Hit The Wall"}
