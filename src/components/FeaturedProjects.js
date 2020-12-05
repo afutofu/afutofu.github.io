@@ -8,11 +8,6 @@ import benefitted2 from "../assets/projectImages/featuredProjects/benefitted2.pn
 import benefitted3 from "../assets/projectImages/featuredProjects/benefitted3.png";
 import benefitted4 from "../assets/projectImages/featuredProjects/benefitted4.png";
 import benefitted5 from "../assets/projectImages/featuredProjects/benefitted5.png";
-import machios1 from "../assets/projectImages/featuredProjects/machios1-min.png";
-import machios2 from "../assets/projectImages/featuredProjects/machios2-min.png";
-import machios3 from "../assets/projectImages/featuredProjects/machios3-min.png";
-import machios4 from "../assets/projectImages/featuredProjects/machios4-min.png";
-import machios5 from "../assets/projectImages/featuredProjects/machios5-min.png";
 import projecc1 from "../assets/projectImages/featuredProjects/projecc1-min.png";
 import projecc2 from "../assets/projectImages/featuredProjects/projecc2-min.png";
 import projecc3 from "../assets/projectImages/featuredProjects/projecc3-min.png";
@@ -212,15 +207,6 @@ const FeaturedProjects = () => {
           />
           <FeaturedProject
             reverse={true}
-            title={"Machio's Pub & Gym"}
-            desc={`A website for "Machio's Pub and Gym", highlighting the menu, gym facilities, and more restaurant related details.`}
-            techs={["React"]}
-            codeLink={"https://github.com/afutofu/machios-pub-and-gym"}
-            siteLink={"https://machios-pub-and-gym.netlify.app/"}
-            images={[machios1, machios2, machios3, machios4, machios5]}
-          />
-
-          <FeaturedProject
             title={"Devil's Advocate"}
             desc={`An e-commerce website selling 'devil fruits' from the 'One Piece' series. Data scraped from a third party site, complete with a cart system and authentication.`}
             techs={["React", "Node.js", "Express", "MongoDB", "Scrapy", "JWT"]}
