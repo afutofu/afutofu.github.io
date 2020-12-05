@@ -72,10 +72,24 @@ const TitleLine = styled.div`
 
 const ProjectArea = styled.div`
   width: 100%;
-  display: flex;
+  /* display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  align-items: center;
+  align-items: center; */
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+
+  @media only screen and (max-width: 1200px) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media only screen and (max-width: 992px) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media only screen and (max-width: 768px) {
+    grid-template-columns: 100%;
+  }
 `;
 
 const theme = {
@@ -138,7 +152,7 @@ const OtherProjects = () => {
           <OtherProject
             reverse={true}
             title={"An Alan Watts Tribute"}
-            desc={`A website detailing Alan Watt's life, books, and a few popular audio clips from his lectures. This was my first React project, and I'm looking forward to revisiting it.`}
+            desc={`A website detailing Alan Watt's life, books, and a few popular audio clips from his lectures.`}
             techs={["React"]}
             codeLink={"https://github.com/afutofu/an-alan-watts-tribute"}
             siteLink={"https://an-alan-watts-tribute.netlify.app/"}
@@ -153,7 +167,7 @@ const OtherProjects = () => {
           <OtherProject
             reverse={true}
             title={"Task Timer"}
-            desc={`Enter a task and start the timer. Records the amount of time you do a task, graphs them, and ranks the time based on the trailing week.`}
+            desc={`Records the amount of time you do a task, graphs them, and ranks the time based on the trailing week.`}
             techs={["Python", "Tkinter", "Matplotlib", "SQLite"]}
             codeLink={"https://github.com/afutofu/task-timer"}
           />
