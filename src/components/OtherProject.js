@@ -1,4 +1,4 @@
-import React, { useRef, useState, useEffect } from "react";
+import React, { useRef, useEffect } from "react";
 import styled, { ThemeProvider } from "styled-components";
 import { gsap, TimelineLite, Power3 } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -7,14 +7,11 @@ gsap.registerPlugin(ScrollTrigger);
 
 const OtherProjectComp = styled.div`
   position: relative;
-  width: 400px;
   height: 200px;
   color: #222;
   margin: 10px 10px;
   box-sizing: border-box;
   background-color: #eee;
-  border-radius: 5px;
-  overflow: hidden;
 
   a {
     top: 0;
@@ -26,28 +23,12 @@ const OtherProjectComp = styled.div`
     text-decoration: none;
   }
 
-  @media only screen and (max-width: 1200px) {
-    min-width: 280px;
-    min-height: 260px;
-  }
-
-  @media only screen and (max-width: 992px) {
-    width: 500px;
-    height: 260px;
+  @media only screen and (max-width: 768px) {
+    height: 250px;
   }
 
   @media only screen and (max-width: 600px) {
-    width: 100%;
-    margin-bottom: 20px;
-    min-height: 200px;
-  }
-
-  @media only screen and (max-width: 450px) {
-    /* min-height: 190px; */
-  }
-
-  @media only screen and (max-width: 350px) {
-    font-size: 12px;
+    height: 200px;
   }
 `;
 
@@ -106,7 +87,7 @@ const TextSide = styled.div`
 `;
 
 const Title = styled.h3`
-  font-size: 17px;
+  font-size: 16px;
   font-weight: 600;
   margin: 10px 0;
 
@@ -121,7 +102,7 @@ const Title = styled.h3`
   }
 
   @media only screen and (max-width: 600px) {
-    font-size: 20px;
+    font-size: 18px;
     margin-bottom: 10px;
   }
 
@@ -131,13 +112,12 @@ const Title = styled.h3`
   }
 
   @media only screen and (max-width: 350px) {
-    font-size: 16px;
+    font-size: 14px;
   }
 `;
 
 const Desc = styled.p`
   font-size: 14px;
-  /* line-height: 1.7rem; */
   font-weight: 400;
   margin: 0;
   margin-bottom: 15px;
@@ -153,7 +133,7 @@ const Desc = styled.p`
   }
 
   @media only screen and (max-width: 600px) {
-    font-size: 16px;
+    font-size: 14px;
     margin-bottom: 15px;
   }
 
@@ -180,7 +160,7 @@ const Techs = styled.ul`
 
 const TechItem = styled.li`
   font-weight: 600;
-  font-size: 14px;
+  font-size: 12px;
   margin: 0 10px;
   margin-bottom: 10px;
   color: ${(props) => props.theme.color};
@@ -191,12 +171,12 @@ const TechItem = styled.li`
   }
 
   @media only screen and (max-width: 992px) {
-    font-size: 16px;
+    font-size: 14px;
     margin-bottom: 10px;
   }
 
   @media only screen and (max-width: 600px) {
-    font-size: 16px;
+    font-size: 14px;
   }
 
   @media only screen and (max-width: 450px) {
@@ -208,55 +188,6 @@ const TechItem = styled.li`
     font-size: 12px;
   }
 `;
-
-// const CodeIcon = styled.div`
-//   position: absolute;
-//   top: 10px;
-//   left: 10px;
-//   display: flex;
-//   align-items: center;
-//   z-index: 50;
-
-//   a {
-//     color: white;
-//     pointer-events: none;
-
-//     ${OtherProjectComp}:hover & {
-//       opacity: 1;
-//       pointer-events: auto;
-//     }
-//   }
-
-//   i {
-//     font-size: 18px;
-//     padding: 5px;
-//     transition: color 0.2s;
-//     transition: opacity 0.5s;
-
-//     opacity: 0;
-
-//     :hover {
-//       color: ${(props) => props.theme.color};
-//     }
-
-//     ${OtherProjectComp}:hover & {
-//       opacity: 1;
-//       cursor: pointer;
-//     }
-
-//     /* @media only screen and (max-width: 1200px) {
-//       font-size: 18px;
-//     }
-
-//     @media only screen and (max-width: 992px) {
-//       font-size: 18px;
-//     }
-
-//     @media only screen and (max-width: 600px) {
-//       font-size: 20px;
-//     } */
-//   }
-// `;
 
 const SiteIcon = styled.div`
   position: absolute;
@@ -321,7 +252,7 @@ const FeaturedProject = (props) => {
     let master = new TimelineLite({
       scrollTrigger: {
         trigger: project,
-        start: "top-=150 center",
+        start: "top-=200 center",
         toggleActions: "play none none none",
       },
     });
