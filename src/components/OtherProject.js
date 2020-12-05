@@ -32,6 +32,10 @@ const OtherProjectComp = styled.div`
   @media only screen and (max-width: 600px) {
     height: 200px;
   }
+
+  @media only screen and (max-width: 450px) {
+    height: 160px;
+  }
 `;
 
 const ProjectImage = styled.img.attrs((props) => ({
@@ -93,7 +97,7 @@ const Title = styled.h3`
   }
 
   @media only screen and (max-width: 450px) {
-    font-size: 18px;
+    font-size: 16px;
     margin-bottom: 8px;
   }
 
@@ -124,7 +128,7 @@ const Desc = styled.p`
   }
 
   @media only screen and (max-width: 450px) {
-    font-size: 14px;
+    font-size: 12px;
     margin-bottom: 10px;
   }
 
@@ -166,12 +170,12 @@ const TechItem = styled.li`
   }
 
   @media only screen and (max-width: 450px) {
-    font-size: 14px;
+    font-size: 10px;
     margin-bottom: 5px;
   }
 
   @media only screen and (max-width: 350px) {
-    font-size: 12px;
+    font-size: 10px;
   }
 `;
 

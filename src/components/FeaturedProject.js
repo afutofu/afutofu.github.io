@@ -168,7 +168,7 @@ const TextSide = styled.div`
 `;
 
 const Title = styled.h3`
-  font-size: 20px;
+  font-size: 22px;
   font-weight: 600;
   margin: 0;
   margin-bottom: 15px;
@@ -265,13 +265,13 @@ const TechItem = styled.li`
   }
 
   @media only screen and (max-width: 450px) {
-    font-size: 14px;
+    font-size: 12px;
     line-height: unset;
     margin: 3 5px;
   }
 
   @media only screen and (max-width: 350px) {
-    font-size: 12px;
+    font-size: 10px;
   }
 `;
 
