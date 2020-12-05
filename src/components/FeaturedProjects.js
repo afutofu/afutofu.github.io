@@ -3,6 +3,11 @@ import styled, { ThemeProvider } from "styled-components";
 import { gsap, TimelineLite, Power3 } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
+import benefitted1 from "../assets/projectImages/featuredProjects/benefitted1.png";
+import benefitted2 from "../assets/projectImages/featuredProjects/benefitted2.png";
+import benefitted3 from "../assets/projectImages/featuredProjects/benefitted3.png";
+import benefitted4 from "../assets/projectImages/featuredProjects/benefitted4.png";
+import benefitted5 from "../assets/projectImages/featuredProjects/benefitted5.png";
 import machios1 from "../assets/projectImages/featuredProjects/machios1-min.png";
 import machios2 from "../assets/projectImages/featuredProjects/machios2-min.png";
 import machios3 from "../assets/projectImages/featuredProjects/machios3-min.png";
@@ -160,6 +165,29 @@ const FeaturedProjects = () => {
         </TitleArea>
         <ProjectArea>
           <FeaturedProject
+            title={"Benefitted"}
+            desc={`Landing page for Benefitted. Displays instagram posts, business information, FAQs, and available slot dates to book your own custom apparels and shoes!`}
+            techs={[
+              "React",
+              "Instagram Basic Display API",
+              "GSAP",
+              "Node.js",
+              "Express",
+              "MongoDB",
+              "JWT",
+            ]}
+            codeLink={"https://github.com/afutofu/benefitted"}
+            siteLink={"https://benefitted.herokuapp.com/"}
+            images={[
+              benefitted1,
+              benefitted2,
+              benefitted3,
+              benefitted4,
+              benefitted5,
+            ]}
+          />
+          <FeaturedProject
+            reverse={true}
             title={"Saiko Games"}
             desc={`A video game information website that displays current releases, most popular and featured games, and video game information and reviews.`}
             techs={["React", "IGDB API", "Node.js", "Express"]}
@@ -168,7 +196,6 @@ const FeaturedProjects = () => {
             images={[saiko1, saiko2, saiko3, saiko4, saiko5]}
           />
           <FeaturedProject
-            reverse={true}
             title={"Projecc"}
             desc={`A real-time text messaging web app inspired by Discord. Join project groups, interact with fellow project members, and plan out your next big project!`}
             techs={[
@@ -184,6 +211,7 @@ const FeaturedProjects = () => {
             images={[projecc1, projecc2, projecc3, projecc4, projecc5]}
           />
           <FeaturedProject
+            reverse={true}
             title={"Machio's Pub & Gym"}
             desc={`A website for "Machio's Pub and Gym", highlighting the menu, gym facilities, and more restaurant related details.`}
             techs={["React"]}
@@ -193,7 +221,6 @@ const FeaturedProjects = () => {
           />
 
           <FeaturedProject
-            reverse={true}
             title={"Devil's Advocate"}
             desc={`An e-commerce website selling 'devil fruits' from the 'One Piece' series. Data scraped from a third party site, complete with a cart system and authentication.`}
             techs={["React", "Node.js", "Express", "MongoDB", "Scrapy", "JWT"]}
