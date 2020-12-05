@@ -3,6 +3,8 @@ import styled, { ThemeProvider } from "styled-components";
 import { gsap, TimelineLite, Power3 } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
+import noImage from "../assets/no-image.png";
+
 gsap.registerPlugin(ScrollTrigger);
 
 const OtherProjectComp = styled.div`
@@ -33,7 +35,7 @@ const OtherProjectComp = styled.div`
 `;
 
 const ProjectImage = styled.img.attrs((props) => ({
-  src: props.src ?? "",
+  src: props.src ?? noImage,
   alt: "project-image",
 }))`
   position: absolute;
@@ -56,23 +58,7 @@ const Container = styled.div`
   }
 `;
 
-// const ProjectSide = styled.div`
-//   position: absolute;
-//   top: 0;
-//   left: 0;
-//   flex: 1;
-//   width: 100%;
-//   height: 100%;
-
-//   margin-left: ${(props) => (props.reverse ? "40px" : "0")};
-//   margin-right: ${(props) => (props.reverse ? "0" : "40px")};
-// `;
-
 const TextSide = styled.div`
-  /* position: absolute;
-  left: 50%;
-  transform: translate(-50%); */
-
   z-index: 10;
   width: 100%;
   height: 100%;
@@ -261,7 +247,7 @@ const FeaturedProject = (props) => {
 
   return (
     <OtherProjectComp ref={(el) => (project = el)}>
-      {props.image && <ProjectImage src={props.image} alt="project-image" />}
+      <ProjectImage src={props.image} alt="project-image" />
       <ThemeProvider theme={theme}>
         <a href={props.codeLink} target="_blank" rel="noopener noreferrer">
           <Container>
