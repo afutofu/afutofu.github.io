@@ -5,6 +5,8 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 import OtherProject from "./OtherProject";
 
+import aawt1 from "../assets/projectImages/otherProjects/aawt1.png";
+
 gsap.registerPlugin(ScrollTrigger);
 
 const OtherProjectsComp = styled.div`
@@ -140,6 +142,7 @@ const OtherProjects = () => {
             techs={["React"]}
             codeLink={"https://github.com/afutofu/an-alan-watts-tribute"}
             siteLink={"https://an-alan-watts-tribute.netlify.app/"}
+            image={aawt1}
           />
           <OtherProject
             title={"Task Manager"}

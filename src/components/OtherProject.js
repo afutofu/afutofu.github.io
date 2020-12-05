@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import styled, { ThemeProvider } from "styled-components";
 import { gsap, TimelineLite, Power3 } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -7,16 +7,14 @@ gsap.registerPlugin(ScrollTrigger);
 
 const OtherProjectComp = styled.div`
   position: relative;
-  height: 100%;
-  flex: 1;
-  min-width: 280px;
-  min-height: 260px;
+  width: 400px;
+  height: 200px;
   color: #222;
-  padding: 10px;
   margin: 10px 10px;
   box-sizing: border-box;
   background-color: #eee;
-  border-radius: 10px;
+  border-radius: 5px;
+  overflow: hidden;
 
   a {
     top: 0;
@@ -34,8 +32,8 @@ const OtherProjectComp = styled.div`
   }
 
   @media only screen and (max-width: 992px) {
-    min-width: 230px;
-    min-height: 330px;
+    width: 500px;
+    height: 260px;
   }
 
   @media only screen and (max-width: 600px) {
@@ -53,10 +51,28 @@ const OtherProjectComp = styled.div`
   }
 `;
 
+const ProjectImage = styled.img.attrs((props) => ({
+  src: props.src ?? "",
+  alt: "project-image",
+}))`
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+`;
+
 const Container = styled.div`
   position: relative;
   width: 100%;
   height: 100%;
+  background-color: rgba(255, 255, 255, 0.8);
+
+  opacity: 0;
+
+  transition: opacity 0.3s;
+  :hover {
+    opacity: 1;
+  }
 `;
 
 // const ProjectSide = styled.div`
@@ -87,8 +103,6 @@ const TextSide = styled.div`
   padding: 10px 30px;
   box-sizing: border-box;
   text-align: center;
-
-  /* opacity: 0; */
 `;
 
 const Title = styled.h3`
@@ -266,7 +280,7 @@ const SiteIcon = styled.div`
     font-size: 18px;
     padding: 5px;
     transition: color 0.2s;
-    transition: transform 0.3s;
+    transition: transform 0.1s;
 
     :hover {
       color: ${(props) => props.theme.color};
@@ -303,22 +317,6 @@ const FeaturedProject = (props) => {
     return tl;
   };
 
-  const onMouseEnterProject = () => {
-    gsap.to(project, {
-      y: -7,
-      duration: 0.15,
-      backgroundColor: "#fafafa",
-    });
-  };
-
-  const onMouseLeaveProject = () => {
-    gsap.to(project, {
-      y: 0,
-      duration: 0.15,
-      backgroundColor: "#eee",
-    });
-  };
-
   useEffect(() => {
     let master = new TimelineLite({
       scrollTrigger: {
@@ -331,11 +329,8 @@ const FeaturedProject = (props) => {
   }, []);
 
   return (
-    <OtherProjectComp
-      ref={(el) => (project = el)}
-      onMouseEnter={onMouseEnterProject}
-      onMouseLeave={onMouseLeaveProject}
-    >
+    <OtherProjectComp ref={(el) => (project = el)}>
+      {props.image && <ProjectImage src={props.image} alt="project-image" />}
       <ThemeProvider theme={theme}>
         <a href={props.codeLink} target="_blank" rel="noopener noreferrer">
           <Container>
@@ -349,15 +344,19 @@ const FeaturedProject = (props) => {
                   })}
               </Techs>
             </TextSide>
+            {props.siteLink && (
+              <SiteIcon>
+                <a
+                  href={props.siteLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <i className="fas fa-external-link-alt"></i>
+                </a>
+              </SiteIcon>
+            )}
           </Container>
         </a>
-        {props.siteLink && (
-          <SiteIcon>
-            <a href={props.siteLink} target="_blank" rel="noopener noreferrer">
-              <i className="fas fa-external-link-alt"></i>
-            </a>
-          </SiteIcon>
-        )}
       </ThemeProvider>
     </OtherProjectComp>
   );
