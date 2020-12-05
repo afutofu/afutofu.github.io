@@ -3,26 +3,26 @@ import styled, { ThemeProvider } from "styled-components";
 import { gsap, TimelineLite, Power3 } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-import machios1 from "../assets/projectImages/machios1-min.png";
-import machios2 from "../assets/projectImages/machios2-min.png";
-import machios3 from "../assets/projectImages/machios3-min.png";
-import machios4 from "../assets/projectImages/machios4-min.png";
-import machios5 from "../assets/projectImages/machios5-min.png";
-import projecc1 from "../assets/projectImages/projecc1-min.png";
-import projecc2 from "../assets/projectImages/projecc2-min.png";
-import projecc3 from "../assets/projectImages/projecc3-min.png";
-import projecc4 from "../assets/projectImages/projecc4-min.png";
-import projecc5 from "../assets/projectImages/projecc5-min.png";
-import saiko1 from "../assets/projectImages/saiko1-min.png";
-import saiko2 from "../assets/projectImages/saiko2-min.png";
-import saiko3 from "../assets/projectImages/saiko3-min.png";
-import saiko4 from "../assets/projectImages/saiko4-min.png";
-import saiko5 from "../assets/projectImages/saiko5-min.png";
-import devils1 from "../assets/projectImages/devils1-min.png";
-import devils2 from "../assets/projectImages/devils2-min.png";
-import devils3 from "../assets/projectImages/devils3-min.png";
-import devils4 from "../assets/projectImages/devils4-min.png";
-import devils5 from "../assets/projectImages/devils5-min.png";
+import benefitted1 from "../assets/projectImages/featuredProjects/benefitted1.png";
+import benefitted2 from "../assets/projectImages/featuredProjects/benefitted2.png";
+import benefitted3 from "../assets/projectImages/featuredProjects/benefitted3.png";
+import benefitted4 from "../assets/projectImages/featuredProjects/benefitted4.png";
+import benefitted5 from "../assets/projectImages/featuredProjects/benefitted5.png";
+import projecc1 from "../assets/projectImages/featuredProjects/projecc1-min.png";
+import projecc2 from "../assets/projectImages/featuredProjects/projecc2-min.png";
+import projecc3 from "../assets/projectImages/featuredProjects/projecc3-min.png";
+import projecc4 from "../assets/projectImages/featuredProjects/projecc4-min.png";
+import projecc5 from "../assets/projectImages/featuredProjects/projecc5-min.png";
+import saiko1 from "../assets/projectImages/featuredProjects/saiko1-min.png";
+import saiko2 from "../assets/projectImages/featuredProjects/saiko2-min.png";
+import saiko3 from "../assets/projectImages/featuredProjects/saiko3-min.png";
+import saiko4 from "../assets/projectImages/featuredProjects/saiko4-min.png";
+import saiko5 from "../assets/projectImages/featuredProjects/saiko5-min.png";
+import devils1 from "../assets/projectImages/featuredProjects/devils1-min.png";
+import devils2 from "../assets/projectImages/featuredProjects/devils2-min.png";
+import devils3 from "../assets/projectImages/featuredProjects/devils3-min.png";
+import devils4 from "../assets/projectImages/featuredProjects/devils4-min.png";
+import devils5 from "../assets/projectImages/featuredProjects/devils5-min.png";
 import FeaturedProject from "./FeaturedProject";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -160,6 +160,29 @@ const FeaturedProjects = () => {
         </TitleArea>
         <ProjectArea>
           <FeaturedProject
+            title={"Benefitted"}
+            desc={`Landing page for Benefitted. Displays instagram posts, business information, FAQs, and available slot dates to book your own custom apparels and shoes!`}
+            techs={[
+              "React",
+              "Instagram Basic Display API",
+              "GSAP",
+              "Node.js",
+              "Express",
+              "MongoDB",
+              "JWT",
+            ]}
+            codeLink={"https://github.com/afutofu/benefitted"}
+            siteLink={"https://benefitted.herokuapp.com/"}
+            images={[
+              benefitted1,
+              benefitted2,
+              benefitted3,
+              benefitted4,
+              benefitted5,
+            ]}
+          />
+          <FeaturedProject
+            reverse={true}
             title={"Saiko Games"}
             desc={`A video game information website that displays current releases, most popular and featured games, and video game information and reviews.`}
             techs={["React", "IGDB API", "Node.js", "Express"]}
@@ -168,7 +191,6 @@ const FeaturedProjects = () => {
             images={[saiko1, saiko2, saiko3, saiko4, saiko5]}
           />
           <FeaturedProject
-            reverse={true}
             title={"Projecc"}
             desc={`A real-time text messaging web app inspired by Discord. Join project groups, interact with fellow project members, and plan out your next big project!`}
             techs={[
@@ -183,15 +205,6 @@ const FeaturedProjects = () => {
             siteLink={"https://projecc-afu.herokuapp.com/"}
             images={[projecc1, projecc2, projecc3, projecc4, projecc5]}
           />
-          <FeaturedProject
-            title={"Machio's Pub & Gym"}
-            desc={`A website for "Machio's Pub and Gym", highlighting the menu, gym facilities, and more restaurant related details.`}
-            techs={["React"]}
-            codeLink={"https://github.com/afutofu/machios-pub-and-gym"}
-            siteLink={"https://machios-pub-and-gym.netlify.app/"}
-            images={[machios1, machios2, machios3, machios4, machios5]}
-          />
-
           <FeaturedProject
             reverse={true}
             title={"Devil's Advocate"}

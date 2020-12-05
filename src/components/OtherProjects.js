@@ -5,6 +5,11 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 import OtherProject from "./OtherProject";
 
+import machios1 from "../assets/projectImages/otherProjects/machios1.png";
+import aawt1 from "../assets/projectImages/otherProjects/aawt1.png";
+import taskManager from "../assets/projectImages/otherProjects/task-manager.png";
+import taskTimer from "../assets/projectImages/otherProjects/task-timer.png";
+
 gsap.registerPlugin(ScrollTrigger);
 
 const OtherProjectsComp = styled.div`
@@ -70,10 +75,24 @@ const TitleLine = styled.div`
 
 const ProjectArea = styled.div`
   width: 100%;
-  display: flex;
+  /* display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  align-items: center;
+  align-items: center; */
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+
+  @media only screen and (max-width: 1200px) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media only screen and (max-width: 992px) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media only screen and (max-width: 768px) {
+    grid-template-columns: 100%;
+  }
 `;
 
 const theme = {
@@ -134,25 +153,34 @@ const OtherProjects = () => {
         </TitleArea>
         <ProjectArea>
           <OtherProject
-            reverse={true}
+            title={"Machio's Pub & Gym"}
+            desc={`Landing page for 'Machio's Pub & Gym', highlighting the menu, gym facilities, and more restaurant related details.`}
+            techs={["React"]}
+            codeLink={"https://github.com/afutofu/machios-pub-and-gym"}
+            siteLink={"https://machios-pub-and-gym.netlify.app/"}
+            image={machios1}
+          />
+          <OtherProject
             title={"An Alan Watts Tribute"}
-            desc={`A website detailing Alan Watt's life, books, and a few popular audio clips from his lectures. This was my first React project, and I'm looking forward to revisiting it.`}
+            desc={`A website detailing Alan Watt's life, books, and a few popular audio clips from his lectures.`}
             techs={["React"]}
             codeLink={"https://github.com/afutofu/an-alan-watts-tribute"}
             siteLink={"https://an-alan-watts-tribute.netlify.app/"}
+            image={aawt1}
           />
           <OtherProject
             title={"Task Manager"}
             desc={`A to-do list, day planner, and a 'things I learned today' list all in one app.`}
             techs={["Python", "Tkinter", "SQLite"]}
             codeLink={"https://github.com/afutofu/task-manager"}
+            image={taskManager}
           />
           <OtherProject
-            reverse={true}
             title={"Task Timer"}
-            desc={`Enter a task and start the timer. Records the amount of time you do a task, graphs them, and ranks the time based on the trailing week.`}
+            desc={`Records the amount of time you do a task, graphs them, and ranks the time based on the trailing month.`}
             techs={["Python", "Tkinter", "Matplotlib", "SQLite"]}
             codeLink={"https://github.com/afutofu/task-timer"}
+            image={taskTimer}
           />
           <OtherProject
             title={"Don't Hit The Wall"}
@@ -161,7 +189,6 @@ const OtherProjects = () => {
             codeLink={"https://github.com/afutofu/dont-hit-the-wall"}
           />
           <OtherProject
-            reverse={true}
             title={"Automatic Garden Waterer"}
             desc={`Code for an automatic garden waterer, watering time can be customized. Used with arduino v3.`}
             techs={["Arduino"]}
