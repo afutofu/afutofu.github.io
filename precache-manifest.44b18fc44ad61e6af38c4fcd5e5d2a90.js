@@ -1,23 +1,47 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "b4f578b508ea5965ca47e4187f24c042",
+    "revision": "240b11a822c568ba14e3a37fbec0a0c9",
     "url": "/index.html"
   },
   {
-    "revision": "b432143f7e7892fe3f2e",
-    "url": "/static/js/2.a1342192.chunk.js"
+    "revision": "9486654197e152b4bf09",
+    "url": "/static/js/2.f19e8c91.chunk.js"
   },
   {
     "revision": "d86598ebe3c174d2a75bd509746aff96",
-    "url": "/static/js/2.a1342192.chunk.js.LICENSE.txt"
+    "url": "/static/js/2.f19e8c91.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "2e11512f60a2768defa3",
-    "url": "/static/js/main.eb408884.chunk.js"
+    "revision": "0663960bbef3d2802a48",
+    "url": "/static/js/main.80f3b5da.chunk.js"
   },
   {
     "revision": "4f2b1704eab49d50853b",
     "url": "/static/js/runtime-main.19ccc7f6.js"
+  },
+  {
+    "revision": "0af589d51d92649754454738f2b66d54",
+    "url": "/static/media/aawt1.0af589d5.png"
+  },
+  {
+    "revision": "3cceb65e83dda584978cb7734f80daf2",
+    "url": "/static/media/benefitted1.3cceb65e.png"
+  },
+  {
+    "revision": "416628a929619f115203634dda162cda",
+    "url": "/static/media/benefitted2.416628a9.png"
+  },
+  {
+    "revision": "42a8bd733936dfcfbc04bef4723d07f4",
+    "url": "/static/media/benefitted3.42a8bd73.png"
+  },
+  {
+    "revision": "b43bbac3d1413c3e210995fcf3134b02",
+    "url": "/static/media/benefitted4.b43bbac3.png"
+  },
+  {
+    "revision": "302ecbde047e03c4e33088e55dd50214",
+    "url": "/static/media/benefitted5.302ecbde.png"
   },
   {
     "revision": "5423eb9ea5e5cffa113ebc10a5ee6358",
@@ -40,24 +64,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/devils5-min.a2435a9e.png"
   },
   {
-    "revision": "4320cf403ce6217d7f2d1f3780852b2f",
-    "url": "/static/media/machios1-min.4320cf40.png"
-  },
-  {
     "revision": "efbf13ebdc1884b4bd7d06b2523a4ee4",
-    "url": "/static/media/machios2-min.efbf13eb.png"
-  },
-  {
-    "revision": "60054866a7c647c3e26946b2c7ff881d",
-    "url": "/static/media/machios3-min.60054866.png"
-  },
-  {
-    "revision": "17f15e4e1a04bb026f897091da8c81c0",
-    "url": "/static/media/machios4-min.17f15e4e.png"
-  },
-  {
-    "revision": "f9d9f7e1b8552ebf12a300de9991a107",
-    "url": "/static/media/machios5-min.f9d9f7e1.png"
+    "url": "/static/media/machios1.efbf13eb.png"
   },
   {
     "revision": "73d4b7b7d6b56669e2bad1539eb700db",
@@ -98,6 +106,14 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "2cc121988a581ea44b3dc61ae14504d8",
     "url": "/static/media/saiko5-min.2cc12198.png"
+  },
+  {
+    "revision": "2a9f4039d928a24c1e9697cea6d1834d",
+    "url": "/static/media/task-manager.2a9f4039.png"
+  },
+  {
+    "revision": "450240ea8ef98ce28c3e6421af31617b",
+    "url": "/static/media/task-timer.450240ea.png"
   },
   {
     "revision": "d70fb38ab78e9c5ff0636d6bc4268fab",
