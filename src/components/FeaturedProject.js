@@ -168,7 +168,7 @@ const TextSide = styled.div`
 `;
 
 const Title = styled.h3`
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 600;
   margin: 0;
   margin-bottom: 15px;
@@ -191,7 +191,7 @@ const Title = styled.h3`
 `;
 
 const Desc = styled.p`
-  font-size: 20px;
+  font-size: 16px;
   line-height: 1.8rem;
   font-weight: 400;
   margin: 0;
@@ -250,7 +250,7 @@ const Techs = styled.ul`
 
 const TechItem = styled.li`
   font-weight: 600;
-  font-size: 18px;
+  font-size: 14px;
   margin: 5px 15px;
   color: ${(props) => props.theme.color};
 
