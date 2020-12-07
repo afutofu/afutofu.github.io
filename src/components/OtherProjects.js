@@ -9,6 +9,7 @@ import machios1 from "../assets/projectImages/otherProjects/machios1.png";
 import aawt1 from "../assets/projectImages/otherProjects/aawt1.png";
 import taskManager from "../assets/projectImages/otherProjects/task-manager.png";
 import taskTimer from "../assets/projectImages/otherProjects/task-timer.png";
+import agw from "../assets/projectImages/otherProjects/agw.jpg";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -193,6 +194,7 @@ const OtherProjects = () => {
             desc={`Code for an automatic garden waterer, watering time can be customized. Used with arduino v3.`}
             techs={["Arduino"]}
             codeLink={"https://github.com/afutofu/automatic-garden-waterer"}
+            image={agw}
           />
         </ProjectArea>
       </ThemeProvider>
