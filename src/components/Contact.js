@@ -278,10 +278,9 @@ const Contact = (props) => {
               </TitleLineWrapper>
             </TitleArea>
             <Text ref={(el) => (text = el)}>
-              I'm looking forward to working as a full time web developer -
-              frontent, backend, or full-stack. So feel free to let me know if
-              you're interested in hiring, want to ask some questions, or just
-              want to say hi!
+              I'm currently not looking for any new opportunities, but feel free
+              to let me know if you're still interested in hiring, want to ask
+              some questions, or just want to say hi!
             </Text>
             <a href="mailto:theafuza@gmail.com">
               <Button ref={(el) => (button = el)}>Contact Me</Button>
