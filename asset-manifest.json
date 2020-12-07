@@ -1,16 +1,17 @@
 {
   "files": {
-    "main.js": "/static/js/main.80f3b5da.chunk.js",
-    "main.js.map": "/static/js/main.80f3b5da.chunk.js.map",
+    "main.js": "/static/js/main.39c54f7a.chunk.js",
+    "main.js.map": "/static/js/main.39c54f7a.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.19ccc7f6.js",
     "runtime-main.js.map": "/static/js/runtime-main.19ccc7f6.js.map",
-    "static/js/2.f19e8c91.chunk.js": "/static/js/2.f19e8c91.chunk.js",
-    "static/js/2.f19e8c91.chunk.js.map": "/static/js/2.f19e8c91.chunk.js.map",
+    "static/js/2.c8cc0de6.chunk.js": "/static/js/2.c8cc0de6.chunk.js",
+    "static/js/2.c8cc0de6.chunk.js.map": "/static/js/2.c8cc0de6.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.44b18fc44ad61e6af38c4fcd5e5d2a90.js": "/precache-manifest.44b18fc44ad61e6af38c4fcd5e5d2a90.js",
+    "precache-manifest.c24a1f0ba9777b9c19679aa6c964e1a6.js": "/precache-manifest.c24a1f0ba9777b9c19679aa6c964e1a6.js",
     "service-worker.js": "/service-worker.js",
-    "static/js/2.f19e8c91.chunk.js.LICENSE.txt": "/static/js/2.f19e8c91.chunk.js.LICENSE.txt",
+    "static/js/2.c8cc0de6.chunk.js.LICENSE.txt": "/static/js/2.c8cc0de6.chunk.js.LICENSE.txt",
     "static/media/aawt1.png": "/static/media/aawt1.0af589d5.png",
+    "static/media/agw.jpg": "/static/media/agw.b4c94723.jpg",
     "static/media/benefitted1.png": "/static/media/benefitted1.3cceb65e.png",
     "static/media/benefitted2.png": "/static/media/benefitted2.416628a9.png",
     "static/media/benefitted3.png": "/static/media/benefitted3.42a8bd73.png",
@@ -21,6 +22,11 @@
     "static/media/devils3-min.png": "/static/media/devils3-min.f8f4753a.png",
     "static/media/devils4-min.png": "/static/media/devils4-min.d3405704.png",
     "static/media/devils5-min.png": "/static/media/devils5-min.a2435a9e.png",
+    "static/media/insalts1.png": "/static/media/insalts1.f0a44263.png",
+    "static/media/insalts2.png": "/static/media/insalts2.a108723e.png",
+    "static/media/insalts3.png": "/static/media/insalts3.dc62ef7a.png",
+    "static/media/insalts4.png": "/static/media/insalts4.d0f9f179.png",
+    "static/media/insalts5.png": "/static/media/insalts5.6e49e9a1.png",
     "static/media/machios1.png": "/static/media/machios1.efbf13eb.png",
     "static/media/projecc1-min.png": "/static/media/projecc1-min.73d4b7b7.png",
     "static/media/projecc2-min.png": "/static/media/projecc2-min.30de0c61.png",
@@ -38,7 +44,7 @@
   },
   "entrypoints": [
     "static/js/runtime-main.19ccc7f6.js",
-    "static/js/2.f19e8c91.chunk.js",
-    "static/js/main.80f3b5da.chunk.js"
+    "static/js/2.c8cc0de6.chunk.js",
+    "static/js/main.39c54f7a.chunk.js"
   ]
 }
