@@ -105,7 +105,7 @@ const ImageButtons = styled.div`
   }
 
   @media only screen and (max-width: 450px) {
-    bottom: 5px;
+    bottom: 8px;
   }
 `;
 
@@ -123,9 +123,9 @@ const ImageButton = styled.button`
   cursor: pointer;
 
   @media only screen and (max-width: 450px) {
-    width: 14px;
-    height: 14px;
-    margin: 0 5px;
+    width: 17px;
+    height: 17px;
+    margin: 0 4px;
   }
 `;
 
