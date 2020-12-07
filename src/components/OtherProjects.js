@@ -9,6 +9,8 @@ import machios1 from "../assets/projectImages/otherProjects/machios1.png";
 import aawt1 from "../assets/projectImages/otherProjects/aawt1.png";
 import taskManager from "../assets/projectImages/otherProjects/task-manager.png";
 import taskTimer from "../assets/projectImages/otherProjects/task-timer.png";
+import dhtw from "../assets/projectImages/otherProjects/dhtw.png";
+import agw from "../assets/projectImages/otherProjects/agw.jpg";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -29,9 +31,6 @@ const TitleArea = styled.div`
   margin: 0;
   margin-bottom: 50px;
 
-  /* @media only screen and (max-width: 450px) {
-    width: 90%;
-  } */
 `;
 
 const Title = styled.h2`
@@ -75,10 +74,6 @@ const TitleLine = styled.div`
 
 const ProjectArea = styled.div`
   width: 100%;
-  /* display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  align-items: center; */
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
 
@@ -187,12 +182,14 @@ const OtherProjects = () => {
             desc={`A two player game where each player has to avoid the wall as the game progresses.`}
             techs={["Java"]}
             codeLink={"https://github.com/afutofu/dont-hit-the-wall"}
+            image={dhtw}
           />
           <OtherProject
             title={"Automatic Garden Waterer"}
             desc={`Code for an automatic garden waterer, watering time can be customized. Used with arduino v3.`}
             techs={["Arduino"]}
             codeLink={"https://github.com/afutofu/automatic-garden-waterer"}
+            image={agw}
           />
         </ProjectArea>
       </ThemeProvider>

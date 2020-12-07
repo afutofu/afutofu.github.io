@@ -13,6 +13,11 @@ import projecc2 from "../assets/projectImages/featuredProjects/projecc2-min.png"
 import projecc3 from "../assets/projectImages/featuredProjects/projecc3-min.png";
 import projecc4 from "../assets/projectImages/featuredProjects/projecc4-min.png";
 import projecc5 from "../assets/projectImages/featuredProjects/projecc5-min.png";
+import insalts1 from "../assets/projectImages/featuredProjects/insalts1.png";
+import insalts2 from "../assets/projectImages/featuredProjects/insalts2.png";
+import insalts3 from "../assets/projectImages/featuredProjects/insalts3.png";
+import insalts4 from "../assets/projectImages/featuredProjects/insalts4.png";
+import insalts5 from "../assets/projectImages/featuredProjects/insalts5.png";
 import saiko1 from "../assets/projectImages/featuredProjects/saiko1-min.png";
 import saiko2 from "../assets/projectImages/featuredProjects/saiko2-min.png";
 import saiko3 from "../assets/projectImages/featuredProjects/saiko3-min.png";
@@ -204,6 +209,14 @@ const FeaturedProjects = () => {
             codeLink={"https://github.com/afutofu/projecc"}
             siteLink={"https://projecc-afu.herokuapp.com/"}
             images={[projecc1, projecc2, projecc3, projecc4, projecc5]}
+          />
+          <FeaturedProject
+            title={"Insalts"}
+            desc={`A site for your favorite jokes and insults inspired by Reddit. Check out 'salts' (subreddits) to view posts of a specific category, or create your very own and start posting your own jokes!`}
+            techs={["React", "Node.js", "Express", "Sequelize", "MySQL", "JWT"]}
+            codeLink={"https://github.com/afutofu/insalts"}
+            siteLink={"https://insalts.herokuapp.com/"}
+            images={[insalts1, insalts2, insalts3, insalts4, insalts5]}
           />
           <FeaturedProject
             reverse={true}
