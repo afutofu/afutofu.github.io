@@ -211,6 +211,7 @@ const FeaturedProjects = () => {
             images={[projecc1, projecc2, projecc3, projecc4, projecc5]}
           />
           <FeaturedProject
+            reverse={true}
             title={"Insalts"}
             desc={`A site for your favorite jokes and insults inspired by Reddit. Check out 'salts' (subreddits) to view posts of a specific category, or create your very own and start posting your own jokes!`}
             techs={["React", "Node.js", "Express", "Sequelize", "MySQL", "JWT"]}
@@ -219,7 +220,6 @@ const FeaturedProjects = () => {
             images={[insalts1, insalts2, insalts3, insalts4, insalts5]}
           />
           <FeaturedProject
-            reverse={true}
             title={"Devil's Advocate"}
             desc={`An e-commerce website selling 'devil fruits' from the 'One Piece' series. Data scraped from a third party site, complete with a cart system and authentication.`}
             techs={["React", "Node.js", "Express", "MongoDB", "Scrapy", "JWT"]}
