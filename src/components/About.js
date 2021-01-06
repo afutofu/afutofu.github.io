@@ -211,10 +211,11 @@ const About = () => {
             <Descriptions ref={(el) => (descriptions = el)}>
               <Description>
                 Hi! I'm <DescriptionBold>Afuza</DescriptionBold>, currently
-                living in Jakarta, Indonesia.
+                living in Jakarta, Indonesia. I love watching anime, playing
+                video games, meditation, and cats!
               </Description>
               <Description>
-                Ever since starting programming, I feel like I've uncovered a
+                Ever since I started programming, I feel like I've uncovered a
                 treasure trove filled with exciting opportunities and untouched
                 potential. I've built projects ranging from{" "}
                 <DescriptionBold>video games</DescriptionBold>,{" "}
