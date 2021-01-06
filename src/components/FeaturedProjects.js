@@ -3,11 +3,12 @@ import styled, { ThemeProvider } from "styled-components";
 import { gsap, TimelineLite, Power3 } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-import benefitted1 from "../assets/projectImages/featuredProjects/benefitted1.png";
-import benefitted2 from "../assets/projectImages/featuredProjects/benefitted2.png";
-import benefitted3 from "../assets/projectImages/featuredProjects/benefitted3.png";
-import benefitted4 from "../assets/projectImages/featuredProjects/benefitted4.png";
-import benefitted5 from "../assets/projectImages/featuredProjects/benefitted5.png";
+import benefitted1 from "../assets/projectImages/featuredProjects/benefitted1.jpg";
+import benefitted2 from "../assets/projectImages/featuredProjects/benefitted2.jpg";
+import benefitted3 from "../assets/projectImages/featuredProjects/benefitted3.jpg";
+import benefitted4 from "../assets/projectImages/featuredProjects/benefitted4.jpg";
+import benefitted5 from "../assets/projectImages/featuredProjects/benefitted5.jpg";
+import benefitted6 from "../assets/projectImages/featuredProjects/benefitted6.jpg";
 import projecc1 from "../assets/projectImages/featuredProjects/projecc1-min.png";
 import projecc2 from "../assets/projectImages/featuredProjects/projecc2-min.png";
 import projecc3 from "../assets/projectImages/featuredProjects/projecc3-min.png";
@@ -184,6 +185,7 @@ const FeaturedProjects = () => {
               benefitted3,
               benefitted4,
               benefitted5,
+              benefitted6,
             ]}
           />
           <FeaturedProject
