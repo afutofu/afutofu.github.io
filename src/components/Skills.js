@@ -9,7 +9,6 @@ const SkillsComp = styled.div`
   position: relative;
   width: 100%;
   font-family: "Quicksand", "san-serif";
-  /* height: 550px; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -49,10 +48,8 @@ const Container = styled.div`
 
 const Content = styled.div`
   position: relative;
-  /* top: 50%;
-  transform: translateY(-50%); */
   width: 90%;
-  max-width: 700px;
+  /* max-width: 800px; */
   text-align: left;
   color: #222;
   display: flex;
@@ -115,7 +112,6 @@ const ListAreaWrapper = styled.div`
 
 const ListArea = styled.div`
   width: 85%;
-  max-width: 600px;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
@@ -138,7 +134,7 @@ const List = styled.div`
   justify-content: flex-start;
   align-items: flex-start;
   list-style: none;
-  margin: 0;
+  margin: 0 15px;
 
   @media only screen and (max-width: 992px) {
     justify-content: center;
@@ -146,7 +142,7 @@ const List = styled.div`
     margin: 0 10px;
   }
 
-  @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: 786px) {
     margin: 0;
     margin-bottom: 20px;
   }
@@ -176,10 +172,6 @@ const ListTitle = styled.h3`
   }
 `;
 
-const SmallTitle = styled.span`
-  font-size: 0.9em;
-`;
-
 const ListItems = styled.ul`
   display: flex;
   flex-direction: column;
@@ -193,12 +185,17 @@ const ListItems = styled.ul`
     align-items: center;
     text-align: center;
   }
+
+  @media only screen and (max-width: 600px) {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
 `;
 
 const ListItem = styled.li`
   color: #222;
   font-size: 20px;
-  padding-bottom: 5px;
+  padding-bottom: 10px;
   font-weight: 400;
 
   @media only screen and (max-width: 992px) {
@@ -207,6 +204,7 @@ const ListItem = styled.li`
 
   @media only screen and (max-width: 600px) {
     font-size: 16px;
+    margin: 0 7px;
   }
 
   @media only screen and (max-width: 450px) {
@@ -308,7 +306,7 @@ const Skills = (props) => {
           opacity: 0,
         },
         0.1,
-        "-=1.1"
+        "-=1"
       )
       .staggerFrom(
         listItems[2].childNodes,
@@ -318,7 +316,17 @@ const Skills = (props) => {
           opacity: 0,
         },
         0.1,
-        "-=1.1"
+        "-=1.2"
+      )
+      .staggerFrom(
+        listItems[3].childNodes,
+        0.5,
+        {
+          x: -50,
+          opacity: 0,
+        },
+        0.1,
+        "-=0.8"
       );
 
     return tl;
@@ -360,9 +368,9 @@ const Skills = (props) => {
                     Languages
                   </ListTitle>
                   <ListItems ref={(el) => (listItems = el)}>
-                    <ListItem>Javascript / ES6</ListItem>
+                    <ListItem>Javascript/ES6</ListItem>
                     <ListItem>HTML</ListItem>
-                    <ListItem>CSS / SASS</ListItem>
+                    <ListItem>CSS/SASS</ListItem>
                     <ListItem>PHP</ListItem>
                     <ListItem>SQL</ListItem>
                     <ListItem>Python</ListItem>
@@ -371,9 +379,7 @@ const Skills = (props) => {
                   </ListItems>
                 </List>
                 <List>
-                  <ListTitle>
-                    <SmallTitle>Frameworks</SmallTitle>
-                  </ListTitle>
+                  <ListTitle>Frameworks</ListTitle>
                   <ListItems>
                     <ListItem>React</ListItem>
                     <ListItem>Redux</ListItem>
@@ -388,12 +394,19 @@ const Skills = (props) => {
                   </ListItems>
                 </List>
                 <List>
+                  <ListTitle>Databases</ListTitle>
+                  <ListItems>
+                    <ListItem>PostgreSQL</ListItem>
+                    <ListItem>MySQL</ListItem>
+                    <ListItem>MongoDB</ListItem>
+                  </ListItems>
+                </List>
+                <List>
                   <ListTitle>Tools</ListTitle>
                   <ListItems>
                     <ListItem>Bash</ListItem>
                     <ListItem>Git & Github</ListItem>
                     <ListItem>Chrome DevTools</ListItem>
-                    <ListItem>MongoDB</ListItem>
                     <ListItem>Postman</ListItem>
                     <ListItem>VS Code</ListItem>
                   </ListItems>
