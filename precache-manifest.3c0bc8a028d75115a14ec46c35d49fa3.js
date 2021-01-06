@@ -1,19 +1,19 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "b50c37f0bbee3a6dadd3518f16cadb9e",
+    "revision": "47bd9ca12fb0ab2f1f28688d2837b76c",
     "url": "/index.html"
   },
   {
-    "revision": "badd9619479ed81cdf24",
-    "url": "/static/js/2.c8cc0de6.chunk.js"
+    "revision": "00ca9a37ac7253943639",
+    "url": "/static/js/2.04df06c4.chunk.js"
   },
   {
     "revision": "d86598ebe3c174d2a75bd509746aff96",
-    "url": "/static/js/2.c8cc0de6.chunk.js.LICENSE.txt"
+    "url": "/static/js/2.04df06c4.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "2feafc05ac61a570c865",
-    "url": "/static/js/main.490b894c.chunk.js"
+    "revision": "182dff8f8dcd719cc0e7",
+    "url": "/static/js/main.b6be40b6.chunk.js"
   },
   {
     "revision": "4f2b1704eab49d50853b",
@@ -28,24 +28,28 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/agw.b4c94723.jpg"
   },
   {
-    "revision": "3cceb65e83dda584978cb7734f80daf2",
-    "url": "/static/media/benefitted1.3cceb65e.png"
+    "revision": "788c7593e56b26c9e8ffcca5b98a4725",
+    "url": "/static/media/benefitted1.788c7593.jpg"
   },
   {
-    "revision": "416628a929619f115203634dda162cda",
-    "url": "/static/media/benefitted2.416628a9.png"
+    "revision": "892d6f8283069a02ad574d7a93bf3476",
+    "url": "/static/media/benefitted2.892d6f82.jpg"
   },
   {
-    "revision": "42a8bd733936dfcfbc04bef4723d07f4",
-    "url": "/static/media/benefitted3.42a8bd73.png"
+    "revision": "ff428e2e04e9314b4bd92c1ecdbc541f",
+    "url": "/static/media/benefitted3.ff428e2e.jpg"
   },
   {
-    "revision": "b43bbac3d1413c3e210995fcf3134b02",
-    "url": "/static/media/benefitted4.b43bbac3.png"
+    "revision": "2a0b2dd3c0c7b1466de458a97f0131e7",
+    "url": "/static/media/benefitted4.2a0b2dd3.jpg"
   },
   {
-    "revision": "302ecbde047e03c4e33088e55dd50214",
-    "url": "/static/media/benefitted5.302ecbde.png"
+    "revision": "dc3ada0c3f2fef66c45a4feba1b38022",
+    "url": "/static/media/benefitted5.dc3ada0c.jpg"
+  },
+  {
+    "revision": "28b39cd852139b6527e2be4f92359065",
+    "url": "/static/media/benefitted6.28b39cd8.jpg"
   },
   {
     "revision": "5423eb9ea5e5cffa113ebc10a5ee6358",

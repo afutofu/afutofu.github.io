@@ -1,22 +1,23 @@
 {
   "files": {
-    "main.js": "/static/js/main.490b894c.chunk.js",
-    "main.js.map": "/static/js/main.490b894c.chunk.js.map",
+    "main.js": "/static/js/main.b6be40b6.chunk.js",
+    "main.js.map": "/static/js/main.b6be40b6.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.19ccc7f6.js",
     "runtime-main.js.map": "/static/js/runtime-main.19ccc7f6.js.map",
-    "static/js/2.c8cc0de6.chunk.js": "/static/js/2.c8cc0de6.chunk.js",
-    "static/js/2.c8cc0de6.chunk.js.map": "/static/js/2.c8cc0de6.chunk.js.map",
+    "static/js/2.04df06c4.chunk.js": "/static/js/2.04df06c4.chunk.js",
+    "static/js/2.04df06c4.chunk.js.map": "/static/js/2.04df06c4.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.99663318174fa2acadfed811873647d9.js": "/precache-manifest.99663318174fa2acadfed811873647d9.js",
+    "precache-manifest.3c0bc8a028d75115a14ec46c35d49fa3.js": "/precache-manifest.3c0bc8a028d75115a14ec46c35d49fa3.js",
     "service-worker.js": "/service-worker.js",
-    "static/js/2.c8cc0de6.chunk.js.LICENSE.txt": "/static/js/2.c8cc0de6.chunk.js.LICENSE.txt",
+    "static/js/2.04df06c4.chunk.js.LICENSE.txt": "/static/js/2.04df06c4.chunk.js.LICENSE.txt",
     "static/media/aawt1.png": "/static/media/aawt1.0af589d5.png",
     "static/media/agw.jpg": "/static/media/agw.b4c94723.jpg",
-    "static/media/benefitted1.png": "/static/media/benefitted1.3cceb65e.png",
-    "static/media/benefitted2.png": "/static/media/benefitted2.416628a9.png",
-    "static/media/benefitted3.png": "/static/media/benefitted3.42a8bd73.png",
-    "static/media/benefitted4.png": "/static/media/benefitted4.b43bbac3.png",
-    "static/media/benefitted5.png": "/static/media/benefitted5.302ecbde.png",
+    "static/media/benefitted1.jpg": "/static/media/benefitted1.788c7593.jpg",
+    "static/media/benefitted2.jpg": "/static/media/benefitted2.892d6f82.jpg",
+    "static/media/benefitted3.jpg": "/static/media/benefitted3.ff428e2e.jpg",
+    "static/media/benefitted4.jpg": "/static/media/benefitted4.2a0b2dd3.jpg",
+    "static/media/benefitted5.jpg": "/static/media/benefitted5.dc3ada0c.jpg",
+    "static/media/benefitted6.jpg": "/static/media/benefitted6.28b39cd8.jpg",
     "static/media/devils1-min.png": "/static/media/devils1-min.5423eb9e.png",
     "static/media/devils2-min.png": "/static/media/devils2-min.746a5648.png",
     "static/media/devils3-min.png": "/static/media/devils3-min.f8f4753a.png",
@@ -44,7 +45,7 @@
   },
   "entrypoints": [
     "static/js/runtime-main.19ccc7f6.js",
-    "static/js/2.c8cc0de6.chunk.js",
-    "static/js/main.490b894c.chunk.js"
+    "static/js/2.04df06c4.chunk.js",
+    "static/js/main.b6be40b6.chunk.js"
   ]
 }
