@@ -34,8 +34,12 @@ const Credits = styled.h3`
   font-weight: 600;
   color: #222;
 
-  @media only screen and (max-width: 450px) {
+  @media only screen and (max-width: 600px) {
     font-size: 12px;
+  }
+
+  @media only screen and (max-width: 350px) {
+    font-size: 9px;
   }
 `;
 
