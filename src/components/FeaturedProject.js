@@ -123,9 +123,9 @@ const ImageButton = styled.button`
   cursor: pointer;
 
   @media only screen and (max-width: 450px) {
-    width: 17px;
-    height: 17px;
-    margin: 0 4px;
+    width: 19px;
+    height: 19px;
+    margin: 0 3px;
   }
 `;
 
