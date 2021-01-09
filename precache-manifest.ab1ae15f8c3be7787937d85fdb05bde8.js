@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "6ab5524c16c54cac38bcfadf1abe1320",
+    "revision": "9d8cf44c611d299461a03029654222f0",
     "url": "/index.html"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/js/2.04df06c4.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "df154edcf4d1a5037a28",
-    "url": "/static/js/main.43a57b15.chunk.js"
+    "revision": "7fd2568cf1c4904393b8",
+    "url": "/static/js/main.6d03fa4b.chunk.js"
   },
   {
     "revision": "4f2b1704eab49d50853b",
@@ -144,7 +144,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/task-timer.450240ea.png"
   },
   {
-    "revision": "d70fb38ab78e9c5ff0636d6bc4268fab",
-    "url": "/static/media/wallpaper-skyrim.d70fb38a.jpg"
+    "revision": "8ecbafd5d99e5c5dabb7cdb768ce203a",
+    "url": "/static/media/wallpaper-skyrim-min.8ecbafd5.jpg"
   }
 ]);
