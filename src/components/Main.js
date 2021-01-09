@@ -2,7 +2,7 @@ import React, { useRef, useEffect, useState, useCallback } from "react";
 import styled from "styled-components";
 import { TimelineLite, Power3 } from "gsap";
 
-import skyrimWallpaper from "../assets/wallpaper-skyrim.jpg";
+import skyrimWallpaper from "../assets/wallpaper-skyrim-min.jpg";
 
 import LoadingScreen from "./LoadingScreen";
 import Navbar from "./Navbar";
