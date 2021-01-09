@@ -189,6 +189,7 @@ const ListItems = styled.ul`
   @media only screen and (max-width: 600px) {
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: center;
   }
 `;
 
@@ -399,6 +400,7 @@ const Skills = (props) => {
                     <ListItem>PostgreSQL</ListItem>
                     <ListItem>MySQL</ListItem>
                     <ListItem>MongoDB</ListItem>
+                    <ListItem>SQLite</ListItem>
                   </ListItems>
                 </List>
                 <List>
