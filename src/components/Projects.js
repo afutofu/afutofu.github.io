@@ -32,6 +32,8 @@ const ProjectsComp = styled.div`
 
 const Container = styled.div`
   margin: 0px 15%;
+  padding-top: 50px;
+  box-sizing: border-box;
   position: relative;
   width: 100%;
   display: flex;
