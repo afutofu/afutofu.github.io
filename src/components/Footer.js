@@ -38,8 +38,16 @@ const Credits = styled.h3`
     font-size: 12px;
   }
 
+  @media only screen and (max-width: 450px) {
+    font-size: 10px;
+  }
+
   @media only screen and (max-width: 350px) {
     font-size: 9px;
+  }
+
+  @media only screen and (max-width: 300px) {
+    font-size: 7px;
   }
 `;
 
