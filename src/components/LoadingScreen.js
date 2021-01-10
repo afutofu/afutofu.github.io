@@ -27,7 +27,8 @@ const WhiteScreen = styled.div`
   height: 5000px;
   background-color: #fff;
   border-radius: 50%;
-  transform: translate(-50%, -50%) scale(0);
+  transform: translate(-50%, -50%);
+  opacity: 0;
 `;
 
 const LoadingScreen = ({ isLoading }) => {
@@ -65,7 +66,7 @@ const LoadingScreen = ({ isLoading }) => {
   // };
 
   const logoRotate = () => {
-    let tl = new TimelineMax({ repeat: 4, repeatDelay: 0.02 });
+    let tl = new TimelineMax({ repeat: 2, repeatDelay: 0.02 });
 
     const rotateTime = 1.1;
 
@@ -95,7 +96,7 @@ const LoadingScreen = ({ isLoading }) => {
     let tl = new TimelineLite();
 
     tl.to(whiteScreen, {
-      scale: 1,
+      opacity: 1,
       duration: 0.7,
       ease: Power3.easeInOut,
     });
