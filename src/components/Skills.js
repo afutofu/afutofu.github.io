@@ -116,6 +116,10 @@ const ListArea = styled.div`
   justify-content: space-between;
   align-items: flex-start;
 
+  @media only screen and (max-width: 1200px) {
+    width: 95%;
+  }
+
   @media only screen and (max-width: 992px) {
     width: 100%;
     justify-content: center;
@@ -221,7 +225,7 @@ const theme = {
   color: "#ff350d",
 };
 
-const Skills = (props) => {
+const Skills = () => {
   let titleText = useRef(null);
   let titleLineLeft = useRef(null);
   let titleLineRight = useRef(null);
@@ -392,6 +396,7 @@ const Skills = (props) => {
                     <ListItem>Socket.IO</ListItem>
                     <ListItem>Laravel</ListItem>
                     <ListItem>Scrapy</ListItem>
+                    <ListItem>Arduino</ListItem>
                   </ListItems>
                 </List>
                 <List>
