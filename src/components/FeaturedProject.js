@@ -81,13 +81,13 @@ const ProjectImages = styled.div`
   display: flex;
 `;
 
-const ProjectImage = styled.img.attrs((props) => ({
-  src: props.src,
-  width: "100%",
-  height: "100%",
-}))`
+const ProjectImage = styled.img.attrs((props) => {
+  return {
+    src: props.src,
+    width: "100%",
+  };
+})`
   width: 100%;
-  height: 100%;
 `;
 
 const ImageButtons = styled.div`
