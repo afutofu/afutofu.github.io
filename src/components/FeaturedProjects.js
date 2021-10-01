@@ -3,6 +3,12 @@ import styled, { ThemeProvider } from "styled-components";
 import { gsap, TimelineLite, Power3 } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
+import musashi1 from "../assets/projectImages/featuredProjects/musashi1.png";
+import musashi2 from "../assets/projectImages/featuredProjects/musashi2.png";
+import musashi3 from "../assets/projectImages/featuredProjects/musashi3.png";
+import musashi4 from "../assets/projectImages/featuredProjects/musashi4.png";
+import musashi5 from "../assets/projectImages/featuredProjects/musashi5.png";
+import musashi6 from "../assets/projectImages/featuredProjects/musashi6.png";
 import benefitted1 from "../assets/projectImages/featuredProjects/benefitted1.jpg";
 import benefitted2 from "../assets/projectImages/featuredProjects/benefitted2.jpg";
 import benefitted3 from "../assets/projectImages/featuredProjects/benefitted3.jpg";
@@ -166,6 +172,22 @@ const FeaturedProjects = () => {
         </TitleArea>
         <ProjectArea>
           <FeaturedProject
+            title={"Musashi"}
+            desc={`Discord music bot to play your favorite songs in your servers. Play songs from youtube and spotify, and save your queues to be loaded for next time!`}
+            techs={["Discord.js", "Discord Music Player", "Node.js", "MongoDB"]}
+            codeLink={"https://github.com/afutofu/musashi"}
+            siteLink={"https://musashi-bot.netlify.app/"}
+            images={[
+              musashi1,
+              musashi2,
+              musashi3,
+              musashi4,
+              musashi5,
+              musashi6,
+            ]}
+          />
+          <FeaturedProject
+            reverse={true}
             title={"Benefitted"}
             desc={`Landing page for Benefitted. Displays instagram posts, business information, FAQs, and available slot dates to book your own custom apparels and shoes!`}
             techs={[
@@ -189,7 +211,6 @@ const FeaturedProjects = () => {
             ]}
           />
           <FeaturedProject
-            reverse={true}
             title={"Saiko Games"}
             desc={`A video game information website that displays current releases, most popular and featured games, and video game information and reviews.`}
             techs={["React", "IGDB API", "Node.js", "Express"]}
@@ -198,6 +219,7 @@ const FeaturedProjects = () => {
             images={[saiko1, saiko2, saiko3, saiko4, saiko5]}
           />
           <FeaturedProject
+            reverse={true}
             title={"Projecc"}
             desc={`A real-time text messaging web app inspired by Discord. Join project groups, interact with fellow project members, and plan out your next big project!`}
             techs={[
@@ -213,7 +235,6 @@ const FeaturedProjects = () => {
             images={[projecc1, projecc2, projecc3, projecc4, projecc5]}
           />
           <FeaturedProject
-            reverse={true}
             title={"Insalts"}
             desc={`A site for your favorite jokes and insults inspired by Reddit. Check out 'salts' (subreddits) to view posts of a specific category, or create your very own and start posting your own jokes!`}
             techs={["React", "Node.js", "Express", "Sequelize", "MySQL", "JWT"]}
@@ -222,6 +243,7 @@ const FeaturedProjects = () => {
             images={[insalts1, insalts2, insalts3, insalts4, insalts5]}
           />
           <FeaturedProject
+            reverse={true}
             title={"Devil's Advocate"}
             desc={`An e-commerce website selling 'devil fruits' from the 'One Piece' series. Data scraped from a third party site, complete with a cart system and authentication.`}
             techs={["React", "Node.js", "Express", "MongoDB", "Scrapy", "JWT"]}
