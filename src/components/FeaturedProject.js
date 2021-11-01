@@ -87,7 +87,7 @@ const ProjectImage = styled.img.attrs((props) => {
     width: "100%",
   };
 })`
-  width: 100%;
+  min-width: 100%;
 `;
 
 const ImageButtons = styled.div`
