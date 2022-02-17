@@ -5,7 +5,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 import OtherProject from "./OtherProject";
 
-import machios1 from "../assets/projectImages/otherProjects/machios1.png";
+import machios1 from "../assets/projectImages/machios/machios1.png";
 import aawt1 from "../assets/projectImages/otherProjects/aawt1.png";
 import taskManager from "../assets/projectImages/otherProjects/task-manager.png";
 import taskTimer from "../assets/projectImages/otherProjects/task-timer.png";
@@ -30,7 +30,6 @@ const TitleArea = styled.div`
   align-items: center;
   margin: 0;
   margin-bottom: 50px;
-
 `;
 
 const Title = styled.h2`
