@@ -38,10 +38,7 @@ const OtherProjectComp = styled.div`
   }
 `;
 
-const ProjectImage = styled.img.attrs((props) => ({
-  src: props.src ?? noImage,
-  alt: "project-image",
-}))`
+const ProjectImage = styled.img`
   position: absolute;
   left: 0;
   width: 100%;
@@ -251,7 +248,7 @@ const FeaturedProject = (props) => {
 
   return (
     <OtherProjectComp ref={(el) => (project = el)}>
-      <ProjectImage src={props.image} alt="project-image" />
+      <ProjectImage src={props.image || noImage} alt="project-image" />
       <ThemeProvider theme={theme}>
         <a href={props.codeLink} target="_blank" rel="noopener noreferrer">
           <Container>
@@ -265,19 +262,15 @@ const FeaturedProject = (props) => {
                   })}
               </Techs>
             </TextSide>
-            {props.siteLink && (
-              <SiteIcon>
-                <a
-                  href={props.siteLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <i className="fas fa-external-link-alt"></i>
-                </a>
-              </SiteIcon>
-            )}
           </Container>
         </a>
+        {props.siteLink && (
+          <SiteIcon>
+            <a href={props.siteLink} target="_blank" rel="noopener noreferrer">
+              <i className="fas fa-external-link-alt"></i>
+            </a>
+          </SiteIcon>
+        )}
       </ThemeProvider>
     </OtherProjectComp>
   );
