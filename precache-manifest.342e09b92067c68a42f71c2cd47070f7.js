@@ -1,19 +1,19 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "77713a0b99871d122aa4a679a3e4dd2d",
+    "revision": "fdd5d261cea04c4b54ede3e696e9f398",
     "url": "/index.html"
   },
   {
-    "revision": "330e4ff5739c69aad216",
-    "url": "/static/js/2.f30bdbb2.chunk.js"
+    "revision": "e380690abf8bbea6c8ee",
+    "url": "/static/js/2.909d7a0d.chunk.js"
   },
   {
     "revision": "76142a27665e4fff2cdf486568754d76",
-    "url": "/static/js/2.f30bdbb2.chunk.js.LICENSE.txt"
+    "url": "/static/js/2.909d7a0d.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "13078d7d9072ea71cb3a",
-    "url": "/static/js/main.e1faa930.chunk.js"
+    "revision": "33a842da94223fe4d16a",
+    "url": "/static/js/main.85b7abc4.chunk.js"
   },
   {
     "revision": "4f2b1704eab49d50853b",
@@ -92,8 +92,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/insalts5.6e49e9a1.png"
   },
   {
-    "revision": "efbf13ebdc1884b4bd7d06b2523a4ee4",
-    "url": "/static/media/machios1.efbf13eb.png"
+    "revision": "4320cf403ce6217d7f2d1f3780852b2f",
+    "url": "/static/media/machios1.4320cf40.png"
   },
   {
     "revision": "8f3a8514e332c240ae975e698ce94695",
@@ -170,5 +170,9 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "8ecbafd5d99e5c5dabb7cdb768ce203a",
     "url": "/static/media/wallpaper-skyrim-min.8ecbafd5.jpg"
+  },
+  {
+    "revision": "8e0b0177488782cf6d92f220ae0ca7dd",
+    "url": "/static/media/word-replacer.8e0b0177.png"
   }
 ]);

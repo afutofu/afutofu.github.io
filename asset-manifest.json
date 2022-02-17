@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.js": "/static/js/main.e1faa930.chunk.js",
-    "main.js.map": "/static/js/main.e1faa930.chunk.js.map",
+    "main.js": "/static/js/main.85b7abc4.chunk.js",
+    "main.js.map": "/static/js/main.85b7abc4.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.19ccc7f6.js",
     "runtime-main.js.map": "/static/js/runtime-main.19ccc7f6.js.map",
-    "static/js/2.f30bdbb2.chunk.js": "/static/js/2.f30bdbb2.chunk.js",
-    "static/js/2.f30bdbb2.chunk.js.map": "/static/js/2.f30bdbb2.chunk.js.map",
+    "static/js/2.909d7a0d.chunk.js": "/static/js/2.909d7a0d.chunk.js",
+    "static/js/2.909d7a0d.chunk.js.map": "/static/js/2.909d7a0d.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.21e500e7519981b29d7a76c644aef77f.js": "/precache-manifest.21e500e7519981b29d7a76c644aef77f.js",
+    "precache-manifest.342e09b92067c68a42f71c2cd47070f7.js": "/precache-manifest.342e09b92067c68a42f71c2cd47070f7.js",
     "service-worker.js": "/service-worker.js",
-    "static/js/2.f30bdbb2.chunk.js.LICENSE.txt": "/static/js/2.f30bdbb2.chunk.js.LICENSE.txt",
+    "static/js/2.909d7a0d.chunk.js.LICENSE.txt": "/static/js/2.909d7a0d.chunk.js.LICENSE.txt",
     "static/media/aawt1.png": "/static/media/aawt1.0af589d5.png",
     "static/media/agw.jpg": "/static/media/agw.b4c94723.jpg",
     "static/media/benefitted1.jpg": "/static/media/benefitted1.788c7593.jpg",
@@ -28,7 +28,7 @@
     "static/media/insalts3.png": "/static/media/insalts3.dc62ef7a.png",
     "static/media/insalts4.png": "/static/media/insalts4.d0f9f179.png",
     "static/media/insalts5.png": "/static/media/insalts5.6e49e9a1.png",
-    "static/media/machios1.png": "/static/media/machios1.efbf13eb.png",
+    "static/media/machios1.png": "/static/media/machios1.4320cf40.png",
     "static/media/musashi1.png": "/static/media/musashi1.8f3a8514.png",
     "static/media/musashi2.png": "/static/media/musashi2.6cc3d63b.png",
     "static/media/musashi3.png": "/static/media/musashi3.fd94a505.png",
@@ -47,11 +47,12 @@
     "static/media/saiko5-min.png": "/static/media/saiko5-min.2cc12198.png",
     "static/media/task-manager.png": "/static/media/task-manager.2a9f4039.png",
     "static/media/task-timer.png": "/static/media/task-timer.450240ea.png",
-    "static/media/wallpaper-skyrim-min.jpg": "/static/media/wallpaper-skyrim-min.8ecbafd5.jpg"
+    "static/media/wallpaper-skyrim-min.jpg": "/static/media/wallpaper-skyrim-min.8ecbafd5.jpg",
+    "static/media/word-replacer.png": "/static/media/word-replacer.8e0b0177.png"
   },
   "entrypoints": [
     "static/js/runtime-main.19ccc7f6.js",
-    "static/js/2.f30bdbb2.chunk.js",
-    "static/js/main.e1faa930.chunk.js"
+    "static/js/2.909d7a0d.chunk.js",
+    "static/js/main.85b7abc4.chunk.js"
   ]
 }
