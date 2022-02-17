@@ -5,12 +5,14 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 import OtherProject from "./OtherProject";
 
+import wordReplacer from "../assets/projectImages/otherProjects/word-replacer.png";
 import machios1 from "../assets/projectImages/machios/machios1.png";
 import aawt1 from "../assets/projectImages/otherProjects/aawt1.png";
 import taskManager from "../assets/projectImages/otherProjects/task-manager.png";
 import taskTimer from "../assets/projectImages/otherProjects/task-timer.png";
 import dhtw from "../assets/projectImages/otherProjects/dhtw.png";
 import agw from "../assets/projectImages/otherProjects/agw.jpg";
+import { _replaceRandom } from "gsap/gsap-core";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -146,6 +148,14 @@ const OtherProjects = () => {
           </TitleLineWrapper>
         </TitleArea>
         <ProjectArea>
+          <OtherProject
+            title={"Word Replacer"}
+            desc={`Web app that replaces words from a text input through a word filter list that you can customize.`}
+            techs={["React", "SASS"]}
+            codeLink={"https://github.com/afutofu/word-replacer"}
+            siteLink={"https://word-replacer.netlify.app"}
+            image={wordReplacer}
+          />
           <OtherProject
             title={"Machio's Pub & Gym"}
             desc={`Landing page for 'Machio's Pub & Gym', highlighting the menu, gym facilities, and more restaurant related details.`}
