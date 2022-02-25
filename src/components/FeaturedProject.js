@@ -368,7 +368,12 @@ const FeaturedProject = (props) => {
     <FeaturedProjectComp ref={(el) => (project = el)} reverse={props.reverse}>
       <ThemeProvider theme={theme}>
         <ProjectSide reverse={props.reverse}>
-          <a href={props.siteLink} target="_blank" rel="noopener noreferrer">
+          <a
+            title="Go to site"
+            href={props.siteLink}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <ProjectImages ref={(el) => (images = el)}>
               {props.images.map((image, i) => {
                 return <ProjectImage key={i} src={image} />;
@@ -398,10 +403,20 @@ const FeaturedProject = (props) => {
               })}
           </Techs>
           <Icons>
-            <a href={props.codeLink} target="_blank" rel="noopener noreferrer">
+            <a
+              title="See source code"
+              href={props.codeLink}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <i className="fab fa-github"></i>
             </a>
-            <a href={props.siteLink} target="_blank" rel="noopener noreferrer">
+            <a
+              title="Go to site"
+              href={props.siteLink}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <i className="fas fa-external-link-alt"></i>
             </a>
           </Icons>

@@ -250,7 +250,12 @@ const FeaturedProject = (props) => {
     <OtherProjectComp ref={(el) => (project = el)}>
       <ProjectImage src={props.image || noImage} alt="project-image" />
       <ThemeProvider theme={theme}>
-        <a href={props.codeLink} target="_blank" rel="noopener noreferrer">
+        <a
+          title="See source code"
+          href={props.codeLink}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <Container>
             <TextSide>
               <Title>{props.title}</Title>
@@ -266,7 +271,12 @@ const FeaturedProject = (props) => {
         </a>
         {props.siteLink && (
           <SiteIcon>
-            <a href={props.siteLink} target="_blank" rel="noopener noreferrer">
+            <a
+              title="Go to site"
+              href={props.siteLink}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <i className="fas fa-external-link-alt"></i>
             </a>
           </SiteIcon>

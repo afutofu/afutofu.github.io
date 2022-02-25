@@ -12,7 +12,6 @@ import taskManager from "../assets/projectImages/otherProjects/task-manager.png"
 import taskTimer from "../assets/projectImages/otherProjects/task-timer.png";
 import dhtw from "../assets/projectImages/otherProjects/dhtw.png";
 import agw from "../assets/projectImages/otherProjects/agw.jpg";
-import { _replaceRandom } from "gsap/gsap-core";
 
 gsap.registerPlugin(ScrollTrigger);
 
