@@ -211,8 +211,8 @@ const About = () => {
             <Descriptions ref={(el) => (descriptions = el)}>
               <Description>
                 Hi! I'm <DescriptionBold>Afuza</DescriptionBold>, currently
-                living in Jakarta, Indonesia. I love watching anime, playing
-                video games, meditation, and cats!
+                living in Jakarta, Indonesia. I love reading books, watching
+                anime, and learning new things!
               </Description>
               <Description>
                 Ever since I started programming, I feel like I've uncovered a
@@ -220,7 +220,7 @@ const About = () => {
                 potential. I've built projects ranging from{" "}
                 <DescriptionBold>video games</DescriptionBold>,{" "}
                 <DescriptionBold>personal management tools</DescriptionBold>,{" "}
-                <DescriptionBold>company systems</DescriptionBold>,{" "}
+                <DescriptionBold>business applications</DescriptionBold>,{" "}
                 <DescriptionBold>robots</DescriptionBold>,{" "}
                 <DescriptionBold>AI</DescriptionBold>, and a lot of{" "}
                 <DescriptionBold>websites</DescriptionBold>.
