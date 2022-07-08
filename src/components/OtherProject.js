@@ -251,8 +251,8 @@ const FeaturedProject = (props) => {
       <ProjectImage src={props.image || noImage} alt="project-image" />
       <ThemeProvider theme={theme}>
         <a
-          title="See source code"
-          href={props.codeLink}
+          title={props.siteLink ? "Go to site" : null}
+          href={props.siteLink}
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -269,15 +269,15 @@ const FeaturedProject = (props) => {
             </TextSide>
           </Container>
         </a>
-        {props.siteLink && (
+        {props.codeLink && (
           <SiteIcon>
             <a
-              title="Go to site"
-              href={props.siteLink}
+              title="See source code"
+              href={props.codeLink}
               target="_blank"
               rel="noopener noreferrer"
             >
-              <i className="fas fa-external-link-alt"></i>
+              <i className="fab fa-github"></i>
             </a>
           </SiteIcon>
         )}
