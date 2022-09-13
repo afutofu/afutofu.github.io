@@ -278,11 +278,12 @@ const Contact = (props) => {
               </TitleLineWrapper>
             </TitleArea>
             <Text ref={(el) => (text = el)}>
-              I'm currently not looking for any new opportunities, but feel free
-              to let me know if you're still interested in hiring, want to ask
-              some questions, or just want to say hi!
+              I'm currently open for new opportunities. My resume can be found
+              at the top right of the page. Feel free to let me know if you're
+              interested in hiring, want to ask some questions, or just want to
+              say hi!
             </Text>
-            <a href="mailto:theafuza@gmail.com">
+            <a href="mailto:afuza.business@gmail.com">
               <Button ref={(el) => (button = el)}>Contact Me</Button>
             </a>
           </Content>

@@ -269,7 +269,7 @@ const Home = ({ getHomeTl }) => {
               years. Only getting better and still passionate since the first
               "Hello World"!
             </Description>
-            <a href="mailto:theafuza@gmail.com">
+            <a href="mailto:afuza.business@gmail.com">
               <Button ref={(el) => (button = el)}>Contact Me</Button>
             </a>
           </ThemeProvider>

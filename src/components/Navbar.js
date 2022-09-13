@@ -85,10 +85,10 @@ const NavItem = styled.li`
 `;
 
 const NavBold = styled.span`
-  font-weight: 600;
+  font-weight: 700;
   color: #ff350d;
   text-transform: uppercase;
-  font-size: 0.9em;
+  font-size: 1em;
 `;
 
 const Navbar = ({ getNavbarTl }) => {
