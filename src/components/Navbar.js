@@ -38,7 +38,7 @@ const NavItems = styled.ul`
   box-sizing: border-box;
 
   @media only screen and (min-width: 992px) {
-    max-width: 400px;
+    max-width: 500px;
   }
 
   @media only screen and (max-width: 600px) {
@@ -84,12 +84,12 @@ const NavItem = styled.li`
   }
 `;
 
-// const NavBold = styled.span`
-//   font-weight: 600;
-//   color: #ff350d;
-//   text-transform: uppercase;
-//   font-size: 0.9em;
-// `;
+const NavBold = styled.span`
+  font-weight: 600;
+  color: #ff350d;
+  text-transform: uppercase;
+  font-size: 0.9em;
+`;
 
 const Navbar = ({ getNavbarTl }) => {
   let navbar = useRef(null);
@@ -98,7 +98,7 @@ const Navbar = ({ getNavbarTl }) => {
   let skills = useRef(null);
   let projects = useRef(null);
   let contact = useRef(null);
-  // let resume = useRef(null);
+  let resume = useRef(null);
 
   const navbarEnter = () => {
     let tl = new TimelineLite();
@@ -119,7 +119,7 @@ const Navbar = ({ getNavbarTl }) => {
       autoAlpha: 0,
       ease: Power3.easeOut,
     }).staggerFrom(
-      [about, skills, projects, contact],
+      [about, skills, projects, contact, resume],
       0.7,
       {
         y: -100,
@@ -230,13 +230,17 @@ const Navbar = ({ getNavbarTl }) => {
             Contact
           </Link>
         </NavItem>
-        {/* <NavItem ref={(el) => (resume = el)}>
+        <NavItem ref={(el) => (resume = el)}>
           <NavBold>
-            <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">
+            <a
+              href="/Resume_Muhammad_Afuzarahman.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               Resume
             </a>
           </NavBold>
-        </NavItem> */}
+        </NavItem>
       </NavItems>
     </NavbarComp>
   );
