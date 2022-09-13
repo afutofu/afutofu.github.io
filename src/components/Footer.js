@@ -93,7 +93,7 @@ const Footer = () => {
         <Content>
           <Credits>Developed by Muhammad Afuzarahman</Credits>
           <Socials>
-            <a href="mailto:theafuza@gmail.com">
+            <a href="mailto:afuza.business@gmail.com">
               <i className="fa fa-envelope"></i>
             </a>
             <a
