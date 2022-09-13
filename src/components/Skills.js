@@ -393,6 +393,7 @@ const Skills = () => {
                     <ListItem>jQuery</ListItem>
                     <ListItem>Node.js</ListItem>
                     <ListItem>Express</ListItem>
+                    <ListItem>Django</ListItem>
                     <ListItem>Socket.IO</ListItem>
                     <ListItem>Laravel</ListItem>
                     <ListItem>Scrapy</ListItem>
