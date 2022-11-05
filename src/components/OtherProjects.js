@@ -5,6 +5,9 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 import OtherProject from "./OtherProject";
 
+import dbt1 from "../assets/projectImages/dannyboitattoos/dbt1.png";
+import pnwrs3 from "../assets/projectImages/pnwrs/pnwrs3.jpg";
+import pv1 from "../assets/projectImages/pokemon-viewer/pv1.jpg";
 import wordReplacer from "../assets/projectImages/otherProjects/word-replacer.png";
 import machios1 from "../assets/projectImages/machios/machios1.png";
 import aawt1 from "../assets/projectImages/otherProjects/aawt1.png";
@@ -94,6 +97,8 @@ const theme = {
   color: "#ff350d",
 };
 
+
+
 const OtherProjects = () => {
   let featuredProjects = useRef(null);
   let titleText = useRef(null);
@@ -147,6 +152,30 @@ const OtherProjects = () => {
           </TitleLineWrapper>
         </TitleArea>
         <ProjectArea>
+          <OtherProject
+            title={"DannyBoiTattoos"}
+            desc={`Landing page for DannyBoiTattoos.`}
+            techs={["React", "Instagram Basic Display API", "SASS"]}
+            codeLink={"https://github.com/afutofu/dannyboitattoos"}
+            siteLink={"https://dannyboitattoos.netlify.app/"}
+            image={dbt1}
+          />
+          <OtherProject
+              title={"Pacific Northwest Recovery Services"}
+              desc={`Landing page for Pacific Northwest Recovery Services.`}
+              techs={["React", "NextJS"]}
+              codeLink={"https://github.com/afutofu/pacific-northwest-recovery-services"}
+              siteLink={"https://pacificnorthwestrecoveryservices.com/aahaa"}
+              image={pnwrs3}
+          />
+          <OtherProject
+              title={"Pokemon Viewer"}
+              desc={`Webapp utilizing PokeAPI to look for pokemon information.`}
+              techs={["React", "PokéAPI", "Styled Components"]}
+              codeLink={"https://github.com/afutofu/pokemon-viewer"}
+              siteLink={"https://pokemon-viewer-afuza.netlify.app"}
+              image={pv1}
+            />
           <OtherProject
             title={"Word Replacer"}
             desc={`Web app that replaces words from a text input through a word filter list that you can customize.`}
