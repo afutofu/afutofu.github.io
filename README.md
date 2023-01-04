@@ -18,3 +18,8 @@ Features in this version:
 - Complete links to code and live sites
 - Viewable and downloadable resume
 - Social links
+
+Start locally with:
+```
+npm start
+```
