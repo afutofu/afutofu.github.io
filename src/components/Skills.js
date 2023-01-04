@@ -139,6 +139,7 @@ const List = styled.div`
   align-items: flex-start;
   list-style: none;
   margin: 0 15px;
+  flex-basis: 1;
 
   @media only screen and (max-width: 992px) {
     justify-content: center;
@@ -321,7 +322,7 @@ const Skills = () => {
           opacity: 0,
         },
         0.1,
-        "-=1.2"
+        "-=0.9"
       )
       .staggerFrom(
         listItems[3].childNodes,
@@ -332,6 +333,15 @@ const Skills = () => {
         },
         0.1,
         "-=0.8"
+      ).staggerFrom(
+        listItems[4].childNodes,
+        0.5,
+        {
+          x: -50,
+          opacity: 0,
+        },
+        0.1,
+        "-=0.6"
       );
 
     return tl;
@@ -373,7 +383,8 @@ const Skills = () => {
                     Languages
                   </ListTitle>
                   <ListItems ref={(el) => (listItems = el)}>
-                    <ListItem>Javascript/ES6</ListItem>
+                    <ListItem>Javascript</ListItem>
+                    <ListItem>Typescript</ListItem>
                     <ListItem>HTML</ListItem>
                     <ListItem>CSS/SASS</ListItem>
                     <ListItem>PHP</ListItem>
@@ -384,13 +395,21 @@ const Skills = () => {
                   </ListItems>
                 </List>
                 <List>
-                  <ListTitle>Frameworks</ListTitle>
+                  <ListTitle>Frontend</ListTitle>
                   <ListItems>
                     <ListItem>React</ListItem>
+                    <ListItem>NextJS</ListItem>
                     <ListItem>Redux</ListItem>
+                    <ListItem>Zustand</ListItem>
                     <ListItem>GSAP</ListItem>
                     <ListItem>Bootstrap</ListItem>
+                    <ListItem>Tailwind</ListItem>
                     <ListItem>jQuery</ListItem>
+                  </ListItems>
+                </List>
+                <List>
+                  <ListTitle>Backend</ListTitle>
+                  <ListItems>
                     <ListItem>Node.js</ListItem>
                     <ListItem>Express</ListItem>
                     <ListItem>Django</ListItem>
@@ -401,7 +420,7 @@ const Skills = () => {
                   </ListItems>
                 </List>
                 <List>
-                  <ListTitle>Databases</ListTitle>
+                  <ListTitle>Database</ListTitle>
                   <ListItems>
                     <ListItem>PostgreSQL</ListItem>
                     <ListItem>MySQL</ListItem>
