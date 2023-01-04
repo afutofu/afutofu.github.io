@@ -1,19 +1,19 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "d3d2a4a4bd1bd0a509af4f3d2c8d51ed",
+    "revision": "f09009c06c26417cba783ec84e7396ed",
     "url": "/index.html"
   },
   {
-    "revision": "e380690abf8bbea6c8ee",
-    "url": "/static/js/2.909d7a0d.chunk.js"
+    "revision": "181fffdb7d91aab6c778",
+    "url": "/static/js/2.1654cd18.chunk.js"
   },
   {
     "revision": "76142a27665e4fff2cdf486568754d76",
-    "url": "/static/js/2.909d7a0d.chunk.js.LICENSE.txt"
+    "url": "/static/js/2.1654cd18.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "b85d46bc53e1510d069b",
-    "url": "/static/js/main.bd1ef3ba.chunk.js"
+    "revision": "141e86d1a96f503ab88b",
+    "url": "/static/js/main.e1c35ad2.chunk.js"
   },
   {
     "revision": "4f2b1704eab49d50853b",
@@ -50,6 +50,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "28b39cd852139b6527e2be4f92359065",
     "url": "/static/media/benefitted6.28b39cd8.jpg"
+  },
+  {
+    "revision": "6df861f2d59714d67480ea13f7ef7fe0",
+    "url": "/static/media/dbt1.6df861f2.png"
   },
   {
     "revision": "5423eb9ea5e5cffa113ebc10a5ee6358",
@@ -120,6 +124,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/musashi6.906aecd7.png"
   },
   {
+    "revision": "7ab491ce937fbb44fcf8bd9863921c78",
+    "url": "/static/media/pnwrs3.7ab491ce.jpg"
+  },
+  {
     "revision": "73d4b7b7d6b56669e2bad1539eb700db",
     "url": "/static/media/projecc1-min.73d4b7b7.png"
   },
@@ -140,6 +148,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/projecc5-min.da74d83e.png"
   },
   {
+    "revision": "49a7c17e565b8fe10d02afaa5b0a2983",
+    "url": "/static/media/pv1.49a7c17e.jpg"
+  },
+  {
     "revision": "88e226b84f747415da98a484399e3230",
     "url": "/static/media/saiko1-min.88e226b8.png"
   },
@@ -158,6 +170,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "2cc121988a581ea44b3dc61ae14504d8",
     "url": "/static/media/saiko5-min.2cc12198.png"
+  },
+  {
+    "revision": "8ec4d74f75cdc76b7704f001249ab2eb",
+    "url": "/static/media/software-developer.8ec4d74f.svg"
   },
   {
     "revision": "2a9f4039d928a24c1e9697cea6d1834d",
