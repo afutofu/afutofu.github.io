@@ -2,6 +2,7 @@ import React, { useRef, useEffect, useCallback } from "react";
 import styled, { ThemeProvider } from "styled-components";
 import { gsap, TimelineLite, Power3 } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import softwareDevSVG from "../assets/software-developer.svg";
 gsap.registerPlugin(ScrollTrigger);
 
 const HomeComp = styled.div`
@@ -19,8 +20,23 @@ const HomeComp = styled.div`
 `;
 
 const Container = styled.div`
-  margin: 0px 15%;
+  margin: 0px 12%;
   position: relative;
+  display: flex;
+  align-items: center;
+
+  #home-image {
+    width: 30vw;
+    margin-left: 20px;
+
+    @media only screen and (max-width: 992px) {
+      display: none;
+    }
+  }
+
+  @media only screen and (max-width: 1600px) {
+    margin: 0px 8%;
+  }
 
   @media only screen and (max-width: 992px) {
     margin: 0px 10%;
@@ -219,6 +235,7 @@ const Home = ({ getHomeTl }) => {
   let motto = useRef(null);
   let description = useRef(null);
   let button = useRef(null);
+  let homeImage = useRef(null);
 
   const getTimeline = useCallback(
     (tl) => {
@@ -231,7 +248,7 @@ const Home = ({ getHomeTl }) => {
     let tl = new TimelineLite();
 
     tl.staggerFrom(
-      [introduction, name, motto, description, button],
+      [introduction, name, motto, description, button, homeImage],
       0.6,
       {
         y: 100,
@@ -274,6 +291,12 @@ const Home = ({ getHomeTl }) => {
             </a>
           </ThemeProvider>
         </Content>
+        <img
+          ref={(el) => (homeImage = el)}
+          id="home-image"
+          src={softwareDevSVG}
+          alt="Software Developer Illustration"
+        />
       </Container>
     </HomeComp>
   );
