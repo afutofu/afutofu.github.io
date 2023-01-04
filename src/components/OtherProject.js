@@ -25,6 +25,15 @@ const OtherProjectComp = styled.div`
     text-decoration: none;
   }
 
+  @media only screen and (min-width: 1600px) {
+    position: relative;
+    height: 250px;
+    color: #222;
+    margin: 10px 10px;
+    box-sizing: border-box;
+    background-color: #eee;
+  }
+
   @media only screen and (max-width: 768px) {
     height: 250px;
   }

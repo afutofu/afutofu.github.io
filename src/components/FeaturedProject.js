@@ -54,10 +54,24 @@ const ProjectSide = styled.div`
   margin-right: ${(props) => (props.reverse ? "0" : "40px")};
   overflow: hidden;
 
+  @media only screen and (min-width: 1600px) {
+    position: relative;
+    width: 100%;
+    height: 550px;
+    background-color: #eee;
+    margin-left: ${(props) => (props.reverse ? "40px" : "0")};
+    margin-right: ${(props) => (props.reverse ? "0" : "40px")};
+    overflow: hidden;
+  }
+
   @media only screen and (max-width: 992px) {
     width: 100%;
     margin: 0;
     margin-bottom: 20px;
+    height: 350px;
+  }
+
+  @media only screen and (max-width: 992px) {
     height: 350px;
   }
 
