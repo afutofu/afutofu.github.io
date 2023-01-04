@@ -29,13 +29,33 @@ const Container = styled.div`
     width: 30vw;
     margin-left: 20px;
 
+    @media only screen and (max-width: 1300px) {
+      width: 40vw;
+      margin-left: 20px;
+      margin-bottom: 40px;
+    }
+
     @media only screen and (max-width: 992px) {
-      display: none;
+      width: 45vw;
+    }
+
+    @media only screen and (max-width: 600px) {
+      width: 50vw;
     }
   }
 
   @media only screen and (max-width: 1600px) {
     margin: 0px 8%;
+    display: flex;
+    flex-direction: flex-start;
+    align-items: center;
+  }
+
+  @media only screen and (max-width: 1300px) {
+    margin: 0px 10%;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: flex-start;
   }
 
   @media only screen and (max-width: 992px) {
@@ -44,6 +64,8 @@ const Container = styled.div`
 
   @media only screen and (max-width: 600px) {
     margin: 0 10%;
+    justify-content: center;
+    align-items: center;
   }
 `;
 
@@ -248,7 +270,7 @@ const Home = ({ getHomeTl }) => {
     let tl = new TimelineLite();
 
     tl.staggerFrom(
-      [introduction, name, motto, description, button, homeImage],
+      [homeImage, introduction, name, motto, description, button],
       0.6,
       {
         y: 100,
