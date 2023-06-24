@@ -35,7 +35,7 @@ import devils2 from "../assets/projectImages/devils-advocate/devils2-min.png";
 import devils3 from "../assets/projectImages/devils-advocate/devils3-min.png";
 import devils4 from "../assets/projectImages/devils-advocate/devils4-min.png";
 import devils5 from "../assets/projectImages/devils-advocate/devils5-min.png";
-import FeaturedProject from "./FeaturedProject";
+import FeaturedProject from "../components/FeaturedProject";
 
 gsap.registerPlugin(ScrollTrigger);
 
