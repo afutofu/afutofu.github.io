@@ -33,10 +33,12 @@ const MainComp = styled.div`
   overflow-y: hidden;
 `;
 
-const BackgroundImage = styled.img.attrs(() => ({
-  src: skyrimWallpaper,
-  alt: "skyrimWallpaper",
-}))`
+const BackgroundImage = styled.img.attrs(() => {
+  return {
+    src: skyrimWallpaper,
+    alt: "skyrimWallpaper",
+  };
+})`
   position: fixed;
   width: 100%;
   height: 100%;
