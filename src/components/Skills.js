@@ -226,6 +226,57 @@ const theme = {
   color: "#ff350d",
 };
 
+const skillsList = [
+  {
+    title: "Languages",
+    list: [
+      "Javascript",
+      "Typescript",
+      "HTML",
+      "CSS/SASS",
+      "PHP",
+      "SQL",
+      "Python",
+      "Java",
+      "C++",
+    ],
+  },
+  {
+    title: "Frontend",
+    list: [
+      "React",
+      "NextJS",
+      "Redux",
+      "Zustand",
+      "Easy-Peasy",
+      "GSAP",
+      "Bootstrap",
+      "Tailwind",
+      "jQuery",
+    ],
+  },
+  {
+    title: "Backend",
+    list: [
+      "Node.js",
+      "Express",
+      "Django",
+      "Socket.IO",
+      "Laravel",
+      "Scrapy",
+      "Arduino",
+    ],
+  },
+  {
+    title: "Database",
+    list: ["PostgreSQL", "MySQL", "MongoDB", "SQLite"],
+  },
+  {
+    title: "Tools",
+    list: ["Bash", "Git & Github", "Chrome DevTools", "Postman", "VS Code"],
+  },
+];
+
 const Skills = () => {
   let titleText = useRef(null);
   let titleLineLeft = useRef(null);
@@ -333,7 +384,8 @@ const Skills = () => {
         },
         0.1,
         "-=0.8"
-      ).staggerFrom(
+      )
+      .staggerFrom(
         listItems[4].childNodes,
         0.5,
         {
@@ -378,66 +430,20 @@ const Skills = () => {
             </TitleArea>
             <ListAreaWrapper>
               <ListArea>
-                <List>
-                  <ListTitle ref={(el) => (listTitle = el)}>
-                    Languages
-                  </ListTitle>
-                  <ListItems ref={(el) => (listItems = el)}>
-                    <ListItem>Javascript</ListItem>
-                    <ListItem>Typescript</ListItem>
-                    <ListItem>HTML</ListItem>
-                    <ListItem>CSS/SASS</ListItem>
-                    <ListItem>PHP</ListItem>
-                    <ListItem>SQL</ListItem>
-                    <ListItem>Python</ListItem>
-                    <ListItem>Java</ListItem>
-                    <ListItem>C++</ListItem>
-                  </ListItems>
-                </List>
-                <List>
-                  <ListTitle>Frontend</ListTitle>
-                  <ListItems>
-                    <ListItem>React</ListItem>
-                    <ListItem>NextJS</ListItem>
-                    <ListItem>Redux</ListItem>
-                    <ListItem>Zustand</ListItem>
-                    <ListItem>GSAP</ListItem>
-                    <ListItem>Bootstrap</ListItem>
-                    <ListItem>Tailwind</ListItem>
-                    <ListItem>jQuery</ListItem>
-                  </ListItems>
-                </List>
-                <List>
-                  <ListTitle>Backend</ListTitle>
-                  <ListItems>
-                    <ListItem>Node.js</ListItem>
-                    <ListItem>Express</ListItem>
-                    <ListItem>Django</ListItem>
-                    <ListItem>Socket.IO</ListItem>
-                    <ListItem>Laravel</ListItem>
-                    <ListItem>Scrapy</ListItem>
-                    <ListItem>Arduino</ListItem>
-                  </ListItems>
-                </List>
-                <List>
-                  <ListTitle>Database</ListTitle>
-                  <ListItems>
-                    <ListItem>PostgreSQL</ListItem>
-                    <ListItem>MySQL</ListItem>
-                    <ListItem>MongoDB</ListItem>
-                    <ListItem>SQLite</ListItem>
-                  </ListItems>
-                </List>
-                <List>
-                  <ListTitle>Tools</ListTitle>
-                  <ListItems>
-                    <ListItem>Bash</ListItem>
-                    <ListItem>Git & Github</ListItem>
-                    <ListItem>Chrome DevTools</ListItem>
-                    <ListItem>Postman</ListItem>
-                    <ListItem>VS Code</ListItem>
-                  </ListItems>
-                </List>
+                {skillsList.map((skill) => {
+                  return (
+                    <List>
+                      <ListTitle ref={(el) => (listTitle = el)}>
+                        {skill.title}
+                      </ListTitle>
+                      <ListItems ref={(el) => (listItems = el)}>
+                        {skill.list.map((skillItem) => (
+                          <ListItem>{skillItem}</ListItem>
+                        ))}
+                      </ListItems>
+                    </List>
+                  );
+                })}
               </ListArea>
             </ListAreaWrapper>
           </Content>
