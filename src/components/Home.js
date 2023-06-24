@@ -301,7 +301,7 @@ const Home = ({ getHomeTl }) => {
             <Name ref={(el) => (name = el)}>Muhammad Afuzarahman</Name>
             <Motto ref={(el) => (motto = el)}>
               Ready To <MottoBold>Build</MottoBold> And{" "}
-              <MottoBold>Learn</MottoBold>
+              <MottoBold>Innovate</MottoBold>
             </Motto>
             <Description ref={(el) => (description = el)}>
               Started coding games, then systems, then websites for several
