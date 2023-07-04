@@ -3,8 +3,8 @@ import styled from "styled-components";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-import FeaturedProjects from "./FeaturedProjects";
-import OtherProjects from "./OtherProjects";
+import FeaturedProjects from "../containers/FeaturedProjects";
+import OtherProjects from "../containers/OtherProjects";
 
 gsap.registerPlugin(ScrollTrigger);
 

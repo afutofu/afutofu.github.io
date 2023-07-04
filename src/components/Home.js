@@ -28,11 +28,13 @@ const Container = styled.div`
   #home-image {
     width: 30vw;
     margin-left: 20px;
+    z-index: 0;
 
     @media only screen and (max-width: 1300px) {
       width: 40vw;
       margin-left: 20px;
       margin-bottom: 40px;
+      display: none;
     }
 
     @media only screen and (max-width: 992px) {
@@ -41,6 +43,7 @@ const Container = styled.div`
 
     @media only screen and (max-width: 600px) {
       width: 50vw;
+      display: block;
     }
   }
 
@@ -72,6 +75,7 @@ const Container = styled.div`
 const Content = styled.div`
   position: relative;
   margin: 0 auto;
+  z-index: 100;
 
   /* padding-bottom: 150px; */
   box-sizing: border-box;
@@ -117,11 +121,13 @@ const Name = styled.h1`
   }
 
   @media only screen and (max-width: 992px) {
-    font-size: 40px;
+    font-size: 32px;
+    font-weight: 700;
   }
 
   @media only screen and (max-width: 600px) {
     font-size: 29px;
+    font-weight: 600;
   }
 
   @media only screen and (max-width: 450px) {
@@ -301,7 +307,7 @@ const Home = ({ getHomeTl }) => {
             <Name ref={(el) => (name = el)}>Muhammad Afuzarahman</Name>
             <Motto ref={(el) => (motto = el)}>
               Ready To <MottoBold>Build</MottoBold> And{" "}
-              <MottoBold>Learn</MottoBold>
+              <MottoBold>Innovate</MottoBold>
             </Motto>
             <Description ref={(el) => (description = el)}>
               Started coding games, then systems, then websites for several

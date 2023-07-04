@@ -3,7 +3,7 @@ import styled, { ThemeProvider } from "styled-components";
 import { gsap, TimelineLite, Power3 } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-import OtherProject from "./OtherProject";
+import OtherProject from "../components/OtherProject";
 
 import dbt1 from "../assets/projectImages/dannyboitattoos/dbt1.png";
 import pnwrs3 from "../assets/projectImages/pnwrs/pnwrs3.jpg";
@@ -97,8 +97,6 @@ const theme = {
   color: "#ff350d",
 };
 
-
-
 const OtherProjects = () => {
   let featuredProjects = useRef(null);
   let titleText = useRef(null);
@@ -161,21 +159,23 @@ const OtherProjects = () => {
             image={dbt1}
           />
           <OtherProject
-              title={"Pacific Northwest Recovery Services"}
-              desc={`Landing page for Pacific Northwest Recovery Services.`}
-              techs={["React", "NextJS"]}
-              codeLink={"https://github.com/afutofu/pacific-northwest-recovery-services"}
-              siteLink={"https://pacificnorthwestrecoveryservices.com/aahaa"}
-              image={pnwrs3}
+            title={"Pacific Northwest Recovery Services"}
+            desc={`Landing page for Pacific Northwest Recovery Services.`}
+            techs={["React", "NextJS"]}
+            codeLink={
+              "https://github.com/afutofu/pacific-northwest-recovery-services"
+            }
+            siteLink={"https://pacificnorthwestrecoveryservices.com/aahaa"}
+            image={pnwrs3}
           />
           <OtherProject
-              title={"Pokemon Viewer"}
-              desc={`Webapp utilizing PokeAPI to look for pokemon information.`}
-              techs={["React", "PokéAPI", "Styled Components"]}
-              codeLink={"https://github.com/afutofu/pokemon-viewer"}
-              siteLink={"https://pokemon-viewer-afuza.netlify.app"}
-              image={pv1}
-            />
+            title={"Pokemon Viewer"}
+            desc={`Webapp utilizing PokeAPI to look for pokemon information.`}
+            techs={["React", "PokéAPI", "Styled Components"]}
+            codeLink={"https://github.com/afutofu/pokemon-viewer"}
+            siteLink={"https://pokemon-viewer-afuza.netlify.app"}
+            image={pv1}
+          />
           <OtherProject
             title={"Word Replacer"}
             desc={`Web app that replaces words from a text input through a word filter list that you can customize.`}
