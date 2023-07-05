@@ -4,6 +4,7 @@ import { TimelineLite, Power3 } from "gsap";
 import { Link } from "react-scroll";
 
 import Logo from "./Logo";
+import Hamburger from "./Hamburger";
 
 const NavbarComp = styled.div`
   position: fixed;
@@ -56,36 +57,6 @@ const NavItems = styled.ul`
   @media only screen and (max-width: 600px) {
     justify-content: flex-end;
     min-width: unset;
-  }
-`;
-
-const Hamburger = styled.div`
-  position: absolute;
-  top: 25px;
-  right: calc(5% + 4px);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  width: unset;
-  height: 18px;
-  cursor: pointer;
-
-  :hover {
-    div {
-      background-color: ${(props) =>
-        props.hamburgerOpen ? "black" : "#ff350d"};
-    }
-  }
-
-  div {
-    width: 25px;
-    height: 3px;
-    background-color: ${(props) => (props.hamburgerOpen ? "#ff350d" : "black")};
-    transition: background-color 0.1s linear;
-  }
-
-  @media only screen and (min-width: 768px) {
-    display: none;
   }
 `;
 
@@ -142,6 +113,7 @@ const NavBold = styled.span`
 const Navbar = ({ getNavbarTl }) => {
   let navbar = useRef(null);
   let logo = useRef(null);
+  let hamburger = useRef(null);
   let about = useRef(null);
   let experience = useRef(null);
   let skills = useRef(null);
@@ -169,16 +141,26 @@ const Navbar = ({ getNavbarTl }) => {
     tl.from(logo, 2, {
       autoAlpha: 0,
       ease: Power3.easeOut,
-    }).staggerFrom(
-      [about, experience, skills, projects, contact, resume],
-      0.7,
-      {
-        y: -100,
-        autoAlpha: 0,
-      },
-      0.15,
-      "-=1.7"
-    );
+    })
+      .from(
+        hamburger,
+        2,
+        {
+          autoAlpha: 0,
+          ease: Power3.easeOut,
+        },
+        "-=1"
+      )
+      .staggerFrom(
+        [about, experience, skills, projects, contact, resume],
+        0.7,
+        {
+          y: -100,
+          autoAlpha: 0,
+        },
+        0.15,
+        "-=1.7"
+      );
 
     return tl;
   };
@@ -195,9 +177,12 @@ const Navbar = ({ getNavbarTl }) => {
     const navbarClass = "." + navbar.getAttribute("class").split(" ").join(".");
     let lastScrollPosition = 0;
     window.addEventListener("scroll", () => {
+      setHamburgerOpen(false);
+
       const navbarDOM = document.querySelector(navbarClass);
       let topOfScreenPosition =
         window.pageYOffset || document.documentElement.scrollTop;
+
       if (topOfScreenPosition < 60) {
         navbarDOM.style.top = "0";
 
@@ -220,8 +205,6 @@ const Navbar = ({ getNavbarTl }) => {
     });
   }, [navbar]);
 
-  console.log(hamburgerOpen);
-
   return (
     <NavbarComp ref={(el) => (navbar = el)}>
       <Link
@@ -237,11 +220,8 @@ const Navbar = ({ getNavbarTl }) => {
       <Hamburger
         isOpen={hamburgerOpen}
         onClick={() => setHamburgerOpen((prev) => !prev)}
-      >
-        <div />
-        <div />
-        <div />
-      </Hamburger>
+        ref={(el) => (hamburger = el)}
+      ></Hamburger>
       <NavItems isOpen={hamburgerOpen}>
         <NavItem ref={(el) => (about = el)}>
           <Link
