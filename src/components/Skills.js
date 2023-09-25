@@ -264,6 +264,7 @@ const skillsList = [
       "Django",
       "Socket.IO",
       "Laravel",
+      "Cloudinary",
       "Scrapy",
       "Arduino",
     ],
