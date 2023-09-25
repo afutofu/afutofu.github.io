@@ -1,9 +1,10 @@
-import React, { useRef, useEffect } from "react";
+import React, { useRef, useEffect, useState } from "react";
 import styled from "styled-components";
 import { TimelineLite, Power3 } from "gsap";
 import { Link } from "react-scroll";
 
 import Logo from "./Logo";
+import Hamburger from "./Hamburger";
 
 const NavbarComp = styled.div`
   position: fixed;
@@ -23,9 +24,10 @@ const NavbarComp = styled.div`
 `;
 
 const NavItems = styled.ul`
+  position: relative;
   width: 100%;
   min-width: 300px;
-  max-width: 400px;
+  max-width: 600px;
   color: #222;
   font-family: "Quicksand", "san-serif";
   display: flex;
@@ -37,8 +39,19 @@ const NavItems = styled.ul`
   margin: 0;
   box-sizing: border-box;
 
+  @media only screen and (max-width: 768px) {
+    position: absolute;
+    right: ${(props) => (props.isOpen ? "20px" : "-120px")};
+    top: 70px;
+    flex-direction: column;
+    width: 100px;
+    min-width: unset;
+    align-items: flex-end;
+    transition: right 0.7s ease;
+  }
+
   @media only screen and (min-width: 992px) {
-    max-width: 500px;
+    max-width: 600px;
   }
 
   @media only screen and (max-width: 600px) {
@@ -65,7 +78,13 @@ const NavItem = styled.li`
     color: inherit;
   }
 
-  @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: 768px) {
+    margin-bottom: 10px;
+    background-color: #fafafa;
+    border-radius: 5px;
+  }
+
+  /* @media only screen and (max-width: 600px) {
     font-size: 18px;
     padding: 5px;
     margin: 0 3px;
@@ -80,8 +99,8 @@ const NavItem = styled.li`
   @media only screen and (max-width: 350px) {
     font-size: 10px;
     padding: 3px;
-    margin: 0 3px;
-  }
+    margin: 0 3px; */
+  /* } */
 `;
 
 const NavBold = styled.span`
@@ -94,11 +113,15 @@ const NavBold = styled.span`
 const Navbar = ({ getNavbarTl }) => {
   let navbar = useRef(null);
   let logo = useRef(null);
+  let hamburger = useRef(null);
   let about = useRef(null);
+  let experience = useRef(null);
   let skills = useRef(null);
   let projects = useRef(null);
   let contact = useRef(null);
   let resume = useRef(null);
+
+  const [hamburgerOpen, setHamburgerOpen] = useState(false);
 
   const navbarEnter = () => {
     let tl = new TimelineLite();
@@ -118,16 +141,26 @@ const Navbar = ({ getNavbarTl }) => {
     tl.from(logo, 2, {
       autoAlpha: 0,
       ease: Power3.easeOut,
-    }).staggerFrom(
-      [about, skills, projects, contact, resume],
-      0.7,
-      {
-        y: -100,
-        autoAlpha: 0,
-      },
-      0.15,
-      "-=1.7"
-    );
+    })
+      .from(
+        hamburger,
+        2,
+        {
+          autoAlpha: 0,
+          ease: Power3.easeOut,
+        },
+        "-=1"
+      )
+      .staggerFrom(
+        [about, experience, skills, projects, contact, resume],
+        0.7,
+        {
+          y: -100,
+          autoAlpha: 0,
+        },
+        0.15,
+        "-=1.7"
+      );
 
     return tl;
   };
@@ -144,9 +177,12 @@ const Navbar = ({ getNavbarTl }) => {
     const navbarClass = "." + navbar.getAttribute("class").split(" ").join(".");
     let lastScrollPosition = 0;
     window.addEventListener("scroll", () => {
+      setHamburgerOpen(false);
+
       const navbarDOM = document.querySelector(navbarClass);
       let topOfScreenPosition =
         window.pageYOffset || document.documentElement.scrollTop;
+
       if (topOfScreenPosition < 60) {
         navbarDOM.style.top = "0";
 
@@ -181,7 +217,12 @@ const Navbar = ({ getNavbarTl }) => {
       >
         <Logo size={30} pointer ref={(el) => (logo = el)} />
       </Link>
-      <NavItems>
+      <Hamburger
+        isOpen={hamburgerOpen}
+        onClick={() => setHamburgerOpen((prev) => !prev)}
+        ref={(el) => (hamburger = el)}
+      ></Hamburger>
+      <NavItems isOpen={hamburgerOpen}>
         <NavItem ref={(el) => (about = el)}>
           <Link
             to="about"
@@ -192,6 +233,18 @@ const Navbar = ({ getNavbarTl }) => {
             ignoreCancelEvents={true}
           >
             About
+          </Link>
+        </NavItem>
+        <NavItem ref={(el) => (experience = el)}>
+          <Link
+            to="experience"
+            smooth={true}
+            duration={1000}
+            spy={true}
+            offset={-50}
+            ignoreCancelEvents={true}
+          >
+            Experience
           </Link>
         </NavItem>
         <NavItem ref={(el) => (skills = el)}>

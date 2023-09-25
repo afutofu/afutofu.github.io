@@ -239,6 +239,7 @@ const skillsList = [
       "Python",
       "Java",
       "C++",
+      "C#",
     ],
   },
   {
@@ -263,6 +264,7 @@ const skillsList = [
       "Django",
       "Socket.IO",
       "Laravel",
+      "Cloudinary",
       "Scrapy",
       "Arduino",
     ],
@@ -273,7 +275,16 @@ const skillsList = [
   },
   {
     title: "Tools",
-    list: ["Bash", "Git & Github", "Chrome DevTools", "Postman", "VS Code"],
+    list: [
+      "Bash",
+      "Git & Github",
+      "Chrome DevTools",
+      "Postman",
+      "VS Code",
+      "Jira",
+      "Confluence",
+      "Slack",
+    ],
   },
 ];
 

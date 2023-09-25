@@ -39,6 +39,71 @@ import FeaturedProject from "../components/FeaturedProject";
 
 gsap.registerPlugin(ScrollTrigger);
 
+const FEATURED_PROJECTS = [
+  {
+    title: "Musashi",
+    desc: "Discord music bot to play your favorite songs in your servers. Play songs from youtube and spotify, and save your queues to be loaded for next time!",
+    techs: ["Discord.js", "Discord Music Player", "Node.js", "MongoDB"],
+    codeLink: "https://github.com/afutofu/musashi",
+    siteLink: "https://musashi-bot.netlify.app/",
+    images: [musashi1, musashi2, musashi3, musashi4, musashi5, musashi6],
+  },
+  {
+    title: "Benefitted",
+    desc: "Landing page for Benefitted. Displays Instagram posts, business information, FAQs, and available slot dates to book your own custom apparels and shoes!",
+    techs: [
+      "React",
+      "Instagram Basic Display API",
+      "GSAP",
+      "Node.js",
+      "Express",
+      "MongoDB",
+      "JWT",
+    ],
+    codeLink: "https://github.com/afutofu/benefitted-frontend",
+    siteLink: "https://benefitted.netlify.app/",
+    images: [
+      benefitted1,
+      benefitted2,
+      benefitted3,
+      benefitted4,
+      benefitted5,
+      benefitted6,
+    ],
+  },
+  {
+    title: "Projecc",
+    desc: "A real-time text messaging web app inspired by Discord. Join project groups, interact with fellow project members, and plan out your next big project!",
+    techs: ["React", "Node.js", "Express", "Socket.IO", "MongoDB", "JWT"],
+    codeLink: "https://github.com/afutofu/projecc",
+    siteLink: "https://projecc-ce68769a9813.herokuapp.com",
+    images: [projecc1, projecc2, projecc3, projecc4, projecc5],
+  },
+  {
+    title: "Saiko Games",
+    desc: "A video game information website that displays current releases, most popular and featured games, and video game information and reviews.",
+    techs: ["React", "IGDB API", "Node.js", "Express"],
+    codeLink: "https://github.com/afutofu/saiko-games-frontend",
+    siteLink: "https://saiko-games.netlify.app/",
+    images: [saiko1, saiko2, saiko3, saiko4, saiko5],
+  },
+  {
+    title: "Devil's Advocate",
+    desc: "An e-commerce website selling 'devil fruits' from the 'One Piece' series. Data scraped from a third party site, complete with a cart system and authentication.",
+    techs: ["React", "Node.js", "Express", "MongoDB", "Scrapy", "JWT"],
+    codeLink: "https://github.com/afutofu/devils-advocate-frontend",
+    siteLink: "https://devils-advocate-afuza.netlify.app/",
+    images: [devils1, devils2, devils3, devils4, devils5],
+  },
+  {
+    title: "Insalts",
+    desc: "A site for your favorite jokes and insults inspired by Reddit. Check out 'salts' (subreddits) to view posts of a specific category, or create your very own and start posting your own jokes!",
+    techs: ["React", "Node.js", "Express", "Sequelize", "MySQL", "JWT"],
+    codeLink: "https://github.com/afutofu/insalts",
+    images: [insalts1, insalts2, insalts3, insalts4, insalts5],
+  },
+];
+
 const FeaturedProjectsComp = styled.div`
   position: relative;
   width: 100%;
@@ -171,86 +236,13 @@ const FeaturedProjects = () => {
           </TitleLineWrapper>
         </TitleArea>
         <ProjectArea>
-          <FeaturedProject
-            title={"Musashi"}
-            desc={`Discord music bot to play your favorite songs in your servers. Play songs from youtube and spotify, and save your queues to be loaded for next time!`}
-            techs={["Discord.js", "Discord Music Player", "Node.js", "MongoDB"]}
-            codeLink={"https://github.com/afutofu/musashi"}
-            siteLink={"https://musashi-bot.netlify.app/"}
-            images={[
-              musashi1,
-              musashi2,
-              musashi3,
-              musashi4,
-              musashi5,
-              musashi6,
-            ]}
-          />
-          <FeaturedProject
-            reverse={true}
-            title={"Benefitted"}
-            desc={`Landing page for Benefitted. Displays instagram posts, business information, FAQs, and available slot dates to book your own custom apparels and shoes!`}
-            techs={[
-              "React",
-              "Instagram Basic Display API",
-              "GSAP",
-              "Node.js",
-              "Express",
-              "MongoDB",
-              "JWT",
-            ]}
-            codeLink={"https://github.com/afutofu/benefitted"}
-            siteLink={"https://benefitted.herokuapp.com/"}
-            images={[
-              benefitted1,
-              benefitted2,
-              benefitted3,
-              benefitted4,
-              benefitted5,
-              benefitted6,
-            ]}
-          />
-          <FeaturedProject
-            title={"Saiko Games"}
-            desc={`A video game information website that displays current releases, most popular and featured games, and video game information and reviews.`}
-            techs={["React", "IGDB API", "Node.js", "Express"]}
-            codeLink={"https://github.com/afutofu/saiko-games"}
-            siteLink={"https://saiko-games.herokuapp.com/"}
-            images={[saiko1, saiko2, saiko3, saiko4, saiko5]}
-          />
-          <FeaturedProject
-            reverse={true}
-            title={"Projecc"}
-            desc={`A real-time text messaging web app inspired by Discord. Join project groups, interact with fellow project members, and plan out your next big project!`}
-            techs={[
-              "React",
-              "Node.js",
-              "Express",
-              "Socket.IO",
-              "MongoDB",
-              "JWT",
-            ]}
-            codeLink={"https://github.com/afutofu/projecc"}
-            siteLink={"https://projecc-afu.herokuapp.com/"}
-            images={[projecc1, projecc2, projecc3, projecc4, projecc5]}
-          />
-          <FeaturedProject
-            title={"Insalts"}
-            desc={`A site for your favorite jokes and insults inspired by Reddit. Check out 'salts' (subreddits) to view posts of a specific category, or create your very own and start posting your own jokes!`}
-            techs={["React", "Node.js", "Express", "Sequelize", "MySQL", "JWT"]}
-            codeLink={"https://github.com/afutofu/insalts"}
-            siteLink={"https://insalts.herokuapp.com/"}
-            images={[insalts1, insalts2, insalts3, insalts4, insalts5]}
-          />
-          <FeaturedProject
-            reverse={true}
-            title={"Devil's Advocate"}
-            desc={`An e-commerce website selling 'devil fruits' from the 'One Piece' series. Data scraped from a third party site, complete with a cart system and authentication.`}
-            techs={["React", "Node.js", "Express", "MongoDB", "Scrapy", "JWT"]}
-            codeLink={"https://github.com/afutofu/devils-advocate-mern"}
-            siteLink={"https://devils-advocate-afu.herokuapp.com/"}
-            images={[devils1, devils2, devils3, devils4, devils5]}
-          />
+          {FEATURED_PROJECTS.map((featuredProject, index) => (
+            <FeaturedProject
+              key={featuredProject.title}
+              reverse={index % 2 === 0}
+              {...featuredProject}
+            />
+          ))}
         </ProjectArea>
       </ThemeProvider>
     </FeaturedProjectsComp>
