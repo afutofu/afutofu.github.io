@@ -383,7 +383,7 @@ const FeaturedProject = (props) => {
       <ThemeProvider theme={theme}>
         <ProjectSide reverse={props.reverse}>
           <a
-            title="Go to site"
+            title={props.siteLink ? "Go to site" : "Hosting in progress"}
             href={props.siteLink}
             target="_blank"
             rel="noopener noreferrer"
@@ -426,7 +426,7 @@ const FeaturedProject = (props) => {
               <i className="fab fa-github"></i>
             </a>
             <a
-              title="Go to site"
+              title={props.siteLink ? "Go to site" : "Hosting in progress"}
               href={props.siteLink}
               target="_blank"
               rel="noopener noreferrer"
