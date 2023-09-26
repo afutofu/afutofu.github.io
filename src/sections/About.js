@@ -5,7 +5,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const ExperienceComp = styled.div`
+const AboutComp = styled.div`
   position: relative;
   width: 100%;
   /* height: 550px; */
@@ -13,7 +13,8 @@ const ExperienceComp = styled.div`
   justify-content: center;
   align-items: center;
   font-family: "Quicksand", "san-serif";
-  padding: 150px 0;
+  padding-top: 150px;
+  margin-bottom: 300px;
   /* background-color: white; */
 `;
 
@@ -123,8 +124,8 @@ const theme = {
   color: "#ff350d",
 };
 
-const Experience = () => {
-  // let Experience = useRef(null);
+const About = () => {
+  // let about = useRef(null);
   let titleText = useRef(null);
   let titleLine = useRef(null);
   let descriptions = useRef(null);
@@ -132,7 +133,7 @@ const Experience = () => {
   // const backgroundFade = () => {
   //   let tl = new TimelineLite();
 
-  //   tl.to(Experience, {
+  //   tl.to(about, {
   //     backgroundColor: "#eee",
   //     ease: Power3.easeInOut,
   //     duration: 2,
@@ -196,13 +197,13 @@ const Experience = () => {
   }, []);
 
   return (
-    <ExperienceComp id="experience">
+    <AboutComp id="about">
       <Container>
         <ThemeProvider theme={theme}>
           <Content>
             <TitleArea>
               <Title ref={(el) => (titleText = el)}>
-                My <TitleHighlight>Experience</TitleHighlight> So Far
+                A Bit <TitleHighlight>About</TitleHighlight> Me
               </Title>
               <TitleLineWrapper>
                 <TitleLine ref={(el) => (titleLine = el)} />
@@ -211,7 +212,7 @@ const Experience = () => {
             <Descriptions ref={(el) => (descriptions = el)}>
               <Description>
                 Hi! I'm <DescriptionBold>Afuza</DescriptionBold>, currently
-                living in Jakarta, Indonesia. I love reading books, watching
+                living in Seattle, Washington. I love reading books, watching
                 anime, and learning new things!
               </Description>
               <Description>
@@ -234,8 +235,8 @@ const Experience = () => {
           </Content>
         </ThemeProvider>
       </Container>
-    </ExperienceComp>
+    </AboutComp>
   );
 };
 
-export default Experience;
+export default About;

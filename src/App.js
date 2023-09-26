@@ -6,11 +6,12 @@ import skyrimWallpaper from "./assets/wallpaper-skyrim-min.jpg";
 
 import LoadingScreen from "./components/LoadingScreen";
 import Navbar from "./components/Navbar";
-import Home from "./components/Home";
-import About from "./components/About";
-import Skills from "./components/Skills";
-import Projects from "./components/Projects";
-import Contact from "./components/Contact";
+import Home from "./sections/Home";
+import About from "./sections/About";
+import Experience from "./sections/Experience";
+import Skills from "./sections/Skills";
+import Projects from "./sections/Projects";
+import Contact from "./sections/Contact";
 import Footer from "./components/Footer";
 
 const AppWrapper = styled.div`
@@ -105,7 +106,7 @@ const App = () => {
     if (navbarTl && homeTl && !isLoading) {
       masterTl.add(appEnter());
       masterTl.add(navbarTl.play(), "-=2");
-      masterTl.add(homeTl.play(), "-=0.6");
+      masterTl.add(homeTl.play(), "-=1.5");
       masterTl.play();
     }
   }, [masterTl, navbarTl, homeTl, isLoading]);
@@ -132,6 +133,7 @@ const App = () => {
           <ContentBackground ref={(el) => (contentBg1 = el)}>
             <Home getHomeTl={getHomeTl} />
             <About />
+            <Experience />
             <Skills />
           </ContentBackground>
           <Projects />
