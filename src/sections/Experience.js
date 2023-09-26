@@ -151,23 +151,9 @@ const theme = {
 };
 
 const Experience = () => {
-  // let Experience = useRef(null);
   let titleText = useRef(null);
   let titleLine = useRef(null);
   let descriptions = useRef(null);
-  let experienceLine = useRef(null);
-
-  // const backgroundFade = () => {
-  //   let tl = new TimelineLite();
-
-  //   tl.to(Experience, {
-  //     backgroundColor: "#eee",
-  //     ease: Power3.easeInOut,
-  //     duration: 2,
-  //   });
-
-  //   return tl;
-  // };
 
   const titleEnter = () => {
     let tl = new TimelineLite();
@@ -268,8 +254,9 @@ const Experience = () => {
                 <p>Worked at Gokomodo / PT Saka Uniti in Jakarta, Indonesia</p>
                 <p>
                   Mid-Level front-end engineer primarily utilizing Typescript,
-                  React, Vite, Tailwind, Python, and Django to create MVPs,
-                  CMSs, user facing, and admin portals for organizations in the
+                  React, Vite, Tailwind, jQuery, Django, and others to create
+                  MVPs, CMSs, user facing, and admin portals to form a supply
+                  chain management ecosystem for organizations in the
                   Agribusiness and Commodities industry in Indonesia.
                 </p>
               </Description>

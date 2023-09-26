@@ -159,7 +159,7 @@ const Navbar = ({ getNavbarTl }) => {
           autoAlpha: 0,
         },
         0.15,
-        "-=1.7"
+        "-=2.8"
       );
 
     return tl;
