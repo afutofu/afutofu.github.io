@@ -310,9 +310,9 @@ const Home = ({ getHomeTl }) => {
               <MottoBold>Innovate</MottoBold>
             </Motto>
             <Description ref={(el) => (description = el)}>
-              Started coding games, then systems, then websites for several
-              years. Only getting better and still passionate since the first
-              "Hello World"!
+              Experienced software engineer with numerous years of experience.
+              Only getting better and still passionate since the first "Hello
+              World"!
             </Description>
             <a href="mailto:afuza.business@gmail.com">
               <Button ref={(el) => (button = el)}>Contact Me</Button>
