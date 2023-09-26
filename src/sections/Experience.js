@@ -98,13 +98,13 @@ const Description = styled.div`
   line-height: 1.5em;
   font-weight: 400;
   margin: 0;
-  margin-bottom: 18px;
+  margin-bottom: 20px;
 
   * {
     margin: 0;
   }
 
-  & > h3 {
+  h3 {
     @media only screen and (max-width: 992px) {
       font-size: 23px;
     }
@@ -274,6 +274,30 @@ const Experience = () => {
                 </p>
               </Description>
               <Description>
+                <DescriptionBold>2022 - 2023</DescriptionBold>
+                <div
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                  }}
+                >
+                  <h3 style={{ marginRight: "20px" }}>
+                    Computer Science Tutor
+                  </h3>
+                  <DescriptionBold>Part-Time</DescriptionBold>
+                </div>
+
+                <p>
+                  Volunteered at Green River College Coding Club in Auburn, WA,
+                  USA.
+                </p>
+                <p>
+                  Guided students to understand and solve Python, Java, and C++
+                  related computer science problems.{" "}
+                </p>
+                <p style={{ float: "right" }}></p>
+              </Description>
+              <Description>
                 <DescriptionBold>2021 - 2022</DescriptionBold>
                 <div
                   style={{
@@ -288,7 +312,7 @@ const Experience = () => {
                 <p>
                   Studied at Green River Community College in Auburn, WA, USA.
                 </p>
-                <p>Graduated with an Associate Degree in Computer Science</p>
+                <p>Graduated with an Associate Degree in Computer Science.</p>
                 <p style={{ float: "right" }}></p>
               </Description>
               <Description>
@@ -306,7 +330,7 @@ const Experience = () => {
                 <p>
                   Built a variety of apps ranging from personal websites,
                   personal management tools, and business management
-                  applications
+                  applications.
                 </p>
               </Description>
             </Descriptions>
