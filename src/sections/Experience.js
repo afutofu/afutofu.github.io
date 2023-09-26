@@ -234,7 +234,7 @@ const Experience = () => {
                   <h3 style={{ marginRight: "20px" }}>Student</h3>
                   <DescriptionBold>Full-Time</DescriptionBold>
                 </div>
-                <p>Studied at University of Washington in Seattle, WA, USA</p>
+                <p>Studying at University of Washington in Seattle, WA, USA</p>
                 <p>
                   First-year junior majoring in Computer Science. Expected to
                   graduate in 2025.
