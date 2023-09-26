@@ -13,7 +13,8 @@ const ExperienceComp = styled.div`
   justify-content: center;
   align-items: center;
   font-family: "Quicksand", "san-serif";
-  padding: 150px 0;
+  padding-top: 30px 0;
+  margin-bottom: 130px;
   /* background-color: white; */
 `;
 
@@ -48,7 +49,7 @@ const TitleArea = styled.div`
 const Title = styled.h2`
   font-size: 28px;
   font-weight: 500;
-  padding-right: 20px;
+  padding-left: 20px;
 
   @media only screen and (max-width: 992px) {
     font-size: 26px;
@@ -91,27 +92,53 @@ const Descriptions = styled.div`
   align-items: flex-start;
 `;
 
-const Description = styled.p`
+const Description = styled.div`
+  width: 100%;
   font-size: 20px;
   line-height: 1.5em;
   font-weight: 400;
   margin: 0;
   margin-bottom: 18px;
 
-  @media only screen and (max-width: 992px) {
-    font-size: 18px;
+  * {
+    margin: 0;
   }
 
-  @media only screen and (max-width: 600px) {
-    font-size: 16px;
+  & > h3 {
+    @media only screen and (max-width: 992px) {
+      font-size: 23px;
+    }
+
+    @media only screen and (max-width: 600px) {
+      font-size: 21px;
+    }
+
+    @media only screen and (max-width: 450px) {
+      font-size: 19px;
+    }
+
+    @media only screen and (max-width: 350px) {
+      font-size: 17px;
+    }
   }
 
-  @media only screen and (max-width: 450px) {
-    font-size: 14px;
-  }
+  & > p {
+    @media only screen and (max-width: 992px) {
+      font-size: 18px;
+    }
 
-  @media only screen and (max-width: 350px) {
-    font-size: 12px;
+    @media only screen and (max-width: 600px) {
+      font-size: 16px;
+      line-height: 1.5em;
+    }
+
+    @media only screen and (max-width: 450px) {
+      font-size: 14px;
+    }
+
+    @media only screen and (max-width: 350px) {
+      font-size: 12px;
+    }
   }
 `;
 
@@ -128,6 +155,7 @@ const Experience = () => {
   let titleText = useRef(null);
   let titleLine = useRef(null);
   let descriptions = useRef(null);
+  let experienceLine = useRef(null);
 
   // const backgroundFade = () => {
   //   let tl = new TimelineLite();
@@ -151,7 +179,7 @@ const Experience = () => {
     }).fromTo(
       titleLine,
       {
-        x: "-100%",
+        x: "100%",
         y: 14,
       },
       {
@@ -201,34 +229,85 @@ const Experience = () => {
         <ThemeProvider theme={theme}>
           <Content>
             <TitleArea>
-              <Title ref={(el) => (titleText = el)}>
-                My <TitleHighlight>Experience</TitleHighlight> So Far
-              </Title>
               <TitleLineWrapper>
                 <TitleLine ref={(el) => (titleLine = el)} />
               </TitleLineWrapper>
+              <Title ref={(el) => (titleText = el)}>
+                My <TitleHighlight>Experience</TitleHighlight> So Far
+              </Title>
             </TitleArea>
             <Descriptions ref={(el) => (descriptions = el)}>
               <Description>
-                Hi! I'm <DescriptionBold>Afuza</DescriptionBold>, currently
-                living in Jakarta, Indonesia. I love reading books, watching
-                anime, and learning new things!
+                <DescriptionBold>2023 - Current</DescriptionBold>
+                <div
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                  }}
+                >
+                  <h3 style={{ marginRight: "20px" }}>Student</h3>
+                  <DescriptionBold>Full-Time</DescriptionBold>
+                </div>
+                <p>Studied at University of Washington in Seattle, WA, USA</p>
+                <p>
+                  First-year junior majoring in Computer Science. Expected to
+                  graduate in 2025.
+                </p>
               </Description>
               <Description>
-                Ever since I started programming, I feel like I've uncovered a
-                treasure trove filled with exciting opportunities and untouched
-                potential. I've built projects ranging from{" "}
-                <DescriptionBold>video games</DescriptionBold>,{" "}
-                <DescriptionBold>personal management tools</DescriptionBold>,{" "}
-                <DescriptionBold>business applications</DescriptionBold>,{" "}
-                <DescriptionBold>robots</DescriptionBold>,{" "}
-                <DescriptionBold>AI</DescriptionBold>, and a lot of{" "}
-                <DescriptionBold>websites</DescriptionBold>.
+                <DescriptionBold>2022 - 2023</DescriptionBold>
+                <div
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                  }}
+                >
+                  <h3 style={{ marginRight: "20px" }}>Front-End Engineer</h3>
+                  <DescriptionBold>Full-Time</DescriptionBold>
+                </div>
+                <p>Worked at Gokomodo / PT Saka Uniti in Jakarta, Indonesia</p>
+                <p>
+                  Mid-Level front-end engineer primarily utilizing Typescript,
+                  React, Vite, Tailwind, Python, and Django to create MVPs,
+                  CMSs, user facing, and admin portals for organizations in the
+                  Agribusiness and Commodities industry in Indonesia.
+                </p>
               </Description>
               <Description>
-                Websites and webapps are currently my application of trade, and
-                I'm avid to keep creating and look forward to contribute to
-                helpful and meaningful projects.
+                <DescriptionBold>2021 - 2022</DescriptionBold>
+                <div
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                  }}
+                >
+                  <h3 style={{ marginRight: "20px" }}>Student</h3>
+                  <DescriptionBold>Full-Time</DescriptionBold>
+                </div>
+
+                <p>
+                  Studied at Green River Community College in Auburn, WA, USA.
+                </p>
+                <p>Graduated with an Associate Degree in Computer Science</p>
+                <p style={{ float: "right" }}></p>
+              </Description>
+              <Description>
+                <DescriptionBold>2019 - 2020</DescriptionBold>
+                <div
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                  }}
+                >
+                  <h3 style={{ marginRight: "20px" }}>Software Engineer</h3>
+                  <DescriptionBold>Part-Time</DescriptionBold>
+                </div>
+                <p>Freelancing for local communities in Jakarta, Indonesia</p>
+                <p>
+                  Built a variety of apps ranging from personal websites,
+                  personal management tools, and business management
+                  applications
+                </p>
               </Description>
             </Descriptions>
           </Content>

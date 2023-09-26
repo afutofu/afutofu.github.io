@@ -13,7 +13,8 @@ const AboutComp = styled.div`
   justify-content: center;
   align-items: center;
   font-family: "Quicksand", "san-serif";
-  padding: 150px 0;
+  padding-top: 150px;
+  margin-bottom: 300px;
   /* background-color: white; */
 `;
 
