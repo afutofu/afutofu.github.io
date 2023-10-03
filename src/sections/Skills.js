@@ -284,6 +284,7 @@ const skillsList = [
       "Jira",
       "Confluence",
       "Slack",
+      "Figma",
     ],
   },
 ];
