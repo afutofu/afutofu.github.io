@@ -303,14 +303,14 @@ const Experience = () => {
                 <p style={{ float: "right" }}></p>
               </Description>
               <Description>
-                <DescriptionBold>2019 - 2020</DescriptionBold>
+                <DescriptionBold>2019 - 2022</DescriptionBold>
                 <div
                   style={{
                     display: "flex",
                     alignItems: "center",
                   }}
                 >
-                  <h3 style={{ marginRight: "20px" }}>Software Engineer</h3>
+                  <h3 style={{ marginRight: "20px" }}>Software Developer</h3>
                   <DescriptionBold>Part-Time</DescriptionBold>
                 </div>
                 <p>Freelancing for local communities in Jakarta, Indonesia</p>
