@@ -440,7 +440,7 @@ const Skills = () => {
                 <TitleLine ref={(el) => (titleLineLeft = el)} />
               </TitleLineWrapper>
               <Title ref={(el) => (titleText = el)}>
-                <TitleHighlight>Skills</TitleHighlight> I'm Proud Of
+                <TitleHighlight>Skills</TitleHighlight> I've Learned
               </Title>
               <TitleLineWrapper>
                 <TitleLine ref={(el) => (titleLineRight = el)} />
