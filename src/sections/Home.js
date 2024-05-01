@@ -275,8 +275,12 @@ const Home = ({ getHomeTl }) => {
   const homeEnter = () => {
     let tl = new TimelineLite();
 
-    tl.staggerFrom(
-      [homeImage, introduction, name, motto, description, button],
+    tl.staggerFrom([homeImage], 1.7, {
+      y: 100,
+      autoAlpha: 0,
+      ease: Power3.easeOut,
+    }).staggerFrom(
+      [introduction, name, motto, description, button],
       0.6,
       {
         y: 100,
@@ -284,7 +288,7 @@ const Home = ({ getHomeTl }) => {
         ease: Power3.easeOut,
       },
       0.175,
-      "-=2"
+      "-=1.25"
     );
 
     return tl;
