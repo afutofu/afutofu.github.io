@@ -3,6 +3,7 @@ import styled, { ThemeProvider } from "styled-components";
 import { gsap, TimelineLite, Power3 } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
+import gf1 from "../assets/projectImages/goalforge/gf1.png";
 import projecc1 from "../assets/projectImages/projecc/projecc1-min.png";
 import projecc2 from "../assets/projectImages/projecc/projecc2-min.png";
 import projecc3 from "../assets/projectImages/projecc/projecc3-min.png";
@@ -14,9 +15,32 @@ gsap.registerPlugin(ScrollTrigger);
 
 const FEATURED_PROJECTS = [
   {
+    title: "GoalForge",
+    desc: "A productivity tool to assist you in micro and macro task management. Lay out the plans for your goal and track your progress with ease! (WIP)",
+    techs: [
+      "Typescript",
+      "NextJS",
+      "Tailwind",
+      "Python",
+      "Flask",
+      "DynamoDB",
+      "AWS",
+    ],
+    codeLink: "https://github.com/afutofu/goalforge",
+    siteLink: "https://goalforge.vercel.app/",
+    images: [gf1],
+  },
+  {
     title: "Projecc",
     desc: "A real-time text messaging web app inspired by Discord. Join project groups, interact with fellow project members, and plan out your next big project!",
-    techs: ["React", "Node.js", "Express", "Socket.IO", "MongoDB", "JWT"],
+    techs: [
+      "Javascript",
+      "React",
+      "Node.js",
+      "Express",
+      "Socket.IO",
+      "MongoDB",
+    ],
     codeLink: "https://github.com/afutofu/projecc",
     siteLink: "https://projecc-ce68769a9813.herokuapp.com",
     images: [projecc1, projecc2, projecc3, projecc4, projecc5],
