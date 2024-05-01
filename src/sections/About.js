@@ -212,8 +212,20 @@ const About = () => {
             <Descriptions ref={(el) => (descriptions = el)}>
               <Description>
                 Hi! I'm <DescriptionBold>Afuza</DescriptionBold>, currently
-                living in Seattle, Washington. I love reading books, watching
-                anime, and learning new things!
+                living in Seattle, Washington. I love reading books, keeping up
+                with video games, and learning new things!
+              </Description>
+              <Description>
+                Currently, I'm immersing myself in understanding{" "}
+                <DescriptionBold>
+                  data structures and algorithms
+                </DescriptionBold>
+                . Later this year, I'm excited to dive deeper into{" "}
+                <DescriptionBold>backend development</DescriptionBold> and{" "}
+                <DescriptionBold>devops</DescriptionBold> by learning and
+                practicing{" "}
+                <DescriptionBold>Go, containerization, CI/CD</DescriptionBold>{" "}
+                and <DescriptionBold>AWS</DescriptionBold>
               </Description>
               <Description>
                 Ever since I started programming, I feel like I've uncovered a
