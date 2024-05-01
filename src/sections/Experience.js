@@ -237,7 +237,7 @@ const Experience = () => {
                 <p>Studying at University of Washington in Seattle, WA, USA</p>
                 <p>
                   First-year junior majoring in Computer Science. Expected to
-                  graduate in 2025.
+                  graduate in early 2026.
                 </p>
               </Description>
               <Description>
@@ -251,7 +251,7 @@ const Experience = () => {
                   <h3 style={{ marginRight: "20px" }}>Front-End Engineer</h3>
                   <DescriptionBold>Full-Time</DescriptionBold>
                 </div>
-                <p>Worked at Gokomodo / PT Saka Uniti in Jakarta, Indonesia</p>
+                <p>Worked at Gokomodo / PT Saka Uniti in Jakarta, Indonesia.</p>
                 <p>
                   Mid-Level front-end engineer primarily utilizing Typescript,
                   React, Vite, Tailwind, jQuery, Django, and others to create
@@ -313,7 +313,7 @@ const Experience = () => {
                   <h3 style={{ marginRight: "20px" }}>Software Developer</h3>
                   <DescriptionBold>Part-Time</DescriptionBold>
                 </div>
-                <p>Freelancing for local communities in Jakarta, Indonesia</p>
+                <p>Freelancing for local communities in Jakarta, Indonesia.</p>
                 <p>
                   Built a variety of apps ranging from personal websites,
                   personal management tools, and business management
