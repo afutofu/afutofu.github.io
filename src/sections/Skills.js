@@ -234,12 +234,13 @@ const skillsList = [
       "Typescript",
       "HTML",
       "CSS/SASS",
-      "PHP",
-      "SQL",
       "Python",
+      "OCaml",
       "Java",
       "C++",
       "C#",
+      "PHP",
+      "SQL",
     ],
   },
   {
@@ -250,9 +251,11 @@ const skillsList = [
       "Redux",
       "Zustand",
       "Easy-Peasy",
-      "GSAP",
-      "Bootstrap",
       "Tailwind",
+      "GSAP",
+      "Styled Components",
+      "Bootstrap",
+      "Mantine",
       "jQuery",
     ],
   },
@@ -261,17 +264,20 @@ const skillsList = [
     list: [
       "Node.js",
       "Express",
+      "Flask",
+      "AWS",
+      "Sequelize",
+      "Docker",
       "Django",
       "Socket.IO",
       "Laravel",
       "Cloudinary",
       "Scrapy",
-      "Arduino",
     ],
   },
   {
     title: "Database",
-    list: ["PostgreSQL", "MySQL", "MongoDB", "SQLite"],
+    list: ["PostgreSQL", "MySQL", "MongoDB", "SQLite", "DynamoDB"],
   },
   {
     title: "Tools",
@@ -434,7 +440,7 @@ const Skills = () => {
                 <TitleLine ref={(el) => (titleLineLeft = el)} />
               </TitleLineWrapper>
               <Title ref={(el) => (titleText = el)}>
-                <TitleHighlight>Skills</TitleHighlight> I'm Proud Of
+                <TitleHighlight>Skills</TitleHighlight> I've Learned
               </Title>
               <TitleLineWrapper>
                 <TitleLine ref={(el) => (titleLineRight = el)} />
