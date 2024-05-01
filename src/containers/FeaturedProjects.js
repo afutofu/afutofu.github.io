@@ -20,11 +20,6 @@ import projecc2 from "../assets/projectImages/projecc/projecc2-min.png";
 import projecc3 from "../assets/projectImages/projecc/projecc3-min.png";
 import projecc4 from "../assets/projectImages/projecc/projecc4-min.png";
 import projecc5 from "../assets/projectImages/projecc/projecc5-min.png";
-import insalts1 from "../assets/projectImages/insalts/insalts1.png";
-import insalts2 from "../assets/projectImages/insalts/insalts2.png";
-import insalts3 from "../assets/projectImages/insalts/insalts3.png";
-import insalts4 from "../assets/projectImages/insalts/insalts4.png";
-import insalts5 from "../assets/projectImages/insalts/insalts5.png";
 import saiko1 from "../assets/projectImages/saiko-games/saiko1-min.png";
 import saiko2 from "../assets/projectImages/saiko-games/saiko2-min.png";
 import saiko3 from "../assets/projectImages/saiko-games/saiko3-min.png";
@@ -94,13 +89,6 @@ const FEATURED_PROJECTS = [
     codeLink: "https://github.com/afutofu/devils-advocate-frontend",
     siteLink: "https://devils-advocate-afuza.netlify.app/",
     images: [devils1, devils2, devils3, devils4, devils5],
-  },
-  {
-    title: "Insalts",
-    desc: "A site for your favorite jokes and insults inspired by Reddit. Check out 'salts' (subreddits) to view posts of a specific category, or create your very own and start posting your own jokes!",
-    techs: ["React", "Node.js", "Express", "Sequelize", "MySQL", "JWT"],
-    codeLink: "https://github.com/afutofu/insalts",
-    images: [insalts1, insalts2, insalts3, insalts4, insalts5],
   },
 ];
 

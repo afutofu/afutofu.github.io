@@ -5,6 +5,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 import OtherProject from "../components/OtherProject";
 
+import insalts1 from "../assets/projectImages/insalts/insalts1.png";
 import dbt1 from "../assets/projectImages/dannyboitattoos/dbt1.png";
 import pnwrs3 from "../assets/projectImages/pnwrs/pnwrs3.jpg";
 import pv1 from "../assets/projectImages/pokemon-viewer/pv1.jpg";
@@ -150,6 +151,13 @@ const OtherProjects = () => {
           </TitleLineWrapper>
         </TitleArea>
         <ProjectArea>
+          <OtherProject
+            title={"Insalts"}
+            desc={`A site for your favorite jokes and insults inspired by Reddit.`}
+            techs={["React", "Node.js", "Express", "Sequelize", "MySQL", "JWT"]}
+            codeLink={"https://github.com/afutofu/insalts"}
+            image={insalts1}
+          />
           <OtherProject
             title={"DannyBoiTattoos"}
             desc={`Landing page for DannyBoiTattoos.`}
