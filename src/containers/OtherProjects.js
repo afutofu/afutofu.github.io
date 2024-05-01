@@ -5,6 +5,10 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 import OtherProject from "../components/OtherProject";
 
+import musashi1 from "../assets/projectImages/musashi/musashi1.png";
+import saiko1 from "../assets/projectImages/saiko-games/saiko1-min.png";
+import benefitted1 from "../assets/projectImages/benefitted/benefitted1.jpg";
+import devils1 from "../assets/projectImages/devils-advocate/devils1-min.png";
 import insalts1 from "../assets/projectImages/insalts/insalts1.png";
 import dbt1 from "../assets/projectImages/dannyboitattoos/dbt1.png";
 import pnwrs3 from "../assets/projectImages/pnwrs/pnwrs3.jpg";
@@ -98,8 +102,134 @@ const theme = {
   color: "#ff350d",
 };
 
+const OTHER_PROJECTS = [
+  {
+    title: "Musashi",
+    desc: "Discord music bot to play your favorite songs in your servers. API used currently down.",
+    techs: ["Discord.js", "Discord Music Player", "Node.js", "MongoDB"],
+    codeLink: "https://github.com/afutofu/musashi",
+    siteLink: "https://musashi-bot.netlify.app/",
+    image: musashi1,
+  },
+  {
+    title: "Saiko Games",
+    desc: "A website displaying video game information and reviews.",
+    techs: ["React", "IGDB API", "Node.js", "Express"],
+    codeLink: "https://github.com/afutofu/saiko-games-frontend",
+    siteLink: "https://saiko-games.netlify.app/",
+    image: saiko1,
+  },
+  {
+    title: "Benefitted",
+    desc: "Landing page for Benefitted.",
+    techs: [
+      "React",
+      "Instagram Basic Display API",
+      "GSAP",
+      "Node.js",
+      "Express",
+      "MongoDB",
+      "JWT",
+    ],
+    codeLink: "https://github.com/afutofu/benefitted-frontend",
+    siteLink: "https://benefitted.netlify.app/",
+    image: benefitted1,
+  },
+  {
+    title: "Devil's Advocate",
+    desc: "An e-commerce website selling 'devil fruits' from the 'One Piece' series.",
+    techs: ["React", "Node.js", "Express", "MongoDB", "Scrapy", "JWT"],
+    codeLink: "https://github.com/afutofu/devils-advocate-frontend",
+    siteLink: "https://devils-advocate-afuza.netlify.app/",
+    image: devils1,
+  },
+  {
+    title: "Insalts",
+    desc: "A site for your favorite jokes and insults inspired by Reddit.",
+    techs: ["React", "Node.js", "Express", "Sequelize", "MySQL", "JWT"],
+    codeLink: "https://github.com/afutofu/insalts",
+    image: insalts1,
+  },
+  {
+    title: "DannyBoiTattoos",
+    desc: "Landing page for DannyBoiTattoos.",
+    techs: ["React", "Instagram Basic Display API", "SASS"],
+    codeLink: "https://github.com/afutofu/dannyboitattoos",
+    siteLink: "https://dannyboitattoos.netlify.app/",
+    image: dbt1,
+  },
+  {
+    title: "Pacific Northwest Recovery Services",
+    desc: "Landing page for Pacific Northwest Recovery Services.",
+    techs: ["React", "NextJS"],
+    codeLink: "https://github.com/afutofu/pacific-northwest-recovery-services",
+    siteLink: "https://pacificnorthwestrecoveryservices.com/aahaa",
+    image: pnwrs3,
+  },
+  {
+    title: "Pokemon Viewer",
+    desc: "Webapp utilizing PokeAPI to look for pokemon information.",
+    techs: ["React", "PokéAPI", "Styled Components"],
+    codeLink: "https://github.com/afutofu/pokemon-viewer",
+    siteLink: "https://pokemon-viewer-afuza.netlify.app",
+    image: pv1,
+  },
+  {
+    title: "Word Replacer",
+    desc: "Web app that replaces words from a text input through a word filter list that you can customize.",
+    techs: ["React", "SASS"],
+    codeLink: "https://github.com/afutofu/word-replacer",
+    siteLink: "https://word-replacer.netlify.app",
+    image: wordReplacer,
+  },
+  {
+    title: "Machio's Pub & Gym",
+    desc: "Landing page for 'Machio's Pub & Gym', highlighting the menu, gym facilities, and more restaurant related details.",
+    techs: ["React"],
+    codeLink: "https://github.com/afutofu/machios-pub-and-gym",
+    siteLink: "https://machios-pub-and-gym.netlify.app/",
+    image: machios1,
+  },
+  {
+    title: "An Alan Watts Tribute",
+    desc: "A website detailing Alan Watt's life, books, and a few popular audio clips from his lectures.",
+    techs: ["React"],
+    codeLink: "https://github.com/afutofu/an-alan-watts-tribute",
+    siteLink: "https://an-alan-watts-tribute.netlify.app/",
+    image: aawt1,
+  },
+  {
+    title: "Task Manager",
+    desc: "A to-do list, day planner, and a 'things I learned today' list all in one app.",
+    techs: ["Python", "Tkinter", "SQLite"],
+    codeLink: "https://github.com/afutofu/task-manager",
+    image: taskManager,
+  },
+  {
+    title: "Task Timer",
+    desc: "Records the amount of time you do a task, graphs them, and ranks the time based on the trailing month.",
+    techs: ["Python", "Tkinter", "Matplotlib", "SQLite"],
+    codeLink: "https://github.com/afutofu/task-timer",
+    image: taskTimer,
+  },
+  {
+    title: "Don't Hit The Wall",
+    desc: "A two player game where each player has to avoid the wall as the game progresses.",
+    techs: ["Java"],
+    codeLink: "https://github.com/afutofu/dont-hit-the-wall",
+    image: dhtw,
+  },
+  {
+    title: "Automatic Garden Waterer",
+    desc: "Code for an automatic garden waterer, watering time can be customized. Used with arduino v3.",
+    techs: ["Arduino"],
+    codeLink: "https://github.com/afutofu/automatic-garden-waterer",
+    image: agw,
+  },
+];
+
 const OtherProjects = () => {
-  let featuredProjects = useRef(null);
+  let otherProjects = useRef(null);
   let titleText = useRef(null);
   let titleLine = useRef(null);
 
@@ -131,7 +261,7 @@ const OtherProjects = () => {
   useEffect(() => {
     let master = new TimelineLite({
       scrollTrigger: {
-        trigger: featuredProjects,
+        trigger: otherProjects,
         start: "top-=100 center",
         toggleActions: "play none none none",
       },
@@ -140,7 +270,7 @@ const OtherProjects = () => {
   }, []);
 
   return (
-    <OtherProjectsComp ref={(el) => (featuredProjects = el)}>
+    <OtherProjectsComp ref={(el) => (otherProjects = el)}>
       <ThemeProvider theme={theme}>
         <TitleArea>
           <Title ref={(el) => (titleText = el)}>
@@ -151,91 +281,17 @@ const OtherProjects = () => {
           </TitleLineWrapper>
         </TitleArea>
         <ProjectArea>
-          <OtherProject
-            title={"Insalts"}
-            desc={`A site for your favorite jokes and insults inspired by Reddit.`}
-            techs={["React", "Node.js", "Express", "Sequelize", "MySQL", "JWT"]}
-            codeLink={"https://github.com/afutofu/insalts"}
-            image={insalts1}
-          />
-          <OtherProject
-            title={"DannyBoiTattoos"}
-            desc={`Landing page for DannyBoiTattoos.`}
-            techs={["React", "Instagram Basic Display API", "SASS"]}
-            codeLink={"https://github.com/afutofu/dannyboitattoos"}
-            siteLink={"https://dannyboitattoos.netlify.app/"}
-            image={dbt1}
-          />
-          <OtherProject
-            title={"Pacific Northwest Recovery Services"}
-            desc={`Landing page for Pacific Northwest Recovery Services.`}
-            techs={["React", "NextJS"]}
-            codeLink={
-              "https://github.com/afutofu/pacific-northwest-recovery-services"
-            }
-            siteLink={"https://pacificnorthwestrecoveryservices.com/aahaa"}
-            image={pnwrs3}
-          />
-          <OtherProject
-            title={"Pokemon Viewer"}
-            desc={`Webapp utilizing PokeAPI to look for pokemon information.`}
-            techs={["React", "PokéAPI", "Styled Components"]}
-            codeLink={"https://github.com/afutofu/pokemon-viewer"}
-            siteLink={"https://pokemon-viewer-afuza.netlify.app"}
-            image={pv1}
-          />
-          <OtherProject
-            title={"Word Replacer"}
-            desc={`Web app that replaces words from a text input through a word filter list that you can customize.`}
-            techs={["React", "SASS"]}
-            codeLink={"https://github.com/afutofu/word-replacer"}
-            siteLink={"https://word-replacer.netlify.app"}
-            image={wordReplacer}
-          />
-          <OtherProject
-            title={"Machio's Pub & Gym"}
-            desc={`Landing page for 'Machio's Pub & Gym', highlighting the menu, gym facilities, and more restaurant related details.`}
-            techs={["React"]}
-            codeLink={"https://github.com/afutofu/machios-pub-and-gym"}
-            siteLink={"https://machios-pub-and-gym.netlify.app/"}
-            image={machios1}
-          />
-          <OtherProject
-            title={"An Alan Watts Tribute"}
-            desc={`A website detailing Alan Watt's life, books, and a few popular audio clips from his lectures.`}
-            techs={["React"]}
-            codeLink={"https://github.com/afutofu/an-alan-watts-tribute"}
-            siteLink={"https://an-alan-watts-tribute.netlify.app/"}
-            image={aawt1}
-          />
-          <OtherProject
-            title={"Task Manager"}
-            desc={`A to-do list, day planner, and a 'things I learned today' list all in one app.`}
-            techs={["Python", "Tkinter", "SQLite"]}
-            codeLink={"https://github.com/afutofu/task-manager"}
-            image={taskManager}
-          />
-          <OtherProject
-            title={"Task Timer"}
-            desc={`Records the amount of time you do a task, graphs them, and ranks the time based on the trailing month.`}
-            techs={["Python", "Tkinter", "Matplotlib", "SQLite"]}
-            codeLink={"https://github.com/afutofu/task-timer"}
-            image={taskTimer}
-          />
-          <OtherProject
-            title={"Don't Hit The Wall"}
-            desc={`A two player game where each player has to avoid the wall as the game progresses.`}
-            techs={["Java"]}
-            codeLink={"https://github.com/afutofu/dont-hit-the-wall"}
-            image={dhtw}
-          />
-          <OtherProject
-            title={"Automatic Garden Waterer"}
-            desc={`Code for an automatic garden waterer, watering time can be customized. Used with arduino v3.`}
-            techs={["Arduino"]}
-            codeLink={"https://github.com/afutofu/automatic-garden-waterer"}
-            image={agw}
-          />
+          {OTHER_PROJECTS.map((project, index) => (
+            <OtherProject
+              key={index}
+              title={project.title}
+              desc={project.desc}
+              techs={project.techs}
+              codeLink={project.codeLink}
+              siteLink={project.siteLink}
+              image={project.image}
+            />
+          ))}
         </ProjectArea>
       </ThemeProvider>
     </OtherProjectsComp>

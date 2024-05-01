@@ -3,69 +3,16 @@ import styled, { ThemeProvider } from "styled-components";
 import { gsap, TimelineLite, Power3 } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-import musashi1 from "../assets/projectImages/musashi/musashi1.png";
-import musashi2 from "../assets/projectImages/musashi/musashi2.png";
-import musashi3 from "../assets/projectImages/musashi/musashi3.png";
-import musashi4 from "../assets/projectImages/musashi/musashi4.png";
-import musashi5 from "../assets/projectImages/musashi/musashi5.png";
-import musashi6 from "../assets/projectImages/musashi/musashi6.png";
-import benefitted1 from "../assets/projectImages/benefitted/benefitted1.jpg";
-import benefitted2 from "../assets/projectImages/benefitted/benefitted2.jpg";
-import benefitted3 from "../assets/projectImages/benefitted/benefitted3.jpg";
-import benefitted4 from "../assets/projectImages/benefitted/benefitted4.jpg";
-import benefitted5 from "../assets/projectImages/benefitted/benefitted5.jpg";
-import benefitted6 from "../assets/projectImages/benefitted/benefitted6.jpg";
 import projecc1 from "../assets/projectImages/projecc/projecc1-min.png";
 import projecc2 from "../assets/projectImages/projecc/projecc2-min.png";
 import projecc3 from "../assets/projectImages/projecc/projecc3-min.png";
 import projecc4 from "../assets/projectImages/projecc/projecc4-min.png";
 import projecc5 from "../assets/projectImages/projecc/projecc5-min.png";
-import saiko1 from "../assets/projectImages/saiko-games/saiko1-min.png";
-import saiko2 from "../assets/projectImages/saiko-games/saiko2-min.png";
-import saiko3 from "../assets/projectImages/saiko-games/saiko3-min.png";
-import saiko4 from "../assets/projectImages/saiko-games/saiko4-min.png";
-import saiko5 from "../assets/projectImages/saiko-games/saiko5-min.png";
-import devils1 from "../assets/projectImages/devils-advocate/devils1-min.png";
-import devils2 from "../assets/projectImages/devils-advocate/devils2-min.png";
-import devils3 from "../assets/projectImages/devils-advocate/devils3-min.png";
-import devils4 from "../assets/projectImages/devils-advocate/devils4-min.png";
-import devils5 from "../assets/projectImages/devils-advocate/devils5-min.png";
 import FeaturedProject from "../components/FeaturedProject";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const FEATURED_PROJECTS = [
-  {
-    title: "Musashi",
-    desc: "Discord music bot to play your favorite songs in your servers. Play songs from youtube and spotify, and save your queues to be loaded for next time!",
-    techs: ["Discord.js", "Discord Music Player", "Node.js", "MongoDB"],
-    codeLink: "https://github.com/afutofu/musashi",
-    siteLink: "https://musashi-bot.netlify.app/",
-    images: [musashi1, musashi2, musashi3, musashi4, musashi5, musashi6],
-  },
-  {
-    title: "Benefitted",
-    desc: "Landing page for Benefitted. Displays Instagram posts, business information, FAQs, and available slot dates to book your own custom apparels and shoes!",
-    techs: [
-      "React",
-      "Instagram Basic Display API",
-      "GSAP",
-      "Node.js",
-      "Express",
-      "MongoDB",
-      "JWT",
-    ],
-    codeLink: "https://github.com/afutofu/benefitted-frontend",
-    siteLink: "https://benefitted.netlify.app/",
-    images: [
-      benefitted1,
-      benefitted2,
-      benefitted3,
-      benefitted4,
-      benefitted5,
-      benefitted6,
-    ],
-  },
   {
     title: "Projecc",
     desc: "A real-time text messaging web app inspired by Discord. Join project groups, interact with fellow project members, and plan out your next big project!",
@@ -73,22 +20,6 @@ const FEATURED_PROJECTS = [
     codeLink: "https://github.com/afutofu/projecc",
     siteLink: "https://projecc-ce68769a9813.herokuapp.com",
     images: [projecc1, projecc2, projecc3, projecc4, projecc5],
-  },
-  {
-    title: "Saiko Games",
-    desc: "A video game information website that displays current releases, most popular and featured games, and video game information and reviews.",
-    techs: ["React", "IGDB API", "Node.js", "Express"],
-    codeLink: "https://github.com/afutofu/saiko-games-frontend",
-    siteLink: "https://saiko-games.netlify.app/",
-    images: [saiko1, saiko2, saiko3, saiko4, saiko5],
-  },
-  {
-    title: "Devil's Advocate",
-    desc: "An e-commerce website selling 'devil fruits' from the 'One Piece' series. Data scraped from a third party site, complete with a cart system and authentication.",
-    techs: ["React", "Node.js", "Express", "MongoDB", "Scrapy", "JWT"],
-    codeLink: "https://github.com/afutofu/devils-advocate-frontend",
-    siteLink: "https://devils-advocate-afuza.netlify.app/",
-    images: [devils1, devils2, devils3, devils4, devils5],
   },
 ];
 
