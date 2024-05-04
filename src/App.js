@@ -2,7 +2,8 @@ import React, { useRef, useEffect, useState, useCallback } from "react";
 import styled from "styled-components";
 import { TimelineLite, Power3 } from "gsap";
 
-import skyrimWallpaper from "./assets/wallpaper-skyrim-min.jpg";
+// import skyrimWallpaper from "./assets/wallpaper-skyrim-min.jpg";
+import vagabondWallpaper from "./assets/wallpaper-vagabond-mountains.jpg";
 
 import LoadingScreen from "./components/LoadingScreen";
 import Navbar from "./components/Navbar";
@@ -36,8 +37,8 @@ const AppComp = styled.div`
 
 const BackgroundImage = styled.img.attrs(() => {
   return {
-    src: skyrimWallpaper,
-    alt: "skyrimWallpaper",
+    src: vagabondWallpaper,
+    alt: "vagabondWallpaper",
   };
 })`
   position: fixed;
