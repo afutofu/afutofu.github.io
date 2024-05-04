@@ -27,7 +27,7 @@ const OtherProjectComp = styled.div`
 
   @media only screen and (min-width: 1600px) {
     position: relative;
-    height: 250px;
+    height: 230px;
     color: #222;
     margin: 10px 10px;
     box-sizing: border-box;
