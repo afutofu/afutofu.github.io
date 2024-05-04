@@ -216,16 +216,16 @@ const About = () => {
                 with video games, and learning new things!
               </Description>
               <Description>
-                Currently, I'm immersing myself in understanding{" "}
+                Currently, I'm immersing myself in{" "}
                 <DescriptionBold>
                   data structures and algorithms
                 </DescriptionBold>
-                . Later this year, I'm excited to dive deeper into{" "}
+                . And later this year, I'm excited to dive deeper into{" "}
                 <DescriptionBold>backend development</DescriptionBold> and{" "}
-                <DescriptionBold>devops</DescriptionBold> by learning and
+                <DescriptionBold>DevOps</DescriptionBold>, learning and
                 practicing{" "}
                 <DescriptionBold>Go, containerization, CI/CD</DescriptionBold>{" "}
-                and <DescriptionBold>AWS</DescriptionBold>
+                and <DescriptionBold>AWS</DescriptionBold>.
               </Description>
               <Description>
                 Ever since I started programming, I feel like I've uncovered a

@@ -2,27 +2,39 @@
 
 ![image](https://github.com/afutofu/afutofu.github.io/assets/37662909/475f39e8-5d73-4501-8a1c-e7d89d4b01df)
 
+Website Link: [afutofu.github.io](https://afutofu.github.io/)
 
-Website Link: [Muhammad Afuzarahman](https://afutofu.github.io/)
-
-Online portfolio.
+Online portfolio for Muhammad Afuzarahman.
 
 Technologies used:
 
-- [React](https://reactjs.org/) - Frontend framework
-- [GSAP](https://greensock.com/gsap/) - Easy animations and integration with React
-- [Styled Components](https://styled-components.com/) - CSS styling written into custom components, gets rid of having to use separate css files
+- [React](https://reactjs.org/) - Frontend library
+- [GSAP](https://greensock.com/gsap/) - Animations
+- [Styled Components](https://styled-components.com/) - CSS integration in JS
 
 Features in this version:
 
 - Displays general information
-- Displays favorite projects
+- Displays featured projects
 - Displays other projects
 - Complete links to code and live sites
 - Viewable and downloadable resume
 - Social links
 
-Start locally with:
+1 Clone repository:
+
+```
+git clone https://github.com/afutofu/afutofu.github.io.git
+```
+
+2 Install dependencies:
+
+```
+npm install
+```
+
+3 Start locally with:
+
 ```
 npm start
 ```
