@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "a4af441433f77caed30a7288a3a03acd",
+    "revision": "8774601354ff93122cd8d05de9734f07",
     "url": "/index.html"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/js/2.0faf1692.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "909c1ef5beacedc8dd85",
-    "url": "/static/js/main.79be39ba.chunk.js"
+    "revision": "f2d8555393c790930f2b",
+    "url": "/static/js/main.96f09c7f.chunk.js"
   },
   {
     "revision": "4f2b1704eab49d50853b",
@@ -100,8 +100,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/task-timer.450240ea.png"
   },
   {
-    "revision": "8ecbafd5d99e5c5dabb7cdb768ce203a",
-    "url": "/static/media/wallpaper-skyrim-min.8ecbafd5.jpg"
+    "revision": "f299aa16cb48e9a4d1ed91b4ab4f768d",
+    "url": "/static/media/wallpaper-vagabond-mountains.f299aa16.jpg"
   },
   {
     "revision": "e2956bd33d141d5b26ae874c8a983f41",
