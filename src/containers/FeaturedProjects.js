@@ -172,7 +172,7 @@ const FeaturedProjects = () => {
       <ThemeProvider theme={theme}>
         <TitleArea>
           <Title ref={(el) => (titleText = el)}>
-            Some Of My Favorite <TitleHighlight>Projects</TitleHighlight>
+            Featured <TitleHighlight>Projects</TitleHighlight>
           </Title>
           <TitleLineWrapper>
             <TitleLine ref={(el) => (titleLine = el)} />
