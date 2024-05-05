@@ -94,7 +94,7 @@ const Descriptions = styled.div`
 
 const Description = styled.div`
   width: 100%;
-  font-size: 20px;
+  font-size: 18px;
   line-height: 1.5em;
   font-weight: 400;
   margin: 0;
@@ -123,6 +123,8 @@ const Description = styled.div`
   }
 
   & > p {
+    /* text-align: justify; */
+
     @media only screen and (max-width: 992px) {
       font-size: 18px;
     }
@@ -283,14 +285,8 @@ const Experience = () => {
                     <h3>
                       <div className="icon"></div> Bachelor's - Computer Science
                     </h3>
-                    <p>
-                      Studying at University of Washington in Seattle, WA, USA.
-                    </p>
-                    <p>
-                      First-year junior majoring in Computer Science. Expected
-                      to graduate in early 2026.
-                    </p>
-
+                    <p>University of Washington, Seattle, WA, USA.</p>
+                    <p>Bachelor of Science, Computer Science</p>
                     <DescriptionBold>
                       September 2023 - March 2026
                     </DescriptionBold>
@@ -302,16 +298,11 @@ const Experience = () => {
                     <h3>
                       <div className="icon"></div>Software Engineer
                     </h3>
+                    <p>Gokomodo, Jakarta, Indonesia.</p>
                     <p>
-                      Worked at Gokomodo / PT Saka Uniti in Jakarta, Indonesia.
-                    </p>
-                    <p>
-                      Mid-Level front-end engineer primarily utilizing
-                      Typescript, React, Vite, Tailwind, jQuery, Django, and
-                      others to create MVPs, CMSs, user facing, and admin
-                      portals to form a supply chain management ecosystem for
-                      organizations in the Agribusiness and Commodities industry
-                      in Indonesia.
+                      Collabrotaively built and maintained e-procurement
+                      platforms and internal tools to support the agribusiness
+                      industry.
                     </p>
 
                     <DescriptionBold>
@@ -325,10 +316,7 @@ const Experience = () => {
                     <h3>
                       <div className="icon"></div>Computer Science Tutor
                     </h3>
-                    <p>
-                      Volunteered at Green River College Coding Club in Auburn,
-                      WA, USA.
-                    </p>
+                    <p>GRC Coding Club, Auburn, WA, USA.</p>
                     <p>
                       Guided students to understand and solve Python, Java, and
                       C++ related computer science problems.{" "}
@@ -343,14 +331,10 @@ const Experience = () => {
                     <h3>
                       <div className="icon"></div>Associate - Computer Science
                     </h3>
-                    <p>
-                      Studied at Green River Community College in Auburn, WA,
-                      USA.
-                    </p>
-                    <p>
-                      Graduated with an Associate Degree in Computer Science.
-                    </p>
-
+                    <p>Green River College, Auburn, WA, USA.</p>
+                    <p>Associate of Science, Computer Science.</p>
+                    <p>Graduated with Highest Honors.</p>
+                    <p>GPA: 4.0</p>
                     <DescriptionBold>January 2021 - June 2022</DescriptionBold>
                   </Description>
                 </div>
@@ -360,9 +344,7 @@ const Experience = () => {
                     <h3>
                       <div className="icon"></div>Software Developer
                     </h3>
-                    <p>
-                      Freelancing for local communities in Jakarta, Indonesia.
-                    </p>
+                    <p>Freelance in Jakarta, Indonesia.</p>
                     <p>
                       Built a variety of apps ranging from personal websites,
                       personal management tools, and business management
