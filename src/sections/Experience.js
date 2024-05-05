@@ -146,6 +146,34 @@ const DescriptionBold = styled.span`
   font-weight: 500;
 `;
 
+const LineContainer = styled.div`
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  #middle-line {
+    width: 1px;
+    height: 100%;
+    background-color: #ff350d;
+    position: absolute;
+    left: 50%;
+  }
+
+  .experience {
+    position: relative;
+    text-align: right;
+    width: 50%;
+    margin-right: 50%;
+  }
+
+  .education {
+    position: relative;
+    width: 50%;
+    margin-left: 50%;
+  }
+`;
+
 const theme = {
   color: "#ff350d",
 };
@@ -321,6 +349,18 @@ const Experience = () => {
                 </p>
               </Description>
             </Descriptions>
+            <LineContainer>
+              <div id="middle-line"></div>
+              <div className="education">Computer Science Student</div>
+
+              <div className="experience">Software Engineer</div>
+
+              <div className="experience">Computer Science Tutor</div>
+
+              <div className="education">Computer Science Student</div>
+
+              <div className="experience">Software Developer</div>
+            </LineContainer>
           </Content>
         </ThemeProvider>
       </Container>
