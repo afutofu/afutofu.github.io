@@ -30,7 +30,7 @@ const Container = styled.div`
 const Content = styled.div`
   position: relative;
   width: 100%;
-  max-width: 700px;
+  max-width: 800px;
   text-align: left;
   color: #222;
   display: flex;
@@ -49,7 +49,7 @@ const TitleArea = styled.div`
 const Title = styled.h2`
   font-size: 28px;
   font-weight: 500;
-  padding-left: 20px;
+  padding-right: 20px;
 
   @media only screen and (max-width: 992px) {
     font-size: 26px;
@@ -94,7 +94,7 @@ const Descriptions = styled.div`
 
 const Description = styled.div`
   width: 100%;
-  font-size: 20px;
+  font-size: 18px;
   line-height: 1.5em;
   font-weight: 400;
   margin: 0;
@@ -123,6 +123,8 @@ const Description = styled.div`
   }
 
   & > p {
+    /* text-align: justify; */
+
     @media only screen and (max-width: 992px) {
       font-size: 18px;
     }
@@ -146,6 +148,58 @@ const DescriptionBold = styled.span`
   font-weight: 500;
 `;
 
+const LineContainer = styled.div`
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  #middle-line {
+    width: 1px;
+    height: 100%;
+    background-color: #ff350d;
+    position: absolute;
+    left: 50%;
+  }
+
+  .icon {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: #ff350d 2px solid;
+    box-sizing: border-box;
+    background-color: white;
+    position: absolute;
+  }
+
+  .experience {
+    position: relative;
+    text-align: right;
+    width: 50%;
+    box-sizing: border-box;
+    padding-right: 40px;
+    margin-right: 50%;
+
+    .icon {
+      right: -11px;
+      top: 5px;
+    }
+  }
+
+  .education {
+    position: relative;
+    width: 50%;
+    box-sizing: border-box;
+    padding-left: 40px;
+    margin-left: 50%;
+
+    .icon {
+      left: -10px;
+      top: 5px;
+    }
+  }
+`;
+
 const theme = {
   color: "#ff350d",
 };
@@ -165,7 +219,7 @@ const Experience = () => {
     }).fromTo(
       titleLine,
       {
-        x: "100%",
+        x: "-100%",
         y: 14,
       },
       {
@@ -215,111 +269,92 @@ const Experience = () => {
         <ThemeProvider theme={theme}>
           <Content>
             <TitleArea>
-              <TitleLineWrapper>
-                <TitleLine ref={(el) => (titleLine = el)} />
-              </TitleLineWrapper>
               <Title ref={(el) => (titleText = el)}>
                 My <TitleHighlight>Experience</TitleHighlight> So Far
               </Title>
+              <TitleLineWrapper>
+                <TitleLine ref={(el) => (titleLine = el)} />
+              </TitleLineWrapper>
             </TitleArea>
-            <Descriptions ref={(el) => (descriptions = el)}>
-              <Description>
-                <DescriptionBold>2023 - Current</DescriptionBold>
-                <div
-                  style={{
-                    display: "flex",
-                    alignItems: "center",
-                  }}
-                >
-                  <h3 style={{ marginRight: "20px" }}>Student</h3>
-                  <DescriptionBold>Full-Time</DescriptionBold>
-                </div>
-                <p>Studying at University of Washington in Seattle, WA, USA</p>
-                <p>
-                  First-year junior majoring in Computer Science. Expected to
-                  graduate in early 2026.
-                </p>
-              </Description>
-              <Description>
-                <DescriptionBold>2022 - 2023</DescriptionBold>
-                <div
-                  style={{
-                    display: "flex",
-                    alignItems: "center",
-                  }}
-                >
-                  <h3 style={{ marginRight: "20px" }}>Front-End Engineer</h3>
-                  <DescriptionBold>Full-Time</DescriptionBold>
-                </div>
-                <p>Worked at Gokomodo / PT Saka Uniti in Jakarta, Indonesia.</p>
-                <p>
-                  Mid-Level front-end engineer primarily utilizing Typescript,
-                  React, Vite, Tailwind, jQuery, Django, and others to create
-                  MVPs, CMSs, user facing, and admin portals to form a supply
-                  chain management ecosystem for organizations in the
-                  Agribusiness and Commodities industry in Indonesia.
-                </p>
-              </Description>
-              <Description>
-                <DescriptionBold>2022 - 2023</DescriptionBold>
-                <div
-                  style={{
-                    display: "flex",
-                    alignItems: "center",
-                  }}
-                >
-                  <h3 style={{ marginRight: "20px" }}>
-                    Computer Science Tutor
-                  </h3>
-                  <DescriptionBold>Part-Time</DescriptionBold>
+            <Descriptions>
+              <LineContainer ref={(el) => (descriptions = el)}>
+                <div id="middle-line"></div>
+                <div />
+                <div className="education">
+                  <Description>
+                    <h3>
+                      <div className="icon"></div> Bachelor's - Computer Science
+                    </h3>
+                    <p>University of Washington, Seattle, WA, USA.</p>
+                    <p>Bachelor of Science, Computer Science</p>
+                    <DescriptionBold>
+                      September 2023 - March 2026
+                    </DescriptionBold>
+                  </Description>
                 </div>
 
-                <p>
-                  Volunteered at Green River College Coding Club in Auburn, WA,
-                  USA.
-                </p>
-                <p>
-                  Guided students to understand and solve Python, Java, and C++
-                  related computer science problems.{" "}
-                </p>
-                <p style={{ float: "right" }}></p>
-              </Description>
-              <Description>
-                <DescriptionBold>2021 - 2022</DescriptionBold>
-                <div
-                  style={{
-                    display: "flex",
-                    alignItems: "center",
-                  }}
-                >
-                  <h3 style={{ marginRight: "20px" }}>Student</h3>
-                  <DescriptionBold>Full-Time</DescriptionBold>
+                <div className="experience">
+                  <Description>
+                    <h3>
+                      <div className="icon"></div>Software Engineer
+                    </h3>
+                    <p>Gokomodo, Jakarta, Indonesia.</p>
+                    <p>
+                      Collabrotaively built and maintained e-procurement
+                      platforms and internal tools to support the agribusiness
+                      industry.
+                    </p>
+
+                    <DescriptionBold>
+                      September 2022 - August 2023
+                    </DescriptionBold>
+                  </Description>
                 </div>
 
-                <p>
-                  Studied at Green River Community College in Auburn, WA, USA.
-                </p>
-                <p>Graduated with an Associate Degree in Computer Science.</p>
-                <p style={{ float: "right" }}></p>
-              </Description>
-              <Description>
-                <DescriptionBold>2019 - 2022</DescriptionBold>
-                <div
-                  style={{
-                    display: "flex",
-                    alignItems: "center",
-                  }}
-                >
-                  <h3 style={{ marginRight: "20px" }}>Software Developer</h3>
-                  <DescriptionBold>Part-Time</DescriptionBold>
+                <div className="experience">
+                  <Description>
+                    <h3>
+                      <div className="icon"></div>Computer Science Tutor
+                    </h3>
+                    <p>GRC Coding Club, Auburn, WA, USA.</p>
+                    <p>
+                      Guided students to understand and solve Python, Java, and
+                      C++ related computer science problems.{" "}
+                    </p>
+
+                    <DescriptionBold>March 2022 - August 2022</DescriptionBold>
+                  </Description>
                 </div>
-                <p>Freelancing for local communities in Jakarta, Indonesia.</p>
-                <p>
-                  Built a variety of apps ranging from personal websites,
-                  personal management tools, and business management
-                  applications.
-                </p>
-              </Description>
+
+                <div className="education">
+                  <Description>
+                    <h3>
+                      <div className="icon"></div>Associate - Computer Science
+                    </h3>
+                    <p>Green River College, Auburn, WA, USA.</p>
+                    <p>Associate of Science, Computer Science.</p>
+                    <p>Graduated with Highest Honors.</p>
+                    <p>GPA: 4.0</p>
+                    <DescriptionBold>January 2021 - June 2022</DescriptionBold>
+                  </Description>
+                </div>
+
+                <div className="experience">
+                  <Description>
+                    <h3>
+                      <div className="icon"></div>Software Developer
+                    </h3>
+                    <p>Freelance in Jakarta, Indonesia.</p>
+                    <p>
+                      Built a variety of apps ranging from personal websites,
+                      personal management tools, and business management
+                      applications.
+                    </p>
+
+                    <DescriptionBold>June 2019 - August 2022</DescriptionBold>
+                  </Description>
+                </div>
+              </LineContainer>
             </Descriptions>
           </Content>
         </ThemeProvider>
