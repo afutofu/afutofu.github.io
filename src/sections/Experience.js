@@ -30,7 +30,7 @@ const Container = styled.div`
 const Content = styled.div`
   position: relative;
   width: 100%;
-  max-width: 700px;
+  max-width: 800px;
   text-align: left;
   color: #222;
   display: flex;
@@ -49,7 +49,7 @@ const TitleArea = styled.div`
 const Title = styled.h2`
   font-size: 28px;
   font-weight: 500;
-  padding-left: 20px;
+  padding-right: 20px;
 
   @media only screen and (max-width: 992px) {
     font-size: 26px;
@@ -164,12 +164,16 @@ const LineContainer = styled.div`
     position: relative;
     text-align: right;
     width: 50%;
+    box-sizing: border-box;
+    padding-right: 40px;
     margin-right: 50%;
   }
 
   .education {
     position: relative;
     width: 50%;
+    box-sizing: border-box;
+    padding-left: 40px;
     margin-left: 50%;
   }
 `;
@@ -193,7 +197,7 @@ const Experience = () => {
     }).fromTo(
       titleLine,
       {
-        x: "100%",
+        x: "-100%",
         y: 14,
       },
       {
@@ -243,124 +247,102 @@ const Experience = () => {
         <ThemeProvider theme={theme}>
           <Content>
             <TitleArea>
-              <TitleLineWrapper>
-                <TitleLine ref={(el) => (titleLine = el)} />
-              </TitleLineWrapper>
               <Title ref={(el) => (titleText = el)}>
                 My <TitleHighlight>Experience</TitleHighlight> So Far
               </Title>
+              <TitleLineWrapper>
+                <TitleLine ref={(el) => (titleLine = el)} />
+              </TitleLineWrapper>
             </TitleArea>
-            <Descriptions ref={(el) => (descriptions = el)}>
-              <Description>
-                <DescriptionBold>2023 - Current</DescriptionBold>
-                <div
-                  style={{
-                    display: "flex",
-                    alignItems: "center",
-                  }}
-                >
-                  <h3 style={{ marginRight: "20px" }}>Student</h3>
-                  <DescriptionBold>Full-Time</DescriptionBold>
-                </div>
-                <p>Studying at University of Washington in Seattle, WA, USA</p>
-                <p>
-                  First-year junior majoring in Computer Science. Expected to
-                  graduate in early 2026.
-                </p>
-              </Description>
-              <Description>
-                <DescriptionBold>2022 - 2023</DescriptionBold>
-                <div
-                  style={{
-                    display: "flex",
-                    alignItems: "center",
-                  }}
-                >
-                  <h3 style={{ marginRight: "20px" }}>Front-End Engineer</h3>
-                  <DescriptionBold>Full-Time</DescriptionBold>
-                </div>
-                <p>Worked at Gokomodo / PT Saka Uniti in Jakarta, Indonesia.</p>
-                <p>
-                  Mid-Level front-end engineer primarily utilizing Typescript,
-                  React, Vite, Tailwind, jQuery, Django, and others to create
-                  MVPs, CMSs, user facing, and admin portals to form a supply
-                  chain management ecosystem for organizations in the
-                  Agribusiness and Commodities industry in Indonesia.
-                </p>
-              </Description>
-              <Description>
-                <DescriptionBold>2022 - 2023</DescriptionBold>
-                <div
-                  style={{
-                    display: "flex",
-                    alignItems: "center",
-                  }}
-                >
-                  <h3 style={{ marginRight: "20px" }}>
-                    Computer Science Tutor
-                  </h3>
-                  <DescriptionBold>Part-Time</DescriptionBold>
+            <Descriptions>
+              <LineContainer ref={(el) => (descriptions = el)}>
+                <div id="middle-line"></div>
+                <div className="education">
+                  <Description>
+                    <h3>Bachelor's - Computer Science</h3>
+                    <p>
+                      Studying at University of Washington in Seattle, WA, USA
+                    </p>
+                    <p>
+                      First-year junior majoring in Computer Science. Expected
+                      to graduate in early 2026.
+                    </p>
+
+                    <DescriptionBold>
+                      September 2023 - March 2026
+                    </DescriptionBold>
+                  </Description>
                 </div>
 
-                <p>
-                  Volunteered at Green River College Coding Club in Auburn, WA,
-                  USA.
-                </p>
-                <p>
-                  Guided students to understand and solve Python, Java, and C++
-                  related computer science problems.{" "}
-                </p>
-                <p style={{ float: "right" }}></p>
-              </Description>
-              <Description>
-                <DescriptionBold>2021 - 2022</DescriptionBold>
-                <div
-                  style={{
-                    display: "flex",
-                    alignItems: "center",
-                  }}
-                >
-                  <h3 style={{ marginRight: "20px" }}>Student</h3>
-                  <DescriptionBold>Full-Time</DescriptionBold>
+                <div className="experience">
+                  <Description>
+                    <h3>Software Engineer</h3>
+                    <p>
+                      Worked at Gokomodo / PT Saka Uniti in Jakarta, Indonesia.
+                    </p>
+                    <p>
+                      Mid-Level front-end engineer primarily utilizing
+                      Typescript, React, Vite, Tailwind, jQuery, Django, and
+                      others to create MVPs, CMSs, user facing, and admin
+                      portals to form a supply chain management ecosystem for
+                      organizations in the Agribusiness and Commodities industry
+                      in Indonesia.
+                    </p>
+
+                    <DescriptionBold>
+                      September 2022 - August 2023
+                    </DescriptionBold>
+                  </Description>
                 </div>
 
-                <p>
-                  Studied at Green River Community College in Auburn, WA, USA.
-                </p>
-                <p>Graduated with an Associate Degree in Computer Science.</p>
-                <p style={{ float: "right" }}></p>
-              </Description>
-              <Description>
-                <DescriptionBold>2019 - 2022</DescriptionBold>
-                <div
-                  style={{
-                    display: "flex",
-                    alignItems: "center",
-                  }}
-                >
-                  <h3 style={{ marginRight: "20px" }}>Software Developer</h3>
-                  <DescriptionBold>Part-Time</DescriptionBold>
+                <div className="experience">
+                  <Description>
+                    <h3>Computer Science Tutor</h3>
+                    <p>
+                      Volunteered at Green River College Coding Club in Auburn,
+                      WA, USA.
+                    </p>
+                    <p>
+                      Guided students to understand and solve Python, Java, and
+                      C++ related computer science problems.{" "}
+                    </p>
+
+                    <DescriptionBold>March 2022 - August 2022</DescriptionBold>
+                  </Description>
                 </div>
-                <p>Freelancing for local communities in Jakarta, Indonesia.</p>
-                <p>
-                  Built a variety of apps ranging from personal websites,
-                  personal management tools, and business management
-                  applications.
-                </p>
-              </Description>
+
+                <div className="education">
+                  <Description>
+                    <h3>Associate - Computer Science</h3>
+                    <p>
+                      Studied at Green River Community College in Auburn, WA,
+                      USA.
+                    </p>
+                    <p>
+                      Graduated with an Associate Degree in Computer Science.
+                    </p>
+
+                    <DescriptionBold>January 2021 - June 2022</DescriptionBold>
+                  </Description>
+                </div>
+
+                <div className="experience">
+                  <Description>
+                    <h3>Software Developer</h3>
+                    <p>
+                      Freelancing for local communities in Jakarta, Indonesia.
+                    </p>
+                    <p>
+                      Built a variety of apps ranging from personal websites,
+                      personal management tools, and business management
+                      applications.
+                    </p>
+
+                    <DescriptionBold>June 2019 - August 2022</DescriptionBold>
+                  </Description>
+                </div>
+              </LineContainer>
             </Descriptions>
-            <LineContainer>
-              <div id="middle-line"></div>
-              <div className="education">Computer Science Student</div>
-
-              <div className="experience">Software Engineer</div>
-
-              <div className="experience">Computer Science Tutor</div>
-
-              <div className="education">Computer Science Student</div>
-
-              <div className="experience">Software Developer</div>
-            </LineContainer>
           </Content>
         </ThemeProvider>
       </Container>
