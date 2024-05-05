@@ -160,6 +160,16 @@ const LineContainer = styled.div`
     left: 50%;
   }
 
+  .icon {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: #ff350d 2px solid;
+    box-sizing: border-box;
+    background-color: white;
+    position: absolute;
+  }
+
   .experience {
     position: relative;
     text-align: right;
@@ -167,6 +177,11 @@ const LineContainer = styled.div`
     box-sizing: border-box;
     padding-right: 40px;
     margin-right: 50%;
+
+    .icon {
+      right: -11px;
+      top: 5px;
+    }
   }
 
   .education {
@@ -175,6 +190,11 @@ const LineContainer = styled.div`
     box-sizing: border-box;
     padding-left: 40px;
     margin-left: 50%;
+
+    .icon {
+      left: -10px;
+      top: 5px;
+    }
   }
 `;
 
@@ -257,11 +277,14 @@ const Experience = () => {
             <Descriptions>
               <LineContainer ref={(el) => (descriptions = el)}>
                 <div id="middle-line"></div>
+                <div />
                 <div className="education">
                   <Description>
-                    <h3>Bachelor's - Computer Science</h3>
+                    <h3>
+                      <div className="icon"></div> Bachelor's - Computer Science
+                    </h3>
                     <p>
-                      Studying at University of Washington in Seattle, WA, USA
+                      Studying at University of Washington in Seattle, WA, USA.
                     </p>
                     <p>
                       First-year junior majoring in Computer Science. Expected
@@ -276,7 +299,9 @@ const Experience = () => {
 
                 <div className="experience">
                   <Description>
-                    <h3>Software Engineer</h3>
+                    <h3>
+                      <div className="icon"></div>Software Engineer
+                    </h3>
                     <p>
                       Worked at Gokomodo / PT Saka Uniti in Jakarta, Indonesia.
                     </p>
@@ -297,7 +322,9 @@ const Experience = () => {
 
                 <div className="experience">
                   <Description>
-                    <h3>Computer Science Tutor</h3>
+                    <h3>
+                      <div className="icon"></div>Computer Science Tutor
+                    </h3>
                     <p>
                       Volunteered at Green River College Coding Club in Auburn,
                       WA, USA.
@@ -313,7 +340,9 @@ const Experience = () => {
 
                 <div className="education">
                   <Description>
-                    <h3>Associate - Computer Science</h3>
+                    <h3>
+                      <div className="icon"></div>Associate - Computer Science
+                    </h3>
                     <p>
                       Studied at Green River Community College in Auburn, WA,
                       USA.
@@ -328,7 +357,9 @@ const Experience = () => {
 
                 <div className="experience">
                   <Description>
-                    <h3>Software Developer</h3>
+                    <h3>
+                      <div className="icon"></div>Software Developer
+                    </h3>
                     <p>
                       Freelancing for local communities in Jakarta, Indonesia.
                     </p>
