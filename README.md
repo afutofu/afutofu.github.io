@@ -8,9 +8,9 @@ Online portfolio for Muhammad Afuzarahman.
 
 Technologies used:
 
-- [React](https://reactjs.org/) - Frontend library
-- [GSAP](https://greensock.com/gsap/) - Animations
-- [Styled Components](https://styled-components.com/) - CSS integration in JS
+- [React](https://reactjs.org/)
+- [GSAP](https://greensock.com/gsap/)
+- [Styled Components](https://styled-components.com/)
 
 Features in this version:
 
