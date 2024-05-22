@@ -1,10 +1,10 @@
 # Portfolio
 
-![image](https://github.com/afutofu/afutofu.github.io/assets/37662909/475f39e8-5d73-4501-8a1c-e7d89d4b01df)
-
 Website Link: [afutofu.github.io](https://afutofu.github.io/)
 
 Online portfolio for Muhammad Afuzarahman.
+
+![image](https://github.com/afutofu/afutofu.github.io/assets/37662909/475f39e8-5d73-4501-8a1c-e7d89d4b01df)
 
 Technologies used:
 
