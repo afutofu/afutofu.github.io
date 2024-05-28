@@ -57,12 +57,12 @@ const Title = styled.h2`
 
   @media only screen and (max-width: 450px) {
     padding-right: 15px;
-    font-size: 22px;
+    font-size: 20px;
     line-height: unset;
   }
 
   @media only screen and (max-width: 350px) {
-    font-size: 20px;
+    font-size: 18px;
   }
 `;
 
@@ -146,6 +146,10 @@ const Description = styled.div`
 
 const DescriptionBold = styled.span`
   font-weight: 500;
+
+  @media only screen and (max-width: 450px) {
+    font-size: 14px;
+  }
 `;
 
 const LineContainer = styled.div`
@@ -196,6 +200,26 @@ const LineContainer = styled.div`
     .icon {
       left: -10px;
       top: 5px;
+    }
+  }
+
+  @media only screen and (max-width: 450px) {
+    #middle-line {
+      display: none;
+    }
+
+    .experience,
+    .education {
+      width: 100%;
+      margin-right: 0;
+      margin-left: 0;
+      padding-right: 0;
+      padding-left: 0;
+      text-align: left;
+    }
+
+    .icon {
+      display: none;
     }
   }
 `;
