@@ -234,6 +234,7 @@ const skillsList = [
       "Typescript",
       "HTML",
       "CSS/SASS",
+      "Go",
       "Python",
       "OCaml",
       "Java",
