@@ -5,6 +5,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 import OtherProject from "../components/OtherProject";
 
+import gas1 from "../assets/projectImages/go-api-starter/gas1.png";
 import musashi1 from "../assets/projectImages/musashi/musashi1.png";
 import saiko1 from "../assets/projectImages/saiko-games/saiko1-min.png";
 import benefitted1 from "../assets/projectImages/benefitted/benefitted1.jpg";
@@ -103,6 +104,13 @@ const theme = {
 };
 
 const OTHER_PROJECTS = [
+  {
+    title: "Go API Starter",
+    desc: "Starter API template for todo apps with user authentication and JWT in Go. Includes OpenAPI (Swagger) documentation.",
+    techs: ["Go", "Chi", "OpenAPI (Swagger)", "JWT"],
+    codeLink: "https://github.com/afutofu/go-api-starter",
+    image: gas1,
+  },
   {
     title: "Musashi",
     desc: "Discord music bot to play your favorite songs in your servers. API used currently down.",
