@@ -267,6 +267,7 @@ const skillsList = [
       "Express",
       "Flask",
       "AWS",
+      "SQLAlchemy",
       "Sequelize",
       "Docker",
       "Django",
