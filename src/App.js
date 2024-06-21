@@ -65,7 +65,7 @@ const ContentBackground = styled.div`
 const App = () => {
   const [navbarTl, setNavbarTl] = useState(null);
   const [homeTl, setHomeTl] = useState(null);
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(true); // false for development to skip loading screen
   const [masterTl] = useState(new TimelineLite());
   const backgroundColor = "#fafafa";
 
