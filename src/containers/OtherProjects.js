@@ -6,6 +6,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import OtherProject from "../components/OtherProject";
 
 import rtoRm1 from "../assets/projectImages/rto-rm/rto-rm1.png";
+import pfs1 from "../assets/projectImages/python-fastapi-starter/pfs1.png";
 import gas1 from "../assets/projectImages/go-api-starter/gas1.png";
 import musashi1 from "../assets/projectImages/musashi/musashi1.png";
 import saiko1 from "../assets/projectImages/saiko-games/saiko1-min.png";
@@ -112,6 +113,13 @@ const OTHER_PROJECTS = [
     codeLink: "https://github.com/codetrifecta/rto-room-maker",
     siteLink: "https://rto-room-maker.netlify.app/",
     image: rtoRm1,
+  },
+  {
+    title: "Python FastAPI Starter",
+    desc: "Starter implementation of authentication and todo RESTful APIs in Python FastAPI . Includes OpenAPI (Swagger) documentation..",
+    techs: ["Python", "FastAPI", "OpenAPI (Swagger)", "JWT"],
+    codeLink: "https://github.com/afutofu/python-fastapi-starter",
+    image: pfs1,
   },
   {
     title: "Go API Starter",
