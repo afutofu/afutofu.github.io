@@ -253,6 +253,7 @@ const skillsList = [
       "Zustand",
       "Easy-Peasy",
       "Tailwind",
+      "HTML Canvas",
       "GSAP",
       "Styled Components",
       "Bootstrap",

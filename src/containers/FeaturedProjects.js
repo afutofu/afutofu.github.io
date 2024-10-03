@@ -3,6 +3,11 @@ import styled, { ThemeProvider } from "styled-components";
 import { gsap, TimelineLite, Power3 } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
+import rto1 from "../assets/projectImages/rto/rto1.png";
+import rto2 from "../assets/projectImages/rto/rto2.png";
+import rto3 from "../assets/projectImages/rto/rto3.png";
+import rto4 from "../assets/projectImages/rto/rto4.png";
+import rto5 from "../assets/projectImages/rto/rto5.png";
 import gf1 from "../assets/projectImages/goalforge/gf1.png";
 import projecc1 from "../assets/projectImages/projecc/projecc1-min.png";
 import projecc2 from "../assets/projectImages/projecc/projecc2-min.png";
@@ -14,6 +19,20 @@ import FeaturedProject from "../components/FeaturedProject";
 gsap.registerPlugin(ScrollTrigger);
 
 const FEATURED_PROJECTS = [
+  {
+    title: "Rise to Olympus",
+    desc: "Tactical Turn-Based Roguelike Web Game based on Greek Mythology. Ascend from the depths of Tartarus to the top of Mount Olympus and claim your rewards!",
+    techs: [
+      "Typescript",
+      "React",
+      "Tailwind",
+      "HTML5 Canvas",
+      "Vite",
+    ],
+    codeLink: "https://github.com/codetrifecta/rise-to-olympus",
+    siteLink: "https://rise-to-olympus.netlify.app/",
+    images: [rto1, rto2, rto3, rto4, rto5],
+  },
   {
     title: "GoalForge",
     desc: "A productivity tool to assist you in micro and macro task management. Lay out the plans for your goal and track your progress with ease! (WIP)",
