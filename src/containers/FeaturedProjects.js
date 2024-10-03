@@ -29,7 +29,7 @@ const FEATURED_PROJECTS = [
       "HTML5 Canvas",
       "Vite",
     ],
-    codeLink: "https://github.com/afutofu/rise-to-olympus",
+    codeLink: "https://github.com/codetrifecta/rise-to-olympus",
     siteLink: "https://rise-to-olympus.netlify.app/",
     images: [rto1, rto2, rto3, rto4, rto5],
   },

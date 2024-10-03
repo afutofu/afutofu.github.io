@@ -5,6 +5,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 import OtherProject from "../components/OtherProject";
 
+import rtoRm1 from "../assets/projectImages/rto-rm/rto-rm1.png";
 import gas1 from "../assets/projectImages/go-api-starter/gas1.png";
 import musashi1 from "../assets/projectImages/musashi/musashi1.png";
 import saiko1 from "../assets/projectImages/saiko-games/saiko1-min.png";
@@ -104,6 +105,14 @@ const theme = {
 };
 
 const OTHER_PROJECTS = [
+  {
+    title: "RtO Room Maker",
+    desc: "Internal tool to manage tile functionality with tile art to create rooms to be used in Rise to Olympus Web Game.",
+    techs: ["Typsecript", "React"],
+    codeLink: "https://github.com/codetrifecta/rto-room-maker",
+    siteLink: "https://rto-room-maker.netlify.app/",
+    image: rtoRm1,
+  },
   {
     title: "Go API Starter",
     desc: "Starter API template for todo apps with user authentication and JWT in Go. Includes OpenAPI (Swagger) documentation.",
