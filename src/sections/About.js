@@ -211,37 +211,44 @@ const About = () => {
             </TitleArea>
             <Descriptions ref={(el) => (descriptions = el)}>
               <Description>
-                Hi! I'm <DescriptionBold>Afuza</DescriptionBold>, currently
-                living in Seattle, Washington. I love reading books, keeping up
-                with video games, and learning new things!
+                Hi! I'm <DescriptionBold>Afuza</DescriptionBold>, based in
+                Seattle, Washington. I'm passionate about reading, staying
+                up-to-date with the latest in software, and continuously
+                expanding my knowledge.
               </Description>
               <Description>
-                Currently, I'm immersing myself in{" "}
-                <DescriptionBold>
-                  data structures and algorithms
-                </DescriptionBold>
-                . And later this year, I'm excited to dive deeper into{" "}
-                <DescriptionBold>backend development</DescriptionBold> and{" "}
-                <DescriptionBold>DevOps</DescriptionBold>, learning and
-                practicing{" "}
-                <DescriptionBold>Go, containerization, CI/CD</DescriptionBold>{" "}
-                and <DescriptionBold>AWS</DescriptionBold>.
+                Currently, I'm <DescriptionBold>leading</DescriptionBold> and{" "}
+                <DescriptionBold>managing</DescriptionBold> software engineering
+                teams across various projects. This role has been instrumental
+                in honing my <DescriptionBold>leadership</DescriptionBold> and{" "}
+                <DescriptionBold>communication skills</DescriptionBold>,
+                enabling me to drive projects to success while fostering a
+                collaborative and innovative environment.
+              </Description>
+
+              <Description>
+                Looking ahead, I'm excited to delve into{" "}
+                <DescriptionBold>computer vision</DescriptionBold> later this
+                year. I aim to leverage this technology to develop{" "}
+                <DescriptionBold>groundbreaking</DescriptionBold> software
+                solutions that push the boundaries of what's possible.
               </Description>
               <Description>
-                Ever since I started programming, I feel like I've uncovered a
-                treasure trove filled with exciting opportunities and untouched
-                potential. I've built projects ranging from{" "}
+                My programming journey has been a treasure trove of
+                exciting opportunities and untapped potential. I've built a diverse range of
+                projects, including{" "}
                 <DescriptionBold>video games</DescriptionBold>,{" "}
                 <DescriptionBold>personal management tools</DescriptionBold>,{" "}
                 <DescriptionBold>business applications</DescriptionBold>,{" "}
                 <DescriptionBold>robots</DescriptionBold>,{" "}
-                <DescriptionBold>AI</DescriptionBold>, and a lot of{" "}
+                <DescriptionBold>AI systems</DescriptionBold>, and numerous{" "}
                 <DescriptionBold>websites</DescriptionBold>.
               </Description>
               <Description>
-                Websites and webapps are currently my application of trade, and
-                I'm avid to keep creating and look forward to contribute to
-                helpful and meaningful projects.
+                Websites and web applications are currently my primary focus,
+                and I'm dedicated to creating and contributing to projects that
+                are both helpful and meaningful. I'm always eager to collaborate
+                and bring new ideas to life.
               </Description>
             </Descriptions>
           </Content>
