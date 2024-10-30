@@ -270,6 +270,7 @@ const skillsList = [
       "AWS",
       "SQLAlchemy",
       "Sequelize",
+      "Firebase",
       "Docker",
       "Django",
       "Socket.IO",
