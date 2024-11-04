@@ -308,7 +308,7 @@ const Home = ({ getHomeTl }) => {
             <Introduction ref={(el) => (introduction = el)}>
               Hey there, I'm
             </Introduction>
-            <Name ref={(el) => (name = el)}>Muhammad Afuzarahman</Name>
+            <Name ref={(el) => (name = el)}>Afuza Afuzarahman</Name>
             <Motto ref={(el) => (motto = el)}>
               Ready To <MottoBold>Build</MottoBold> And{" "}
               <MottoBold>Innovate</MottoBold>

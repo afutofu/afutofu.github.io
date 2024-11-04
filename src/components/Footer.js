@@ -91,9 +91,9 @@ const Footer = () => {
     <FooterComp>
       <Container>
         <Content>
-          <Credits>Developed by Muhammad Afuzarahman</Credits>
+          <Credits>Developed by Afuza Afuzarahman</Credits>
           <Socials>
-            <a href="mailto:afuza.business@gmail.com">
+            <a href="mailto:afuza299@gmail.com">
               <i className="fa fa-envelope"></i>
             </a>
             <a
