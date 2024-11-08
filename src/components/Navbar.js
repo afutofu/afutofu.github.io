@@ -286,7 +286,7 @@ const Navbar = ({ getNavbarTl }) => {
         <NavItem ref={(el) => (resume = el)}>
           <NavBold>
             <a
-              href="/Resume_Muhammad_Afuzarahman.pdf"
+              href="/Resume_Afuza.pdf"
               target="_blank"
               rel="noopener noreferrer"
             >
