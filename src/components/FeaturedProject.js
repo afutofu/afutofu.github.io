@@ -58,7 +58,7 @@ const ProjectSide = styled.div`
     position: relative;
     width: 100%;
     height: 550px;
-    background-color: #eee;
+    background-color: #111;
     margin-left: ${(props) => (props.reverse ? "40px" : "0")};
     margin-right: ${(props) => (props.reverse ? "0" : "40px")};
     overflow: hidden;
@@ -399,13 +399,14 @@ const FeaturedProject = (props) => {
           >
             <ProjectImages ref={(el) => (images = el)}>
               {props.images.map((image, i) => {
-                return <ProjectImageContainer key={i}>
-                  <ProjectImage  src={image} center={props.center}/>
-                  <AlphaBackground />
-                </ProjectImageContainer>
+                return (
+                  <ProjectImageContainer key={i}>
+                    <ProjectImage src={image} center={props.center} />
+                    <AlphaBackground />
+                  </ProjectImageContainer>
+                );
               })}
             </ProjectImages>
-            
           </a>
           <ImageButtons>
             {props.images.map((_image, i) => {
