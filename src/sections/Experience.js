@@ -311,8 +311,9 @@ const Experience = () => {
                     </h3>
                     <p>University of Washington, Seattle, WA, USA.</p>
                     <p>Bachelor of Science, Computer Science</p>
+                    <p>GPA: 3.75</p>
                     <DescriptionBold>
-                      September 2023 - March 2026
+                      September 2023 - December 2025
                     </DescriptionBold>
                   </Description>
                 </div>

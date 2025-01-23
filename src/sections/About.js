@@ -217,23 +217,6 @@ const About = () => {
                 expanding my knowledge.
               </Description>
               <Description>
-                Currently, I'm <DescriptionBold>leading</DescriptionBold> and{" "}
-                <DescriptionBold>managing</DescriptionBold> software engineering
-                teams across various projects. This role has been instrumental
-                in honing my <DescriptionBold>leadership</DescriptionBold> and{" "}
-                <DescriptionBold>communication skills</DescriptionBold>,
-                enabling me to drive projects to success while fostering a
-                collaborative and innovative environment.
-              </Description>
-
-              <Description>
-                Looking ahead, I'm excited to delve into{" "}
-                <DescriptionBold>computer vision</DescriptionBold> later this
-                year. I aim to leverage this technology to develop{" "}
-                <DescriptionBold>groundbreaking</DescriptionBold> software
-                solutions that push the boundaries of what's possible.
-              </Description>
-              <Description>
                 My programming journey has been a treasure trove of
                 exciting opportunities and untapped potential. I've built a diverse range of
                 projects, including{" "}

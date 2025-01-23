@@ -248,6 +248,7 @@ const skillsList = [
     title: "Frontend",
     list: [
       "React",
+      "React Native",
       "NextJS",
       "Redux",
       "Zustand",
