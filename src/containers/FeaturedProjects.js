@@ -3,6 +3,15 @@ import styled, { ThemeProvider } from "styled-components";
 import { gsap, TimelineLite, Power3 } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
+import fq1 from "../assets/projectImages/fitquest/fq1.png";
+import fq2 from "../assets/projectImages/fitquest/fq2.png";
+import fq3 from "../assets/projectImages/fitquest/fq3.png";
+import fq4 from "../assets/projectImages/fitquest/fq4.png";
+import fq5 from "../assets/projectImages/fitquest/fq5.png";
+import fq6 from "../assets/projectImages/fitquest/fq6.png";
+import fq7 from "../assets/projectImages/fitquest/fq7.png";
+import fq8 from "../assets/projectImages/fitquest/fq8.png";
+import fq9 from "../assets/projectImages/fitquest/fq9.png";
 import rto1 from "../assets/projectImages/rto/rto1.png";
 import rto2 from "../assets/projectImages/rto/rto2.png";
 import rto3 from "../assets/projectImages/rto/rto3.png";
@@ -20,8 +29,21 @@ gsap.registerPlugin(ScrollTrigger);
 
 const FEATURED_PROJECTS = [
   {
+    title: "FitQuest",
+    desc: "💪 FitQuest is a gamified fitness app that transforms users' fitness journeys into engaging RPG-style adventures.",
+    techs: [
+      "Typescript",
+      "React Native",
+      "Tailwind",
+      "Firebase",
+    ],
+    codeLink: "https://github.com/cse403-fitquest/fitquest",
+    images: [fq1, fq2, fq3, fq4, fq5, fq6, fq7, fq8, fq9],
+    center: true,
+  },
+  {
     title: "Rise to Olympus",
-    desc: "Tactical Turn-Based Roguelike Web Game based on Greek Mythology. Ascend from the depths of Tartarus to the top of Mount Olympus and claim your rewards!",
+    desc: "🏛️ Tactical Turn-Based Roguelike Web Game based on Greek Mythology. Ascend from the depths of Tartarus to the top of Mount Olympus and claim your rewards!",
     techs: [
       "Typescript",
       "React",
@@ -35,7 +57,7 @@ const FEATURED_PROJECTS = [
   },
   {
     title: "GoalForge",
-    desc: "A productivity tool to assist you in micro and macro task management. Lay out the plans for your goal and track your progress with ease! (WIP)",
+    desc: "🎯 A productivity tool to assist you in micro and macro task management. Lay out the plans for your goal and track your progress with ease! (WIP)",
     techs: [
       "Typescript",
       "NextJS",
@@ -53,7 +75,7 @@ const FEATURED_PROJECTS = [
   },
   {
     title: "Projecc",
-    desc: "A real-time text messaging web app inspired by Discord. Join project groups, interact with fellow project members, and plan out your next big project!",
+    desc: "💬 A real-time text messaging web app inspired by Discord. Join project groups, interact with fellow project members, and plan out your next big project!",
     techs: [
       "Javascript",
       "React",

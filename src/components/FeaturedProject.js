@@ -49,7 +49,7 @@ const ProjectSide = styled.div`
   width: 100%;
   height: 420px;
   /* min-height: 250px; */
-  background-color: #eee;
+  background-color: #111;
   margin-left: ${(props) => (props.reverse ? "40px" : "0")};
   margin-right: ${(props) => (props.reverse ? "0" : "40px")};
   overflow: hidden;
@@ -95,13 +95,22 @@ const ProjectImages = styled.div`
   display: flex;
 `;
 
+const ProjectImageContainer = styled.div`
+  position: relative;
+  min-width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
 const ProjectImage = styled.img.attrs((props) => {
   return {
     src: props.src,
-    width: "100%",
   };
 })`
-  min-width: 100%;
+  height: 100%;
+  width: ${(props) => (props.center ? "unset" : "100%")};
 `;
 
 const ImageButtons = styled.div`
@@ -390,10 +399,13 @@ const FeaturedProject = (props) => {
           >
             <ProjectImages ref={(el) => (images = el)}>
               {props.images.map((image, i) => {
-                return <ProjectImage key={i} src={image} />;
+                return <ProjectImageContainer key={i}>
+                  <ProjectImage  src={image} center={props.center}/>
+                  <AlphaBackground />
+                </ProjectImageContainer>
               })}
             </ProjectImages>
-            <AlphaBackground />
+            
           </a>
           <ImageButtons>
             {props.images.map((_image, i) => {
