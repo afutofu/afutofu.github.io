@@ -38,7 +38,7 @@ const FEATURED_PROJECTS = [
       "Firebase",
     ],
     codeLink: "https://github.com/cse403-fitquest/fitquest",
-    siteLink: "https://github.com/cse403-fitquest/fitquest",
+    siteLink: "https://expo.dev/accounts/afuza/projects/fitquest/builds/02729e56-2c3a-4e20-ad9c-1e6d6ee0cb7f",
     images: [fq1, fq2, fq3, fq4, fq5, fq6, fq7, fq8, fq9],
     center: true,
   },
