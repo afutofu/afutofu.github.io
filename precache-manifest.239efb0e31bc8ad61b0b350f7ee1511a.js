@@ -1,19 +1,19 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "f0ce0bd18729d739c9615daf7c2b0473",
+    "revision": "62437e5aceb86fae6c4c3cdd67b2f77a",
     "url": "/index.html"
   },
   {
-    "revision": "06ea734fbb8476b84ef3",
-    "url": "/static/js/2.eb065bb0.chunk.js"
+    "revision": "e380690abf8bbea6c8ee",
+    "url": "/static/js/2.909d7a0d.chunk.js"
   },
   {
     "revision": "76142a27665e4fff2cdf486568754d76",
-    "url": "/static/js/2.eb065bb0.chunk.js.LICENSE.txt"
+    "url": "/static/js/2.909d7a0d.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "e984437800ea88f83424",
-    "url": "/static/js/main.0f4e79db.chunk.js"
+    "revision": "09f6d96cead1a832cb53",
+    "url": "/static/js/main.4eac0a28.chunk.js"
   },
   {
     "revision": "4f2b1704eab49d50853b",
@@ -38,6 +38,42 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "5423eb9ea5e5cffa113ebc10a5ee6358",
     "url": "/static/media/devils1-min.5423eb9e.png"
+  },
+  {
+    "revision": "ffc698f603da1783b6588843354c2951",
+    "url": "/static/media/fq1.ffc698f6.png"
+  },
+  {
+    "revision": "c7fcfbd53999dc965eb5a02b4e324eac",
+    "url": "/static/media/fq2.c7fcfbd5.png"
+  },
+  {
+    "revision": "14ebcbe1788f03a23ba4d26b80dd7854",
+    "url": "/static/media/fq3.14ebcbe1.png"
+  },
+  {
+    "revision": "472f3f5ded7bcf99b136426b0cc4e365",
+    "url": "/static/media/fq4.472f3f5d.png"
+  },
+  {
+    "revision": "9fcb792a806dd2d10a4e929ebe9ff272",
+    "url": "/static/media/fq5.9fcb792a.png"
+  },
+  {
+    "revision": "28e1afdb0a76bb1ff8299888d0319f06",
+    "url": "/static/media/fq6.28e1afdb.png"
+  },
+  {
+    "revision": "86a726807f947c66c1a431b5c241ee1e",
+    "url": "/static/media/fq7.86a72680.png"
+  },
+  {
+    "revision": "03ff0cbd60ce755f7bf1ca2c586491a4",
+    "url": "/static/media/fq8.03ff0cbd.png"
+  },
+  {
+    "revision": "3eddd573e5688f3e93f2cc2ad62e904a",
+    "url": "/static/media/fq9.3eddd573.png"
   },
   {
     "revision": "5d764889ed084c2d6d6cc698eb7c513e",
