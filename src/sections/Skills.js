@@ -455,13 +455,13 @@ const Skills = () => {
               <ListArea>
                 {skillsList.map((skill) => {
                   return (
-                    <List>
+                    <List key={skill.title}>
                       <ListTitle ref={(el) => (listTitle = el)}>
                         {skill.title}
                       </ListTitle>
                       <ListItems ref={(el) => (listItems = el)}>
                         {skill.list.map((skillItem) => (
-                          <ListItem>{skillItem}</ListItem>
+                          <ListItem key={skillItem}>{skillItem}</ListItem>
                         ))}
                       </ListItems>
                     </List>
