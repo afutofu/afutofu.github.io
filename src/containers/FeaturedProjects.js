@@ -34,6 +34,7 @@ const FEATURED_PROJECTS = [
     techs: [
       "Typescript",
       "React Native",
+      "Expo",
       "Tailwind",
       "Firebase",
     ],
