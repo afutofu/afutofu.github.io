@@ -174,9 +174,12 @@ const LineContainer = styled.div`
     box-sizing: border-box;
     background-color: white;
     position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
-  .experience {
+  .industry {
     position: relative;
     text-align: right;
     width: 50%;
@@ -190,7 +193,7 @@ const LineContainer = styled.div`
     }
   }
 
-  .education {
+  .academia {
     position: relative;
     width: 50%;
     box-sizing: border-box;
@@ -203,13 +206,28 @@ const LineContainer = styled.div`
     }
   }
 
+  .industry,
+  .academia {
+    .employer {
+      font-weight: 500;
+      font-size: 18px;
+      font-style: italic;
+    }
+
+    .employer-logo {
+      width: 45px;
+      height: 45px;
+      border-radius: 10%;
+    }
+  }
+
   @media only screen and (max-width: 450px) {
     #middle-line {
       display: none;
     }
 
-    .experience,
-    .education {
+    .industry,
+    .academia {
       width: 100%;
       margin-right: 0;
       margin-left: 0;
@@ -288,7 +306,7 @@ const Experience = () => {
   }, []);
 
   return (
-    <ExperienceComp id="experience">
+    <ExperienceComp id="industry">
       <Container>
         <ThemeProvider theme={theme}>
           <Content>
@@ -304,30 +322,84 @@ const Experience = () => {
               <LineContainer ref={(el) => (descriptions = el)}>
                 <div id="middle-line"></div>
                 <div />
-                <div className="education">
+
+                <div className="industry">
                   <Description>
                     <h3>
-                      <div className="icon"></div> Bachelor's - Computer Science
+                      <div className="icon"><img
+                        className="employer-logo"
+                        src="https://media.licdn.com/dms/image/v2/C560BAQFxQkzeHZxIYg/company-logo_100_100/company-logo_100_100/0/1633985771178/crowdstrike_logo?e=1756339200&v=beta&t=LiW8Bn22ysBn9LPLn8mYrrYhLba1gfAAefr9IzfOflo"
+                        alt="crowdstrike logo"
+                      /></div>Software Engineer Intern
                     </h3>
-                    <p>University of Washington, Seattle, WA, USA.</p>
+                    <p className="employer">CrowdStrike</p>
+
+                    <p>
+                      Built scalable frontend features and tests for a security
+                      platform serving 20K+ daily users, contributing to UI,
+                      CI/CD, and internal tooling in a large enterprise
+                      codebase.
+                    </p>
+
+                    <DescriptionBold>
+                      June 2025 - September 2025
+                    </DescriptionBold>
+                  </Description>
+                </div>
+
+                <div className="academia">
+                  <Description>
+                    <h3>
+                      <div className="icon"><img
+                        className="employer-logo"
+                        src="https://media.licdn.com/dms/image/v2/C560BAQFwDzhWGVWkvA/company-logo_100_100/company-logo_100_100/0/1630568058793?e=1756339200&v=beta&t=fmYY3ucrFxMsQ09LalKIheuLIH70ONnwQCUU5y8Dtjk"
+                        alt="paul allen logo"
+                      /></div>CSE Teaching Assistant
+                    </h3>
+                    <p className="employer">Paul G. Allen School of Computer Science & Engineering</p>
+                    <p>
+                      Served as a TA for CSE 403 at UW, mentoring 80+ students
+                      in Agile, Git, and software design while leading
+                      consistent grading efforts across 13+ teams and refining
+                      rubrics based on feedback.
+                    </p>
+                    <DescriptionBold>March 2025 - June 2025</DescriptionBold>
+                  </Description>
+                </div>
+
+                <div className="academia">
+                  <Description>
+                    <h3>
+                      <div className="icon"><img
+                        className="employer-logo"
+                        src="https://media.licdn.com/dms/image/v2/C4D0BAQEMmhF9TqUCgA/company-logo_100_100/company-logo_100_100/0/1630545704089/university_of_washington_logo?e=1756339200&v=beta&t=NZU7GBDl3JM8h-bPdCNZwmKAw3iuBnZwtzYafOf6ZGI"
+                        alt="paul allen logo"
+                      /></div> Bachelor's - Computer Science
+                    </h3>
+                    <p className="employer">University of Washington - Seattle</p>
                     <p>Bachelor of Science, Computer Science</p>
-                    <p>GPA: 3.75</p>
+                    <p>GPA: 3.8</p>
                     <DescriptionBold>
                       September 2023 - December 2025
                     </DescriptionBold>
                   </Description>
                 </div>
 
-                <div className="experience">
+                <div className="industry">
                   <Description>
                     <h3>
-                      <div className="icon"></div>Software Engineer
+                      <div className="icon"><img
+                        className="employer-logo"
+                        src="https://media.licdn.com/dms/image/v2/D560BAQGf4CsTTcZWjA/company-logo_100_100/company-logo_100_100/0/1731063757425/gokomodo_logo?e=1756339200&v=beta&t=N5qxcJHOapOa07TiTbSt82wuUMYbiTP2xxCX-TjPGe0"
+                        alt="paul allen logo"
+                      /></div>Software Engineer
                     </h3>
-                    <p>Gokomodo, Jakarta, Indonesia.</p>
+                    <p className="employer">Gokomodo</p>
                     <p>
-                      Collabrotaively built and maintained e-procurement
-                      platforms and internal tools to support the agribusiness
-                      industry.
+                      Collaboratively built and optimized web and mobile
+                      platforms supporting the agribusiness industry, improving
+                      performance, engagement, and user satisfaction across
+                      e-procurement tools and internal systems.
                     </p>
 
                     <DescriptionBold>
@@ -336,12 +408,16 @@ const Experience = () => {
                   </Description>
                 </div>
 
-                <div className="experience">
+                <div className="academia">
                   <Description>
                     <h3>
-                      <div className="icon"></div>Computer Science Tutor
+                      <div className="icon"><img
+                        className="employer-logo"
+                        src="https://media.licdn.com/dms/image/v2/C510BAQFES50IBKXPLA/company-logo_100_100/company-logo_100_100/0/1631319645601?e=1756339200&v=beta&t=p3a0cXhzSwHmQ3BSOnFFnzyJMcMyYaNHh9JFCuLhU6s"
+                        alt="grc coding logo"
+                      /></div>Computer Science Tutor
                     </h3>
-                    <p>GRC Coding Club, Auburn, WA, USA.</p>
+                    <p className="employer">GRC Coding Club</p>
                     <p>
                       Guided students to understand and solve Python, Java, and
                       C++ related computer science problems.{" "}
@@ -351,12 +427,16 @@ const Experience = () => {
                   </Description>
                 </div>
 
-                <div className="education">
+                <div className="academia">
                   <Description>
                     <h3>
-                      <div className="icon"></div>Associate - Computer Science
+                      <div className="icon"><img
+                        className="employer-logo"
+                        src="https://media.licdn.com/dms/image/v2/C510BAQFES50IBKXPLA/company-logo_100_100/company-logo_100_100/0/1631319645601?e=1756339200&v=beta&t=p3a0cXhzSwHmQ3BSOnFFnzyJMcMyYaNHh9JFCuLhU6s"
+                        alt="green river college logo"
+                      /></div>Associate - Computer Science
                     </h3>
-                    <p>Green River College, Auburn, WA, USA.</p>
+                    <p className="employer">Green River College</p>
                     <p>Associate of Science, Computer Science.</p>
                     <p>Graduated with Highest Honors.</p>
                     <p>GPA: 4.0</p>
@@ -364,12 +444,16 @@ const Experience = () => {
                   </Description>
                 </div>
 
-                <div className="experience">
+                <div className="industry">
                   <Description>
                     <h3>
-                      <div className="icon"></div>Software Developer
+                      <div className="icon"><img
+                        className="employer-logo"
+                        src="https://media.licdn.com/dms/image/v2/D4E0BAQEm61LvFDQ0Gg/company-logo_100_100/B4EZaIZV7PGQAQ-/0/1746045069009/indpendent_contractor_logo?e=1756339200&v=beta&t=BUDrguhqjno0kdVw8TxIu0t8dczpqwAFb9A6cLCi-gA"
+                        alt="full stack logo"
+                      /></div>Full Stack Developer
                     </h3>
-                    <p>Freelance in Jakarta, Indonesia.</p>
+                    <p className="employer">Freelance</p>
                     <p>
                       Built a variety of apps ranging from personal websites,
                       personal management tools, and business management
