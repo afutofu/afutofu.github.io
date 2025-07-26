@@ -248,8 +248,9 @@ const skillsList = [
     title: "Frontend",
     list: [
       "React",
+      "Ember.js",
       "React Native",
-      "NextJS",
+      "Next.js",
       "Redux",
       "Zustand",
       "Easy-Peasy",
@@ -287,6 +288,7 @@ const skillsList = [
   {
     title: "Tools",
     list: [
+      "Jenkins",
       "Bash",
       "Git & Github",
       "Chrome DevTools",
