@@ -23,6 +23,8 @@ import taskManager from "../assets/projectImages/otherProjects/task-manager.png"
 import taskTimer from "../assets/projectImages/otherProjects/task-timer.png";
 import dhtw from "../assets/projectImages/otherProjects/dhtw.png";
 import agw from "../assets/projectImages/otherProjects/agw.jpg";
+import gf1 from "../assets/projectImages/goalforge/gf1.png";
+import projecc4 from "../assets/projectImages/projecc/projecc4-min.png";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -127,6 +129,38 @@ const OTHER_PROJECTS = [
     techs: ["Go", "Chi", "OpenAPI (Swagger)", "JWT"],
     codeLink: "https://github.com/afutofu/go-api-starter",
     image: gas1,
+  },
+  {
+    title: "GoalForge",
+    desc: "🎯 A productivity tool to assist you in micro and macro task management. Lay out the plans for your goal and track your progress with ease! (WIP)",
+    techs: [
+      "Typescript",
+      "NextJS",
+      "Tailwind",
+      "Python",
+      "Flask",
+      "SQLAlchemy",
+      "PostgreSQL",
+      "DynamoDB",
+      "AWS RDS",
+    ],
+    codeLink: "https://github.com/afutofu/goalforge",
+    siteLink: "https://goalforge.vercel.app/",
+    image: gf1,
+  },
+  {
+    title: "Projecc",
+    desc: "💬 A real-time text messaging web app inspired by Discord. Join project groups, interact with fellow project members, and plan out your next big project!",
+    techs: [
+      "Javascript",
+      "React",
+      "Node.js",
+      "Express",
+      "Socket.IO",
+      "MongoDB",
+    ],
+    codeLink: "https://github.com/afutofu/projecc",
+    image: projecc4,
   },
   {
     title: "Musashi",
